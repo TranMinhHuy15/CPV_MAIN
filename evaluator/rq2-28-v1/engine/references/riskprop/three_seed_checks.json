@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests_run": 6,
+  "errors": 0,
+  "failures": 0,
+  "scope": "CPU configs, actual fixed video-ID splits, reference parity, test adapter, synthetic queue/resume/statistics; NOT three full GPU runs"
+}

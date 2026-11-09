@@ -1,0 +1,7 @@
+{
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "gpu_query": "NVIDIA GeForce RTX 4080, 16376, 15896, 595.84",
+  "cpu_count": 12,
+  "workspace_free_bytes": 259365711872,
+  "target_gpu_full224_not_yet_verified": true
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "path": "/workspace/rq2_medium_backups/RQ2_medium_h7_20261031_072615_UTC_2630447.tar",
+    "bytes": 8082606080,
+    "partial": false,
+    "sha256_file": "/workspace/rq2_medium_backups/RQ2_medium_h7_20261031_072615_UTC_2630447.tar.sha256",
+    "sha256_file_content": "2bc8d6dfe7ba07879519cce9198599c99deae483f9626b5faafb114ccffaa877  RQ2_medium_h7_20261031_072615_UTC_2630447.tar",
+    "tar_hash_verified": false
+  }
+]

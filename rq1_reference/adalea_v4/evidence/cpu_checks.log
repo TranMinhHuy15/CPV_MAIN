@@ -1,0 +1,146 @@
+test_accumulation_partial_window_and_budget (__main__.Checks) ... /workspace/adalea_v4_runtime/venv/lib/python3.8/site-packages/einops/_torch_specific.py:109: ImportWarning: allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0
+  warnings.warn("allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0", ImportWarning)
+ok
+test_adaptive_changes_weights_not_negative (__main__.Checks) ... ok
+test_aggregate_refuses_missing_seed (__main__.Checks) ... ok
+test_atomic_cache_real_video_and_warm_cache (__main__.Checks) ... ok
+test_attc_uses_native_clock_and_excludes_after_event (__main__.Checks) ... ok
+test_causal_model_empty_objects_gradients (__main__.Checks) ... ok
+test_checkpoint_resume_adaptive_rng_exact (__main__.Checks) ... Seed 42 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Resume seed 42 from completed epoch 1, ATTC 2.900000s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+ok
+test_disk_resume_credits_existing_cache_without_changing_features (__main__.Checks) ... ok
+test_full_train_val_test_three_seed_fixture (__main__.Checks) ... Seed 42 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+Seed 43 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 43 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+Seed 44 epoch 1: mAUC 0.3333, mAP 0.6667, ATTC_next 2.9000s; 0.0s
+Seed 44 epoch 2: mAUC 0.3333, mAP 0.6667, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+ok
+test_invalid_cache_and_nonfinite_cli_stop_before_work (__main__.Checks) ... ok
+test_large_cache_decompresses_each_member_once (__main__.Checks) ... ok
+test_loss_equation_frames_negative_and_post_event (__main__.Checks) ... ok
+test_preflight_measurement_is_cold_even_with_warm_production_cache (__main__.Checks) ... ok
+test_process_deadline_and_output_lock (__main__.Checks) ... started
+ok
+test_sampler_v6_and_test_hidden (__main__.Checks) ... ok
+test_shared_validation_and_pooled_test_metrics (__main__.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 9.972s
+
+OK
+test_accumulation_partial_window_and_budget (__main__.Checks) ... /workspace/adalea_v4_runtime/venv/lib/python3.8/site-packages/einops/_torch_specific.py:109: ImportWarning: allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0
+  warnings.warn("allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0", ImportWarning)
+ok
+test_adaptive_changes_weights_not_negative (__main__.Checks) ... ok
+test_aggregate_refuses_missing_seed (__main__.Checks) ... ok
+test_atomic_cache_real_video_and_warm_cache (__main__.Checks) ... ok
+test_attc_uses_native_clock_and_excludes_after_event (__main__.Checks) ... ok
+test_causal_model_empty_objects_gradients (__main__.Checks) ... ok
+test_checkpoint_resume_adaptive_rng_exact (__main__.Checks) ... Seed 42 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Resume seed 42 from completed epoch 1, ATTC 2.900000s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+ok
+test_disk_resume_credits_existing_cache_without_changing_features (__main__.Checks) ... ok
+test_full_train_val_test_three_seed_fixture (__main__.Checks) ... Seed 42 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+Seed 43 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 43 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+Seed 44 epoch 1: mAUC 0.3333, mAP 0.6667, ATTC_next 2.9000s; 0.0s
+Seed 44 epoch 2: mAUC 0.3333, mAP 0.6667, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+ok
+test_invalid_cache_and_nonfinite_cli_stop_before_work (__main__.Checks) ... ok
+test_large_cache_decompresses_each_member_once (__main__.Checks) ... ok
+test_loss_equation_frames_negative_and_post_event (__main__.Checks) ... ok
+test_preflight_measurement_is_cold_even_with_warm_production_cache (__main__.Checks) ... ok
+test_process_deadline_and_output_lock (__main__.Checks) ... started
+ok
+test_sampler_v6_and_test_hidden (__main__.Checks) ... ok
+test_shared_validation_and_pooled_test_metrics (__main__.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 10.049s
+
+OK

@@ -1,0 +1,7 @@
+{
+  "platform": "Linux-6.8.0-134-generic-x86_64-with-glibc2.39",
+  "gpu_query": "NVIDIA GeForce RTX 4080 SUPER, 16376, 15945, 595.71.05",
+  "cpu_count": 16,
+  "workspace_free_bytes": 118834782208,
+  "target_gpu_full224_not_yet_verified": true
+}

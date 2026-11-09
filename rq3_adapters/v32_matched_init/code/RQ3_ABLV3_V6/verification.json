@@ -1,0 +1,8 @@
+{
+  "version": "V3.2 recovery",
+  "cpu_tests_pass": true,
+  "cpu_tests": 58,
+  "planned_runs": 18,
+  "cuda_end_to_end_executed": false,
+  "test_log": "../validation/V6_tests_v32.log"
+}

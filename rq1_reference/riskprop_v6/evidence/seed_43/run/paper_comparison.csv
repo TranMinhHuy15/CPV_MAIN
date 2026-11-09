@@ -1,0 +1,7 @@
+scope,metric,paper_table1_nexar,reproduced,numerical_delta_only,directly_comparable,reason
+author_300_video_validation_proxy,mAP,0.87,0.8661902061923056,-0.003809793807694417,False,Validation scope; paper-vs-code metric definitions unresolved. Not a claimed paper gap/win.
+author_300_video_validation_proxy,mAUC,0.869,0.8712592592592593,0.002259259259259294,False,Validation scope; paper-vs-code metric definitions unresolved. Not a claimed paper gap/win.
+author_300_video_validation_proxy,mAUC_0.1,0.472,0.7078362573099416,0.23583625730994162,False,Validation scope; paper-vs-code metric definitions unresolved. Not a claimed paper gap/win.
+author_300_video_validation_proxy,mTTA_0.1_s,0.958,0.8525066666666667,-0.10549333333333322,False,Validation scope; paper-vs-code metric definitions unresolved. Not a claimed paper gap/win.
+official_nexar_test_public,mAP,0.87,0.8179898382877075,-0.052010161712292446,False,Official held-out mAP; paper does not resolve Public/Private versus validation-window scoring.
+official_nexar_test_private,mAP,0.87,0.8666332722763883,-0.0033667277236116844,False,Official held-out mAP; paper does not resolve Public/Private versus validation-window scoring.

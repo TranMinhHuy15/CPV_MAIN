@@ -1,0 +1,5378 @@
+{
+  "00204": {
+    "event_s": 10.166341000000001,
+    "onset_s": 9.466341000000002,
+    "onset_index": 94,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00030": {
+    "event_s": 10.56689,
+    "onset_s": 9.097890000000003,
+    "onset_index": 91,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00146": {
+    "event_s": 9.961279,
+    "onset_s": 7.5702789999999975,
+    "onset_index": 75,
+    "event_index": 98,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00020": {
+    "event_s": 9.650327,
+    "onset_s": 7.789327,
+    "onset_index": 80,
+    "event_index": 99,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00511": {
+    "event_s": 10.158703,
+    "onset_s": 8.729703,
+    "onset_index": 85,
+    "event_index": 99,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00261": {
+    "event_s": 9.547619000000001,
+    "onset_s": 7.575619000000001,
+    "onset_index": 74,
+    "event_index": 93,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00346": {
+    "event_s": 10.6,
+    "onset_s": 9.500000000000002,
+    "onset_index": 95,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00545": {
+    "event_s": 10.195946,
+    "onset_s": 8.916946,
+    "onset_index": 88,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00492": {
+    "event_s": 10.368084000000001,
+    "onset_s": 8.407084000000003,
+    "onset_index": 85,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00299": {
+    "event_s": 10.399194999999999,
+    "onset_s": 9.799194999999997,
+    "onset_index": 98,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00350": {
+    "event_s": 10.933008000000001,
+    "onset_s": 8.999008000000003,
+    "onset_index": 89,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00484": {
+    "event_s": 10.396531000000001,
+    "onset_s": 9.127531,
+    "onset_index": 88,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00230": {
+    "event_s": 10.466341,
+    "onset_s": 9.433341000000002,
+    "onset_index": 94,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00161": {
+    "event_s": 10.733333,
+    "onset_s": 8.866333,
+    "onset_index": 89,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00193": {
+    "event_s": 10.8,
+    "onset_s": 9.233,
+    "onset_index": 92,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00347": {
+    "event_s": 10.799675,
+    "onset_s": 10.766675,
+    "onset_index": 107,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00101": {
+    "event_s": 10.666667,
+    "onset_s": 8.699667000000002,
+    "onset_index": 87,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00304": {
+    "event_s": 10.499675,
+    "onset_s": 9.299675,
+    "onset_index": 93,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00087": {
+    "event_s": 9.943781000000001,
+    "onset_s": 8.767781,
+    "onset_index": 89,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00462": {
+    "event_s": 10.303922,
+    "onset_s": 8.343922,
+    "onset_index": 85,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00219": {
+    "event_s": 10.666341000000001,
+    "onset_s": 8.216341000000002,
+    "onset_index": 82,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00278": {
+    "event_s": 9.930966999999999,
+    "onset_s": 9.597966999999997,
+    "onset_index": 95,
+    "event_index": 98,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00221": {
+    "event_s": 11.066667,
+    "onset_s": 10.099667000000002,
+    "onset_index": 101,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00185": {
+    "event_s": 10.699675000000001,
+    "onset_s": 10.265675,
+    "onset_index": 102,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00323": {
+    "event_s": 10.966341,
+    "onset_s": 7.566340999999998,
+    "onset_index": 75,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00045": {
+    "event_s": 11.188525,
+    "onset_s": 9.011525,
+    "onset_index": 91,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00548": {
+    "event_s": 11.033333,
+    "onset_s": 10.233333,
+    "onset_index": 102,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00156": {
+    "event_s": 10.166667,
+    "onset_s": 8.566666999999999,
+    "onset_index": 86,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00419": {
+    "event_s": 9.999675,
+    "onset_s": 9.515675000000002,
+    "onset_index": 95,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00374": {
+    "event_s": 9.733333,
+    "onset_s": 7.900333000000002,
+    "onset_index": 79,
+    "event_index": 97,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00038": {
+    "event_s": 10.499675,
+    "onset_s": 8.099675000000001,
+    "onset_index": 81,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00176": {
+    "event_s": 10.366667,
+    "onset_s": 6.433666999999998,
+    "onset_index": 64,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00211": {
+    "event_s": 10.93771,
+    "onset_s": 10.601709999999997,
+    "onset_index": 105,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01009": {
+    "event_s": 10.233333,
+    "onset_s": 5.933333000000001,
+    "onset_index": 59,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00781": {
+    "event_s": 10.728094,
+    "onset_s": 9.454094,
+    "onset_index": 96,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00994": {
+    "event_s": 10.566341000000001,
+    "onset_s": 8.232341000000002,
+    "onset_index": 82,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00482": {
+    "event_s": 10.989532,
+    "onset_s": 8.964532000000002,
+    "onset_index": 91,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00316": {
+    "event_s": 10.598039,
+    "onset_s": 8.311038999999997,
+    "onset_index": 84,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00258": {
+    "event_s": 10.366667,
+    "onset_s": 10.232667,
+    "onset_index": 102,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01038": {
+    "event_s": 10.666341000000001,
+    "onset_s": 7.400340999999999,
+    "onset_index": 74,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00799": {
+    "event_s": 10.099675000000001,
+    "onset_s": 8.865675000000003,
+    "onset_index": 88,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00267": {
+    "event_s": 10.368084000000001,
+    "onset_s": 8.145084000000002,
+    "onset_index": 82,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01023": {
+    "event_s": 9.966667,
+    "onset_s": 7.934666999999999,
+    "onset_index": 79,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00436": {
+    "event_s": 10.271242,
+    "onset_s": 9.258242,
+    "onset_index": 94,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00279": {
+    "event_s": 10.499208,
+    "onset_s": 8.276208,
+    "onset_index": 81,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00268": {
+    "event_s": 9.999675,
+    "onset_s": 6.666674999999998,
+    "onset_index": 66,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00137": {
+    "event_s": 11.001672,
+    "onset_s": 9.934671999999999,
+    "onset_index": 99,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00338": {
+    "event_s": 10.366341,
+    "onset_s": 9.066341000000003,
+    "onset_index": 90,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00561": {
+    "event_s": 9.897521999999999,
+    "onset_s": 8.129521999999998,
+    "onset_index": 81,
+    "event_index": 98,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01017": {
+    "event_s": 10.833333,
+    "onset_s": 8.833333,
+    "onset_index": 88,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00439": {
+    "event_s": 10.671233,
+    "onset_s": 10.450233,
+    "onset_index": 101,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00801": {
+    "event_s": 11.101536,
+    "onset_s": 8.161536000000002,
+    "onset_index": 81,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00009": {
+    "event_s": 10.075163,
+    "onset_s": 7.136162999999998,
+    "onset_index": 73,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00215": {
+    "event_s": 10.666667,
+    "onset_s": 8.666667,
+    "onset_index": 87,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00091": {
+    "event_s": 10.466657,
+    "onset_s": 8.736657,
+    "onset_index": 89,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00631": {
+    "event_s": 10.826134,
+    "onset_s": 8.768133999999996,
+    "onset_index": 89,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00322": {
+    "event_s": 10.366341,
+    "onset_s": 9.799341,
+    "onset_index": 98,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00878": {
+    "event_s": 11.235315,
+    "onset_s": 8.499315,
+    "onset_index": 84,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00969": {
+    "event_s": 10.696078,
+    "onset_s": 8.768078,
+    "onset_index": 89,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00779": {
+    "event_s": 10.6,
+    "onset_s": 8.799999999999999,
+    "onset_index": 87,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00778": {
+    "event_s": 9.942623,
+    "onset_s": 9.156622999999998,
+    "onset_index": 93,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00892": {
+    "event_s": 10.728094,
+    "onset_s": 9.225094,
+    "onset_index": 93,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00196": {
+    "event_s": 10.031302,
+    "onset_s": 8.663302000000002,
+    "onset_index": 86,
+    "event_index": 99,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00305": {
+    "event_s": 10.666667,
+    "onset_s": 8.699667000000002,
+    "onset_index": 87,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00987": {
+    "event_s": 10.729508,
+    "onset_s": 8.995508000000001,
+    "onset_index": 91,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00159": {
+    "event_s": 10.172727,
+    "onset_s": 8.429727000000002,
+    "onset_index": 77,
+    "event_index": 93,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00075": {
+    "event_s": 10.166341000000001,
+    "onset_s": 9.232341,
+    "onset_index": 92,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00720": {
+    "event_s": 10.2,
+    "onset_s": 8.633,
+    "onset_index": 86,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00002": {
+    "event_s": 10.701336,
+    "onset_s": 9.593335999999999,
+    "onset_index": 94,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01006": {
+    "event_s": 10.466667,
+    "onset_s": 9.266667,
+    "onset_index": 93,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00975": {
+    "event_s": 10.533333,
+    "onset_s": 8.766332999999998,
+    "onset_index": 88,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00385": {
+    "event_s": 10.566341000000001,
+    "onset_s": 9.233341000000003,
+    "onset_index": 92,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00806": {
+    "event_s": 9.877049,
+    "onset_s": 8.763049000000002,
+    "onset_index": 89,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00829": {
+    "event_s": 10.233333,
+    "onset_s": 9.066333,
+    "onset_index": 91,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00962": {
+    "event_s": 9.699675000000001,
+    "onset_s": 6.833675000000001,
+    "onset_index": 68,
+    "event_index": 97,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00724": {
+    "event_s": 10.6,
+    "onset_s": 9.865999999999998,
+    "onset_index": 98,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00764": {
+    "event_s": 10.434641,
+    "onset_s": 8.473641,
+    "onset_index": 87,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00654": {
+    "event_s": 10.734322,
+    "onset_s": 9.596321999999999,
+    "onset_index": 95,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00628": {
+    "event_s": 11.066341000000001,
+    "onset_s": 7.266341000000004,
+    "onset_index": 72,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00743": {
+    "event_s": 10.285714,
+    "onset_s": 6.794714000000001,
+    "onset_index": 64,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00620": {
+    "event_s": 10.799675,
+    "onset_s": 7.799675000000001,
+    "onset_index": 78,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00853": {
+    "event_s": 10.1,
+    "onset_s": 9.533,
+    "onset_index": 95,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00399": {
+    "event_s": 10.400870000000001,
+    "onset_s": 9.616869999999999,
+    "onset_index": 98,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00448": {
+    "event_s": 10.3,
+    "onset_s": 9.733,
+    "onset_index": 97,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00400": {
+    "event_s": 10.568259,
+    "onset_s": 9.101258999999997,
+    "onset_index": 89,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00559": {
+    "event_s": 10.366341,
+    "onset_s": 9.300341000000001,
+    "onset_index": 93,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00107": {
+    "event_s": 10.631148,
+    "onset_s": 8.275148000000002,
+    "onset_index": 84,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00711": {
+    "event_s": 10.266341,
+    "onset_s": 7.499341000000001,
+    "onset_index": 75,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00092": {
+    "event_s": 10.600094,
+    "onset_s": 8.926093999999997,
+    "onset_index": 88,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00432": {
+    "event_s": 10.8,
+    "onset_s": 10.767,
+    "onset_index": 107,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00767": {
+    "event_s": 10.891493,
+    "onset_s": 10.238493000000002,
+    "onset_index": 104,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00920": {
+    "event_s": 10.7,
+    "onset_s": 9.166999999999998,
+    "onset_index": 91,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00535": {
+    "event_s": 10.433977,
+    "onset_s": 8.538976999999997,
+    "onset_index": 86,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00689": {
+    "event_s": 10.035714,
+    "onset_s": 8.465714000000004,
+    "onset_index": 79,
+    "event_index": 93,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00297": {
+    "event_s": 10.633996,
+    "onset_s": 10.027995999999998,
+    "onset_index": 98,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00984": {
+    "event_s": 10.366341,
+    "onset_s": 8.199340999999999,
+    "onset_index": 82,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00094": {
+    "event_s": 10.332305,
+    "onset_s": 7.195304999999999,
+    "onset_index": 71,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00070": {
+    "event_s": 10.466341,
+    "onset_s": 8.566340999999998,
+    "onset_index": 85,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00051": {
+    "event_s": 10.599675000000001,
+    "onset_s": 7.1666750000000015,
+    "onset_index": 71,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00862": {
+    "event_s": 10.866667,
+    "onset_s": 9.532667,
+    "onset_index": 95,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00451": {
+    "event_s": 10.466341,
+    "onset_s": 8.966341,
+    "onset_index": 89,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00572": {
+    "event_s": 10.396993,
+    "onset_s": 9.235992999999999,
+    "onset_index": 89,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00760": {
+    "event_s": 10.433333,
+    "onset_s": 8.967333000000002,
+    "onset_index": 90,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00649": {
+    "event_s": 10.203074,
+    "onset_s": 9.481074000000003,
+    "onset_index": 95,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00421": {
+    "event_s": 11.435984,
+    "onset_s": 10.667983999999999,
+    "onset_index": 106,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00756": {
+    "event_s": 9.633333,
+    "onset_s": 8.034333,
+    "onset_index": 81,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00231": {
+    "event_s": 10.399675,
+    "onset_s": 8.866675000000003,
+    "onset_index": 88,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00728": {
+    "event_s": 9.533008,
+    "onset_s": 6.800008,
+    "onset_index": 67,
+    "event_index": 95,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00280": {
+    "event_s": 10.399675,
+    "onset_s": 9.032675,
+    "onset_index": 90,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00775": {
+    "event_s": 10.6,
+    "onset_s": 9.066999999999998,
+    "onset_index": 90,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00277": {
+    "event_s": 10.5,
+    "onset_s": 9.514,
+    "onset_index": 93,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00612": {
+    "event_s": 10.84119,
+    "onset_s": 8.96619,
+    "onset_index": 87,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00993": {
+    "event_s": 10.700669,
+    "onset_s": 8.461668999999999,
+    "onset_index": 84,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00925": {
+    "event_s": 10.3,
+    "onset_s": 8.8,
+    "onset_index": 88,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00886": {
+    "event_s": 10.933008000000001,
+    "onset_s": 9.733008000000002,
+    "onset_index": 97,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00067": {
+    "event_s": 10.066667,
+    "onset_s": 7.9996670000000005,
+    "onset_index": 80,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00821": {
+    "event_s": 10.266667,
+    "onset_s": 8.533667,
+    "onset_index": 85,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00386": {
+    "event_s": 10.233333,
+    "onset_s": 7.5003329999999995,
+    "onset_index": 75,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00116": {
+    "event_s": 10.761438,
+    "onset_s": 9.454438000000001,
+    "onset_index": 96,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00619": {
+    "event_s": 10.4,
+    "onset_s": 7.9,
+    "onset_index": 79,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01007": {
+    "event_s": 10.366667,
+    "onset_s": 7.935667,
+    "onset_index": 79,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00390": {
+    "event_s": 9.933008000000001,
+    "onset_s": 8.800008000000002,
+    "onset_index": 87,
+    "event_index": 99,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00120": {
+    "event_s": 10.566869,
+    "onset_s": 9.889869000000001,
+    "onset_index": 97,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00113": {
+    "event_s": 11.066667,
+    "onset_s": 9.766667,
+    "onset_index": 98,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00035": {
+    "event_s": 10.966341,
+    "onset_s": 9.833341,
+    "onset_index": 98,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00708": {
+    "event_s": 10.533445,
+    "onset_s": 9.096445,
+    "onset_index": 90,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00732": {
+    "event_s": 10.7,
+    "onset_s": 6.699999999999999,
+    "onset_index": 66,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00738": {
+    "event_s": 10.566667,
+    "onset_s": 8.666667000000002,
+    "onset_index": 87,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00681": {
+    "event_s": 10.098662,
+    "onset_s": 5.9606619999999975,
+    "onset_index": 59,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00908": {
+    "event_s": 10.662735,
+    "onset_s": 9.485735,
+    "onset_index": 97,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00992": {
+    "event_s": 10.433008000000001,
+    "onset_s": 9.233007999999998,
+    "onset_index": 91,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00770": {
+    "event_s": 10.899675,
+    "onset_s": 9.566675000000002,
+    "onset_index": 95,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01032": {
+    "event_s": 10.07377,
+    "onset_s": 7.164770000000001,
+    "onset_index": 73,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00946": {
+    "event_s": 10.633008,
+    "onset_s": 9.400008,
+    "onset_index": 93,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00894": {
+    "event_s": 10.770259,
+    "onset_s": 7.659258999999999,
+    "onset_index": 75,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00717": {
+    "event_s": 10.630719,
+    "onset_s": 9.650718999999999,
+    "onset_index": 99,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00933": {
+    "event_s": 10.833333,
+    "onset_s": 10.000333000000001,
+    "onset_index": 100,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00812": {
+    "event_s": 10.7,
+    "onset_s": 9.167000000000002,
+    "onset_index": 91,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00726": {
+    "event_s": 9.649663,
+    "onset_s": 8.213663000000002,
+    "onset_index": 83,
+    "event_index": 98,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01030": {
+    "event_s": 11.433008000000001,
+    "onset_s": 9.633008,
+    "onset_index": 96,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00772": {
+    "event_s": 9.943781000000001,
+    "onset_s": 6.415781000000003,
+    "onset_index": 65,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01010": {
+    "event_s": 10.303258000000001,
+    "onset_s": 9.257257999999998,
+    "onset_index": 94,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00518": {
+    "event_s": 10.365772,
+    "onset_s": 8.625771999999998,
+    "onset_index": 85,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00445": {
+    "event_s": 10.766341,
+    "onset_s": 7.033341,
+    "onset_index": 70,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00531": {
+    "event_s": 10.03632,
+    "onset_s": 8.41732,
+    "onset_index": 84,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00504": {
+    "event_s": 10.138575000000001,
+    "onset_s": 9.384575,
+    "onset_index": 95,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00379": {
+    "event_s": 10.533445,
+    "onset_s": 8.229445000000002,
+    "onset_index": 82,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00073": {
+    "event_s": 10.107843,
+    "onset_s": 7.299842999999999,
+    "onset_index": 74,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00186": {
+    "event_s": 10.877631000000001,
+    "onset_s": 10.260631000000004,
+    "onset_index": 99,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00126": {
+    "event_s": 10.172539,
+    "onset_s": 9.062539000000001,
+    "onset_index": 92,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00438": {
+    "event_s": 10.198997,
+    "onset_s": 8.463997,
+    "onset_index": 84,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00508": {
+    "event_s": 10.533008,
+    "onset_s": 8.966008,
+    "onset_index": 89,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00293": {
+    "event_s": 10.728094,
+    "onset_s": 9.814093999999999,
+    "onset_index": 99,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00404": {
+    "event_s": 10.433333,
+    "onset_s": 9.266333000000001,
+    "onset_index": 93,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00012": {
+    "event_s": 10.53268,
+    "onset_s": 10.271679999999996,
+    "onset_index": 105,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00165": {
+    "event_s": 10.833333,
+    "onset_s": 10.800333000000002,
+    "onset_index": 108,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00315": {
+    "event_s": 10.466341,
+    "onset_s": 8.966341,
+    "onset_index": 89,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00525": {
+    "event_s": 10.136963000000002,
+    "onset_s": 8.422963000000003,
+    "onset_index": 84,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00524": {
+    "event_s": 9.939916,
+    "onset_s": 8.200916,
+    "onset_index": 83,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00377": {
+    "event_s": 10.096774,
+    "onset_s": 8.627773999999999,
+    "onset_index": 71,
+    "event_index": 84,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00220": {
+    "event_s": 10.401297000000001,
+    "onset_s": 8.832297000000002,
+    "onset_index": 90,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00552": {
+    "event_s": 10.633008,
+    "onset_s": 9.199008,
+    "onset_index": 91,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00337": {
+    "event_s": 10.8,
+    "onset_s": 9.433,
+    "onset_index": 94,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00893": {
+    "event_s": 10.499528999999999,
+    "onset_s": 8.362528999999999,
+    "onset_index": 83,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00352": {
+    "event_s": 10.866667,
+    "onset_s": 9.332666999999997,
+    "onset_index": 93,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00870": {
+    "event_s": 10.499528999999999,
+    "onset_s": 7.525528999999999,
+    "onset_index": 75,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01029": {
+    "event_s": 10.699675000000001,
+    "onset_s": 9.232674999999999,
+    "onset_index": 92,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00575": {
+    "event_s": 9.993243,
+    "onset_s": 5.612242999999999,
+    "onset_index": 55,
+    "event_index": 98,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00080": {
+    "event_s": 10.808902000000002,
+    "onset_s": 8.955902000000004,
+    "onset_index": 86,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00680": {
+    "event_s": 10.666667,
+    "onset_s": 10.599667,
+    "onset_index": 106,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00514": {
+    "event_s": 10.033333,
+    "onset_s": 8.750333000000003,
+    "onset_index": 88,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00922": {
+    "event_s": 10.915225,
+    "onset_s": 9.050225000000001,
+    "onset_index": 87,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00468": {
+    "event_s": 10.300457000000002,
+    "onset_s": 8.743457000000003,
+    "onset_index": 87,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00815": {
+    "event_s": 10.6,
+    "onset_s": 9.466,
+    "onset_index": 94,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00115": {
+    "event_s": 10.454955,
+    "onset_s": 9.153955000000002,
+    "onset_index": 68,
+    "event_index": 77,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00796": {
+    "event_s": 10.3,
+    "onset_s": 8.900000000000002,
+    "onset_index": 89,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01005": {
+    "event_s": 10.826797,
+    "onset_s": 8.114797,
+    "onset_index": 83,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00615": {
+    "event_s": 10.1,
+    "onset_s": 8.467,
+    "onset_index": 84,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00951": {
+    "event_s": 10.299675,
+    "onset_s": 9.665675,
+    "onset_index": 96,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00555": {
+    "event_s": 10.566776,
+    "onset_s": 6.652776000000003,
+    "onset_index": 65,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00768": {
+    "event_s": 10.066667,
+    "onset_s": 8.266667000000004,
+    "onset_index": 83,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00736": {
+    "event_s": 10.231971,
+    "onset_s": 6.154970999999998,
+    "onset_index": 61,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00384": {
+    "event_s": 11.433008000000001,
+    "onset_s": 9.667008,
+    "onset_index": 96,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00198": {
+    "event_s": 11.088235,
+    "onset_s": 11.055235000000001,
+    "onset_index": 112,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00088": {
+    "event_s": 9.763743,
+    "onset_s": 9.162743,
+    "onset_index": 90,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00281": {
+    "event_s": 10.366341,
+    "onset_s": 9.299341,
+    "onset_index": 93,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00490": {
+    "event_s": 10.033008,
+    "onset_s": 6.933008000000003,
+    "onset_index": 69,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00646": {
+    "event_s": 10.866667,
+    "onset_s": 7.732666999999999,
+    "onset_index": 77,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00229": {
+    "event_s": 10.270578,
+    "onset_s": 8.212578,
+    "onset_index": 84,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00907": {
+    "event_s": 10.633333,
+    "onset_s": 8.000333000000001,
+    "onset_index": 80,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00759": {
+    "event_s": 10.866341,
+    "onset_s": 9.799341,
+    "onset_index": 98,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00924": {
+    "event_s": 10.226856,
+    "onset_s": 8.593856,
+    "onset_index": 83,
+    "event_index": 99,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00053": {
+    "event_s": 10.336601,
+    "onset_s": 9.062600999999999,
+    "onset_index": 93,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00632": {
+    "event_s": 10.578683,
+    "onset_s": 8.878683,
+    "onset_index": 74,
+    "event_index": 89,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00899": {
+    "event_s": 10.099675000000001,
+    "onset_s": 8.333675000000001,
+    "onset_index": 83,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00672": {
+    "event_s": 10.266667,
+    "onset_s": 8.733667000000002,
+    "onset_index": 87,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00595": {
+    "event_s": 11.099675000000001,
+    "onset_s": 9.866675,
+    "onset_index": 98,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00197": {
+    "event_s": 11.153595,
+    "onset_s": 8.768594999999998,
+    "onset_index": 89,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00191": {
+    "event_s": 10.1,
+    "onset_s": 8.4,
+    "onset_index": 84,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00855": {
+    "event_s": 10.92623,
+    "onset_s": 9.97523,
+    "onset_index": 101,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00203": {
+    "event_s": 10.332305,
+    "onset_s": 9.197305000000002,
+    "onset_index": 91,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00746": {
+    "event_s": 10.266667,
+    "onset_s": 10.032666999999998,
+    "onset_index": 100,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00950": {
+    "event_s": 9.566667,
+    "onset_s": 8.534667,
+    "onset_index": 85,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00402": {
+    "event_s": 10.7,
+    "onset_s": 9.966999999999999,
+    "onset_index": 99,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00569": {
+    "event_s": 10.84119,
+    "onset_s": 10.05719,
+    "onset_index": 98,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00368": {
+    "event_s": 10.566341000000001,
+    "onset_s": 8.866341000000002,
+    "onset_index": 88,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00409": {
+    "event_s": 10.4,
+    "onset_s": 8.534,
+    "onset_index": 85,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00749": {
+    "event_s": 10.335938,
+    "onset_s": 9.747938,
+    "onset_index": 99,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00150": {
+    "event_s": 10.701342,
+    "onset_s": 9.091342000000001,
+    "onset_index": 90,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00786": {
+    "event_s": 10.5,
+    "onset_s": 9.833000000000002,
+    "onset_index": 98,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00507": {
+    "event_s": 10.630055,
+    "onset_s": 9.650055,
+    "onset_index": 98,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00274": {
+    "event_s": 10.466341,
+    "onset_s": 9.166341,
+    "onset_index": 91,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00939": {
+    "event_s": 10.897247,
+    "onset_s": 9.112247,
+    "onset_index": 92,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00956": {
+    "event_s": 10.565359,
+    "onset_s": 8.900358999999998,
+    "onset_index": 91,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00837": {
+    "event_s": 10.633008,
+    "onset_s": 9.400008,
+    "onset_index": 93,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00243": {
+    "event_s": 10.966667,
+    "onset_s": 10.133667,
+    "onset_index": 101,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01021": {
+    "event_s": 10.6,
+    "onset_s": 7.200000000000001,
+    "onset_index": 72,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00999": {
+    "event_s": 11.133333,
+    "onset_s": 9.700333,
+    "onset_index": 97,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00826": {
+    "event_s": 10.133008,
+    "onset_s": 7.700008,
+    "onset_index": 76,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00814": {
+    "event_s": 9.966341,
+    "onset_s": 7.966341,
+    "onset_index": 79,
+    "event_index": 99,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00616": {
+    "event_s": 11.157895,
+    "onset_s": 9.550895,
+    "onset_index": 96,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00800": {
+    "event_s": 10.467213,
+    "onset_s": 9.090212999999997,
+    "onset_index": 93,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01025": {
+    "event_s": 11.033008,
+    "onset_s": 9.700008000000002,
+    "onset_index": 96,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00182": {
+    "event_s": 10.9811,
+    "onset_s": 9.5071,
+    "onset_index": 92,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01018": {
+    "event_s": 10.466444000000001,
+    "onset_s": 9.322444000000003,
+    "onset_index": 94,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00808": {
+    "event_s": 10.198997,
+    "onset_s": 8.063996999999999,
+    "onset_index": 80,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00578": {
+    "event_s": 10.253521,
+    "onset_s": 8.038521,
+    "onset_index": 76,
+    "event_index": 97,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00246": {
+    "event_s": 10.899675,
+    "onset_s": 9.832675,
+    "onset_index": 98,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00685": {
+    "event_s": 10.766667,
+    "onset_s": 9.599667000000002,
+    "onset_index": 96,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00716": {
+    "event_s": 10.6,
+    "onset_s": 8.432999999999998,
+    "onset_index": 84,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00396": {
+    "event_s": 10.5,
+    "onset_s": 9.911000000000001,
+    "onset_index": 101,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00797": {
+    "event_s": 10.5,
+    "onset_s": 9.7,
+    "onset_index": 97,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00513": {
+    "event_s": 10.466341,
+    "onset_s": 9.633340999999998,
+    "onset_index": 96,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00807": {
+    "event_s": 10.433333,
+    "onset_s": 7.833333000000001,
+    "onset_index": 78,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00257": {
+    "event_s": 10.433333,
+    "onset_s": 9.166333,
+    "onset_index": 92,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00178": {
+    "event_s": 10.966667,
+    "onset_s": 9.916666999999999,
+    "onset_index": 99,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00974": {
+    "event_s": 10.6734,
+    "onset_s": 7.679400000000001,
+    "onset_index": 73,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00721": {
+    "event_s": 11.057377,
+    "onset_s": 8.933377000000002,
+    "onset_index": 91,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00052": {
+    "event_s": 10.766667,
+    "onset_s": 9.132667,
+    "onset_index": 91,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00752": {
+    "event_s": 11.4,
+    "onset_s": 9.833999999999998,
+    "onset_index": 98,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00359": {
+    "event_s": 10.633008,
+    "onset_s": 8.233007999999998,
+    "onset_index": 81,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00241": {
+    "event_s": 10.335938,
+    "onset_s": 10.074938000000001,
+    "onset_index": 102,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00365": {
+    "event_s": 10.599675000000001,
+    "onset_s": 8.699675000000003,
+    "onset_index": 87,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00134": {
+    "event_s": 10.728758,
+    "onset_s": 8.342758,
+    "onset_index": 85,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01015": {
+    "event_s": 10.330508,
+    "onset_s": 8.978508,
+    "onset_index": 88,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01027": {
+    "event_s": 10.599675000000001,
+    "onset_s": 10.433675000000004,
+    "onset_index": 104,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00536": {
+    "event_s": 10.53367,
+    "onset_s": 10.063670000000002,
+    "onset_index": 100,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00871": {
+    "event_s": 10.266667,
+    "onset_s": 7.666666999999999,
+    "onset_index": 77,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00446": {
+    "event_s": 10.433008000000001,
+    "onset_s": 8.833008000000003,
+    "onset_index": 88,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00790": {
+    "event_s": 10.733333,
+    "onset_s": 8.199333000000001,
+    "onset_index": 82,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00919": {
+    "event_s": 9.943781000000001,
+    "onset_s": 8.702781000000002,
+    "onset_index": 88,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00033": {
+    "event_s": 10.433333,
+    "onset_s": 7.5003329999999995,
+    "onset_index": 75,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00576": {
+    "event_s": 10.40099,
+    "onset_s": 6.910989999999998,
+    "onset_index": 69,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00509": {
+    "event_s": 10.433333,
+    "onset_s": 9.266332999999998,
+    "onset_index": 93,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00412": {
+    "event_s": 10.533333,
+    "onset_s": 8.700333000000002,
+    "onset_index": 87,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01001": {
+    "event_s": 11.033008,
+    "onset_s": 7.566008,
+    "onset_index": 75,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00489": {
+    "event_s": 11.055556,
+    "onset_s": 9.977556,
+    "onset_index": 102,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00001": {
+    "event_s": 10.633008,
+    "onset_s": 8.733008000000002,
+    "onset_index": 87,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00844": {
+    "event_s": 10.398752,
+    "onset_s": 9.026752,
+    "onset_index": 89,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00367": {
+    "event_s": 10.173203,
+    "onset_s": 8.214203000000001,
+    "onset_index": 84,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00465": {
+    "event_s": 10.733333,
+    "onset_s": 9.266332999999998,
+    "onset_index": 93,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00140": {
+    "event_s": 10.599675000000001,
+    "onset_s": 8.032675000000001,
+    "onset_index": 80,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00314": {
+    "event_s": 9.966667,
+    "onset_s": 8.466667,
+    "onset_index": 85,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00470": {
+    "event_s": 10.794118,
+    "onset_s": 9.536118,
+    "onset_index": 97,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00249": {
+    "event_s": 11.068562,
+    "onset_s": 8.929562,
+    "onset_index": 89,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00718": {
+    "event_s": 9.666667,
+    "onset_s": 8.332667,
+    "onset_index": 83,
+    "event_index": 97,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00034": {
+    "event_s": 10.166667,
+    "onset_s": 8.732667,
+    "onset_index": 87,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00248": {
+    "event_s": 10.891493,
+    "onset_s": 6.599492999999999,
+    "onset_index": 67,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00679": {
+    "event_s": 10.910959,
+    "onset_s": 8.895959,
+    "onset_index": 87,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00050": {
+    "event_s": 10.728094,
+    "onset_s": 9.192093999999999,
+    "onset_index": 93,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00011": {
+    "event_s": 10.233008,
+    "onset_s": 8.733008,
+    "onset_index": 87,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01026": {
+    "event_s": 10.401639,
+    "onset_s": 8.473638999999999,
+    "onset_index": 86,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00139": {
+    "event_s": 9.964412,
+    "onset_s": 5.794411999999998,
+    "onset_index": 57,
+    "event_index": 98,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00499": {
+    "event_s": 10.399675,
+    "onset_s": 9.399675,
+    "onset_index": 94,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00306": {
+    "event_s": 10.333008000000001,
+    "onset_s": 9.600008,
+    "onset_index": 95,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00582": {
+    "event_s": 10.794118,
+    "onset_s": 9.062118,
+    "onset_index": 92,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00676": {
+    "event_s": 10.303922,
+    "onset_s": 8.735921999999999,
+    "onset_index": 89,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00934": {
+    "event_s": 10.733333,
+    "onset_s": 9.200333000000002,
+    "onset_index": 92,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00811": {
+    "event_s": 10.399666,
+    "onset_s": 7.861666,
+    "onset_index": 78,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00662": {
+    "event_s": 10.6,
+    "onset_s": 7.700000000000001,
+    "onset_index": 77,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00442": {
+    "event_s": 10.333333,
+    "onset_s": 9.633333,
+    "onset_index": 96,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00069": {
+    "event_s": 10.667208,
+    "onset_s": 9.277208,
+    "onset_index": 92,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "01014": {
+    "event_s": 10.066667,
+    "onset_s": 8.566667,
+    "onset_index": 86,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "00706": {
+    "event_s": 10.533333,
+    "onset_s": 8.033333,
+    "onset_index": 80,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02397": {
+    "event_s": 11.687285,
+    "onset_s": 10.418284999999997,
+    "onset_index": 101,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02448": {
+    "event_s": 10.866341,
+    "onset_s": 9.632341000000002,
+    "onset_index": 96,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02479": {
+    "event_s": 10.366341,
+    "onset_s": 8.366341,
+    "onset_index": 83,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02229": {
+    "event_s": 11.366667,
+    "onset_s": 9.833667000000002,
+    "onset_index": 98,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02315": {
+    "event_s": 10.731971,
+    "onset_s": 6.561970999999998,
+    "onset_index": 65,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02571": {
+    "event_s": 10.866667,
+    "onset_s": 9.583667000000002,
+    "onset_index": 96,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02385": {
+    "event_s": 10.496067,
+    "onset_s": 9.358066999999998,
+    "onset_index": 92,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02519": {
+    "event_s": 11.200669,
+    "onset_s": 8.662669,
+    "onset_index": 86,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02345": {
+    "event_s": 11.0,
+    "onset_s": 9.564000000000002,
+    "onset_index": 97,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02589": {
+    "event_s": 11.266341,
+    "onset_s": 9.666341000000003,
+    "onset_index": 96,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02580": {
+    "event_s": 11.301003,
+    "onset_s": 9.566003,
+    "onset_index": 95,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02242": {
+    "event_s": 10.598662,
+    "onset_s": 9.129662000000001,
+    "onset_index": 91,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02500": {
+    "event_s": 10.666667,
+    "onset_s": 9.466667000000001,
+    "onset_index": 95,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02556": {
+    "event_s": 11.177874,
+    "onset_s": 7.6868739999999995,
+    "onset_index": 71,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02260": {
+    "event_s": 11.066341000000001,
+    "onset_s": 7.666340999999999,
+    "onset_index": 76,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02549": {
+    "event_s": 10.698526,
+    "onset_s": 8.559526,
+    "onset_index": 85,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02180": {
+    "event_s": 11.391493,
+    "onset_s": 9.005493000000001,
+    "onset_index": 91,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02527": {
+    "event_s": 10.266667,
+    "onset_s": 6.7996669999999995,
+    "onset_index": 68,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02396": {
+    "event_s": 11.097592,
+    "onset_s": 8.741592000000002,
+    "onset_index": 89,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02222": {
+    "event_s": 11.546075,
+    "onset_s": 10.079074999999998,
+    "onset_index": 98,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02402": {
+    "event_s": 10.833008000000001,
+    "onset_s": 7.9000080000000015,
+    "onset_index": 78,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02189": {
+    "event_s": 11.366341,
+    "onset_s": 9.800340999999998,
+    "onset_index": 98,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02199": {
+    "event_s": 10.766667,
+    "onset_s": 7.766667,
+    "onset_index": 78,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02574": {
+    "event_s": 11.166667,
+    "onset_s": 8.266667000000002,
+    "onset_index": 83,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02526": {
+    "event_s": 11.130719,
+    "onset_s": 9.072719,
+    "onset_index": 93,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02223": {
+    "event_s": 10.864407,
+    "onset_s": 9.512407,
+    "onset_index": 93,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02324": {
+    "event_s": 11.133008,
+    "onset_s": 8.500008000000001,
+    "onset_index": 84,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02160": {
+    "event_s": 10.836601,
+    "onset_s": 9.823600999999998,
+    "onset_index": 100,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02575": {
+    "event_s": 11.166341000000001,
+    "onset_s": 8.566341,
+    "onset_index": 85,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02597": {
+    "event_s": 10.733333,
+    "onset_s": 9.033333,
+    "onset_index": 90,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02410": {
+    "event_s": 10.266341,
+    "onset_s": 8.399341,
+    "onset_index": 84,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02390": {
+    "event_s": 11.326797,
+    "onset_s": 10.068797,
+    "onset_index": 103,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02270": {
+    "event_s": 10.639859000000001,
+    "onset_s": 9.463859,
+    "onset_index": 96,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02287": {
+    "event_s": 11.032787,
+    "onset_s": 8.855787000000001,
+    "onset_index": 90,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02563": {
+    "event_s": 10.4,
+    "onset_s": 8.632999999999997,
+    "onset_index": 86,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02358": {
+    "event_s": 10.832305,
+    "onset_s": 8.528305000000001,
+    "onset_index": 85,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02480": {
+    "event_s": 10.933333,
+    "onset_s": 9.400333000000002,
+    "onset_index": 94,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02512": {
+    "event_s": 10.699675000000001,
+    "onset_s": 9.166675,
+    "onset_index": 91,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02238": {
+    "event_s": 10.999336000000001,
+    "onset_s": 9.725336,
+    "onset_index": 99,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02495": {
+    "event_s": 11.133008,
+    "onset_s": 9.900008,
+    "onset_index": 98,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02373": {
+    "event_s": 11.433008000000001,
+    "onset_s": 9.433008000000001,
+    "onset_index": 94,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02151": {
+    "event_s": 10.639859000000001,
+    "onset_s": 9.462859000000002,
+    "onset_index": 96,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02370": {
+    "event_s": 10.7,
+    "onset_s": 8.3,
+    "onset_index": 83,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02548": {
+    "event_s": 11.097375000000001,
+    "onset_s": 9.169375,
+    "onset_index": 93,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02213": {
+    "event_s": 10.901297000000001,
+    "onset_s": 9.365297,
+    "onset_index": 95,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02235": {
+    "event_s": 10.966341,
+    "onset_s": 7.8323409999999996,
+    "onset_index": 78,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02579": {
+    "event_s": 11.266667,
+    "onset_s": 6.966667000000001,
+    "onset_index": 70,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02454": {
+    "event_s": 10.933008000000001,
+    "onset_s": 8.483008000000002,
+    "onset_index": 84,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02384": {
+    "event_s": 11.458248000000001,
+    "onset_s": 9.235248000000002,
+    "onset_index": 93,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02271": {
+    "event_s": 11.2,
+    "onset_s": 10.067,
+    "onset_index": 100,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02264": {
+    "event_s": 10.833333,
+    "onset_s": 9.366332999999997,
+    "onset_index": 94,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02349": {
+    "event_s": 10.933008000000001,
+    "onset_s": 9.883008,
+    "onset_index": 98,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02557": {
+    "event_s": 10.699675000000001,
+    "onset_s": 9.566675000000002,
+    "onset_index": 95,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02325": {
+    "event_s": 10.6,
+    "onset_s": 9.033,
+    "onset_index": 90,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02266": {
+    "event_s": 11.499675,
+    "onset_s": 9.332674999999998,
+    "onset_index": 93,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02428": {
+    "event_s": 11.199675000000001,
+    "onset_s": 10.099675000000003,
+    "onset_index": 101,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02387": {
+    "event_s": 10.733008,
+    "onset_s": 9.233008,
+    "onset_index": 92,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02442": {
+    "event_s": 11.233642999999999,
+    "onset_s": 8.497642999999998,
+    "onset_index": 84,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02203": {
+    "event_s": 10.581882,
+    "onset_s": 7.5878820000000005,
+    "onset_index": 72,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02326": {
+    "event_s": 10.672539,
+    "onset_s": 8.713539,
+    "onset_index": 89,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02305": {
+    "event_s": 10.803922,
+    "onset_s": 8.843922,
+    "onset_index": 90,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02430": {
+    "event_s": 11.366667,
+    "onset_s": 10.133666999999999,
+    "onset_index": 101,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02537": {
+    "event_s": 11.238800999999999,
+    "onset_s": 9.809801,
+    "onset_index": 95,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02429": {
+    "event_s": 10.733333,
+    "onset_s": 9.400333000000002,
+    "onset_index": 94,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02368": {
+    "event_s": 10.6,
+    "onset_s": 7.333999999999998,
+    "onset_index": 73,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02369": {
+    "event_s": 10.5,
+    "onset_s": 8.166,
+    "onset_index": 81,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02322": {
+    "event_s": 11.52459,
+    "onset_s": 9.563590000000001,
+    "onset_index": 97,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02558": {
+    "event_s": 11.102472,
+    "onset_s": 9.087472,
+    "onset_index": 88,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02281": {
+    "event_s": 11.499675,
+    "onset_s": 10.332675000000002,
+    "onset_index": 103,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02286": {
+    "event_s": 11.233008,
+    "onset_s": 9.333008000000001,
+    "onset_index": 93,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02601": {
+    "event_s": 10.933008000000001,
+    "onset_s": 8.766008,
+    "onset_index": 87,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02227": {
+    "event_s": 10.5,
+    "onset_s": 9.433,
+    "onset_index": 94,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02407": {
+    "event_s": 10.542484,
+    "onset_s": 8.973484000000001,
+    "onset_index": 92,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02259": {
+    "event_s": 11.033008,
+    "onset_s": 9.666008,
+    "onset_index": 96,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02423": {
+    "event_s": 11.666667,
+    "onset_s": 10.199666999999998,
+    "onset_index": 102,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02232": {
+    "event_s": 11.266341,
+    "onset_s": 9.832341,
+    "onset_index": 98,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02263": {
+    "event_s": 11.327100000000002,
+    "onset_s": 9.950099999999999,
+    "onset_index": 101,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02336": {
+    "event_s": 11.433008000000001,
+    "onset_s": 10.233008000000002,
+    "onset_index": 102,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02206": {
+    "event_s": 11.167224,
+    "onset_s": 8.193223999999999,
+    "onset_index": 82,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02504": {
+    "event_s": 10.166341000000001,
+    "onset_s": 8.300341000000001,
+    "onset_index": 83,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02204": {
+    "event_s": 10.766667,
+    "onset_s": 6.966667000000003,
+    "onset_index": 70,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02341": {
+    "event_s": 10.899675,
+    "onset_s": 9.666675,
+    "onset_index": 96,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02529": {
+    "event_s": 11.066667,
+    "onset_s": 9.433667000000002,
+    "onset_index": 94,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02295": {
+    "event_s": 10.932432,
+    "onset_s": 7.0184320000000024,
+    "onset_index": 69,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02244": {
+    "event_s": 11.399675,
+    "onset_s": 9.965675,
+    "onset_index": 99,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02364": {
+    "event_s": 10.899194999999999,
+    "onset_s": 6.822194999999997,
+    "onset_index": 68,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02251": {
+    "event_s": 10.699675000000001,
+    "onset_s": 9.332675,
+    "onset_index": 93,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02543": {
+    "event_s": 10.866221,
+    "onset_s": 9.799221,
+    "onset_index": 98,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02441": {
+    "event_s": 11.633333,
+    "onset_s": 8.900333,
+    "onset_index": 89,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02569": {
+    "event_s": 10.833333,
+    "onset_s": 8.833333,
+    "onset_index": 88,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02459": {
+    "event_s": 11.199675000000001,
+    "onset_s": 7.766675000000001,
+    "onset_index": 77,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02330": {
+    "event_s": 11.162735,
+    "onset_s": 7.634735000000001,
+    "onset_index": 78,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02586": {
+    "event_s": 11.133651,
+    "onset_s": 9.393650999999998,
+    "onset_index": 93,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02155": {
+    "event_s": 11.269478,
+    "onset_s": 9.990478,
+    "onset_index": 98,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02489": {
+    "event_s": 10.366341,
+    "onset_s": 8.933341,
+    "onset_index": 89,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02581": {
+    "event_s": 10.699675000000001,
+    "onset_s": 8.632675,
+    "onset_index": 86,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02185": {
+    "event_s": 11.70187,
+    "onset_s": 9.462869999999999,
+    "onset_index": 94,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02196": {
+    "event_s": 11.434312,
+    "onset_s": 9.997311999999999,
+    "onset_index": 99,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02595": {
+    "event_s": 10.533333,
+    "onset_s": 9.500333000000003,
+    "onset_index": 95,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02190": {
+    "event_s": 10.928571,
+    "onset_s": 9.358571000000003,
+    "onset_index": 87,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02496": {
+    "event_s": 11.533333,
+    "onset_s": 10.467333000000002,
+    "onset_index": 105,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02582": {
+    "event_s": 11.735315,
+    "onset_s": 9.967315,
+    "onset_index": 99,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02468": {
+    "event_s": 11.195952,
+    "onset_s": 8.286952000000001,
+    "onset_index": 84,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02399": {
+    "event_s": 11.566667,
+    "onset_s": 10.232667000000001,
+    "onset_index": 102,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02420": {
+    "event_s": 11.099675000000001,
+    "onset_s": 9.932675,
+    "onset_index": 99,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02518": {
+    "event_s": 11.097375000000001,
+    "onset_s": 9.236375,
+    "onset_index": 94,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02554": {
+    "event_s": 11.199675000000001,
+    "onset_s": 9.699675000000001,
+    "onset_index": 97,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02209": {
+    "event_s": 11.410691,
+    "onset_s": 10.249690999999999,
+    "onset_index": 99,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02499": {
+    "event_s": 10.933333,
+    "onset_s": 9.400332999999998,
+    "onset_index": 94,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02194": {
+    "event_s": 10.93311,
+    "onset_s": 8.796109999999999,
+    "onset_index": 87,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02476": {
+    "event_s": 11.666667,
+    "onset_s": 8.800667,
+    "onset_index": 88,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02434": {
+    "event_s": 10.7,
+    "onset_s": 6.766999999999998,
+    "onset_index": 67,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02505": {
+    "event_s": 10.9,
+    "onset_s": 9.600000000000003,
+    "onset_index": 96,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02433": {
+    "event_s": 11.167224,
+    "onset_s": 7.0292239999999975,
+    "onset_index": 70,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02316": {
+    "event_s": 10.999675,
+    "onset_s": 9.099675000000001,
+    "onset_index": 91,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02307": {
+    "event_s": 11.4,
+    "onset_s": 9.865999999999998,
+    "onset_index": 98,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02298": {
+    "event_s": 10.832215,
+    "onset_s": 9.222215,
+    "onset_index": 91,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02513": {
+    "event_s": 11.196078,
+    "onset_s": 9.464078,
+    "onset_index": 96,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02291": {
+    "event_s": 11.105414,
+    "onset_s": 8.890414,
+    "onset_index": 84,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02311": {
+    "event_s": 11.066341000000001,
+    "onset_s": 9.899341000000003,
+    "onset_index": 99,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02584": {
+    "event_s": 10.699675000000001,
+    "onset_s": 8.866675000000003,
+    "onset_index": 88,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02600": {
+    "event_s": 10.673203,
+    "onset_s": 9.627202999999998,
+    "onset_index": 98,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02419": {
+    "event_s": 11.162735,
+    "onset_s": 10.084735,
+    "onset_index": 103,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02328": {
+    "event_s": 10.624467,
+    "onset_s": 8.991467,
+    "onset_index": 87,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02221": {
+    "event_s": 10.470199,
+    "onset_s": 8.685198999999999,
+    "onset_index": 88,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02365": {
+    "event_s": 10.637284000000001,
+    "onset_s": 9.030284000000002,
+    "onset_index": 91,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02234": {
+    "event_s": 10.6,
+    "onset_s": 9.266,
+    "onset_index": 92,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02474": {
+    "event_s": 11.166341000000001,
+    "onset_s": 7.166341000000001,
+    "onset_index": 71,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02438": {
+    "event_s": 10.699675000000001,
+    "onset_s": 8.299674999999999,
+    "onset_index": 83,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02191": {
+    "event_s": 11.499675,
+    "onset_s": 8.099675000000001,
+    "onset_index": 81,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02228": {
+    "event_s": 11.099234,
+    "onset_s": 9.480234,
+    "onset_index": 95,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02146": {
+    "event_s": 11.228758,
+    "onset_s": 9.921758,
+    "onset_index": 101,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02469": {
+    "event_s": 10.566341000000001,
+    "onset_s": 6.833341000000001,
+    "onset_index": 68,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02542": {
+    "event_s": 10.833008000000001,
+    "onset_s": 8.933008000000003,
+    "onset_index": 89,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02219": {
+    "event_s": 10.607843,
+    "onset_s": 8.222843,
+    "onset_index": 83,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02312": {
+    "event_s": 10.733008,
+    "onset_s": 8.199008000000001,
+    "onset_index": 81,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02212": {
+    "event_s": 10.766341,
+    "onset_s": 8.866340999999998,
+    "onset_index": 88,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02412": {
+    "event_s": 11.720543000000001,
+    "onset_s": 9.596543000000002,
+    "onset_index": 97,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02522": {
+    "event_s": 10.346405,
+    "onset_s": 8.288404999999997,
+    "onset_index": 85,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02501": {
+    "event_s": 10.999675,
+    "onset_s": 9.832675,
+    "onset_index": 98,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02252": {
+    "event_s": 10.47281,
+    "onset_s": 8.73381,
+    "onset_index": 88,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02494": {
+    "event_s": 11.099675000000001,
+    "onset_s": 9.532675000000001,
+    "onset_index": 95,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02297": {
+    "event_s": 11.066667,
+    "onset_s": 7.733666999999999,
+    "onset_index": 77,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02265": {
+    "event_s": 11.849673,
+    "onset_s": 9.562672999999997,
+    "onset_index": 97,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02163": {
+    "event_s": 9.566667,
+    "onset_s": 8.534667,
+    "onset_index": 85,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02594": {
+    "event_s": 10.736936,
+    "onset_s": 9.002936000000002,
+    "onset_index": 91,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02426": {
+    "event_s": 10.866667,
+    "onset_s": 9.366667,
+    "onset_index": 94,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02304": {
+    "event_s": 10.665080999999999,
+    "onset_s": 8.530080999999997,
+    "onset_index": 84,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02282": {
+    "event_s": 10.934641,
+    "onset_s": 7.995640999999997,
+    "onset_index": 82,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02332": {
+    "event_s": 10.566667,
+    "onset_s": 7.966667000000003,
+    "onset_index": 80,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02470": {
+    "event_s": 10.699675000000001,
+    "onset_s": 8.132675,
+    "onset_index": 81,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02566": {
+    "event_s": 10.727892,
+    "onset_s": 8.755892000000001,
+    "onset_index": 85,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02269": {
+    "event_s": 10.964803000000002,
+    "onset_s": 9.099803000000003,
+    "onset_index": 87,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02473": {
+    "event_s": 11.78365,
+    "onset_s": 9.888649999999997,
+    "onset_index": 100,
+    "event_index": 120,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02472": {
+    "event_s": 10.366667,
+    "onset_s": 7.935667,
+    "onset_index": 79,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02283": {
+    "event_s": 10.466341,
+    "onset_s": 8.666341,
+    "onset_index": 86,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02567": {
+    "event_s": 9.966667,
+    "onset_s": 7.934666999999999,
+    "onset_index": 79,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02394": {
+    "event_s": 11.2,
+    "onset_s": 9.8,
+    "onset_index": 98,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02366": {
+    "event_s": 10.050847,
+    "onset_s": 6.9398469999999985,
+    "onset_index": 68,
+    "event_index": 98,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02224": {
+    "event_s": 11.162735,
+    "onset_s": 6.870734999999998,
+    "onset_index": 70,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02243": {
+    "event_s": 10.933977,
+    "onset_s": 8.908977000000002,
+    "onset_index": 90,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02599": {
+    "event_s": 11.166667,
+    "onset_s": 8.433667,
+    "onset_index": 84,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02374": {
+    "event_s": 10.8,
+    "onset_s": 9.267000000000003,
+    "onset_index": 92,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02279": {
+    "event_s": 10.114754,
+    "onset_s": 9.000754000000002,
+    "onset_index": 91,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02166": {
+    "event_s": 9.633333,
+    "onset_s": 8.034333,
+    "onset_index": 81,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02280": {
+    "event_s": 10.433333,
+    "onset_s": 8.499333000000002,
+    "onset_index": 85,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02356": {
+    "event_s": 10.999675,
+    "onset_s": 9.999675,
+    "onset_index": 100,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02585": {
+    "event_s": 11.066341000000001,
+    "onset_s": 9.999341000000001,
+    "onset_index": 100,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02306": {
+    "event_s": 11.333333,
+    "onset_s": 10.133333,
+    "onset_index": 101,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02502": {
+    "event_s": 11.032974,
+    "onset_s": 8.092974000000002,
+    "onset_index": 80,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02342": {
+    "event_s": 11.589395000000001,
+    "onset_s": 9.661395,
+    "onset_index": 98,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02413": {
+    "event_s": 10.733333,
+    "onset_s": 8.933333,
+    "onset_index": 89,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02578": {
+    "event_s": 11.0,
+    "onset_s": 9.233999999999998,
+    "onset_index": 92,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02372": {
+    "event_s": 11.033008,
+    "onset_s": 9.533008,
+    "onset_index": 95,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02147": {
+    "event_s": 11.0,
+    "onset_s": 9.628,
+    "onset_index": 96,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02337": {
+    "event_s": 11.666667,
+    "onset_s": 9.233667,
+    "onset_index": 92,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02268": {
+    "event_s": 11.391493,
+    "onset_s": 10.281493000000001,
+    "onset_index": 104,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02465": {
+    "event_s": 10.466341,
+    "onset_s": 7.366341000000002,
+    "onset_index": 73,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02508": {
+    "event_s": 11.133008,
+    "onset_s": 9.633008,
+    "onset_index": 96,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02318": {
+    "event_s": 11.574324,
+    "onset_s": 7.1933240000000005,
+    "onset_index": 71,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02487": {
+    "event_s": 10.599675000000001,
+    "onset_s": 8.099675000000001,
+    "onset_index": 81,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02486": {
+    "event_s": 10.901297000000001,
+    "onset_s": 8.189297000000002,
+    "onset_index": 83,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02319": {
+    "event_s": 11.195415,
+    "onset_s": 9.465415,
+    "onset_index": 96,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02186": {
+    "event_s": 11.366667,
+    "onset_s": 9.600667,
+    "onset_index": 96,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02520": {
+    "event_s": 11.5,
+    "onset_s": 10.366,
+    "onset_index": 103,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02181": {
+    "event_s": 11.033445,
+    "onset_s": 7.896445,
+    "onset_index": 78,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02379": {
+    "event_s": 10.666667,
+    "onset_s": 9.099667,
+    "onset_index": 91,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02207": {
+    "event_s": 10.360269,
+    "onset_s": 7.969268999999999,
+    "onset_index": 79,
+    "event_index": 102,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02602": {
+    "event_s": 10.66443,
+    "onset_s": 9.274429999999999,
+    "onset_index": 92,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02561": {
+    "event_s": 11.06689,
+    "onset_s": 9.698890000000002,
+    "onset_index": 97,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02241": {
+    "event_s": 10.899675,
+    "onset_s": 9.366675000000003,
+    "onset_index": 93,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02202": {
+    "event_s": 11.235695,
+    "onset_s": 9.012695,
+    "onset_index": 88,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02274": {
+    "event_s": 10.81975,
+    "onset_s": 9.518750000000002,
+    "onset_index": 70,
+    "event_index": 80,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02334": {
+    "event_s": 11.163399,
+    "onset_s": 9.595398999999999,
+    "onset_index": 98,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02195": {
+    "event_s": 11.290554,
+    "onset_s": 9.547554000000002,
+    "onset_index": 87,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02231": {
+    "event_s": 11.131148,
+    "onset_s": 9.987148000000001,
+    "onset_index": 101,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02552": {
+    "event_s": 10.933993,
+    "onset_s": 9.219993,
+    "onset_index": 93,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02354": {
+    "event_s": 10.966341,
+    "onset_s": 8.999341000000001,
+    "onset_index": 90,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02439": {
+    "event_s": 11.401338,
+    "onset_s": 10.266338000000003,
+    "onset_index": 102,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02236": {
+    "event_s": 10.630295,
+    "onset_s": 8.956294999999997,
+    "onset_index": 89,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02536": {
+    "event_s": 10.867987,
+    "onset_s": 7.377986999999997,
+    "onset_index": 74,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02446": {
+    "event_s": 10.6,
+    "onset_s": 9.299999999999999,
+    "onset_index": 92,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02408": {
+    "event_s": 10.803922,
+    "onset_s": 9.529922,
+    "onset_index": 97,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02376": {
+    "event_s": 11.564516,
+    "onset_s": 10.095515999999998,
+    "onset_index": 84,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02378": {
+    "event_s": 10.79798,
+    "onset_s": 9.68998,
+    "onset_index": 95,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02409": {
+    "event_s": 11.033333,
+    "onset_s": 9.766333000000001,
+    "onset_index": 98,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02200": {
+    "event_s": 10.833008000000001,
+    "onset_s": 8.866008000000003,
+    "onset_index": 88,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02401": {
+    "event_s": 10.966341,
+    "onset_s": 9.666341,
+    "onset_index": 96,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02253": {
+    "event_s": 10.966667,
+    "onset_s": 9.766666999999996,
+    "onset_index": 98,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02335": {
+    "event_s": 10.933008000000001,
+    "onset_s": 8.433008000000001,
+    "onset_index": 84,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02391": {
+    "event_s": 11.261438,
+    "onset_s": 9.758438,
+    "onset_index": 99,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02414": {
+    "event_s": 11.996187,
+    "onset_s": 10.522187,
+    "onset_index": 102,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02148": {
+    "event_s": 11.228758,
+    "onset_s": 8.420757999999998,
+    "onset_index": 86,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02300": {
+    "event_s": 11.309278,
+    "onset_s": 9.456278000000003,
+    "onset_index": 91,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02509": {
+    "event_s": 10.566667,
+    "onset_s": 8.733667000000002,
+    "onset_index": 87,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02593": {
+    "event_s": 10.766341,
+    "onset_s": 9.066341000000001,
+    "onset_index": 90,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02276": {
+    "event_s": 11.1,
+    "onset_s": 9.366999999999999,
+    "onset_index": 93,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02383": {
+    "event_s": 11.133008,
+    "onset_s": 9.333008000000003,
+    "onset_index": 93,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02371": {
+    "event_s": 10.966667,
+    "onset_s": 9.633667,
+    "onset_index": 96,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02521": {
+    "event_s": 10.999336000000001,
+    "onset_s": 9.758336000000002,
+    "onset_index": 99,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02294": {
+    "event_s": 11.366667,
+    "onset_s": 10.299667,
+    "onset_index": 103,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02492": {
+    "event_s": 11.199675000000001,
+    "onset_s": 9.866675000000003,
+    "onset_index": 98,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02462": {
+    "event_s": 11.0,
+    "onset_s": 9.443000000000001,
+    "onset_index": 95,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02381": {
+    "event_s": 10.484127,
+    "onset_s": 8.784127000000002,
+    "onset_index": 74,
+    "event_index": 88,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02533": {
+    "event_s": 11.34119,
+    "onset_s": 9.46619,
+    "onset_index": 92,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02482": {
+    "event_s": 11.5,
+    "onset_s": 10.034000000000002,
+    "onset_index": 100,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02233": {
+    "event_s": 10.6,
+    "onset_s": 9.1,
+    "onset_index": 91,
+    "event_index": 106,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02338": {
+    "event_s": 11.033333,
+    "onset_s": 9.399333,
+    "onset_index": 94,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02511": {
+    "event_s": 11.133333,
+    "onset_s": 8.366333000000001,
+    "onset_index": 84,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02360": {
+    "event_s": 11.163399,
+    "onset_s": 9.498398999999997,
+    "onset_index": 97,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02257": {
+    "event_s": 10.866667,
+    "onset_s": 9.266666999999998,
+    "onset_index": 93,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02175": {
+    "event_s": 11.130719,
+    "onset_s": 9.169719,
+    "onset_index": 94,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02648": {
+    "event_s": 11.566341000000001,
+    "onset_s": 7.833341000000001,
+    "onset_index": 78,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02691": {
+    "event_s": 11.793454,
+    "onset_s": 9.768454000000002,
+    "onset_index": 99,
+    "event_index": 120,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02913": {
+    "event_s": 11.359811,
+    "onset_s": 8.365811,
+    "onset_index": 79,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02615": {
+    "event_s": 11.866341,
+    "onset_s": 9.416341000000001,
+    "onset_index": 94,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02683": {
+    "event_s": 11.033008,
+    "onset_s": 7.033008000000001,
+    "onset_index": 70,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02686": {
+    "event_s": 11.007428,
+    "onset_s": 8.784428000000002,
+    "onset_index": 89,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02903": {
+    "event_s": 11.399675,
+    "onset_s": 9.532675,
+    "onset_index": 95,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02869": {
+    "event_s": 11.398752,
+    "onset_s": 9.658751999999998,
+    "onset_index": 95,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02790": {
+    "event_s": 11.564696,
+    "onset_s": 9.996695999999998,
+    "onset_index": 102,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02781": {
+    "event_s": 11.767559,
+    "onset_s": 7.629558999999999,
+    "onset_index": 76,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02676": {
+    "event_s": 11.5,
+    "onset_s": 9.114,
+    "onset_index": 92,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02861": {
+    "event_s": 11.075163,
+    "onset_s": 9.539162999999999,
+    "onset_index": 97,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02873": {
+    "event_s": 11.6,
+    "onset_s": 9.200000000000001,
+    "onset_index": 92,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02697": {
+    "event_s": 11.699675000000001,
+    "onset_s": 9.066675000000002,
+    "onset_index": 90,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02608": {
+    "event_s": 11.133333,
+    "onset_s": 8.400333,
+    "onset_index": 84,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02708": {
+    "event_s": 11.466341,
+    "onset_s": 9.499341000000001,
+    "onset_index": 95,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02687": {
+    "event_s": 11.041820000000001,
+    "onset_s": 9.31182,
+    "onset_index": 94,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02887": {
+    "event_s": 11.0745,
+    "onset_s": 9.505500000000001,
+    "onset_index": 97,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02739": {
+    "event_s": 11.433008000000001,
+    "onset_s": 8.933008000000001,
+    "onset_index": 89,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02885": {
+    "event_s": 11.299675,
+    "onset_s": 9.766675000000003,
+    "onset_index": 97,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02717": {
+    "event_s": 12.184664,
+    "onset_s": 10.169664,
+    "onset_index": 98,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02782": {
+    "event_s": 12.134981,
+    "onset_s": 9.997981,
+    "onset_index": 99,
+    "event_index": 120,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02736": {
+    "event_s": 11.261092,
+    "onset_s": 9.386092,
+    "onset_index": 92,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02845": {
+    "event_s": 11.466667,
+    "onset_s": 8.133666999999997,
+    "onset_index": 81,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02895": {
+    "event_s": 11.630719,
+    "onset_s": 9.965718999999996,
+    "onset_index": 102,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02713": {
+    "event_s": 11.4,
+    "onset_s": 9.500000000000002,
+    "onset_index": 95,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02673": {
+    "event_s": 11.533008,
+    "onset_s": 7.233008000000002,
+    "onset_index": 72,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02837": {
+    "event_s": 11.934783,
+    "onset_s": 7.764782999999998,
+    "onset_index": 77,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02656": {
+    "event_s": 11.229956,
+    "onset_s": 8.838955999999998,
+    "onset_index": 87,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02705": {
+    "event_s": 11.633008,
+    "onset_s": 8.700008,
+    "onset_index": 86,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02667": {
+    "event_s": 11.899675,
+    "onset_s": 8.799675000000002,
+    "onset_index": 88,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02748": {
+    "event_s": 11.166341000000001,
+    "onset_s": 8.666341000000001,
+    "onset_index": 86,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02675": {
+    "event_s": 11.366341,
+    "onset_s": 9.832340999999998,
+    "onset_index": 98,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02709": {
+    "event_s": 11.833333,
+    "onset_s": 10.267332999999997,
+    "onset_index": 103,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02730": {
+    "event_s": 11.924173,
+    "onset_s": 9.964172999999999,
+    "onset_index": 101,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02852": {
+    "event_s": 11.226962,
+    "onset_s": 9.593962000000001,
+    "onset_index": 93,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02809": {
+    "event_s": 11.133333,
+    "onset_s": 9.366332999999997,
+    "onset_index": 94,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02702": {
+    "event_s": 11.46732,
+    "onset_s": 9.60632,
+    "onset_index": 98,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02794": {
+    "event_s": 11.266667,
+    "onset_s": 9.099666999999998,
+    "onset_index": 91,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02725": {
+    "event_s": 11.4,
+    "onset_s": 9.9,
+    "onset_index": 99,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02856": {
+    "event_s": 11.5,
+    "onset_s": 9.767,
+    "onset_index": 97,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02764": {
+    "event_s": 11.033333,
+    "onset_s": 8.033333,
+    "onset_index": 80,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02886": {
+    "event_s": 11.332776,
+    "onset_s": 9.028776000000002,
+    "onset_index": 89,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02613": {
+    "event_s": 11.265886,
+    "onset_s": 9.497886,
+    "onset_index": 95,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02700": {
+    "event_s": 11.198997,
+    "onset_s": 8.959997,
+    "onset_index": 89,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02864": {
+    "event_s": 12.199675000000001,
+    "onset_s": 10.566675000000002,
+    "onset_index": 105,
+    "event_index": 122,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02693": {
+    "event_s": 11.666341000000001,
+    "onset_s": 8.899341000000002,
+    "onset_index": 89,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02880": {
+    "event_s": 11.810824,
+    "onset_s": 9.945824000000002,
+    "onset_index": 95,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02818": {
+    "event_s": 11.840136000000001,
+    "onset_s": 9.868136000000002,
+    "onset_index": 96,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02644": {
+    "event_s": 11.140523,
+    "onset_s": 8.428523,
+    "onset_index": 86,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02899": {
+    "event_s": 11.0,
+    "onset_s": 8.400000000000002,
+    "onset_index": 84,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02847": {
+    "event_s": 11.761526,
+    "onset_s": 9.833525999999999,
+    "onset_index": 99,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02787": {
+    "event_s": 11.2,
+    "onset_s": 9.2,
+    "onset_index": 92,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02639": {
+    "event_s": 11.107179,
+    "onset_s": 9.179179,
+    "onset_index": 93,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02868": {
+    "event_s": 11.933008000000001,
+    "onset_s": 8.500008000000001,
+    "onset_index": 84,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02771": {
+    "event_s": 11.696721,
+    "onset_s": 9.735721000000002,
+    "onset_index": 99,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02844": {
+    "event_s": 11.433555,
+    "onset_s": 9.876555000000002,
+    "onset_index": 99,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02741": {
+    "event_s": 11.3,
+    "onset_s": 7.366999999999999,
+    "onset_index": 73,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02745": {
+    "event_s": 12.122951,
+    "onset_s": 9.213951000000002,
+    "onset_index": 93,
+    "event_index": 123,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02896": {
+    "event_s": 11.301587,
+    "onset_s": 9.601587,
+    "onset_index": 81,
+    "event_index": 95,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02915": {
+    "event_s": 11.266667,
+    "onset_s": 8.000666999999998,
+    "onset_index": 80,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02838": {
+    "event_s": 11.266341,
+    "onset_s": 9.733341000000003,
+    "onset_index": 97,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02776": {
+    "event_s": 11.366667,
+    "onset_s": 9.600667,
+    "onset_index": 96,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02749": {
+    "event_s": 11.633008,
+    "onset_s": 10.033007999999999,
+    "onset_index": 99,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02657": {
+    "event_s": 11.833333,
+    "onset_s": 9.933333000000001,
+    "onset_index": 99,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02891": {
+    "event_s": 11.266667,
+    "onset_s": 8.366667000000001,
+    "onset_index": 84,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02635": {
+    "event_s": 11.1,
+    "onset_s": 9.299999999999999,
+    "onset_index": 92,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02723": {
+    "event_s": 11.3,
+    "onset_s": 9.133,
+    "onset_index": 91,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02632": {
+    "event_s": 11.238562,
+    "onset_s": 9.735562,
+    "onset_index": 99,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02604": {
+    "event_s": 11.600334,
+    "onset_s": 8.626334,
+    "onset_index": 86,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02680": {
+    "event_s": 11.303258000000001,
+    "onset_s": 9.344258000000002,
+    "onset_index": 95,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02746": {
+    "event_s": 11.142857,
+    "onset_s": 7.651857,
+    "onset_index": 71,
+    "event_index": 103,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02647": {
+    "event_s": 11.866667,
+    "onset_s": 8.466667000000001,
+    "onset_index": 85,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02751": {
+    "event_s": 12.022876,
+    "onset_s": 8.494876000000001,
+    "onset_index": 87,
+    "event_index": 123,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02830": {
+    "event_s": 11.566667,
+    "onset_s": 9.166666999999999,
+    "onset_index": 92,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02801": {
+    "event_s": 11.631148,
+    "onset_s": 9.897148000000001,
+    "onset_index": 100,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02743": {
+    "event_s": 11.600334,
+    "onset_s": 7.523333999999998,
+    "onset_index": 75,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02762": {
+    "event_s": 11.399675,
+    "onset_s": 8.865675000000001,
+    "onset_index": 88,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02870": {
+    "event_s": 9.966667,
+    "onset_s": 7.934666999999999,
+    "onset_index": 79,
+    "event_index": 100,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02769": {
+    "event_s": 11.466667,
+    "onset_s": 7.666667000000002,
+    "onset_index": 77,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02747": {
+    "event_s": 11.533445,
+    "onset_s": 8.797445,
+    "onset_index": 87,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02780": {
+    "event_s": 11.366221,
+    "onset_s": 9.631221,
+    "onset_index": 96,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02658": {
+    "event_s": 11.871622,
+    "onset_s": 7.957622000000002,
+    "onset_index": 79,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02692": {
+    "event_s": 11.199675000000001,
+    "onset_s": 8.466675,
+    "onset_index": 84,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02767": {
+    "event_s": 11.959016,
+    "onset_s": 9.782016,
+    "onset_index": 100,
+    "event_index": 122,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02610": {
+    "event_s": 11.46732,
+    "onset_s": 9.735320000000002,
+    "onset_index": 99,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02754": {
+    "event_s": 11.299675,
+    "onset_s": 9.599675000000001,
+    "onset_index": 96,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02765": {
+    "event_s": 11.198526,
+    "onset_s": 8.258526000000002,
+    "onset_index": 82,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02627": {
+    "event_s": 11.699675000000001,
+    "onset_s": 9.132675,
+    "onset_index": 91,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02620": {
+    "event_s": 11.630719,
+    "onset_s": 9.669719,
+    "onset_index": 99,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02888": {
+    "event_s": 11.866667,
+    "onset_s": 9.899667,
+    "onset_index": 99,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02812": {
+    "event_s": 11.733333,
+    "onset_s": 10.200332999999999,
+    "onset_index": 102,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02695": {
+    "event_s": 11.891493,
+    "onset_s": 9.996492999999997,
+    "onset_index": 101,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02889": {
+    "event_s": 11.007428,
+    "onset_s": 8.651428000000003,
+    "onset_index": 88,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02849": {
+    "event_s": 11.891493,
+    "onset_s": 9.506492999999999,
+    "onset_index": 96,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02807": {
+    "event_s": 11.666341000000001,
+    "onset_s": 10.133341,
+    "onset_index": 101,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02850": {
+    "event_s": 11.599234,
+    "onset_s": 9.980234,
+    "onset_index": 100,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02703": {
+    "event_s": 11.735695,
+    "onset_s": 9.512695,
+    "onset_index": 93,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02638": {
+    "event_s": 11.466341,
+    "onset_s": 9.832341,
+    "onset_index": 98,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02678": {
+    "event_s": 11.7,
+    "onset_s": 9.099999999999998,
+    "onset_index": 90,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02792": {
+    "event_s": 11.892674000000001,
+    "onset_s": 9.768674000000003,
+    "onset_index": 99,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02655": {
+    "event_s": 9.633333,
+    "onset_s": 8.034333,
+    "onset_index": 81,
+    "event_index": 96,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02628": {
+    "event_s": 12.166667,
+    "onset_s": 10.366667,
+    "onset_index": 104,
+    "event_index": 122,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02783": {
+    "event_s": 11.099675000000001,
+    "onset_s": 8.233675000000002,
+    "onset_index": 82,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02831": {
+    "event_s": 11.466667,
+    "onset_s": 9.966667,
+    "onset_index": 100,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02758": {
+    "event_s": 12.054892,
+    "onset_s": 9.996891999999997,
+    "onset_index": 102,
+    "event_index": 123,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02779": {
+    "event_s": 11.866341,
+    "onset_s": 10.166341000000001,
+    "onset_index": 101,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02854": {
+    "event_s": 11.163852,
+    "onset_s": 9.489851999999997,
+    "onset_index": 94,
+    "event_index": 110,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02876": {
+    "event_s": 11.6636,
+    "onset_s": 9.9246,
+    "onset_index": 100,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02820": {
+    "event_s": 11.833008000000001,
+    "onset_s": 10.033008000000004,
+    "onset_index": 100,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02912": {
+    "event_s": 11.333008000000001,
+    "onset_s": 9.333008000000001,
+    "onset_index": 93,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02616": {
+    "event_s": 10.933008000000001,
+    "onset_s": 9.100008000000003,
+    "onset_index": 90,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02836": {
+    "event_s": 11.063282,
+    "onset_s": 9.320282,
+    "onset_index": 85,
+    "event_index": 101,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02666": {
+    "event_s": 11.399675,
+    "onset_s": 9.065675,
+    "onset_index": 90,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02814": {
+    "event_s": 11.922535,
+    "onset_s": 9.707535,
+    "onset_index": 92,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02760": {
+    "event_s": 12.266667,
+    "onset_s": 10.766667,
+    "onset_index": 108,
+    "event_index": 123,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02671": {
+    "event_s": 11.801003,
+    "onset_s": 9.662003,
+    "onset_index": 96,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02866": {
+    "event_s": 11.733642999999999,
+    "onset_s": 8.596642999999998,
+    "onset_index": 85,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02897": {
+    "event_s": 11.8,
+    "onset_s": 10.3,
+    "onset_index": 103,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02712": {
+    "event_s": 11.060019,
+    "onset_s": 6.679019,
+    "onset_index": 65,
+    "event_index": 108,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02674": {
+    "event_s": 12.066341000000001,
+    "onset_s": 10.499341000000001,
+    "onset_index": 105,
+    "event_index": 120,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02650": {
+    "event_s": 11.59781,
+    "onset_s": 9.990810000000002,
+    "onset_index": 100,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02682": {
+    "event_s": 11.767559,
+    "onset_s": 9.229559,
+    "onset_index": 92,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02793": {
+    "event_s": 11.933008000000001,
+    "onset_s": 9.933008000000001,
+    "onset_index": 99,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02828": {
+    "event_s": 11.533008,
+    "onset_s": 9.633007999999998,
+    "onset_index": 95,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02669": {
+    "event_s": 11.1,
+    "onset_s": 9.500000000000002,
+    "onset_index": 95,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02799": {
+    "event_s": 11.063181,
+    "onset_s": 9.453181,
+    "onset_index": 93,
+    "event_index": 109,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02612": {
+    "event_s": 11.533333,
+    "onset_s": 9.599333000000003,
+    "onset_index": 96,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02642": {
+    "event_s": 12.133333,
+    "onset_s": 8.666333,
+    "onset_index": 87,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02816": {
+    "event_s": 12.109242,
+    "onset_s": 8.998242,
+    "onset_index": 88,
+    "event_index": 118,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02788": {
+    "event_s": 11.433333,
+    "onset_s": 8.299332999999999,
+    "onset_index": 83,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02833": {
+    "event_s": 11.5,
+    "onset_s": 9.212999999999997,
+    "onset_index": 93,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02661": {
+    "event_s": 11.399675,
+    "onset_s": 9.533675,
+    "onset_index": 95,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02908": {
+    "event_s": 11.366667,
+    "onset_s": 9.833667000000002,
+    "onset_index": 98,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02817": {
+    "event_s": 11.466997,
+    "onset_s": 9.752997,
+    "onset_index": 98,
+    "event_index": 116,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02875": {
+    "event_s": 11.859477,
+    "onset_s": 9.801477,
+    "onset_index": 100,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02626": {
+    "event_s": 11.301325,
+    "onset_s": 9.516325,
+    "onset_index": 96,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02722": {
+    "event_s": 11.268977,
+    "onset_s": 7.778976999999998,
+    "onset_index": 78,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02629": {
+    "event_s": 11.924173,
+    "onset_s": 7.632172999999998,
+    "onset_index": 77,
+    "event_index": 121,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02744": {
+    "event_s": 11.266341,
+    "onset_s": 7.8663409999999985,
+    "onset_index": 78,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02839": {
+    "event_s": 11.767559,
+    "onset_s": 9.632558999999999,
+    "onset_index": 96,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02914": {
+    "event_s": 11.699675000000001,
+    "onset_s": 9.933675,
+    "onset_index": 99,
+    "event_index": 117,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02840": {
+    "event_s": 11.320731,
+    "onset_s": 9.750731000000004,
+    "onset_index": 91,
+    "event_index": 105,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02677": {
+    "event_s": 11.205882,
+    "onset_s": 8.397882,
+    "onset_index": 85,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02651": {
+    "event_s": 12.533008,
+    "onset_s": 10.966008,
+    "onset_index": 109,
+    "event_index": 125,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02835": {
+    "event_s": 11.433008000000001,
+    "onset_s": 9.000008000000001,
+    "onset_index": 89,
+    "event_index": 114,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02804": {
+    "event_s": 11.271242,
+    "onset_s": 8.332241999999999,
+    "onset_index": 85,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02800": {
+    "event_s": 11.499675,
+    "onset_s": 9.932675,
+    "onset_index": 99,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02786": {
+    "event_s": 11.366341,
+    "onset_s": 9.833341000000003,
+    "onset_index": 98,
+    "event_index": 113,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02636": {
+    "event_s": 11.899675,
+    "onset_s": 10.066675000000002,
+    "onset_index": 100,
+    "event_index": 119,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02890": {
+    "event_s": 11.566341000000001,
+    "onset_s": 9.499341000000001,
+    "onset_index": 95,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02855": {
+    "event_s": 10.366667,
+    "onset_s": 7.935667,
+    "onset_index": 79,
+    "event_index": 104,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02806": {
+    "event_s": 11.121617,
+    "onset_s": 9.268617000000003,
+    "onset_index": 89,
+    "event_index": 107,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02911": {
+    "event_s": 11.133333,
+    "onset_s": 9.233333000000002,
+    "onset_index": 92,
+    "event_index": 111,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02711": {
+    "event_s": 11.233333,
+    "onset_s": 9.733333,
+    "onset_index": 97,
+    "event_index": 112,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  },
+  "02810": {
+    "event_s": 11.466667,
+    "onset_s": 9.966667,
+    "onset_index": 100,
+    "event_index": 115,
+    "mapping_verified": false,
+    "source": "released metadata + probed stream boundary"
+  }
+}

@@ -1,0 +1,21 @@
+test_author_losses_and_gradients (__main__.ReproductionTests) ... ok
+test_effective_batch_flush (__main__.ReproductionTests) ... ok
+test_native_jpeg_decode (__main__.ReproductionTests) ... 10/30 11:37:50 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+10/30 11:37:50 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+ok
+test_official_metric_parity (__main__.ReproductionTests) ... ok
+test_original_model_forward_and_backward (__main__.ReproductionTests) ... ok
+test_published_preprocessing (__main__.ReproductionTests) ... ok
+test_published_sampler (__main__.ReproductionTests) ... ok
+test_report_pipeline (__main__.ReproductionTests) ... SYNTHETIC metric self-check from sample_submission.csv; NOT trained model scores.
+mAP (Public): 0.841203
+mAP (Private): 0.861791
+
+Reports saved. Numerical comparisons are labeled provisional, not automatic paper reproduction claims.
+ok
+test_resume_artifact_guard (__main__.ReproductionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.369s
+
+OK

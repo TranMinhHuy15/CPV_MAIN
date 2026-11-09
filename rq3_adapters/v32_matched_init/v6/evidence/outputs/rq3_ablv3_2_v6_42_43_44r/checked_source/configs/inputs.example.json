@@ -1,0 +1,11 @@
+{
+  "data_root": "/kaggle/input/YOUR_NEXAR_DATASET",
+  "out_root": "/kaggle/working/rq3_h7_modules_v1",
+  "h7_runs": {
+    "42": "/kaggle/input/YOUR_H7_RESULTS/medium_h7/seed_42/run",
+    "43": "/kaggle/input/YOUR_H7_RESULTS/medium_h7/seed_43/run",
+    "44": "/kaggle/input/YOUR_H7_RESULTS/medium_h7/seed_44/run"
+  },
+  "arms": ["m1", "m1_m2", "m1_m3", "full"],
+  "encode_chunk": 2
+}

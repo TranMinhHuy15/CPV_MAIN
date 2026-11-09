@@ -1,0 +1,35 @@
+{
+  "schema": "v6-verified-artifact-seal-v1",
+  "seed": 44,
+  "files": {
+    "validation_metrics.json": "17f313c15330dcb987f22602974bf1746d13892aa16c995774e76ba68d5eb258",
+    "validation_predictions.json": "5a1bf54b81eb3f2e6a4b6f0d56a0487e06cbd8e0f66cdb23335271b47b0bb03b",
+    "official_test_metrics.json": "f15abed1318cda61e72d0bef58b165561fff1231884ff0ba8f1a8721c46eeb45",
+    "evaluation_notes.json": "1e0e2abf61eedefbddeebfd5ff9e406bd1a734537defe118907c05ab967747de",
+    "test_predictions.json": "5f5739c19382333468a469db361ca0f732fb4c2b967f4ddbdb9d4cb01d34105c",
+    "submission.csv": "ba9c0bd1fb57a9d2821f4ff405b2a478550cd78f2d4d639a0fdecf8e5f200f15",
+    "run_manifest.json": "ec683986156746be8a807ab89893b8a931fb1eee3e2e783d63d4237f10b1c347",
+    "training_status.json": "bc0da445896fd9c01589270a046d888f42392d1a8878bf16f77a640398d713bf",
+    "validation_history.jsonl": "10cf2598ec10bf482cb002ed55c79cb1a3942eb0de27468ed38a6017c5390673",
+    "best_mAUC@_epoch_35.pth": "5c0e817995491932240f7c2533423b61d47f4d9b5af96e34b65978594b901a17",
+    "resume_latest.pth": "b6249e7c64151568bdff2756dab03bda57c07af72cd302e0735c6b67a16d354c",
+    "rng_epoch50_rank0.pth": "0755dc74531eda9fcbb985a8864dd3cea4428e2544fba04f59fd0d06b0db35cb",
+    "safe_resume_snapshot.zip": "fce559f2caf7057b835776ff8355e7e9b99b54b1b845ee137658cb74dc1bfa75"
+  },
+  "measured": {
+    "Public": {
+      "mAP": 0.8152801254710385,
+      "mAUC": 0.8390577660560473
+    },
+    "Private": {
+      "mAP": 0.8612736928651716,
+      "mAUC": 0.867699335081689
+    },
+    "Combined": {
+      "mAP": 0.8365754086644325,
+      "mAUC": 0.8534406486310697
+    }
+  },
+  "inference_rerun": true,
+  "scope": "stored prediction arithmetic and artifact integrity; GPU inference only if explicitly rerun"
+}

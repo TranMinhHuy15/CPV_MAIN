@@ -1,0 +1,21 @@
+{
+  "annotations.csv": "0cc944e13e11cdeed50036c2a28b190fb675173aed964b66c5c713ca87989d50",
+  "copy.py": "a0014d868ca12a50b19e4f8c50606d272b45e9f5cc8fc2b2fc1cb1789eb0452a",
+  "count.py": "d5fae5cbc1d477857018c5a86ac0137ec14ffd3f84f8bc464dd2777937e22609",
+  "DATA_PIPELINE.md": "75a285d89a453116c7f32ee15f75e59216470ce3b490afccf59c42e8eb8f7af0",
+  "duplicate.py": "d1a4aace2e72fb474daf9de7ef655a7cf610478d1a72701ff375ff7d781f5af8",
+  "extract_raw_frames.py": "825b6a3c54418a50b3019b7c8f984a6469bf7e9a6edcbb95076f5251e185c1c4",
+  "generate_nexar_splits.py": "c665ded01c04046c3f9980c53d2e79e86693f11b96efc27c8d45d1d72f4fb8a6",
+  "generate_nexar_val_references.py": "f1dde2ccb791642007706c7ec6d2e28861f3c09d09746335cbeca146214a5554",
+  "index.csv": "93cf949e27c4e6d9bb1b9ed13c97e6928ad9a2fa6fb0bd96f986b63433b13902",
+  "match.py": "86af24b09fc252d4db3dd137a76c61ba7ddd86a173482680e00c20f46f03487d",
+  "nexar_test_annotations.csv": "ab0d1a24ce9fd51f4560b88ef6c6aeff5063611af0e0f89511160dfc96dc0ea0",
+  "nexar_train_annotations.csv": "7e114a82115631ae6a91603740daadff24c63ef14a35750eb543bce78d4fa518",
+  "nexar_val_annotations.csv": "858245dc1e83871cbeb4977660067e8a4c16a857776774a3df96fe191767a0b1",
+  "nexar_val_references.csv": "57c3aec1bcf6aece39d3763561c86c7d1d68dff0fa6462aa0a1c22ae57417336",
+  "sample_submission.csv": "c64ecd83cac390e5cf3de8fe835d7c1f85c97bfdf952d8eeada965e5178a336f",
+  "split.py": "d35ad890b6355913658d34341407773c81a7d09a772db481f0f4ec9cf20ed7dd",
+  "splits.py": "8463618fd8c7d90b2ada4f0eaea49a894ea812e64bec8f9951dd6edd1c120d4e",
+  "test.csv": "128d561408be476fa144f30e0b6458d622d33df1f8f581fb2b6c47e3086e8db9",
+  "train.csv": "c0ba110b84e154b83885da39c55035e16b1626cc8d3398db7d5aa1620ec6d200"
+}

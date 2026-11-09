@@ -1,0 +1,69 @@
+test_a7_and_g3_reproduce_source_outputs_and_gradients (test_ablation_modules.Adapter.test_a7_and_g3_reproduce_source_outputs_and_gradients) ... ok
+test_c7_never_reads_other_snippets (test_ablation_modules.Adapter.test_c7_never_reads_other_snippets) ... ok
+test_each_window_is_a_fresh_lstm_pass (test_ablation_modules.Adapter.test_each_window_is_a_fresh_lstm_pass) ... ok
+test_every_mode_starts_exactly_at_the_base (test_ablation_modules.Adapter.test_every_mode_starts_exactly_at_the_base) ... ok
+test_exact_window_lengths_and_causality (test_ablation_modules.Adapter.test_exact_window_lengths_and_causality) ... C:\Users\MSI\Documents\ChatGPT\CPV\work\ablv3_independent_review\recheck_v32\RQ3_ABLV3_1_RECOVERY_FIXED_20261107\RQ3_ABLV3_V6\tests\test_ablation_modules.py:109: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:836.)
+  self.assertGreater(float((a(y, z)[0][:, t] - out[:, t]).abs().max()), 1e-7, (mode, 'inside'))
+ok
+test_input_validation_rejects_sentinel_and_nonfinite (test_ablation_modules.Adapter.test_input_validation_rejects_sentinel_and_nonfinite) ... ok
+test_parameter_counts_real_size_and_no_dead_weights (test_ablation_modules.Adapter.test_parameter_counts_real_size_and_no_dead_weights) ... ok
+test_r7_is_last_lstm_state (test_ablation_modules.Adapter.test_r7_is_last_lstm_state) ... ok
+test_same_seed_initial_state_matches_source_m1_and_m1_m2 (test_ablation_modules.Adapter.test_same_seed_initial_state_matches_source_m1_and_m1_m2) ... ok
+test_three_updates_output_first_then_recurrent_gradient (test_ablation_modules.Adapter.test_three_updates_output_first_then_recurrent_gradient) ... ok
+test_u3_mean_and_g3_zero_fusion_equals_u3 (test_ablation_modules.Adapter.test_u3_mean_and_g3_zero_fusion_equals_u3) ... ok
+test_compaction_preserves_exact_adapter_and_rejects_changed_frozen_weights (test_artifacts_reports.ArtifactsReports.test_compaction_preserves_exact_adapter_and_rejects_changed_frozen_weights) ... ok
+test_pairwise_tables_keep_each_seed_and_invalidate_stale_completion (test_artifacts_reports.ArtifactsReports.test_pairwise_tables_keep_each_seed_and_invalidate_stale_completion) ... ok
+test_cached_frozen_logits_match_forward_and_adapter_gradients (test_model_routes.ModelRoutes.test_cached_frozen_logits_match_forward_and_adapter_gradients) ... ok
+test_preprocessor_accepts_pseudo_collate_dict_and_list (test_model_routes.ModelRoutes.test_preprocessor_accepts_pseudo_collate_dict_and_list) ... ok
+test_reference_h13_uses_actual_thirteen_past_tokens (test_model_routes.ModelRoutes.test_reference_h13_uses_actual_thirteen_past_tokens) ... ok
+test_teacher_cache_rejects_wrong_baseline_missing_batch_parity_and_corruption (test_model_routes.ModelRoutes.test_teacher_cache_rejects_wrong_baseline_missing_batch_parity_and_corruption) ... ok
+test_one_v6_encoder_five_heads_blind_resume_corruption (test_paired_capture.PairCapture.test_one_v6_encoder_five_heads_blind_resume_corruption) ... ok
+test_config_requires_v6_runs_for_all_seeds_and_no_overlap (test_policy.Policy.test_config_requires_v6_runs_for_all_seeds_and_no_overlap) ... ok
+test_eta_units_and_json_stable_binding (test_policy.Policy.test_eta_units_and_json_stable_binding) ... ok
+test_failed_log_write_stops_owned_subprocess (test_policy.Policy.test_failed_log_write_stops_owned_subprocess) ... ok
+test_prior_study_must_use_same_v6_and_config (test_policy.Policy.test_prior_study_must_use_same_v6_and_config) ... ok
+test_single_predeclared_candidate_and_arms (test_policy.Policy.test_single_predeclared_candidate_and_arms) ... ok
+test_source_syntax_python38 (test_policy.Policy.test_source_syntax_python38) ... ok
+test_v6_baseline_route (test_policy.Policy.test_v6_baseline_route) ... ok
+test_cache_support_is_published_only_after_staging (test_recheck.RecheckTests.test_cache_support_is_published_only_after_staging) ... ok
+test_linux_interrupt_signals_group_and_waits (test_recheck.RecheckTests.test_linux_interrupt_signals_group_and_waits) ... ok
+test_linux_nested_worker_inherits_launcher_process_group (test_recheck.RecheckTests.test_linux_nested_worker_inherits_launcher_process_group) ... ok
+test_partial_shared_source_does_not_unlock_test (test_recheck.RecheckTests.test_partial_shared_source_does_not_unlock_test) ... ok
+test_staged_validation_history_survives_failed_replace_and_retries (test_recheck.RecheckTests.test_staged_validation_history_survives_failed_replace_and_retries) ... ok
+test_incomplete_first_epoch_archived_and_recovery_can_continue (test_recovery.RecoveryTests.test_incomplete_first_epoch_archived_and_recovery_can_continue) ... ok
+test_interrupted_diagnostics_replace_preserves_previous_records (test_recovery.RecoveryTests.test_interrupted_diagnostics_replace_preserves_previous_records) ... ok
+test_invalid_borrowed_cache_falls_back_and_pins_fresh_cache (test_recovery.RecoveryTests.test_invalid_borrowed_cache_falls_back_and_pins_fresh_cache) ... ok
+test_low_disk_stops_before_writing_checkpoint (test_recovery.RecoveryTests.test_low_disk_stops_before_writing_checkpoint) ... ok
+test_missing_later_snapshot_is_not_silently_restarted (test_recovery.RecoveryTests.test_missing_later_snapshot_is_not_silently_restarted) ... ok
+test_pilot_checks_recovered_epoch_instead_of_uncommitted_status (test_recovery.RecoveryTests.test_pilot_checks_recovered_epoch_instead_of_uncommitted_status) ... ok
+test_preflight_retry_only_allows_source_staging (test_recovery.RecoveryTests.test_preflight_retry_only_allows_source_staging) ... ok
+test_builder_is_rng_isolated_and_independent_of_ambient_random_consumption (test_v3_controls.V3Controls.test_builder_is_rng_isolated_and_independent_of_ambient_random_consumption) ... ok
+test_cross_base_rejects_analysis_code_changed_after_bootstrap (test_v3_controls.V3Controls.test_cross_base_rejects_analysis_code_changed_after_bootstrap) ... ok
+test_diagnostic_hook_precedes_commit_and_survives_postcommit_interruption (test_v3_controls.V3Controls.test_diagnostic_hook_precedes_commit_and_survives_postcommit_interruption) ... ok
+test_diagnostics_complete_epoch_inventory_and_duplicates (test_v3_controls.V3Controls.test_diagnostics_complete_epoch_inventory_and_duplicates) ... ok
+test_eta_caller_handles_coverage_zero_through_six (test_v3_controls.V3Controls.test_eta_caller_handles_coverage_zero_through_six) ... ok
+test_fast_bootstrap_ties_duplicates_equal_reference_metrics (test_v3_controls.V3Controls.test_fast_bootstrap_ties_duplicates_equal_reference_metrics) ... ok
+test_integrated_six_heads_share_init_and_leave_same_training_rng (test_v3_controls.V3Controls.test_integrated_six_heads_share_init_and_leave_same_training_rng) ... ok
+test_optional_prior_and_config_maker_preserve_v2 (test_v3_controls.V3Controls.test_optional_prior_and_config_maker_preserve_v2) ... ok
+test_pilot_supervisor_stops_at_two_then_resumes_to_three (test_v3_controls.V3Controls.test_pilot_supervisor_stops_at_two_then_resumes_to_three) ... ok
+test_plan_code_mutation_and_old_output_rejected (test_v3_controls.V3Controls.test_plan_code_mutation_and_old_output_rejected) ... ok
+test_training_dropout_rng_consumption_same_across_six_heads (test_v3_controls.V3Controls.test_training_dropout_rng_consumption_same_across_six_heads) ... ok
+test_validation_epoch_one_samples_and_resume_trim_are_aligned (test_v3_controls.V3Controls.test_validation_epoch_one_samples_and_resume_trim_are_aligned) ... ok
+test_worker_config_retention_and_prepared_source_are_bound (test_v3_controls.V3Controls.test_worker_config_retention_and_prepared_source_are_bound) ... ok
+test_contrast_plan_roles (test_v6_routes.Bootstrap.test_contrast_plan_roles) ... ok
+test_real_size_parameter_counts (test_v6_routes.Bootstrap.test_real_size_parameter_counts) ... ok
+test_adapter_export_roundtrip_for_every_arm (test_v6_routes.V6Routes.test_adapter_export_roundtrip_for_every_arm) ... ok
+test_baseline_equals_author_v6_head_math (test_v6_routes.V6Routes.test_baseline_equals_author_v6_head_math)
+V6 AnticipationHead: avg_pool2d(H,W) -> mean(T) -> dropout(eval) -> fc. Our cache keeps the all-axis mean. ... ok
+test_teacher_cache_path_matches_and_only_adapter_gets_gradients (test_v6_routes.V6Routes.test_teacher_cache_path_matches_and_only_adapter_gets_gradients) ... ok
+test_v6_head_has_no_base_recurrence_and_builds_the_four_arms (test_v6_routes.V6Routes.test_v6_head_has_no_base_recurrence_and_builds_the_four_arms) ... ok
+V6 PARITY seed=44 validation 300x30: max|dp|=0.00e+00 mean|dp|=0.00e+00 -> PASS
+V6 PARITY seed=44 validation 300x30: max|dp|=9.34e-02 mean|dp|=1.04e-05 -> FAIL
+test_validation_parity_gate (test_v6_routes.V6Routes.test_validation_parity_gate) ... ok
+test_zero_initialised_modules_start_exactly_at_v6 (test_v6_routes.V6Routes.test_zero_initialised_modules_start_exactly_at_v6) ... ok
+
+----------------------------------------------------------------------
+Ran 58 tests in 68.327s
+
+OK

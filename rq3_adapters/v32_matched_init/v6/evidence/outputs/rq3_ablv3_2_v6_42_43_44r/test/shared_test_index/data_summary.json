@@ -1,0 +1,7 @@
+{
+  "test_videos": 1344,
+  "positive_videos": 672,
+  "onset_at_or_after_cut_count": 23,
+  "test_labels_in_model_input": false,
+  "mapping_verified_against_author_evaluator": false
+}

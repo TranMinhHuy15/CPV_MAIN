@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "contract": {
+    "protocol": "top-v2-v6matched-batch2-eff16-amp-single-gpu-3seed-terminal-fixed-v2",
+    "source_commit": "772c6e57e664ecde83f9d92d0641e1cba99abfb7",
+    "data_revision": "7535d0656dac31d7da2846913bb69c6331d2a70a",
+    "seed": 42,
+    "epochs": 50,
+    "batch_per_gpu": 2,
+    "effective_batch_size": 16,
+    "world_size": 1,
+    "amp": true,
+    "precision": "train AMP float16, published losses FP32, validation/test FP32; dynamic scale starts 1024",
+    "loss": "TOP_released_decoder_20_horizon_BCE_pos_weight10",
+    "preprocessing": "V6_matched_native-frame-opencv-jpeg",
+    "selection": "V6_full_validation_mAUC@",
+    "optimizer": "SGD_lr0.002_momentum0.9_wd0.0001_ms20_40",
+    "preprocessing_archive_sha256": "5626cf3268f6223ff4f571db17ca433cbcc687a0991ff1934cb9106c314e169b",
+    "annotations_sha256": "0cc944e13e11cdeed50036c2a28b190fb675173aed964b66c5c713ca87989d50",
+    "runtime_contract": {
+      "python": "3.8.5",
+      "torch": "2.1.0+cu118",
+      "torchvision": "0.16.0+cu118",
+      "cuda": "11.8",
+      "mmengine": "0.10.7",
+      "mmcv": "2.2.0",
+      "mmaction2": "1.2.0-author-source",
+      "mmcv_wheel_sha256": "9733cbc2cf656e2d64780c93286847740c03c5da3c85ce531ae779d81f01c93c",
+      "installed_packages": {
+        "wheel": "0.45.1",
+        "pip": "25.0.1",
+        "setuptools": "75.3.4",
+        "mpmath": "1.3.0",
+        "urllib3": "1.26.13",
+        "typing_extensions": "4.13.2",
+        "sympy": "1.13.3",
+        "pillow": "10.4.0",
+        "numpy": "1.24.4",
+        "networkx": "3.1",
+        "markupsafe": "2.1.5",
+        "idna": "3.4",
+        "fsspec": "2025.3.0",
+        "filelock": "3.16.1",
+        "charset-normalizer": "2.1.1",
+        "certifi": "2022.12.7",
+        "triton": "2.1.0",
+        "requests": "2.28.1",
+        "jinja2": "3.1.6",
+        "torch": "2.1.0+cu118",
+        "torchvision": "0.16.0+cu118",
+        "pytz": "2026.5",
+        "addict": "2.4.0",
+        "zipp": "3.20.2",
+        "wcwidth": "0.2.14",
+        "tzdata": "2026.5",
+        "tomli": "2.5.0",
+        "threadpoolctl": "3.5.0",
+        "termcolor": "2.4.0",
+        "six": "1.17.0",
+        "scipy": "1.10.1",
+        "pyyaml": "6.0.3",
+        "pyparsing": "3.1.4",
+        "pygments": "2.19.2",
+        "platformdirs": "4.3.6",
+        "packaging": "26.2",
+        "opencv-python": "4.8.1.78",
+        "mdurl": "0.1.2",
+        "kiwisolver": "1.4.7",
+        "joblib": "1.4.2",
+        "fonttools": "4.57.0",
+        "einops": "0.8.0",
+        "cycler": "0.12.1",
+        "contourpy": "1.1.1",
+        "scikit-learn": "1.3.2",
+        "python-dateutil": "2.9.0.post0",
+        "markdown-it-py": "3.0.0",
+        "importlib_resources": "6.4.5",
+        "importlib_metadata": "8.5.0",
+        "ftfy": "6.2.3",
+        "yapf": "0.40.2",
+        "rich": "14.3.4",
+        "pandas": "2.0.3",
+        "matplotlib": "3.7.5",
+        "seaborn": "0.13.2",
+        "mmengine": "0.10.7",
+        "mmcv": "2.2.0"
+      },
+      "requirements_sha256": "03c2fde11dee07b4f74444e6db047c003f5644850dc8be1744e04ea2a7018a8a"
+    },
+    "launcher_sha256": {
+      "repro.py": "c81dd304c9306c9197e5c9631f6f899d3572ee665ac8fb87890619548c582645",
+      "worker.py": "c6b076384b2a36f3f8cad647e05d9d1864f9353374e7a9f4482a17a5d875f16c",
+      "kaggle_adapter.py": "cfbf4cb5cf6dc69da6a4d0eeea474897b5d0213c0ed8755bd9688cf70029cc1c",
+      "evaluate.py": "cfb29535396b744e0aa62bbaeb54f8ca71736881ffba57ab5488bbab8e8dcd92",
+      "amp_adapter.py": "a098c79005bd8acf60e4bf170ae034a530906e6a58d108a49ef7a39f6e64bb6e",
+      "run_vast.py": "c9a8666679108bf904fd64b4609cbea8eef437f42ddb33e9d5edc038677a33ca",
+      "run_three_seeds.py": "73d00381788530ba5e65644277e5c98becb7690e73cec5c5868b5d4b3b9f1aed",
+      "process_control.py": "d4c8cc899c8cb9f0a907f34ca87ae0170de2a02dd7b3a5247b415fe7316060a3",
+      "checkpoint_safety.py": "93a12a421c8dd3dc26774529e4c984745a098fb88a9fe4c2edab6ecbe0a33b45",
+      "v6_reference.py": "a5226d57d150240cf133d872b8b99f826cdeff424dab25a48fb21f469c2d1bb3",
+      "v6_profile.json": "3876e45330b94b2f7d7fec6e76ae9650b252c72cc3eb092fcec9610ae37176c4"
+    }
+  },
+  "physical_batch_per_gpu": 2,
+  "effective_batch_size": 16,
+  "accumulation_steps": 8,
+  "train_microsteps_per_epoch_per_rank": 600,
+  "optimizer_steps_per_epoch": 75,
+  "rank0_smoke_losses": [
+    {
+      "loss": 0.7162657976150513,
+      "loss_cls": 0.7162657976150513
+    },
+    {
+      "loss": 0.6677339673042297,
+      "loss_cls": 0.6677339673042297
+    },
+    {
+      "loss": 0.5582571625709534,
+      "loss_cls": 0.5582571625709534
+    },
+    {
+      "loss": 0.658509373664856,
+      "loss_cls": 0.658509373664856
+    },
+    {
+      "loss": 0.6557530760765076,
+      "loss_cls": 0.6557530760765076
+    },
+    {
+      "loss": 0.6185997724533081,
+      "loss_cls": 0.6185997724533081
+    },
+    {
+      "loss": 0.672034502029419,
+      "loss_cls": 0.672034502029419
+    },
+    {
+      "loss": 0.8084139823913574,
+      "loss_cls": 0.8084139823913574
+    },
+    {
+      "loss": 2.3812508583068848,
+      "loss_cls": 2.3812508583068848
+    },
+    {
+      "loss": 6.198883397701138e-07,
+      "loss_cls": 6.198883397701138e-07
+    },
+    {
+      "loss": 6.039937261448358e-07,
+      "loss_cls": 6.039937261448358e-07
+    },
+    {
+      "loss": 2.1328134536743164,
+      "loss_cls": 2.1328134536743164
+    },
+    {
+      "loss": 5.809466188111401e-07,
+      "loss_cls": 5.809466188111401e-07
+    },
+    {
+      "loss": 0.840951144695282,
+      "loss_cls": 0.840951144695282
+    },
+    {
+      "loss": 2.4305999279022217,
+      "loss_cls": 2.4305999279022217
+    },
+    {
+      "loss": 2.365821123123169,
+      "loss_cls": 2.365821123123169
+    }
+  ],
+  "smoke_microsteps": 16,
+  "nominal_smoke_optimizer_steps": 2,
+  "actual_smoke_optimizer_steps": 2,
+  "amp_scaler_state": {
+    "scale": 1024.0,
+    "growth_factor": 2.0,
+    "backoff_factor": 0.5,
+    "growth_interval": 2000,
+    "_growth_tracker": 2
+  },
+  "training_precision": "AMP float16 forward; original losses FP32",
+  "evaluation_precision": "FP32",
+  "mini_validation_passed": true,
+  "mini_validation_videos": 2,
+  "mini_validation_scope": "technical pipeline check after discarded smoke updates; NOT a trained-model result",
+  "world_size": 1,
+  "seconds_per_microstep": 1.6218584256867568,
+  "rough_train_only_50_epoch_hours": 13.515486880722973,
+  "estimate_caveat": "15 post-warm-up microsteps including data wait; AMP updates may be skipped if gradients overflow. Excludes validation/preparation/test; not a runtime guarantee.",
+  "peak_memory_gb_max_across_gpus": 15.279275894165039,
+  "backbone_gradient_present": true,
+  "backbone_sgd_update_verified": true
+}

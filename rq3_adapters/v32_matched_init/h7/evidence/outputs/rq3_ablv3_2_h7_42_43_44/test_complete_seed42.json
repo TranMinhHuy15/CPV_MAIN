@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "roles": [
+    "b0",
+    "c7_current_repeat",
+    "r7_last_state",
+    "a7_m1",
+    "a26_m1",
+    "u3_uniform",
+    "g3_learned"
+  ],
+  "seed": 42,
+  "selection_lock_sha256": "a7ddcce85108cda686b5810d570d05769c4e73ecdf0fc87ab3fb3857ccd874b3"
+}

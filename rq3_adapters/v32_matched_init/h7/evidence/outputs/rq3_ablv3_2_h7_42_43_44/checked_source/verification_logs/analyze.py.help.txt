@@ -1,0 +1,9 @@
+usage: analyze.py [-h] --inputs INPUTS [--draws DRAWS]
+
+Paired video bootstrap conditional on three fixed seeds; exploratory
+inference.
+
+options:
+  -h, --help       show this help message and exit
+  --inputs INPUTS
+  --draws DRAWS

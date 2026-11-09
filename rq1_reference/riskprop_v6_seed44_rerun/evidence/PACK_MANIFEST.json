@@ -1,0 +1,13 @@
+{
+ "seed": 44,
+ "run": "rerun2 (train lai, 1 session neu session_info.train_sessions==1)",
+ "best_checkpoint": "best_mAUC@_epoch_35.pth",
+ "best_checkpoint_sha256": "5c0e817995491932240f7c2533423b61d47f4d9b5af96e34b65978594b901a17",
+ "package_zip_sha256": "9ac40f07432991f6830315db44ba3d11f72c103fdd3d6cc3583fcb1e8d540bd9",
+ "test": {
+  "Public_mAP": 0.8152801254710385,
+  "Private_mAP": 0.8612736928651713
+ },
+ "created": "2026-11-03 11:41:10",
+ "note": "Day la RiskProp V6 (H1). Notebook RQ3 cpv-1 dung checkpoint H7 co hash co dinh; can chinh stager neu muon dung checkpoint nay."
+}

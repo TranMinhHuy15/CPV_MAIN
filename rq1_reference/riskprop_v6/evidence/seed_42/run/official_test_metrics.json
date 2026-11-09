@@ -1,0 +1,76 @@
+{
+  "Public": {
+    "mAP": 0.8229412134509814,
+    "mAUC_grouped": 0.8415733822576899,
+    "mPAUC_sklearn_standardized": 0.6416826900755318,
+    "mPAUC_raw_divided_by_0.1": 0.3191971111435105,
+    "groups": [
+      {
+        "group": 0,
+        "lead_time_s": 0.5,
+        "n": 284,
+        "AP": 0.8326417252832975,
+        "AUC": 0.8542451894465383,
+        "pAUC_sklearn_standardized": 0.6781653598387956,
+        "pAUC_raw_divided_by_0.1": 0.38851418369371155
+      },
+      {
+        "group": 1,
+        "lead_time_s": 1.0,
+        "n": 231,
+        "AP": 0.8287824748829089,
+        "AUC": 0.8541979010494752,
+        "pAUC_sklearn_standardized": 0.6451511086561982,
+        "pAUC_raw_divided_by_0.1": 0.3257871064467766
+      },
+      {
+        "group": 2,
+        "lead_time_s": 1.5,
+        "n": 152,
+        "AP": 0.8073994401867376,
+        "AUC": 0.8162770562770563,
+        "pAUC_sklearn_standardized": 0.6017316017316017,
+        "pAUC_raw_divided_by_0.1": 0.24329004329004328
+      }
+    ],
+    "mTTA": null,
+    "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+  },
+  "Private": {
+    "mAP": 0.86000042119504,
+    "mAUC_grouped": 0.863126253494856,
+    "mPAUC_sklearn_standardized": 0.6859119162107726,
+    "mPAUC_raw_divided_by_0.1": 0.40323264080046806,
+    "groups": [
+      {
+        "group": 0,
+        "lead_time_s": 0.5,
+        "n": 284,
+        "AP": 0.9138839620901573,
+        "AUC": 0.9154433644118231,
+        "pAUC_sklearn_standardized": 0.7603336848369684,
+        "pAUC_raw_divided_by_0.1": 0.5446340011902401
+      },
+      {
+        "group": 1,
+        "lead_time_s": 1.0,
+        "n": 233,
+        "AP": 0.8660399673877943,
+        "AUC": 0.8681844974948423,
+        "pAUC_sklearn_standardized": 0.6889106054260319,
+        "pAUC_raw_divided_by_0.1": 0.40893015030946067
+      },
+      {
+        "group": 2,
+        "lead_time_s": 1.5,
+        "n": 160,
+        "AP": 0.8000773341071684,
+        "AUC": 0.8057508985779028,
+        "pAUC_sklearn_standardized": 0.6084914583693176,
+        "pAUC_raw_divided_by_0.1": 0.2561337709017035
+      }
+    ],
+    "mTTA": null,
+    "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "wrapper_sha256": {
+    "linux_preflight.py": "a65c415e5b18996686be9d016d9933a285a716826a13ff61a703cde97ca5d97a",
+    "verify_package.py": "54d3d5bac98a897c49d46f1e53347a8fb9ecec3b8c2d9b843d6662a84cb6893e",
+    "integrity.py": "9a960f16a23eed5faf7eef1582cbb27209375090a1042329a38c38d871138de7",
+    "training_state.py": "68e2e1ad1706558bd9396da6915e58d4916985f9e8f0cfa1cb8ee9c9d9c23218",
+    "safe_entry.py": "2022e58aa58ffec8d658e67e01305088fb9fa50a0cf06d22ae2a518de1e2a952",
+    "recover_uncommitted.py": "d18467664ea57b4821121f81f53a82e8096b51d2fa57ee389e703bf1c3295801",
+    "backup_seed44.py": "3373dda466c03010e547e931c907b8c13a095410dd6aa3c66543f548a619b452",
+    "run_seed44.py": "8f7decbb231dca649c00136692d74feb7912c58e7e3eadd6550c30725b4d5f43",
+    "audit_seed.py": "b20adf16bf57493604b2ffb675b5ba31c6eee8309d01a25b859ebbe8d81dfd9e",
+    "verify_backup.py": "baeddccb02611c75318937652c1a4fe33b0105351f58abf510de345d920ed84a",
+    "run_selftests.py": "248b6c29eeedc7983c2101c3c353564354ceb7e715a6d7d1d20b029f4e131dcb",
+    "compare_predictions.py": "d2b7d4769b70756094c02e5c1428be9e1522af02159c94f966e07f432d25a170",
+    "safe_queue.py": "48595f43758c16d4c954e27e163fbc6aabce17ae49833eba197a78f0883df002"
+  },
+  "scope": "Operational wrapper only; legacy scientific contract unchanged"
+}

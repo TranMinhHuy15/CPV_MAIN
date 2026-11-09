@@ -1,0 +1,57 @@
+{
+  "release": "RQ3_H7_SELECTED_EXPORT_v1",
+  "study_status": "exploratory_after_prior_test_inspection",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "default_arms": [
+    "m1",
+    "m1_m2",
+    "m1_m3",
+    "full"
+  ],
+  "primary": "full-minus-frozen-H7",
+  "primary_metric": "AP@1.5s",
+  "guardrail": "delta mAP >= -0.01; report paired interval, do not infer from means alone",
+  "frozen_base_history": 7,
+  "adapter_histories": [
+    7,
+    13,
+    26
+  ],
+  "window_policy": "independent reset, shared weights, oldest-to-newest, includes current token",
+  "attention_age": "subtract softplus(decay_raw)*observed_lag/25; nonnegative learned decay",
+  "temporal_features": "spatial mean only; actual encoder T retained",
+  "feature_cache": false,
+  "training_augmentation": "inherited RQ2 RandomResizedCrop/Flip; not static .npy training",
+  "width": 512,
+  "dropout": 0.1,
+  "correction_bound": 1.0,
+  "residual_gate": "input-conditioned sigmoid, bias=-2 (nonzero gate output); correction=C*g*tanh(raw)",
+  "residual_initialization": "output weight and bias zero; no second zero multiplicative gate",
+  "motion": "mean(phi(projected difference)-phi(0)); nonlinear before pooling; no physical-speed claim",
+  "epochs": 50,
+  "optimizer": "AdamW",
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "gradient_clip": 40.0,
+  "microbatch": 2,
+  "accumulation": 8,
+  "effective_batch": 16,
+  "world_size": 1,
+  "precision": "FP32 train/val/test, autocast and TF32 disabled",
+  "lr_milestones": [
+    20,
+    40
+  ],
+  "lr_gamma": 0.1,
+  "checkpoint_selection": "highest validation full mAUC@",
+  "warmup_tokens": 25,
+  "target_tokens": 30,
+  "snippet_frames": 5,
+  "native_stride": 3,
+  "test_gate": "all declared arms x all three seeds complete before any final test scoring",
+  "baseline_input": "Approved selected H7 weights plus original sealed metadata; not H7 resume"
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "package_path": "D:\\FA26\\CPV\\new\\rq3_v6base\\RQ3_V6BASE_v1_CODE_ONLY.zip",
+    "member": "RQ3_V6BASE_v1/worker.py",
+    "packaged_worker_sha256": "5f9afe6c6b325e9fcb6e72522bb28277f1419aca3023328a285b9cb0befdd874",
+    "executed_worker_sha256": "2b373d35bdcbaf902c8c3ccf19f42e7502f92472a4dde0af93d74cc5e7f5bb55",
+    "same": false
+  },
+  {
+    "package_path": "C:\\Users\\Admin\\Downloads\\RQ3_V6BASE_v1_CODE_ONLY.zip",
+    "member": "RQ3_V6BASE_v1/worker.py",
+    "packaged_worker_sha256": "5f9afe6c6b325e9fcb6e72522bb28277f1419aca3023328a285b9cb0befdd874",
+    "executed_worker_sha256": "2b373d35bdcbaf902c8c3ccf19f42e7502f92472a4dde0af93d74cc5e7f5bb55",
+    "same": false
+  }
+]

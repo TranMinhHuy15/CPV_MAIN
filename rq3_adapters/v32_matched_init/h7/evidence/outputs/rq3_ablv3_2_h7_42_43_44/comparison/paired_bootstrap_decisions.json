@@ -1,0 +1,674 @@
+{
+  "decisions": {
+    "a26_m1_vs_b0": {
+      "cross_study": false,
+      "kind": "secondary",
+      "left": "a26_m1",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 2.0601234241438835,
+          "ci95_low_pp": -0.8210300167007787,
+          "delta_pp": 0.6388044308305456,
+          "p_two_sided": 0.4484,
+          "per_seed_pp": [
+            -0.1328437191091214,
+            -1.0768272324897743,
+            3.1260842440905323
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        },
+        "mAP": {
+          "ci95_high_pp": 2.008948529189069,
+          "ci95_low_pp": 0.5638708125638446,
+          "delta_pp": 1.3090689827026027,
+          "p_two_sided": 0.0008,
+          "per_seed_pp": [
+            0.062978846311601,
+            1.6495369576373875,
+            2.21469114415882
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        },
+        "mAUC": {
+          "ci95_high_pp": 1.229442059424816,
+          "ci95_low_pp": 0.3642360021816945,
+          "delta_pp": 0.7922971258421193,
+          "p_two_sided": 0.0,
+          "per_seed_pp": [
+            0.271619047607663,
+            0.8244366381436108,
+            1.280835691775084
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        }
+      },
+      "question": "adapter vs same-seed frozen base",
+      "right": "b0",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "effect present (left > right)",
+        "mAUC": "effect present (left > right)"
+      }
+    },
+    "a7_m1_vs_b0": {
+      "cross_study": false,
+      "kind": "secondary",
+      "left": "a7_m1",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 1.2238308961903195,
+          "ci95_low_pp": -0.4316090933369881,
+          "delta_pp": 0.39473139883196745,
+          "p_two_sided": 0.3572,
+          "per_seed_pp": [
+            -0.02549119493547858,
+            0.12350453493417124,
+            1.0861808564972097
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAP": {
+          "ci95_high_pp": 1.0284800959037501,
+          "ci95_low_pp": 0.1079428301204426,
+          "delta_pp": 0.5406070155709226,
+          "p_two_sided": 0.0144,
+          "per_seed_pp": [
+            0.04897899796544314,
+            0.7800291387301872,
+            0.7928129100171377
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.8673401638600479,
+          "ci95_low_pp": 0.329946904515932,
+          "delta_pp": 0.5956521980553224,
+          "p_two_sided": 0.0,
+          "per_seed_pp": [
+            0.14383023600000877,
+            0.9786940695848956,
+            0.6644322885810627
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        }
+      },
+      "question": "adapter vs same-seed frozen base",
+      "right": "b0",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "effect present (left > right)",
+        "mAUC": "effect present (left > right)"
+      }
+    },
+    "a7_m1_vs_c7_current_repeat": {
+      "cross_study": false,
+      "kind": "main",
+      "left": "a7_m1",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 0.9842666209574407,
+          "ci95_low_pp": -0.6520337653920526,
+          "delta_pp": 0.14560109720900272,
+          "p_holm": 1.0,
+          "p_two_sided": 0.7044,
+          "per_seed_pp": [
+            -0.34780498463788945,
+            0.9945839747415031,
+            -0.20997569847660547
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        },
+        "mAP": {
+          "ci95_high_pp": 0.38641102835219193,
+          "ci95_low_pp": -0.3991628778036501,
+          "delta_pp": -0.028413333364370647,
+          "p_holm": 1.0,
+          "p_two_sided": 0.9376,
+          "per_seed_pp": [
+            -0.1365549044478609,
+            0.08203128231489831,
+            -0.030716377960149366
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.25837537631311347,
+          "ci95_low_pp": -0.18827667209264776,
+          "delta_pp": 0.026901669673314494,
+          "p_two_sided": 0.8064,
+          "per_seed_pp": [
+            -0.1297643622835798,
+            0.1544367746572406,
+            0.056032596646282684
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        }
+      },
+      "question": "inter-snippet past in the adapter (same layers/params)",
+      "right": "c7_current_repeat",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "no detectable effect (CI includes 0)",
+        "mAUC": "no detectable effect (CI includes 0)"
+      }
+    },
+    "a7_m1_vs_r7_last_state": {
+      "cross_study": false,
+      "kind": "main",
+      "left": "a7_m1",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 0.46930114177934035,
+          "ci95_low_pp": -0.2862654279357237,
+          "delta_pp": 0.06586504110255298,
+          "p_holm": 1.0,
+          "p_two_sided": 0.6992,
+          "per_seed_pp": [
+            -0.09279186954483931,
+            0.4040262972607622,
+            -0.11363930440826397
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        },
+        "mAP": {
+          "ci95_high_pp": 0.2119595282924967,
+          "ci95_low_pp": -0.154773037985843,
+          "delta_pp": 0.002870755245887313,
+          "p_holm": 1.0,
+          "p_two_sided": 0.7656,
+          "per_seed_pp": [
+            0.041655819842800756,
+            0.21430093942136352,
+            -0.24734449352650234
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.19040720170782077,
+          "ci95_low_pp": -0.05586871494179588,
+          "delta_pp": 0.06801686629397766,
+          "p_two_sided": 0.282,
+          "per_seed_pp": [
+            0.05179879701115997,
+            0.33325521341789344,
+            -0.1810034115471204
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        }
+      },
+      "question": "attention+age vs last state (differs by 524,289 params)",
+      "right": "r7_last_state",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "no detectable effect (CI includes 0)",
+        "mAUC": "no detectable effect (CI includes 0)"
+      }
+    },
+    "c7_current_repeat_vs_b0": {
+      "cross_study": false,
+      "kind": "secondary",
+      "left": "c7_current_repeat",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 1.0977419211080344,
+          "ci95_low_pp": -0.6672207747916457,
+          "delta_pp": 0.24913030162296476,
+          "p_two_sided": 0.5952,
+          "per_seed_pp": [
+            0.32231378970241087,
+            -0.8710794398073318,
+            1.2961565549738152
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAP": {
+          "ci95_high_pp": 1.058183822308403,
+          "ci95_low_pp": 0.1269711566328304,
+          "delta_pp": 0.5690203489352934,
+          "p_two_sided": 0.0124,
+          "per_seed_pp": [
+            0.18553390241330403,
+            0.6979978564152889,
+            0.8235292879772871
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.8297735008179048,
+          "ci95_low_pp": 0.3096178856855576,
+          "delta_pp": 0.5687505283820078,
+          "p_two_sided": 0.0,
+          "per_seed_pp": [
+            0.27359459828358856,
+            0.824257294927655,
+            0.60839969193478
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        }
+      },
+      "question": "adapter vs same-seed frozen base",
+      "right": "b0",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "effect present (left > right)",
+        "mAUC": "effect present (left > right)"
+      }
+    },
+    "g3_learned_vs_a26_m1": {
+      "cross_study": false,
+      "kind": "main",
+      "left": "g3_learned",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 0.5742670433237186,
+          "ci95_low_pp": -0.989189598564117,
+          "delta_pp": -0.24605746183424815,
+          "p_holm": 1.0,
+          "p_two_sided": 0.5788,
+          "per_seed_pp": [
+            0.2570942699523959,
+            0.467917302828158,
+            -1.4631839582832984
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAP": {
+          "ci95_high_pp": 0.2021106773774487,
+          "ci95_low_pp": -0.5131234477788271,
+          "delta_pp": -0.1519540909386367,
+          "p_holm": 1.0,
+          "p_two_sided": 0.4004,
+          "per_seed_pp": [
+            0.3385022636449908,
+            0.17401715919928007,
+            -0.968381695660181
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.08374936985432274,
+          "ci95_low_pp": -0.3824111111093488,
+          "delta_pp": -0.15248103574471888,
+          "p_two_sided": 0.2028,
+          "per_seed_pp": [
+            0.033523406166124925,
+            0.0020835063935131792,
+            -0.4930500197937948
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        }
+      },
+      "question": "three windows (learned) vs longest window only (not compute-matched)",
+      "right": "a26_m1",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "no detectable effect (CI includes 0)",
+        "mAUC": "no detectable effect (CI includes 0)"
+      }
+    },
+    "g3_learned_vs_b0": {
+      "cross_study": false,
+      "kind": "secondary",
+      "left": "g3_learned",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 1.5786989812200336,
+          "ci95_low_pp": -0.84727329392963,
+          "delta_pp": 0.3927469689962974,
+          "p_two_sided": 0.5664,
+          "per_seed_pp": [
+            0.12425055084327452,
+            -0.6089099296616163,
+            1.662900285807234
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAP": {
+          "ci95_high_pp": 1.7792387394440496,
+          "ci95_low_pp": 0.4859525625680724,
+          "delta_pp": 1.1571148917639662,
+          "p_two_sided": 0.0008,
+          "per_seed_pp": [
+            0.4014811099565918,
+            1.8235541168366676,
+            1.2463094484986392
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        },
+        "mAUC": {
+          "ci95_high_pp": 1.0001905860663731,
+          "ci95_low_pp": 0.28503671911404793,
+          "delta_pp": 0.6398160900974004,
+          "p_two_sided": 0.0,
+          "per_seed_pp": [
+            0.3051424537737879,
+            0.826520144537124,
+            0.7877856719812892
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        }
+      },
+      "question": "adapter vs same-seed frozen base",
+      "right": "b0",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "effect present (left > right)",
+        "mAUC": "effect present (left > right)"
+      }
+    },
+    "g3_learned_vs_u3_uniform": {
+      "cross_study": false,
+      "kind": "main",
+      "left": "g3_learned",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 0.391970929053343,
+          "ci95_low_pp": -0.8755417228775203,
+          "delta_pp": -0.2601751007511218,
+          "p_holm": 1.0,
+          "p_two_sided": 0.454,
+          "per_seed_pp": [
+            -0.33413227728995576,
+            0.27351850867949334,
+            -0.719911533642903
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        },
+        "mAP": {
+          "ci95_high_pp": 0.3348123294997404,
+          "ci95_low_pp": -0.32861197878016,
+          "delta_pp": 0.0017724048502384033,
+          "p_holm": 1.0,
+          "p_two_sided": 0.9912,
+          "per_seed_pp": [
+            -0.15388841346520854,
+            0.5374699258814619,
+            -0.37826429786553817
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.09271237706550996,
+          "ci95_low_pp": -0.2813582999560958,
+          "delta_pp": -0.08994258228008922,
+          "p_two_sided": 0.3456,
+          "per_seed_pp": [
+            -0.19802858095308018,
+            0.14800503925597175,
+            -0.21980420514315924
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        }
+      },
+      "question": "learned vs fixed uniform fusion (+4,611 params)",
+      "right": "u3_uniform",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "no detectable effect (CI includes 0)",
+        "mAUC": "no detectable effect (CI includes 0)"
+      }
+    },
+    "r7_last_state_vs_b0": {
+      "cross_study": false,
+      "kind": "secondary",
+      "left": "r7_last_state",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 1.1851979567746842,
+          "ci95_low_pp": -0.5291255481480315,
+          "delta_pp": 0.3288663577294145,
+          "p_two_sided": 0.464,
+          "per_seed_pp": [
+            0.06730067460936073,
+            -0.280521762326591,
+            1.1998201609054737
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAP": {
+          "ci95_high_pp": 0.9695616802506397,
+          "ci95_low_pp": 0.10119580530712788,
+          "delta_pp": 0.5377362603250353,
+          "p_two_sided": 0.0124,
+          "per_seed_pp": [
+            0.007323178122642382,
+            0.5657281993088237,
+            1.04015740354364
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.7994968996644168,
+          "ci95_low_pp": 0.2639222439285445,
+          "delta_pp": 0.5276353317613447,
+          "p_two_sided": 0.0004,
+          "per_seed_pp": [
+            0.0920314389888488,
+            0.6454388561670021,
+            0.8454357001281831
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        }
+      },
+      "question": "adapter vs same-seed frozen base",
+      "right": "b0",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "effect present (left > right)",
+        "mAUC": "effect present (left > right)"
+      }
+    },
+    "u3_uniform_vs_a26_m1": {
+      "cross_study": false,
+      "kind": "main",
+      "left": "u3_uniform",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 1.0145644363159603,
+          "ci95_low_pp": -0.8472527694423667,
+          "delta_pp": 0.01411763891687364,
+          "p_holm": 1.0,
+          "p_two_sided": 0.9736,
+          "per_seed_pp": [
+            0.5912265472423517,
+            0.19439879414866468,
+            -0.7432724246403954
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAP": {
+          "ci95_high_pp": 0.2798387584064471,
+          "ci95_low_pp": -0.592114478277925,
+          "delta_pp": -0.1537264957888751,
+          "p_holm": 1.0,
+          "p_two_sided": 0.4956,
+          "per_seed_pp": [
+            0.49239067711019935,
+            -0.36345276668218185,
+            -0.5901173977946428
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        },
+        "mAUC": {
+          "ci95_high_pp": 0.15205602302448656,
+          "ci95_low_pp": -0.271008909420465,
+          "delta_pp": -0.06253845346462969,
+          "p_two_sided": 0.5712,
+          "per_seed_pp": [
+            0.2315519871192051,
+            -0.14592153286245857,
+            -0.2732458146506356
+          ],
+          "seeds_negative": 2,
+          "seeds_positive": 1
+        }
+      },
+      "question": "three windows (uniform) vs longest window only (not compute-matched)",
+      "right": "a26_m1",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "no detectable effect (CI includes 0)",
+        "mAUC": "no detectable effect (CI includes 0)"
+      }
+    },
+    "u3_uniform_vs_b0": {
+      "cross_study": false,
+      "kind": "secondary",
+      "left": "u3_uniform",
+      "metrics": {
+        "AP@1.5s": {
+          "ci95_high_pp": 1.8723489484178364,
+          "ci95_low_pp": -0.6962812118477794,
+          "delta_pp": 0.6529220697474192,
+          "p_two_sided": 0.3572,
+          "per_seed_pp": [
+            0.4583828281332303,
+            -0.8824284383411096,
+            2.382811819450137
+          ],
+          "seeds_negative": 1,
+          "seeds_positive": 2
+        },
+        "mAP": {
+          "ci95_high_pp": 1.739236159523569,
+          "ci95_low_pp": 0.5176648511675574,
+          "delta_pp": 1.1553424869137277,
+          "p_two_sided": 0.0,
+          "per_seed_pp": [
+            0.5553695234218003,
+            1.2860841909552057,
+            1.6245737463641774
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        },
+        "mAUC": {
+          "ci95_high_pp": 1.1153204581582943,
+          "ci95_low_pp": 0.34748474365733684,
+          "delta_pp": 0.7297586723774896,
+          "p_two_sided": 0.0,
+          "per_seed_pp": [
+            0.5031710347268681,
+            0.6785151052811522,
+            1.0075898771244485
+          ],
+          "seeds_negative": 0,
+          "seeds_positive": 3
+        }
+      },
+      "question": "adapter vs same-seed frozen base",
+      "right": "b0",
+      "verdict": {
+        "AP@1.5s": "no detectable effect (CI includes 0)",
+        "mAP": "effect present (left > right)",
+        "mAUC": "effect present (left > right)"
+      }
+    }
+  },
+  "holm_family": [
+    {
+      "left": "a7_m1",
+      "metric": "mAP",
+      "right": "c7_current_repeat"
+    },
+    {
+      "left": "a7_m1",
+      "metric": "AP@1.5s",
+      "right": "c7_current_repeat"
+    },
+    {
+      "left": "a7_m1",
+      "metric": "mAP",
+      "right": "r7_last_state"
+    },
+    {
+      "left": "a7_m1",
+      "metric": "AP@1.5s",
+      "right": "r7_last_state"
+    },
+    {
+      "left": "g3_learned",
+      "metric": "mAP",
+      "right": "u3_uniform"
+    },
+    {
+      "left": "g3_learned",
+      "metric": "AP@1.5s",
+      "right": "u3_uniform"
+    },
+    {
+      "left": "u3_uniform",
+      "metric": "mAP",
+      "right": "a26_m1"
+    },
+    {
+      "left": "u3_uniform",
+      "metric": "AP@1.5s",
+      "right": "a26_m1"
+    },
+    {
+      "left": "g3_learned",
+      "metric": "mAP",
+      "right": "a26_m1"
+    },
+    {
+      "left": "g3_learned",
+      "metric": "AP@1.5s",
+      "right": "a26_m1"
+    }
+  ],
+  "metadata": {
+    "analysis_code_sha256": {
+      "ablation_stats.py": "6bebe6dcf265f26e96f7be79132302b09d67c3a309be6b75706c843495613caa",
+      "analyze_cross_base.py": "111aaac75c9427fa8c9db7909d2b29bc89532b054a3613d5e9e1616e50b31f92",
+      "study_guard.py": "b064b973e4f606874cb415a3141d9a3084ef8580903e6a480580af2aa585e9b6"
+    },
+    "analysis_plan_sha256": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86",
+    "base": "h7",
+    "dry_run": false,
+    "indices_sha256": "c88b01bca5559a8e7939d06748e0b86cd2ef19ab2eccab4385ea9e1370637456",
+    "labels_groups_sha256": "a261210d0a845ef457ffe12fcceba4125971848d5d913ecbbe8267ddd9214ba3",
+    "planned_resamples": 5000,
+    "resamples": 5000,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "solution_sha256": "609affe8bbc9b03e7ce6068a74fc18f9a1b015deacd3273c8ca40cbdfc3f3753",
+    "study_contract_sha256": "629265c4f96813f159f88fea644ef470231645682d6624ba90d8d4e89a1031f3",
+    "study_version": "rq3-ablation-v3.2-matched-six-arms",
+    "uncertainty": "shared stratified video bootstrap with three fixed seeds, not seed-population uncertainty"
+  },
+  "p_value_note": "Approximate percentile-tail bootstrap p; zero is a Monte Carlo zero, not an exact probability.",
+  "rule": "PREREGISTERED_ANALYSIS.md"
+}

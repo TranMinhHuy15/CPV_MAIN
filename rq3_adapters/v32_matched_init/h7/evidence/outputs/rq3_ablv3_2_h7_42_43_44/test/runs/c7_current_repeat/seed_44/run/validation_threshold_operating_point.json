@@ -1,0 +1,7 @@
+{
+  "note": "clip alarm rate; not pre-event TTA or calibrated test FAR target",
+  "test_negative_frame_FAR": 0.12390710382513662,
+  "test_positive_clip_any_alarm_rate": 0.9032738095238095,
+  "threshold": 0.41137123107910156,
+  "threshold_source": "selected validation threshold@0.10"
+}

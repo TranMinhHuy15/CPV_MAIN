@@ -1,0 +1,91 @@
+{
+  "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "default_total_hours": 24,
+  "full_rtx4080_linux_224_verified": false,
+  "model_loss_sampler_metric_algorithms_unchanged": true,
+  "changes": [
+    "process-group cleanup",
+    "global wall-clock budget including setup/evaluation",
+    "exclusive output lock",
+    "atomic completed-epoch recovery snapshot",
+    "strict evaluation contract"
+  ],
+  "three_seed_checks.json": {
+    "passed": true,
+    "tests_run": 6,
+    "errors": 0,
+    "failures": 0,
+    "scope": "CPU configs, actual fixed video-ID splits, reference parity, test adapter, synthetic queue/resume/statistics; NOT three full GPU runs"
+  },
+  "safety_checks.json": {
+    "passed": true,
+    "tests_run": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "platform": "nt",
+    "real_posix_process_tree_verified": false,
+    "scope": "Real local subprocess deadlines/Ctrl+C, lock and synthetic snapshot recovery; POSIX normal-exit cleanup skipped on Windows"
+  },
+  "reference_checks.json": {
+    "tests_run": 9,
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "scope": "CPU / library checks; not a T4 x2 training benchmark"
+  },
+  "pretrained_local_gpu_smoke": {
+    "passed": true,
+    "reports": [
+      {
+        "seed": 42,
+        "passed": true,
+        "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "microsteps": 16,
+        "accumulation": 8,
+        "backbone_updated": true,
+        "mini_validation": true
+      },
+      {
+        "seed": 43,
+        "passed": true,
+        "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "microsteps": 16,
+        "accumulation": 8,
+        "backbone_updated": true,
+        "mini_validation": true
+      },
+      {
+        "seed": 44,
+        "passed": true,
+        "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "microsteps": 16,
+        "accumulation": 8,
+        "backbone_updated": true,
+        "mini_validation": true
+      }
+    ],
+    "scope": "LOCAL RTX3050 32px with original pretraining and production worker; NOT rented Linux RTX4080 full224 validation"
+  },
+  "real_local_gpu_checkpoint_resume": {
+    "passed": true,
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "fixture_resolution": 32,
+    "fixture_train_videos": 4,
+    "fixture_validation_videos": 4,
+    "original_pretraining_loaded": true,
+    "completed_fixture_epochs": 2,
+    "actual_runner_train_val_checkpoint_hook": true,
+    "actual_snapshot_rollback_hashes_match": true,
+    "actual_runner_resume_optimizer_scaler_scheduler_rng": true,
+    "no_duplicate_history_epochs": true,
+    "snapshot_bytes": 380461807,
+    "actual_linux_rtx4080_full224_verified": false,
+    "scope": "LOCAL CUDA original model/pipeline and real Runner checkpoint/resume; 32px/four-video fixture with partial accumulation flush. NOT 50epoch/full-dataset results."
+  }
+}

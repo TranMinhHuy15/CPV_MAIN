@@ -1,0 +1,20 @@
+{
+  "GPU": "NVIDIA GeForce RTX 4080",
+  "blind_index_sha256": "e35c7360626718011c0087f5d51c39b006438a6b50a6be6bd80672a14b7f4d61",
+  "capture_code_sha256": "0ca1f9887a124d1928a76d2a7d82c99bb44bddecf86f5fb3cd5d8ffb764e9222",
+  "checkpoint_sha256": "65690bba89a0be6a12afd5885668e423a499a78a4312ce90210b2ed5b89acc17",
+  "cuda": "11.8",
+  "cudnn_tf32": false,
+  "precision": "FP32, no autocast",
+  "sampling": "native_end_anchored_stride3_bounded_past",
+  "selection_lock_sha256": "32b0c61736aa60284c5e10b7c7dd41f2f344d55c94f5aec3f53d5cc2324f5406",
+  "torch": "2.1.0+cu118",
+  "training_contract": {
+    "arm": "b0",
+    "base_model": "RiskProp V6 frozen",
+    "checkpoint_sha256": "65690bba89a0be6a12afd5885668e423a499a78a4312ce90210b2ed5b89acc17",
+    "original_contract_sha256": "b912d3409771b7d6b53e23890c8ab928cb3dc5864ec9f904ed9dca5847312674",
+    "seed": 43,
+    "study_contract_sha256": "8c777e167d2b94f86d0c6b06d59763e047a5b8db096337c806883c8fef805b29"
+  }
+}

@@ -1,0 +1,8 @@
+usage: bootstrap.py [-h] --runtime-root RUNTIME_ROOT
+
+Install the audited Linux research runtime without replacing notebook
+packages.
+
+options:
+  -h, --help            show this help message and exit
+  --runtime-root RUNTIME_ROOT

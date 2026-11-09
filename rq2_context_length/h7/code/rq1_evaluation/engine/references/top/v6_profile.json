@@ -1,0 +1,179 @@
+{
+  "train_pipeline_frame": [
+    {
+      "type": "SampleFramesBeforeAccident",
+      "clip_len": 5,
+      "num_clips": 30,
+      "test_mode": false
+    },
+    {
+      "type": "RawFrameDecode",
+      "io_backend": "disk"
+    },
+    {
+      "type": "RandomResizedCrop",
+      "area_range": [
+        0.8,
+        1.0
+      ],
+      "aspect_ratio_range": [
+        1.3333333333333333,
+        1.7777777777777777
+      ]
+    },
+    {
+      "type": "Resize",
+      "scale": [
+        224,
+        224
+      ],
+      "keep_ratio": false
+    },
+    {
+      "type": "Flip",
+      "flip_ratio": 0.5
+    },
+    {
+      "type": "Flow",
+      "modality": "rgb"
+    },
+    {
+      "type": "FormatShape",
+      "input_format": "NCTHW"
+    },
+    {
+      "type": "PackActionInputs",
+      "meta_keys": [],
+      "algorithm_keys": [
+        "dataset",
+        "frame_dir",
+        "filename_tmpl",
+        "img_shape",
+        "sample_idx",
+        "video_id",
+        "type",
+        "start_index",
+        "total_frames",
+        "target",
+        "abnormal_start_frame",
+        "accident_frame",
+        "frame_inds",
+        "clip_len",
+        "num_clips",
+        "frame_interval",
+        "fps",
+        "is_val",
+        "is_test",
+        "text"
+      ]
+    }
+  ],
+  "val_pipeline_frame": [
+    {
+      "type": "SampleFramesBeforeAccident",
+      "clip_len": 5,
+      "num_clips": 30,
+      "test_mode": true
+    },
+    {
+      "type": "RawFrameDecode",
+      "io_backend": "disk"
+    },
+    {
+      "type": "Resize",
+      "scale": [
+        224,
+        224
+      ],
+      "keep_ratio": false
+    },
+    {
+      "type": "Flow",
+      "modality": "rgb"
+    },
+    {
+      "type": "FormatShape",
+      "input_format": "NCTHW"
+    },
+    {
+      "type": "PackActionInputs",
+      "meta_keys": [],
+      "algorithm_keys": [
+        "dataset",
+        "frame_dir",
+        "filename_tmpl",
+        "img_shape",
+        "sample_idx",
+        "video_id",
+        "type",
+        "start_index",
+        "total_frames",
+        "target",
+        "abnormal_start_frame",
+        "accident_frame",
+        "frame_inds",
+        "clip_len",
+        "num_clips",
+        "frame_interval",
+        "fps",
+        "is_val",
+        "is_test",
+        "text"
+      ]
+    }
+  ],
+  "load_from": "https://download.openmmlab.com/mmaction/v1.0/recognition/slowonly/slowonly_imagenet-pretrained-r50_32xb8-8x8x1-steplr-150e_kinetics710-rgb/slowonly_imagenet-pretrained-r50_32xb8-8x8x1-steplr-150e_kinetics710-rgb_20230612-12ce977c.pth",
+  "backbone": {
+    "type": "ResNet3dSlowOnly",
+    "depth": 50,
+    "pretrained": "https://download.pytorch.org/models/resnet50-11ad3fa6.pth",
+    "lateral": false,
+    "conv1_kernel": [
+      1,
+      7,
+      7
+    ],
+    "conv1_stride_t": 1,
+    "pool1_stride_t": 1,
+    "inflate": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "norm_eval": false
+  },
+  "data_preprocessor": {
+    "type": "ActionDataPreprocessor",
+    "mean": [
+      123.675,
+      116.28,
+      103.53
+    ],
+    "std": [
+      58.395,
+      57.12,
+      57.375
+    ],
+    "format_shape": "NCTHW"
+  },
+  "train_sampler": {
+    "type": "DefaultSampler",
+    "shuffle": true,
+    "round_up": true
+  },
+  "val_sampler": {
+    "type": "DefaultSampler",
+    "shuffle": false,
+    "round_up": false
+  },
+  "provenance": {
+    "repo": "xingyueye5/RiskProp",
+    "commit": "579376fa1d879f28a9d68c2565d1e449de24b666",
+    "files": {
+      "taa\\metrics.py": "08c985df806af2cced71f71990fce657a564063ad8fba8f7833a11e8e50e8493",
+      "taa\\transforms.py": "62dcc6b57d9bece72553534d39e23bec636d0acd625ac5587fa50e260b7828f4",
+      "configs\\predict_anomaly_snippet.py": "640ad74e531da7b098d952ffd566db10306497074f999d8a1e211215ef1b7e98"
+    }
+  }
+}

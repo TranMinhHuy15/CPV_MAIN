@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-15",
+  "release": "Checked v2: transactional evaluation completion",
+  "approved_for_unconditional_paid_training": false,
+  "status": "Local checks passed; RTX4080/Linux/full224 TRAINING host preflight still required.",
+  "regression_reproduced_on_original": true,
+  "regression_fixed_in_checked": true,
+  "changes": [
+    "Atomic LAST evaluation_complete.json seals all finalized artifacts.",
+    "Reject incomplete28metric schema and missing/changed1344risk curves.",
+    "Validate CSV agrees exactly with JSON before sealing.",
+    "Separate protocol/output default; original ZIP unchanged."
+  ],
+  "unchanged_training_core": {
+    "worker.py": "f2a54759c66904d3e97d323c4c744601e7b4f0a66ffc762a573abc144c68de25",
+    "repro.py": "c6f40130e3a7b8765964957a398ba32e00c9b97f0b8e1038624f88a805aa7bcc",
+    "rq2_model.py": "edc58461fd7e15c8dedc6988c9ea54f68d9c7020a51bd058cd5e2ae8785c4eaf",
+    "kaggle_adapter.py": "8c8804e90f4587f5e9e268b016023d8ccd2a6729426322fdcd0fc3c2acb46388",
+    "amp_adapter.py": "7575a3cac8dcb462875457c8782ebef8bc143b1727e045e624f55aaf14c4e0fa",
+    "checkpoint_safety.py": "93a12a421c8dd3dc26774529e4c984745a098fb88a9fe4c2edab6ecbe0a33b45",
+    "process_control.py": "60fcc87501f7b07ee4db7b8bde4f67aface77e9977909e2c85d3d9d1ab5aa9b2",
+    "setup_environment.py": "9581387c5df07b494b4ff641c7b693f525cf9b643ca20afbecfdb62da5617695",
+    "requirements-kaggle.txt": "03c2fde11dee07b4f74444e6db047c003f5644850dc8be1744e04ea2a7018a8a",
+    "RiskProp-main.zip": "7d3f6f28b027f5e53802600afde28980c38e1d77409e2934da742069f99571bf"
+  },
+  "capture_math_functions_unchanged": [
+    "decode_cache",
+    "sample_for",
+    "encode_features",
+    "curve_from_features",
+    "technical_capture_check",
+    "validate_curve"
+  ],
+  "tests": {
+    "bounded_history_and_bn": 8,
+    "queue_budget_pilot_and_dispatch": 8,
+    "transactional_completion": 7,
+    "original_reference": 9,
+    "amp_formula_gradient_parity": true,
+    "completion_regression_red2_green2": true
+  },
+  "process_safety": {
+    "passed": true,
+    "tests_run": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "platform": "nt",
+    "real_posix_process_tree_verified": false,
+    "scope": "Real local subprocess deadlines/Ctrl+C, lock and synthetic snapshot recovery; POSIX normal-exit cleanup skipped on Windows"
+  },
+  "reports": {
+    "short_gpu": {
+      "passed": true,
+      "tests": 5,
+      "skipped": 0,
+      "gpu": {
+        "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "fixture_input": [
+          2,
+          55,
+          3,
+          5,
+          32,
+          32
+        ],
+        "loss": 0.6955649256706238,
+        "peak_memory_bytes": 1137733632,
+        "actual_backbone_gradient": true,
+        "actual_lstm_update": true,
+        "checkpoint_roundtrip": true,
+        "production224_verified": false,
+        "pretrained_checkpoint_loaded": true,
+        "codec_capture_parity": {
+          "passed": true,
+          "decoded_pixel_parity": true,
+          "max_probability_delta": 1.0728836059570312e-06
+        },
+        "codec_inference_resolution": 224,
+        "full224_inference_verified": true
+      }
+    },
+    "long_gpu": {
+      "passed": true,
+      "tests": 5,
+      "skipped": 0,
+      "gpu": {
+        "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "fixture_input": [
+          2,
+          55,
+          3,
+          5,
+          32,
+          32
+        ],
+        "loss": 0.698646068572998,
+        "peak_memory_bytes": 1143025664,
+        "actual_backbone_gradient": true,
+        "actual_lstm_update": true,
+        "checkpoint_roundtrip": true,
+        "production224_verified": false,
+        "pretrained_checkpoint_loaded": true,
+        "codec_capture_parity": {
+          "passed": true,
+          "decoded_pixel_parity": true,
+          "max_probability_delta": 1.996755599975586e-06
+        },
+        "codec_inference_resolution": 224,
+        "full224_inference_verified": true
+      }
+    },
+    "real_runner_resume": {
+      "passed": true,
+      "variant": "long",
+      "fixture": "SYNTHETIC32PX4SAMPLES_NOT_RESEARCH",
+      "real_runner_train_val_checkpoint": true,
+      "snapshot_rollback_hash": true,
+      "actual_resume_optimizer_scaler_scheduler_rng": true,
+      "no_duplicate_epochs": true,
+      "original_pretraining": true,
+      "full224_verified": false,
+      "linux_verified": false
+    },
+    "original_reference": {
+      "tests_run": 9,
+      "errors": 0,
+      "failures": 0,
+      "passed": true,
+      "scope": "CPU / library checks; not a T4 x2 training benchmark"
+    },
+    "synthetic_full1344_report": {
+      "passed": true,
+      "completion_commit_validated": true,
+      "fixture": "CONSTANT0.5,SYNTHETIC_ONLY_NOT_RESEARCH_RESULT",
+      "curves": 1344,
+      "metric_count": 28,
+      "metric_names": [
+        "AP@0.5s",
+        "AP@1.0s",
+        "AP@1.5s",
+        "AUC_full@0.5s",
+        "AUC_full@1.0s",
+        "AUC_full@1.5s",
+        "Private/mAP",
+        "Private/mAUC_grouped",
+        "Private/mPAUC_raw_divided_by_0.1",
+        "Private/mPAUC_sklearn_standardized",
+        "Public/mAP",
+        "Public/mAUC_grouped",
+        "Public/mPAUC_raw_divided_by_0.1",
+        "Public/mPAUC_sklearn_standardized",
+        "mAP",
+        "mAUC_grouped",
+        "mPAUC_raw_divided_by_0.1",
+        "mPAUC_sklearn_standardized",
+        "mTTA_Private_author_index10_inferred_s",
+        "mTTA_Public_author_index10_inferred_s",
+        "mTTA_author_index10_inferred@0.5s",
+        "mTTA_author_index10_inferred@1.0s",
+        "mTTA_author_index10_inferred@1.5s",
+        "mTTA_test_author_index10_inferred_s",
+        "maximum_actual_negative_frame_FAR",
+        "pAUC_raw_div_0.1@0.5s",
+        "pAUC_raw_div_0.1@1.0s",
+        "pAUC_raw_div_0.1@1.5s"
+      ],
+      "misses_count": 22,
+      "actual_tie_FAR": 1.0
+    }
+  },
+  "unverified": [
+    "RTX4080 16GB full224 truebatch2 training memory/throughput",
+    "Linux installer/POSIX orphan cleanup on the rented host; WSL is not installed locally",
+    "All6x50epochs and1344REALvideo inference for these new checkpoints",
+    "Score improvement, statistical significance, exact paper metric equivalence"
+  ],
+  "scope": "Software/fixture checks are NOT experimental model results. No paid GPU or remote machine was used."
+}

@@ -1,0 +1,9 @@
+{
+  "global_local": "https://download.pytorch.org/models/vgg16-397923af.pth",
+  "detector": "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth",
+  "features": "FP32 extraction, resized 224x224; cache FP16; frozen FC7",
+  "weight_sha256": {
+    "vgg16-397923af.pth": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0",
+    "fasterrcnn_resnet50_fpn_coco-258fb6c6.pth": "258fb6c638b15964ddcdd1ae0748c5eef1be9e732750120cc857feed3faac384"
+  }
+}

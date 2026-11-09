@@ -1,0 +1,11 @@
+{
+  "selected_checkpoint": "best_mAUC@_epoch_12.pth",
+  "completed_epochs": 50,
+  "test_was_not_used_for_selection": true,
+  "partial_auc": "Both normalizations reported on exactly the same predictions; do not pick the closest one to a reference.",
+  "code_mtta": "Released code averages over negative-frame thresholds, counts misses as zero, clips after alert onset.",
+  "test_mtta": "Not fabricated from a scalar clipped-test score; use validation risk-curve proxy, labeled separately.",
+  "no_published_target": "TOP publishes no Nexar numbers; the context rows are other methods from the RiskProp paper, not a reproduction target.",
+  "test_score_rule": "max over the 20 horizon scores of the last snippet (released AnticipationMetric rule).",
+  "single_seed": "One run, not a statistically supported estimate across seeds."
+}

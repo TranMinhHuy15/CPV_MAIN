@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "batch_windows": 8,
+  "feature_dim": 4096,
+  "sequence_length": 30,
+  "eval_precision": "FP32",
+  "synthetic_features_only": true,
+  "extractor_resident": true,
+  "peak_memory_allocated_gib": 0.7115240097045898
+}

@@ -1,0 +1,1104 @@
+11/07 13:59:23 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.2, V13.2.86
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+11/07 13:59:24 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+    dict(deadline=1e+300, seed=42, type='ReproductionStateHook'),
+    dict(type='RQ3StrictHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=1,
+        rule='greater',
+        save_best='mAUC@',
+        type='CheckpointHook'),
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=False,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained=None,
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        adapter_dropout=0.1,
+        adapter_init_seed=42,
+        arm='c7_current_repeat',
+        clip_len=5,
+        history=7,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        reference_history=7,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='VastTunedV6Head',
+        width=512,
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(
+        format_shape='NCTHW',
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='ActionDataPreprocessor'),
+    encode_chunk=4,
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='RQ3H7Recognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40.0, norm_type=2),
+    optimizer=dict(lr=0.0002, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(
+        custom_keys=dict({
+            'backbone': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.fc_cls': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.rnn': dict(decay_mult=0.0, lr_mult=0.0)
+        })),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        20,
+        40,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/test/runs/c7_current_repeat/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/test/runs/c7_current_repeat/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='train',
+        test_mode=False,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/test/runs/c7_current_repeat/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='validation',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/test/runs/c7_current_repeat/seed_42/run'
+
+11/07 13:59:25 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+11/07 13:59:25 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Loads checkpoint by local backend from path: /workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth
+The model and loaded state dict do not match exactly
+
+missing keys in source state_dict: cls_head.adapter.decay_raw, cls_head.adapter.proj.weight, cls_head.adapter.proj.bias, cls_head.adapter.norm.weight, cls_head.adapter.norm.bias, cls_head.adapter.rnn.weight_ih_l0, cls_head.adapter.rnn.weight_hh_l0, cls_head.adapter.rnn.bias_ih_l0, cls_head.adapter.rnn.bias_hh_l0, cls_head.adapter.query.weight, cls_head.adapter.key.weight, cls_head.adapter.residual_gate.weight, cls_head.adapter.residual_gate.bias, cls_head.adapter.output.weight, cls_head.adapter.output.bias
+
+CPU_DATA 100/1344
+CPU_DATA 200/1344
+CPU_DATA 300/1344
+CPU_DATA 400/1344
+CPU_DATA 500/1344
+CPU_DATA 600/1344
+CPU_DATA 700/1344
+CPU_DATA 800/1344
+CPU_DATA 900/1344
+CPU_DATA 1000/1344
+CPU_DATA 1100/1344
+CPU_DATA 1200/1344
+CPU_DATA 1300/1344
+FREEZE module=c7_current_repeat seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+FREEZE module=r7_last_state seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+FREEZE module=a7_m1 seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+FREEZE module=a26_m1 seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+FREEZE module=u3_uniform seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+FREEZE module=g3_learned seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+TEST seed42 1/1344 | 13.32s/video | ETA 4.97h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 10/1344 | 10.45s/video | ETA 3.87h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 20/1344 | 6.42s/video | ETA 2.36h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 30/1344 | 5.05s/video | ETA 1.84h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 40/1344 | 4.36s/video | ETA 1.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 50/1344 | 3.95s/video | ETA 1.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 60/1344 | 3.69s/video | ETA 1.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 70/1344 | 3.51s/video | ETA 1.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 80/1344 | 3.35s/video | ETA 1.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 90/1344 | 3.25s/video | ETA 1.13h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 100/1344 | 3.16s/video | ETA 1.09h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 110/1344 | 3.08s/video | ETA 1.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 120/1344 | 3.03s/video | ETA 1.03h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 130/1344 | 2.99s/video | ETA 1.01h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 140/1344 | 2.96s/video | ETA 0.99h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 150/1344 | 2.92s/video | ETA 0.97h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 160/1344 | 2.88s/video | ETA 0.95h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 170/1344 | 2.86s/video | ETA 0.93h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 180/1344 | 2.83s/video | ETA 0.92h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 190/1344 | 2.80s/video | ETA 0.90h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 200/1344 | 2.77s/video | ETA 0.88h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 210/1344 | 2.76s/video | ETA 0.87h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 220/1344 | 2.74s/video | ETA 0.86h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 230/1344 | 2.72s/video | ETA 0.84h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 240/1344 | 2.71s/video | ETA 0.83h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 250/1344 | 2.70s/video | ETA 0.82h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 260/1344 | 2.68s/video | ETA 0.81h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 270/1344 | 2.67s/video | ETA 0.80h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 280/1344 | 2.66s/video | ETA 0.79h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 290/1344 | 2.65s/video | ETA 0.78h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 300/1344 | 2.64s/video | ETA 0.76h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 310/1344 | 2.63s/video | ETA 0.75h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 320/1344 | 2.61s/video | ETA 0.74h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 330/1344 | 2.60s/video | ETA 0.73h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 340/1344 | 2.59s/video | ETA 0.72h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 350/1344 | 2.58s/video | ETA 0.71h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 360/1344 | 2.58s/video | ETA 0.70h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 370/1344 | 2.57s/video | ETA 0.69h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 380/1344 | 2.56s/video | ETA 0.69h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 390/1344 | 2.55s/video | ETA 0.68h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 400/1344 | 2.54s/video | ETA 0.67h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 410/1344 | 2.53s/video | ETA 0.66h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 420/1344 | 2.53s/video | ETA 0.65h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 430/1344 | 2.52s/video | ETA 0.64h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 440/1344 | 2.52s/video | ETA 0.63h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 450/1344 | 2.51s/video | ETA 0.62h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 460/1344 | 2.51s/video | ETA 0.62h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 470/1344 | 2.50s/video | ETA 0.61h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 480/1344 | 2.50s/video | ETA 0.60h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 490/1344 | 2.49s/video | ETA 0.59h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 500/1344 | 2.49s/video | ETA 0.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 510/1344 | 2.48s/video | ETA 0.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 520/1344 | 2.48s/video | ETA 0.57h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 530/1344 | 2.47s/video | ETA 0.56h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 540/1344 | 2.47s/video | ETA 0.55h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 550/1344 | 2.47s/video | ETA 0.54h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 560/1344 | 2.46s/video | ETA 0.54h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 570/1344 | 2.46s/video | ETA 0.53h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 580/1344 | 2.46s/video | ETA 0.52h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 590/1344 | 2.46s/video | ETA 0.52h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 600/1344 | 2.46s/video | ETA 0.51h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 610/1344 | 2.45s/video | ETA 0.50h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 620/1344 | 2.45s/video | ETA 0.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 630/1344 | 2.45s/video | ETA 0.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 640/1344 | 2.45s/video | ETA 0.48h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 650/1344 | 2.44s/video | ETA 0.47h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 660/1344 | 2.44s/video | ETA 0.46h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 670/1344 | 2.44s/video | ETA 0.46h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 680/1344 | 2.44s/video | ETA 0.45h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 690/1344 | 2.43s/video | ETA 0.44h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 700/1344 | 2.43s/video | ETA 0.44h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 710/1344 | 2.43s/video | ETA 0.43h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 720/1344 | 2.43s/video | ETA 0.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 730/1344 | 2.43s/video | ETA 0.41h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 740/1344 | 2.43s/video | ETA 0.41h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 750/1344 | 2.42s/video | ETA 0.40h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 760/1344 | 2.42s/video | ETA 0.39h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 770/1344 | 2.42s/video | ETA 0.39h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 780/1344 | 2.42s/video | ETA 0.38h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 790/1344 | 2.42s/video | ETA 0.37h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 800/1344 | 2.42s/video | ETA 0.37h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 810/1344 | 2.42s/video | ETA 0.36h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 820/1344 | 2.42s/video | ETA 0.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 830/1344 | 2.42s/video | ETA 0.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 840/1344 | 2.42s/video | ETA 0.34h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 850/1344 | 2.42s/video | ETA 0.33h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 860/1344 | 2.42s/video | ETA 0.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 870/1344 | 2.41s/video | ETA 0.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 880/1344 | 2.41s/video | ETA 0.31h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 890/1344 | 2.41s/video | ETA 0.30h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 900/1344 | 2.41s/video | ETA 0.30h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 910/1344 | 2.41s/video | ETA 0.29h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 920/1344 | 2.41s/video | ETA 0.28h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 930/1344 | 2.41s/video | ETA 0.28h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 940/1344 | 2.41s/video | ETA 0.27h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 950/1344 | 2.41s/video | ETA 0.26h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 960/1344 | 2.41s/video | ETA 0.26h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 970/1344 | 2.41s/video | ETA 0.25h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 980/1344 | 2.41s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 990/1344 | 2.41s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1000/1344 | 2.40s/video | ETA 0.23h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1010/1344 | 2.40s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1020/1344 | 2.40s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1030/1344 | 2.40s/video | ETA 0.21h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1040/1344 | 2.40s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1050/1344 | 2.40s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1060/1344 | 2.40s/video | ETA 0.19h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1070/1344 | 2.40s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1080/1344 | 2.40s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1090/1344 | 2.39s/video | ETA 0.17h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1100/1344 | 2.39s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1110/1344 | 2.39s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1120/1344 | 2.39s/video | ETA 0.15h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1130/1344 | 2.39s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1140/1344 | 2.39s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1150/1344 | 2.39s/video | ETA 0.13h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1160/1344 | 2.39s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1170/1344 | 2.39s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1180/1344 | 2.39s/video | ETA 0.11h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1190/1344 | 2.39s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1200/1344 | 2.38s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1210/1344 | 2.38s/video | ETA 0.09h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1220/1344 | 2.38s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1230/1344 | 2.38s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1240/1344 | 2.38s/video | ETA 0.07h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1250/1344 | 2.38s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1260/1344 | 2.38s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1270/1344 | 2.38s/video | ETA 0.05h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1280/1344 | 2.38s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1290/1344 | 2.38s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1300/1344 | 2.38s/video | ETA 0.03h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1310/1344 | 2.38s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1320/1344 | 2.38s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1330/1344 | 2.38s/video | ETA 0.01h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+TEST seed42 1340/1344 | 2.38s/video | ETA 0.00h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+RESULT TEST seed=42 model=c7_current_repeat mAP=83.9395% mAUC=85.3130% AP0.5=87.5512% AP1.0=84.5990% AP1.5=79.6683%
+RESULT TEST seed=42 model=V6 mAP=83.9227% mAUC=85.2210% AP0.5=87.0329% AP1.0=84.5125% AP1.5=80.2226%
+RESULT TEST seed=42 model=r7_last_state mAP=84.3441% mAUC=85.4158% AP0.5=87.9959% AP1.0=85.1191% AP1.5=79.9174%
+RESULT TEST seed=42 model=a7_m1 mAP=84.0899% mAUC=85.2234% AP0.5=87.7152% AP1.0=84.6845% AP1.5=79.8700%
+RESULT TEST seed=42 model=a26_m1 mAP=84.6125% mAUC=85.4050% AP0.5=87.6455% AP1.0=85.5787% AP1.5=80.6134%
+RESULT TEST seed=42 model=u3_uniform mAP=84.2526% mAUC=85.3767% AP0.5=87.6273% AP1.0=85.2280% AP1.5=79.9025%
+RESULT TEST seed=42 model=g3_learned mAP=84.2083% mAUC=85.4058% AP0.5=87.7946% AP1.0=84.9838% AP1.5=79.8464%

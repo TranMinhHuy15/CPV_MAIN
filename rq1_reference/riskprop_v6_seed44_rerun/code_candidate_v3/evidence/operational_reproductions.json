@@ -1,0 +1,12 @@
+{
+  "saved_state_accepts_missing_checkpoint": true,
+  "evaluated_accepts_missing_checkpoint_and_predictions": true,
+  "files_present": [
+    "evaluation_notes.json",
+    "official_test_metrics.json",
+    "run_manifest.json",
+    "training_status.json",
+    "validation_metrics.json"
+  ],
+  "interrupted_before_first_epoch_error": "Incomplete run metadata at C:\\Users\\MSI\\Documents\\ChatGPT\\CPV\\work\\seed44_audit_20261102\\tmp5u84il6m\\seed_44\\run. Inspect the failed run; do not overwrite it."
+}

@@ -1,0 +1,10 @@
+{
+  "max_abs_prob_diff": 0.004652031318732153,
+  "mean_abs_prob_diff": 0.00023270901682965854,
+  "mean_tolerance": 0.001,
+  "passed": true,
+  "scope": "frozen V6 fc(mean feature) on cached validation features vs V6 validation_predictions.json",
+  "snippets": 9000,
+  "tolerance": 0.01,
+  "videos": 300
+}

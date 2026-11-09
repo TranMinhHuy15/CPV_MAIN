@@ -1,0 +1,150 @@
+{
+  "analysis_plan": {
+    "file": "PREREGISTERED_ANALYSIS.md",
+    "sha256": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86"
+  },
+  "baselines": {
+    "v6": {
+      "42": {
+        "baseline_input_kind": "frozen_V6_selected_checkpoint",
+        "checkpoint": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth",
+        "checkpoint_sha256": "fda77d9bfc56258ceea39878e51d38e3ee7e174cf92e42f9ed610c4562d9943b",
+        "contract_sha256": "2eb85a457ec3cc90a706c5efba60d5dbbf6249f8dd87ba6cb6174443e0171c83",
+        "history": 0,
+        "manifest_sha256": "a4dcc7ebe72622b91873505c4835d9f22cb3ff4e6a57d245a0eeb70eb998932e",
+        "original_test_predictions_sha256": "f49ff6d3468b8753024151b477a1cc39940eeda204ca7e58297326311f7ade03",
+        "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+        "recipe_sha256": "3587fdfb792926c331e806fd9019eddf4f04b684618d05b7607579753b0906bb",
+        "run": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run",
+        "seed": 42,
+        "selected_epoch": 25,
+        "validation_history_sha256": "a722a352bfa3eacd027fc6c4fd9b6a66b40e3a1165dd6b115c70a82f4b448f6d",
+        "validation_metrics": {
+          "AP@0.5s": 0.930025367156527,
+          "AP@1.0s": 0.8631249973444908,
+          "AP@1.5s": 0.8064488330499099,
+          "mAP@": 0.8665330658503092,
+          "mAUC@": 0.8693037037037037
+        },
+        "validation_predictions_sha256": "5982f3892ec800629146e583bf9bb6ff24d977807d1519f8c0360eefd227f329",
+        "validation_threshold": 0.3118206858634949
+      },
+      "43": {
+        "baseline_input_kind": "frozen_V6_selected_checkpoint",
+        "checkpoint": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_43/run/best_mAUC@_epoch_11.pth",
+        "checkpoint_sha256": "65690bba89a0be6a12afd5885668e423a499a78a4312ce90210b2ed5b89acc17",
+        "contract_sha256": "b912d3409771b7d6b53e23890c8ab928cb3dc5864ec9f904ed9dca5847312674",
+        "history": 0,
+        "manifest_sha256": "0926f502e9882fafa3883e638e943da3ef695a5f7c1bcca9fe32de4b5e625c02",
+        "original_test_predictions_sha256": "77407c03522d5bd1f5cb6fd912dc925fe221ba2078a042407231f1127b79fc38",
+        "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+        "recipe_sha256": "3587fdfb792926c331e806fd9019eddf4f04b684618d05b7607579753b0906bb",
+        "run": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_43/run",
+        "seed": 43,
+        "selected_epoch": 11,
+        "validation_history_sha256": "84777defc0cf75401250cb1af36d5b85f1f83c6895ed6c85b639890775440774",
+        "validation_metrics": {
+          "AP@0.5s": 0.9319164254752325,
+          "AP@1.0s": 0.8675405349455633,
+          "AP@1.5s": 0.7991136581561211,
+          "mAP@": 0.8661902061923056,
+          "mAUC@": 0.8712592592592593
+        },
+        "validation_predictions_sha256": "205d8ccef6f9abc2a0218e6c20bf812db68c696a98c80e44c5696da462f16b33",
+        "validation_threshold": 0.33986759185791016
+      },
+      "44": {
+        "baseline_input_kind": "frozen_V6_selected_checkpoint",
+        "checkpoint": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_44_rerun/run/best_mAUC@_epoch_35.pth",
+        "checkpoint_sha256": "5c0e817995491932240f7c2533423b61d47f4d9b5af96e34b65978594b901a17",
+        "contract_sha256": "fd3452bf7ec1e20285f3823196717321dc27a1a13a935d9164fe3439e8ef21e6",
+        "history": 0,
+        "manifest_sha256": "ec683986156746be8a807ab89893b8a931fb1eee3e2e783d63d4237f10b1c347",
+        "original_test_predictions_sha256": "5f5739c19382333468a469db361ca0f732fb4c2b967f4ddbdb9d4cb01d34105c",
+        "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+        "recipe_sha256": "3587fdfb792926c331e806fd9019eddf4f04b684618d05b7607579753b0906bb",
+        "run": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_44_rerun/run",
+        "seed": 44,
+        "selected_epoch": 35,
+        "validation_history_sha256": "10cf2598ec10bf482cb002ed55c79cb1a3942eb0de27468ed38a6017c5390673",
+        "validation_metrics": {
+          "AP@0.5s": 0.9200600924482373,
+          "AP@1.0s": 0.8556275091346377,
+          "AP@1.5s": 0.7970248839796805,
+          "mAP@": 0.8575708285208519,
+          "mAUC@": 0.8680888888888889
+        },
+        "validation_predictions_sha256": "5a1bf54b81eb3f2e6a4b6f0d56a0487e06cbd8e0f66cdb23335271b47b0bb03b",
+        "validation_threshold": 0.7071888446807861
+      }
+    }
+  },
+  "candidates": [
+    {
+      "dropout": 0.1,
+      "id": "c2_lr_double",
+      "lr": 0.0002,
+      "rationale": "Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.",
+      "weight_decay": 0.0001,
+      "width": 512
+    }
+  ],
+  "code": {
+    "PREREGISTERED_ANALYSIS.md": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86",
+    "ablation_modules.py": "8b2c0b66493edb5249a8013ac2efe243059a7be8a1ac6efd98fa28914f59713c",
+    "ablation_stats.py": "6bebe6dcf265f26e96f7be79132302b09d67c3a309be6b75706c843495613caa",
+    "analyze_cross_base.py": "111aaac75c9427fa8c9db7909d2b29bc89532b054a3613d5e9e1616e50b31f92",
+    "artifacts.py": "db46f665f2b3262ccc13ca1d6d0a88dbbc7e763433cf2407914da3959e6a0b94",
+    "backend.py": "aaede4f44f7a57a8c602e8aad508a02c24a6727e6aee6920fcdcad89c3d0ce63",
+    "bootstrap_paired.py": "302ab84e81008e95a7ecbf00a07cf18052e3804320cbeb88cf4c59e9c5702a84",
+    "build_release.py": "118ff178eb4107826c190b718509ca9f9855bf1b4666b439ac9b779a05f0c607",
+    "capture_helpers.py": "a25cc57475ad089f61aba7928ce3dc359a9471791690ed3cc37db3a223b56ce0",
+    "console.py": "5eaf3f2dbb2ad6216a60e367d52c93be5ee9fb9c949561339df8e587fb950a07",
+    "diagnostics.py": "265a6d34a97f7d3af6a0b16576b8993afe29cfa0ab80b2883075b236ed466b90",
+    "launch.py": "b8eceed0bac0f08ffe4e47dcd8d00d999b124c282fa2743a25b90c7f640c5ab2",
+    "legacy/cache_store.py": "e0f41b504d9c6c81b07839bce38ce540fdcb9a1ea0e6a4075f75802b9092021e",
+    "legacy/cached_driver.py": "01fd38c977a0a27fda7f5696d7e2c1ad3e6c7fe1d14d91fe38d7c917ba3e372e",
+    "legacy/cached_plugin.py": "55f14b6cc9ef43ecb12e57a0e7b0b721b9711bc5de949b0039ff7f63ccbe6805",
+    "legacy/module_inputs.py": "f3846c174cd79c21ac8aa0f8bf58ad69619aa96a7491b718c294173db9e7b29f",
+    "legacy/runtime_profile.py": "0f9eb9af1bb868a927d0182eb487aee89153acc62be58f0da30241ee428a2eb6",
+    "make_inputs_from_v2.py": "16d35e0c469db1cbe6c0f5ff30c2b656991be69ac9d261fdedf00c4cdf997e3b",
+    "matched_initialization.py": "3f2e762bb309aea626afac74f939add0387fa92c5319c8c4f9b42fae5743cd08",
+    "models.py": "2e404f69526ba11d39605915c14917622997d3f3a60b767f443d30a77c4068fd",
+    "protocol.py": "73e133115ac23c975c7ab3082be810ea5150e042adc3082054fc7a135f18a78b",
+    "recovery.py": "7efecc7cdfa9b2c432c473a66de96496908adb7e5144f9ca11a2e15eaff383f7",
+    "reporting.py": "e32585800aa30f155ce6c41e9763a67164be8aff78eb65f5a073a671b5c641d8",
+    "run.py": "7c6afcec9cda7b6207e762a74f603adc7322c886c95bef1071c49632aafe2fde",
+    "study_guard.py": "b064b973e4f606874cb415a3141d9a3084ef8580903e6a480580af2aa585e9b6",
+    "test_backend.py": "0ca1f9887a124d1928a76d2a7d82c99bb44bddecf86f5fb3cd5d8ffb764e9222",
+    "worker.py": "4a1a0042a2aa4c7b004fa39373e1b8de522046a508dfeb590f18b59aed2468c5"
+  },
+  "config": {
+    "cache_roots": {
+      "42": null,
+      "43": null,
+      "44": null
+    },
+    "compact_completed_trials": true,
+    "data_root": "/workspace/Nexar_HF",
+    "encode_chunk": 4,
+    "log_every_batches": 20,
+    "output_root": "/workspace/outputs/rq3_ablv3_2_v6_42_43_44r",
+    "prior_study_root": null,
+    "runtime_root": "/workspace/runtime/rq3_checked",
+    "source_zip": "/workspace/RQ3_ABLV3_2_RECHECK_FIXED_20261107/inputs/rq3_selected_source_v1.zip",
+    "v6_runs": {
+      "42": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run",
+      "43": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_43/run",
+      "44": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_44_rerun/run"
+    }
+  },
+  "prior_study": {
+    "root": null,
+    "used_for_main": false
+  },
+  "selection": "single predeclared candidate (c2_lr_double); epoch per run by earliest max validation mAUC; no test selection",
+  "solution_sha256": "609affe8bbc9b03e7ce6068a74fc18f9a1b015deacd3273c8ca40cbdfc3f3753",
+  "source_root": "/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/checked_source",
+  "study": "exploratory matched ablation V3 on frozen RiskProp V6 (42/43 original, 44 rerun): all six adapters trained anew; no prior prediction reuse; test set previously inspected",
+  "study_version": "rq3-ablation-v3.2-matched-six-arms"
+}

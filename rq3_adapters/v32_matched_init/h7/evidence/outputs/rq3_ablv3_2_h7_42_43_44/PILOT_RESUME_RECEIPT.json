@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "epochs": [
+    1,
+    2,
+    3
+  ],
+  "scope": "snapshot verified at pilot boundaries 2 and 3; completed pilot stages may be reused after interruption",
+  "study_contract_sha256": "629265c4f96813f159f88fea644ef470231645682d6624ba90d8d4e89a1031f3"
+}

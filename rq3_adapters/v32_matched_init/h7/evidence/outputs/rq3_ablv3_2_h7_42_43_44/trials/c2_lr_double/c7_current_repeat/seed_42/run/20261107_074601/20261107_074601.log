@@ -1,0 +1,1527 @@
+2026/11/07 07:46:02 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.2, V13.2.86
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+2026/11/07 07:46:02 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+    dict(
+        deadline=1.7976931348623157e+308,
+        seed=42,
+        type='ReproductionStateHook'),
+    dict(type='RQ3StrictHook'),
+    dict(type='CacheEpochTimingHook'),
+    dict(
+        arm='c7_current_repeat',
+        seed=42,
+        type='MatchedValidationDiagnosticsHook'),
+    dict(
+        arm='c7_current_repeat',
+        candidate='c2_lr_double',
+        every=20,
+        seed=42,
+        type='VastNamedLogHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=1,
+        rule='greater',
+        save_best='mAUC@',
+        type='CheckpointHook'),
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_42/run/resume_latest.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=False,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained=None,
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        adapter_dropout=0.1,
+        adapter_init_seed=42,
+        arm='c7_current_repeat',
+        clip_len=5,
+        history=7,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        reference_history=7,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='VastTunedH7AblationHead',
+        width=512,
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(type='VastTeacherPreprocessor'),
+    encode_chunk=4,
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='VastTeacherCachedRecognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40.0, norm_type=2),
+    optimizer=dict(lr=0.0002, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(
+        custom_keys=dict({
+            'backbone': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.fc_cls': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.rnn': dict(decay_mult=0.0, lr_mult=0.0)
+        })),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        20,
+        40,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = True
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_h7_42_43_44/caches/seed_42',
+        manifest_sha256=
+        '808f23de90ab49fba9567285e37162217d068cd0c8bbc628ceece2fea543d02b',
+        split='train',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_h7_42_43_44/caches/seed_42',
+        manifest_sha256=
+        '808f23de90ab49fba9567285e37162217d068cd0c8bbc628ceece2fea543d02b',
+        split='validation',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_42/run'
+
+2026/11/07 07:46:03 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2026/11/07 07:46:03 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(80          ) MatchedValidationDiagnosticsHook   
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+(80          ) MatchedValidationDiagnosticsHook   
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+(80          ) MatchedValidationDiagnosticsHook   
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(80          ) MatchedValidationDiagnosticsHook   
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(80          ) MatchedValidationDiagnosticsHook   
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.downsample.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.downsample.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.0.downsample.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.1.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer1.2.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.downsample.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.downsample.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.0.downsample.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.1.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.2.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer2.3.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.downsample.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.downsample.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.0.downsample.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.1.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.2.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.3.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.4.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer3.5.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.downsample.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.downsample.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.0.downsample.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.1.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv1.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv1.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv1.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv2.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv2.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv2.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv3.conv.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv3.bn.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - backbone.layer4.2.conv3.bn.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - cls_head.rnn.weight_ih_l0 is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - cls_head.rnn.weight_hh_l0 is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - cls_head.rnn.bias_ih_l0 is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - cls_head.rnn.bias_hh_l0 is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - cls_head.fc_cls.weight is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - cls_head.fc_cls.bias is skipped since its requires_grad=False
+2026/11/07 07:46:04 - mmengine - WARNING - The prefix is not set in metric class SavingAnticipationMetric.
+Name of parameter - Initialization information
+
+backbone.conv1.conv.weight - torch.Size([64, 3, 1, 7, 7]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv1.conv.weight - torch.Size([64, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv2.conv.weight - torch.Size([64, 64, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv3.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv3.bn.weight - torch.Size([256]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv3.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.downsample.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.downsample.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.downsample.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv1.conv.weight - torch.Size([64, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv2.conv.weight - torch.Size([64, 64, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv3.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv3.bn.weight - torch.Size([256]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv3.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv1.conv.weight - torch.Size([64, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv2.conv.weight - torch.Size([64, 64, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv3.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv3.bn.weight - torch.Size([256]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv3.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv1.conv.weight - torch.Size([128, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.downsample.conv.weight - torch.Size([512, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.downsample.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.downsample.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv1.conv.weight - torch.Size([128, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv1.conv.weight - torch.Size([128, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv1.conv.weight - torch.Size([128, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv1.conv.weight - torch.Size([256, 512, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.downsample.conv.weight - torch.Size([1024, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.downsample.bn.weight - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.downsample.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv1.conv.weight - torch.Size([512, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv1.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv1.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv2.conv.weight - torch.Size([512, 512, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv2.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv2.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv3.conv.weight - torch.Size([2048, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv3.bn.weight - torch.Size([2048]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv3.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.downsample.conv.weight - torch.Size([2048, 1024, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.downsample.bn.weight - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.downsample.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv1.conv.weight - torch.Size([512, 2048, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv1.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv1.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv2.conv.weight - torch.Size([512, 512, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv2.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv2.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv3.conv.weight - torch.Size([2048, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv3.bn.weight - torch.Size([2048]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv3.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv1.conv.weight - torch.Size([512, 2048, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv1.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv1.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv2.conv.weight - torch.Size([512, 512, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv2.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv2.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv3.conv.weight - torch.Size([2048, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv3.bn.weight - torch.Size([2048]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv3.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.weight_ih_l0 - torch.Size([8192, 2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.weight_hh_l0 - torch.Size([8192, 2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.bias_ih_l0 - torch.Size([8192]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.bias_hh_l0 - torch.Size([8192]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.fc_cls.weight - torch.Size([1, 2048]): 
+Initialized by user-defined `init_weights` in VastTunedH7AblationHead  
+
+cls_head.fc_cls.bias - torch.Size([1]): 
+Initialized by user-defined `init_weights` in VastTunedH7AblationHead  
+
+cls_head.adapter.decay_raw - torch.Size([]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.proj.weight - torch.Size([512, 2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.proj.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.norm.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.norm.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.weight_ih_l0 - torch.Size([2048, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.weight_hh_l0 - torch.Size([2048, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.bias_ih_l0 - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.bias_hh_l0 - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.query.weight - torch.Size([512, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.key.weight - torch.Size([512, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.residual_gate.weight - torch.Size([1, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.residual_gate.bias - torch.Size([1]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.output.weight - torch.Size([1, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.output.bias - torch.Size([1]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+2026/11/07 07:46:04 - mmengine - INFO - Load checkpoint from /workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_42/run/resume_latest.pth
+2026/11/07 07:46:04 - mmengine - INFO - resumed epoch: 2, iter: 1200
+2026/11/07 07:46:04 - mmengine - WARNING - Gradient accumulative may slightly decrease performance because the model has BatchNorm layers.
+2026/11/07 07:46:04 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+2026/11/07 07:46:04 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+2026/11/07 07:46:04 - mmengine - INFO - Checkpoints will be saved to /workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_42/run.
+2026/11/07 07:46:05 - mmengine - INFO - Epoch(train)  [3][ 20/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:19:06  time: 0.0398  data_time: 0.0205  memory: 556  loss: 0.4367  loss_cls: 0.2430  loss_ffr: 0.1858  loss_mono: 0.0079  grad_norm: 0.3573
+2026/11/07 07:46:06 - mmengine - INFO - Epoch(train)  [3][ 40/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:17:51  time: 0.0346  data_time: 0.0203  memory: 413  loss: 0.4571  loss_cls: 0.2229  loss_ffr: 0.2215  loss_mono: 0.0127  grad_norm: 0.3738
+2026/11/07 07:46:07 - mmengine - INFO - Epoch(train)  [3][ 60/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:17:26  time: 0.0348  data_time: 0.0202  memory: 413  loss: 0.4464  loss_cls: 0.2508  loss_ffr: 0.1649  loss_mono: 0.0306  grad_norm: 0.3764
+2026/11/07 07:46:07 - mmengine - INFO - Epoch(train)  [3][ 80/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:17:11  time: 0.0344  data_time: 0.0203  memory: 413  loss: 0.4048  loss_cls: 0.2206  loss_ffr: 0.1647  loss_mono: 0.0195  grad_norm: 0.3487
+2026/11/07 07:46:08 - mmengine - INFO - Epoch(train)  [3][100/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:17:01  time: 0.0343  data_time: 0.0203  memory: 413  loss: 0.4405  loss_cls: 0.2768  loss_ffr: 0.1479  loss_mono: 0.0157  grad_norm: 0.3682
+2026/11/07 07:46:09 - mmengine - INFO - Epoch(train)  [3][120/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:54  time: 0.0342  data_time: 0.0205  memory: 413  loss: 0.4328  loss_cls: 0.2739  loss_ffr: 0.1414  loss_mono: 0.0175  grad_norm: 0.3768
+2026/11/07 07:46:09 - mmengine - INFO - Epoch(train)  [3][140/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:44  time: 0.0331  data_time: 0.0204  memory: 413  loss: 0.4152  loss_cls: 0.1894  loss_ffr: 0.2038  loss_mono: 0.0220  grad_norm: 0.4146
+2026/11/07 07:46:10 - mmengine - INFO - Epoch(train)  [3][160/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:32  time: 0.0319  data_time: 0.0203  memory: 413  loss: 0.3495  loss_cls: 0.1662  loss_ffr: 0.1665  loss_mono: 0.0168  grad_norm: 0.4107
+2026/11/07 07:46:11 - mmengine - INFO - Epoch(train)  [3][180/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:24  time: 0.0324  data_time: 0.0203  memory: 413  loss: 0.4757  loss_cls: 0.2812  loss_ffr: 0.1763  loss_mono: 0.0182  grad_norm: 0.4726
+2026/11/07 07:46:11 - mmengine - INFO - Epoch(train)  [3][200/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:19  time: 0.0331  data_time: 0.0204  memory: 413  loss: 0.5369  loss_cls: 0.2929  loss_ffr: 0.2160  loss_mono: 0.0279  grad_norm: 0.4477
+2026/11/07 07:46:12 - mmengine - INFO - Epoch(train)  [3][220/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:20  time: 0.0347  data_time: 0.0203  memory: 413  loss: 0.4556  loss_cls: 0.2413  loss_ffr: 0.1961  loss_mono: 0.0181  grad_norm: 0.4432
+2026/11/07 07:46:13 - mmengine - INFO - Epoch(train)  [3][240/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:14  time: 0.0321  data_time: 0.0203  memory: 413  loss: 0.3561  loss_cls: 0.1887  loss_ffr: 0.1444  loss_mono: 0.0231  grad_norm: 0.4735
+2026/11/07 07:46:13 - mmengine - INFO - Epoch(train)  [3][260/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:11  time: 0.0329  data_time: 0.0205  memory: 413  loss: 0.4695  loss_cls: 0.2846  loss_ffr: 0.1754  loss_mono: 0.0094  grad_norm: 0.5031
+2026/11/07 07:46:14 - mmengine - INFO - Epoch(train)  [3][280/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:08  time: 0.0331  data_time: 0.0205  memory: 413  loss: 0.4032  loss_cls: 0.2052  loss_ffr: 0.1829  loss_mono: 0.0150  grad_norm: 0.5431
+2026/11/07 07:46:15 - mmengine - INFO - Epoch(train)  [3][300/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:11  time: 0.0358  data_time: 0.0204  memory: 413  loss: 0.3975  loss_cls: 0.2300  loss_ffr: 0.1473  loss_mono: 0.0203  grad_norm: 0.5629
+2026/11/07 07:46:15 - mmengine - INFO - Epoch(train)  [3][320/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:09  time: 0.0333  data_time: 0.0204  memory: 413  loss: 0.4190  loss_cls: 0.2607  loss_ffr: 0.1498  loss_mono: 0.0085  grad_norm: 0.5922
+2026/11/07 07:46:16 - mmengine - INFO - Epoch(train)  [3][340/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:09  time: 0.0345  data_time: 0.0203  memory: 413  loss: 0.4328  loss_cls: 0.2071  loss_ffr: 0.2035  loss_mono: 0.0222  grad_norm: 0.5663
+2026/11/07 07:46:17 - mmengine - INFO - Epoch(train)  [3][360/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:07  time: 0.0332  data_time: 0.0203  memory: 413  loss: 0.3547  loss_cls: 0.1952  loss_ffr: 0.1487  loss_mono: 0.0108  grad_norm: 0.5283
+2026/11/07 07:46:17 - mmengine - INFO - Epoch(train)  [3][380/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:06  time: 0.0337  data_time: 0.0203  memory: 413  loss: 0.4482  loss_cls: 0.2695  loss_ffr: 0.1637  loss_mono: 0.0150  grad_norm: 0.5300
+2026/11/07 07:46:18 - mmengine - INFO - Epoch(train)  [3][400/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:05  time: 0.0342  data_time: 0.0202  memory: 413  loss: 0.4515  loss_cls: 0.2701  loss_ffr: 0.1727  loss_mono: 0.0088  grad_norm: 0.5248
+2026/11/07 07:46:19 - mmengine - INFO - Epoch(train)  [3][420/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:06  time: 0.0348  data_time: 0.0202  memory: 413  loss: 0.4471  loss_cls: 0.2754  loss_ffr: 0.1589  loss_mono: 0.0128  grad_norm: 0.4834
+2026/11/07 07:46:19 - mmengine - INFO - Epoch(train)  [3][440/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:05  time: 0.0339  data_time: 0.0205  memory: 413  loss: 0.4211  loss_cls: 0.2529  loss_ffr: 0.1495  loss_mono: 0.0187  grad_norm: 0.4788
+2026/11/07 07:46:20 - mmengine - INFO - Epoch(train)  [3][460/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:02  time: 0.0327  data_time: 0.0203  memory: 413  loss: 0.4184  loss_cls: 0.2546  loss_ffr: 0.1456  loss_mono: 0.0182  grad_norm: 0.4481
+2026/11/07 07:46:21 - mmengine - INFO - Epoch(train)  [3][480/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:01  time: 0.0332  data_time: 0.0200  memory: 413  loss: 0.4879  loss_cls: 0.2687  loss_ffr: 0.1963  loss_mono: 0.0229  grad_norm: 0.3998
+2026/11/07 07:46:21 - mmengine - INFO - Epoch(train)  [3][500/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:02  time: 0.0351  data_time: 0.0199  memory: 413  loss: 0.4802  loss_cls: 0.2625  loss_ffr: 0.2073  loss_mono: 0.0104  grad_norm: 0.3779
+2026/11/07 07:46:22 - mmengine - INFO - Epoch(train)  [3][520/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:01  time: 0.0341  data_time: 0.0200  memory: 413  loss: 0.4905  loss_cls: 0.2815  loss_ffr: 0.1949  loss_mono: 0.0141  grad_norm: 0.3729
+2026/11/07 07:46:23 - mmengine - INFO - Epoch(train)  [3][540/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:16:01  time: 0.0346  data_time: 0.0199  memory: 413  loss: 0.5188  loss_cls: 0.2944  loss_ffr: 0.2092  loss_mono: 0.0153  grad_norm: 0.4056
+2026/11/07 07:46:24 - mmengine - INFO - Epoch(train)  [3][560/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:59  time: 0.0332  data_time: 0.0199  memory: 413  loss: 0.4509  loss_cls: 0.2552  loss_ffr: 0.1841  loss_mono: 0.0116  grad_norm: 0.4273
+2026/11/07 07:46:24 - mmengine - INFO - Epoch(train)  [3][580/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:58  time: 0.0336  data_time: 0.0200  memory: 413  loss: 0.5919  loss_cls: 0.3793  loss_ffr: 0.1807  loss_mono: 0.0319  grad_norm: 0.4561
+2026/11/07 07:46:25 - mmengine - INFO - Exp name: predict_anomaly_snippet_20261107_074601
+2026/11/07 07:46:25 - mmengine - INFO - Epoch(train)  [3][600/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:58  time: 0.0350  data_time: 0.0200  memory: 413  loss: 0.5536  loss_cls: 0.3319  loss_ffr: 0.2034  loss_mono: 0.0183  grad_norm: 0.4192
+2026/11/07 07:46:25 - mmengine - INFO - Saving checkpoint at 3 epochs
+2026/11/07 07:46:26 - mmengine - INFO - Epoch(val)  [3][ 20/300]    eta: 0:00:04  time: 0.0150  data_time: 0.0131  memory: 380  
+2026/11/07 07:46:26 - mmengine - INFO - Epoch(val)  [3][ 40/300]    eta: 0:00:03  time: 0.0124  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:27 - mmengine - INFO - Epoch(val)  [3][ 60/300]    eta: 0:00:03  time: 0.0123  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:27 - mmengine - INFO - Epoch(val)  [3][ 80/300]    eta: 0:00:02  time: 0.0127  data_time: 0.0110  memory: 380  
+2026/11/07 07:46:27 - mmengine - INFO - Epoch(val)  [3][100/300]    eta: 0:00:02  time: 0.0124  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:27 - mmengine - INFO - Epoch(val)  [3][120/300]    eta: 0:00:02  time: 0.0123  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:28 - mmengine - INFO - Epoch(val)  [3][140/300]    eta: 0:00:02  time: 0.0124  data_time: 0.0107  memory: 380  
+2026/11/07 07:46:28 - mmengine - INFO - Epoch(val)  [3][160/300]    eta: 0:00:01  time: 0.0123  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:28 - mmengine - INFO - Epoch(val)  [3][180/300]    eta: 0:00:01  time: 0.0123  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:28 - mmengine - INFO - Epoch(val)  [3][200/300]    eta: 0:00:01  time: 0.0124  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:29 - mmengine - INFO - Epoch(val)  [3][220/300]    eta: 0:00:01  time: 0.0123  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:29 - mmengine - INFO - Epoch(val)  [3][240/300]    eta: 0:00:00  time: 0.0129  data_time: 0.0110  memory: 380  
+2026/11/07 07:46:29 - mmengine - INFO - Epoch(val)  [3][260/300]    eta: 0:00:00  time: 0.0123  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:29 - mmengine - INFO - Epoch(val)  [3][280/300]    eta: 0:00:00  time: 0.0124  data_time: 0.0106  memory: 380  
+2026/11/07 07:46:30 - mmengine - INFO - Epoch(val)  [3][300/300]    eta: 0:00:00  time: 0.0124  data_time: 0.0107  memory: 380  
+2026/11/07 07:46:30 - mmengine - INFO - Epoch(val) [3][300/300]    threshold@0.10: 0.5265  tta@0.01: 0.3300  tta@0.05: 0.8933  tta@0.1: 1.0440  mtta@0.1: 0.7765  tta@1: 1.5453  AUC@0.0s: 0.8571  AUC@0.5s: 0.7911  AUC@1.0s: 0.6835  AUC@1.5s: 0.5998  mAUC@0.1: 0.6915  AUC_full@0.0s: 0.9412  AUC_full@0.5s: 0.9130  AUC_full@1.0s: 0.8636  AUC_full@1.5s: 0.8043  mAUC@: 0.8603  AP@0.0s: 0.9474  AP@0.5s: 0.9149  AP@1.0s: 0.8483  AP@1.5s: 0.7685  mAP@: 0.8439  num_samples@: 300  data_time: 0.0108  time: 0.0126

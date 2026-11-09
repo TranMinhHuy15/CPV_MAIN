@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "files": {
+    "RESULTS.md": "1bb4eee8143f890b4c9c07adc0d4f6b932d9598eba3658a78dd1de3d174d7036",
+    "all_models_all28_metrics.csv": "6950a8c03f4d3b73217cdd1573f29a023b4fe4df9234751d4820d4e9e5e086ec",
+    "per_seed_all28_metrics_vs_V6.csv": "c27ef6e1dfb1907a8e74e6b6972cc7d5b7ab7ae71e58eca16d25a3f475592b0e",
+    "per_seed_summary.csv": "52c9bb4e3217b2d5e2336c78559355db769eb54845603f188b02d9879cb9f153",
+    "v6_rescore_parity.csv": "ccf33974812036521d8626a35e0277f571314383875aab457182ed1502256184"
+  },
+  "rows_all_metrics": 504,
+  "rows_per_seed_summary": 18,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "selection_lock_sha256": "32b0c61736aa60284c5e10b7c7dd41f2f344d55c94f5aec3f53d5cc2324f5406",
+  "test_count": 1344
+}

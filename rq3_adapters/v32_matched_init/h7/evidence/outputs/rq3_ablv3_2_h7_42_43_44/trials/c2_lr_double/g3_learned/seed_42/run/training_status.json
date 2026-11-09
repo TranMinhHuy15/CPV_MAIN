@@ -1,0 +1,7 @@
+{
+  "completed_epochs": 50,
+  "target_epochs": 50,
+  "complete": true,
+  "checkpoint_selection": "validation full mAUC@ (published config)",
+  "best_checkpoint": "best_mAUC@_epoch_14.pth"
+}

@@ -1,0 +1,21 @@
+{
+  "tests": 71,
+  "passed": true,
+  "passed_count": 70,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    [
+      "test_normal_parent_exit_cleans_orphan (test_safety.SafetyChecks.test_normal_parent_exit_cleans_orphan)",
+      "Real POSIX orphan cleanup must run on rented Linux before training"
+    ]
+  ],
+  "seconds": 187.25,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.8.0+cpu",
+    "numpy": "2.5.4",
+    "cuda_available": false
+  },
+  "scope": "Fresh ZIP round-trip CPU/tensor/recovery/process-tree/evaluator regression; not full CNN224/CUDA/Nexar"
+}

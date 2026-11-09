@@ -1,0 +1,204 @@
+"""Study policy, artifact identities and selection. Standard library only."""
+import csv
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import statistics
+import tempfile
+
+SEEDS = (42, 43, 44)
+ARMS = ('m1', 'm1_m2', 'm1_dx')
+METRICS = ('mAP@', 'mAUC@', 'AP@0.5s', 'AP@1.0s', 'AP@1.5s')
+PROTOCOL = 'rq3-v6base-frozen-riskprop-one-config-three-seeds-v1'
+DATA_REVISION = '7535d0656dac31d7da2846913bb69c6331d2a70a'
+SOURCE_COMMIT = '579376fa1d879f28a9d68c2565d1e449de24b666'
+# One configuration only: the H7 study (v1.1) showed four configurations within ~0.2 pp validation
+# mAUC of each other, so the tuning dimension is dropped. c2 won there for all three modules.
+CANDIDATES = (
+    dict(id='c2_lr_double', lr=2e-4, weight_decay=1e-4, dropout=.1, width=512,
+         rationale='Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.'),
+)
+
+
+def load(path):
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(4 << 20), b''):h.update(block)
+    return h.hexdigest()
+
+
+def digest(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, allow_nan=False).encode()).hexdigest()
+
+
+def save(path, value):
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+    fd,tmp=tempfile.mkstemp(dir=str(path.parent),suffix='.tmp')
+    try:
+        with os.fdopen(fd,'w',encoding='utf-8') as f:
+            json.dump(value,f,ensure_ascii=False,sort_keys=True,allow_nan=False,indent=2)
+            f.flush();os.fsync(f.fileno())
+        os.replace(tmp,path)
+    finally:
+        if os.path.exists(tmp):os.unlink(tmp)
+
+
+def bind(path,value):
+    path=Path(path)
+    if path.exists() and load(path)!=value:raise ValueError('Identity changed; preserve outputs and use a NEW output_root: '+str(path))
+    if not path.exists():save(path,value)
+    return digest(value)
+
+
+def csv_write(path,rows):
+    if not rows:raise ValueError('Refuse empty result table.')
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+    tmp=path.with_suffix(path.suffix+'.tmp')
+    with tmp.open('w',encoding='utf-8-sig',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+    tmp.replace(path)
+
+
+def candidate(name):
+    return dict(next(c for c in CANDIDATES if c['id']==name))
+
+
+def validate_candidates():
+    identities=[digest({k:v for k,v in c.items() if k not in ('id','rationale')}) for c in CANDIDATES]
+    if len(set(c['id'] for c in CANDIDATES))!=len(CANDIDATES) or len(set(identities))!=len(CANDIDATES):
+        raise ValueError('Duplicate candidate ID or actual hyperparameters.')
+    return True
+
+
+def plain_name(name):
+    if not isinstance(name,str) or not name or name in ('.','..') or any(c in name for c in '/\\:'):
+        raise ValueError('Unsafe checkpoint filename.')
+    return name
+
+
+def validate_config(cfg):
+    validate_candidates()
+    required={'source_zip','data_root','output_root','runtime_root','v6_runs','cache_roots',
+              'encode_chunk','log_every_batches','compact_completed_trials'}
+    if set(cfg)!=required:raise ValueError('Use exact inputs.example.json fields; unexpected/missing: '+str(set(cfg)^required))
+    for key in ('v6_runs','cache_roots'):
+        if set(cfg[key])!={str(s) for s in SEEDS}:raise ValueError(key+' must explicitly include42/43/44.')
+    for key in ('source_zip','data_root','output_root','runtime_root'):
+        if not isinstance(cfg[key],str) or not cfg[key].strip():raise ValueError('Fill '+key)
+    if type(cfg['encode_chunk']) is not int or not 1<=cfg['encode_chunk']<=16:raise ValueError('encode_chunk1..16')
+    if type(cfg['log_every_batches']) is not int or cfg['log_every_batches']<1:raise ValueError('Positive log interval.')
+    if type(cfg['compact_completed_trials']) is not bool:raise ValueError('compact_completed_trials must be bool.')
+    inputs=[Path(cfg['data_root']).resolve(),Path(cfg['source_zip']).resolve()]
+    for key in ('v6_runs','cache_roots'):
+        for value in cfg[key].values():
+            if value is not None:inputs.append(Path(value).resolve())
+    outputs=[Path(cfg[key]).resolve() for key in ('output_root','runtime_root')]
+    for out in outputs:
+        for source in inputs:
+            if out==source or out in source.parents or source in out.parents:raise ValueError('Output/runtime must not overlap original inputs.')
+    if outputs[0]==outputs[1] or outputs[0] in outputs[1].parents or outputs[1] in outputs[0].parents:
+        raise ValueError('Keep runtime_root and output_root separate.')
+    return cfg
+
+
+def history_selection(run):
+    run=Path(run);status=load(run/'training_status.json')
+    history=[json.loads(s) for s in (run/'validation_history.jsonl').read_text(encoding='utf-8-sig').splitlines() if s.strip()]
+    if (status.get('complete') is not True or status.get('completed_epochs')!=50 or status.get('target_epochs')!=50
+            or [r.get('epoch') for r in history]!=list(range(1,51))):raise ValueError('Need exactly50 committed epochs: '+str(run))
+    for row in history:
+        for key in METRICS:
+            v=row.get('metrics',{}).get(key)
+            if type(v) not in (int,float) or not math.isfinite(v) or not 0<=v<=1:raise ValueError('Invalid validation metric '+key)
+    best=max(history,key=lambda r:r['metrics']['mAUC@'])
+    checkpoint=plain_name(status.get('best_checkpoint'))
+    if checkpoint!='best_mAUC@_epoch_%d.pth'%best['epoch']:raise ValueError('Best checkpoint does not match earliest maximum validation mAUC.')
+    threshold=best['metrics'].get('threshold@0.10')
+    if type(threshold) not in (int,float) or not math.isfinite(threshold):raise ValueError('Missing frozen validation threshold.')
+    return dict(epoch=best['epoch'],checkpoint=checkpoint,metrics=best['metrics'],validation_threshold=threshold)
+
+
+# Frozen base for this study: RiskProp V6 (author code, with_rnn=False), seeds 42/43 from the original
+# three-seed run and seed 44 from the 2026-11-03 rerun (the original seed-44 run had a resume defect and
+# is excluded). The V6 head is fc_cls(mean CNN feature) per snippet; no recurrence.
+V6_PROTOCOL = 'riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3'
+V6_PREPROCESSING = 'author-native-frame-opencv-jpeg-v2'
+V6_RECIPE_KEYS = ('source_commit','data_revision','epochs','batch_per_gpu','effective_batch_size','world_size',
+                  'amp','loss','preprocessing','preprocessing_archive_sha256','annotations_sha256')
+V6_REQUIRED = ('run_manifest.json','training_status.json','validation_history.jsonl','validation_predictions.json',
+               'test_predictions.json')
+
+
+def validate_v6_baseline(run,seed,kaggle_adapter_sha256=None):
+    """Read-only check of one frozen V6 run folder: metadata + exactly one selected checkpoint."""
+    run=Path(run).resolve()
+    for name in V6_REQUIRED:
+        if not (run/name).is_file() or (run/name).stat().st_size==0:raise FileNotFoundError('V6 run file missing: '+str(run/name))
+    c=load(run/'run_manifest.json')['contract']
+    if (type(c.get('seed')) is not int or c['seed']!=seed or c.get('source_commit')!=SOURCE_COMMIT
+            or c.get('data_revision')!=DATA_REVISION or c.get('preprocessing')!=V6_PREPROCESSING
+            or c.get('epochs')!=50 or c.get('rq2') is not None):
+        raise ValueError('Not a V6 (no-RNN) run of seed %d with the shared source/data/preprocessing: %s'%(seed,run))
+    if kaggle_adapter_sha256 is not None and c.get('launcher_sha256',{}).get('kaggle_adapter.py')!=kaggle_adapter_sha256:
+        raise ValueError('V6 data/preprocessing adapter differs from the source used for feature extraction: '+str(run))
+    selected=history_selection(run)
+    pths=sorted(p.name for p in run.glob('*.pth'))
+    if pths!=[selected['checkpoint']]:
+        raise ValueError('V6 run folder must hold exactly the selected best checkpoint %s, found %s'%(selected['checkpoint'],pths))
+    cp=run/selected['checkpoint']
+    val=load(run/'validation_predictions.json')
+    if len(val)!=300 or len({r['id'] for r in val})!=300 or any(len(r['pred'])!=30 for r in val):
+        raise ValueError('V6 validation_predictions.json must hold 300 videos x 30 snippet probabilities.')
+    test=load(run/'test_predictions.json')
+    if len(test)!=1344 or len({r['id'] for r in test})!=1344:raise ValueError('V6 test_predictions.json must hold 1344 videos.')
+    return dict(run=str(run),checkpoint=str(cp),checkpoint_sha256=sha(cp),contract_sha256=digest(c),
+                recipe_sha256=digest({k:c.get(k) for k in V6_RECIPE_KEYS}),history=0,seed=seed,
+                baseline_input_kind='frozen_V6_selected_checkpoint',protocol=c.get('protocol'),
+                selected_epoch=selected['epoch'],validation_metrics={k:selected['metrics'][k] for k in METRICS},
+                validation_threshold=selected['validation_threshold'],manifest_sha256=sha(run/'run_manifest.json'),
+                validation_history_sha256=sha(run/'validation_history.jsonl'),
+                validation_predictions_sha256=sha(run/'validation_predictions.json'),
+                original_test_predictions_sha256=sha(run/'test_predictions.json'))
+
+
+def rank_common(rows):
+    """ONE candidate per module across all THREE seeds; never use held-out test."""
+    expected={(a,c['id'],s) for a in ARMS for c in CANDIDATES for s in SEEDS}
+    keys=[(r['arm'],r['candidate'],r['seed']) for r in rows]
+    if len(set(keys))!=len(keys) or set(keys)!=expected:raise ValueError('Need the complete unique candidate x module x seed matrix before selection.')
+    rankings=[];chosen={}
+    for arm in ARMS:
+        arm_rows=[]
+        for order,c in enumerate(CANDIDATES):
+            subset=sorted((r for r in rows if r['arm']==arm and r['candidate']==c['id']),key=lambda r:r['seed'])
+            values=[r['validation_metrics']['mAUC@'] for r in subset]
+            aps=[r['validation_metrics']['AP@1.5s'] for r in subset]
+            if any(type(x) not in (int,float) or not math.isfinite(x) for x in values+aps):raise ValueError('Nonfinite validation rank.')
+            row=dict(arm=arm,candidate=c['id'],n=3,mean_validation_mAUC=statistics.mean(values),
+                     sd_validation_mAUC=statistics.stdev(values),mean_validation_AP15=statistics.mean(aps),
+                     **{'seed%d_validation_mAUC'%r['seed']:r['validation_metrics']['mAUC@'] for r in subset})
+            arm_rows.append((row,order,subset))
+        arm_rows.sort(key=lambda x:(-x[0]['mean_validation_mAUC'],-x[0]['mean_validation_AP15'],x[1]))
+        winner=arm_rows[0]
+        chosen[arm]=dict(candidate=winner[0]['candidate'],hyperparameters=candidate(winner[0]['candidate']),
+                         selected=winner[2],reason='Maximum mean full validation mAUC across42/43/44; ties: mean AP@1.5s then predeclared candidate order. Same candidate for all three seeds.')
+        for rank,(row,_,_) in enumerate(arm_rows,1):rankings.append(dict(rank=rank,**row))
+    return chosen,rankings
+
+
+def measured_eta(train_seconds_per_epoch,extract_seconds_per_video=None,test_seconds_per_video=None,completed_runs=0):
+    if set(train_seconds_per_epoch)!=set(ARMS):raise ValueError('Measure all three module pilots.')
+    if any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in train_seconds_per_epoch.values()):raise ValueError('Positive measured epoch seconds required.')
+    runs_per_arm=len(CANDIDATES)*len(SEEDS)
+    seconds=sum(train_seconds_per_epoch[a]*50*runs_per_arm for a in ARMS)
+    return dict(training_runs=runs_per_arm*len(ARMS),epochs=50*runs_per_arm*len(ARMS),
+                training_hours=seconds/3600,extraction_hours=None if extract_seconds_per_video is None else extract_seconds_per_video*1500*3/3600,
+                test_hours=None if test_seconds_per_video is None else test_seconds_per_video*1344*3/3600,
+                scope='Measured on current GPU; one V6 encoder per test video shared by b0 and all modules. Setup, data audit, report I/O listed separately.',
+                completed_runs=completed_runs)

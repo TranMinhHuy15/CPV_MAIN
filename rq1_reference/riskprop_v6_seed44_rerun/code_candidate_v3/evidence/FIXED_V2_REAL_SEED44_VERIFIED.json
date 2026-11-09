@@ -1,0 +1,80 @@
+{
+  "seed": 44,
+  "status": {
+    "completed_epochs": 50,
+    "target_epochs": 50,
+    "complete": true,
+    "checkpoint_selection": "validation full mAUC@ (published config)",
+    "best_checkpoint": "best_mAUC@_epoch_17.pth"
+  },
+  "history_epochs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "best_checkpoint_sha256": "85f7421dda95b04b7e6e02f8f1a77591d8b49a820ed0bc516cd4041e94e3005a",
+  "metrics": {
+    "Public": {
+      "mAP": 0.7774630378911094,
+      "mAUC": 0.817629388755944
+    },
+    "Private": {
+      "mAP": 0.8226925526327054,
+      "mAUC": 0.8436780101222103
+    },
+    "Combined": {
+      "mAP": 0.7962148361915307,
+      "mAUC": 0.8301414992660412
+    }
+  },
+  "GPU_inference_rerun": false,
+  "weights_changed": false,
+  "warning": "Parent RNG restored does not guarantee persistent DataLoader worker RNG equivalence."
+}

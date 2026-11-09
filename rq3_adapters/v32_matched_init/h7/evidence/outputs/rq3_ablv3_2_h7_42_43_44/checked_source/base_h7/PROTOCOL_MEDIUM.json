@@ -1,0 +1,41 @@
+{
+  "history": 7,
+  "feature_dim": 2048,
+  "hidden_dim": 2048,
+  "rnn_layers": 1,
+  "bidirectional": false,
+  "reset_each_window": true,
+  "warmup": 25,
+  "targets": 30,
+  "tokens": 55,
+  "clip_frames": 5,
+  "native_stride": 3,
+  "maximum_native_frame_lookback": 30,
+  "nominal_span_at_30fps_s": 1.0,
+  "epochs": 50,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "microbatch": 2,
+  "accumulation": 8,
+  "effective_batch": 16,
+  "world_size": 1,
+  "loss": "BCE+1.5FFR+1.1AMC",
+  "pos_weight": 1,
+  "optimizer": "SGD",
+  "lr": 0.002,
+  "momentum": 0.9,
+  "weight_decay": 0.0001,
+  "lr_milestones": [
+    20,
+    40
+  ],
+  "lr_gamma": 0.1,
+  "checkpoint": "highest validation full mAUC@",
+  "final_test_after_all_selected_seeds_train": true,
+  "study_status": "exploratory_followup_after_prior_test_inspection",
+  "metric_arithmetic": "unchanged rq2-28-v1; raw pAUC/0.1 and index-based mTTA disclosed",
+  "no_performance_guarantee": true
+}

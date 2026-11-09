@@ -1,0 +1,12 @@
+This export reads training files; it never starts/resumes training or evaluation.
+Each invocation creates a NEW snapshot. It does not monitor future epochs automatically.
+Run again after train/test/backup finishes to capture the final available logs.
+tmux capture-pane is read-only and captures only retained scrollback, not lost history.
+Browser uploads and earlier unzip/download messages may have no surviving log.
+Source sections are NOT merged into a claimed exact global time order.
+Raw result bytes are preserved unless token redaction was necessary; inspect manifest.
+This ZIP contains LOGS/REPORTS, not model weights, optimizer state or videos.
+It does NOT replace the original verified TAR model backup.
+A local download must be independently hash-checked before any instance destruction.
+No model/test/checkpoint integrity claim is made by this collector.
+TMUX: Captured retained scrollback only; redactions=0.

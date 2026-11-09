@@ -1,0 +1,2 @@
+# Preserve archived source/log bytes and SHA-256 on every checkout.
+* -text

@@ -1,0 +1,225 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "contract": {
+    "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+    "source_commit": "579376fa1d879f28a9d68c2565d1e449de24b666",
+    "data_revision": "7535d0656dac31d7da2846913bb69c6331d2a70a",
+    "seed": 43,
+    "epochs": 50,
+    "batch_per_gpu": 2,
+    "effective_batch_size": 16,
+    "world_size": 1,
+    "amp": true,
+    "precision": "train AMP float16, published losses FP32, validation/test FP32; dynamic scale starts 1024",
+    "loss": "published_code_no_algorithmic_changes",
+    "preprocessing": "author-native-frame-opencv-jpeg-v2",
+    "preprocessing_archive_sha256": "5626cf3268f6223ff4f571db17ca433cbcc687a0991ff1934cb9106c314e169b",
+    "annotations_sha256": "0cc944e13e11cdeed50036c2a28b190fb675173aed964b66c5c713ca87989d50",
+    "runtime_contract": {
+      "python": "3.8.5",
+      "torch": "2.1.0+cu118",
+      "torchvision": "0.16.0+cu118",
+      "cuda": "11.8",
+      "mmengine": "0.10.7",
+      "mmcv": "2.2.0",
+      "mmaction2": "1.2.0-author-source",
+      "mmcv_wheel_sha256": "9733cbc2cf656e2d64780c93286847740c03c5da3c85ce531ae779d81f01c93c",
+      "installed_packages": {
+        "wheel": "0.45.1",
+        "pip": "25.0.1",
+        "setuptools": "75.3.4",
+        "mpmath": "1.3.0",
+        "urllib3": "1.26.13",
+        "typing_extensions": "4.13.2",
+        "sympy": "1.13.3",
+        "pillow": "10.4.0",
+        "numpy": "1.24.4",
+        "networkx": "3.1",
+        "markupsafe": "2.1.5",
+        "idna": "3.4",
+        "fsspec": "2025.3.0",
+        "filelock": "3.16.1",
+        "charset-normalizer": "2.1.1",
+        "certifi": "2022.12.7",
+        "triton": "2.1.0",
+        "requests": "2.28.1",
+        "jinja2": "3.1.6",
+        "torch": "2.1.0+cu118",
+        "torchvision": "0.16.0+cu118",
+        "pytz": "2026.5",
+        "addict": "2.4.0",
+        "zipp": "3.20.2",
+        "wcwidth": "0.2.14",
+        "tzdata": "2026.5",
+        "tomli": "2.4.1",
+        "threadpoolctl": "3.5.0",
+        "termcolor": "2.4.0",
+        "six": "1.17.0",
+        "scipy": "1.10.1",
+        "pyyaml": "6.0.3",
+        "pyparsing": "3.1.4",
+        "pygments": "2.19.2",
+        "platformdirs": "4.3.6",
+        "packaging": "26.2",
+        "opencv-python": "4.8.1.78",
+        "mdurl": "0.1.2",
+        "kiwisolver": "1.4.7",
+        "joblib": "1.4.2",
+        "fonttools": "4.57.0",
+        "einops": "0.8.0",
+        "cycler": "0.12.1",
+        "contourpy": "1.1.1",
+        "scikit-learn": "1.3.2",
+        "python-dateutil": "2.9.0.post0",
+        "markdown-it-py": "3.0.0",
+        "importlib_resources": "6.4.5",
+        "importlib_metadata": "8.5.0",
+        "ftfy": "6.2.3",
+        "yapf": "0.40.2",
+        "rich": "14.3.4",
+        "pandas": "2.0.3",
+        "matplotlib": "3.7.5",
+        "seaborn": "0.13.2",
+        "mmengine": "0.10.7",
+        "mmcv": "2.2.0"
+      },
+      "requirements_sha256": "03c2fde11dee07b4f74444e6db047c003f5644850dc8be1744e04ea2a7018a8a"
+    },
+    "launcher_sha256": {
+      "repro.py": "d2e217566d7859b417ba4b31b8913f2f4e47166ec50be4497b67dcd509f1535f",
+      "worker.py": "5cb043662f4f85585e18856cb163c741a5423c7888044527cdf08cbfa82ee031",
+      "kaggle_adapter.py": "8c8804e90f4587f5e9e268b016023d8ccd2a6729426322fdcd0fc3c2acb46388",
+      "evaluate.py": "a0abd07154af26474ed454a98860d0197ff3c6254d8622ff8da3a48e2762c239",
+      "amp_adapter.py": "7575a3cac8dcb462875457c8782ebef8bc143b1727e045e624f55aaf14c4e0fa",
+      "run_vast.py": "49989110a989522e413beac4b6cb1cee8447c81d80b2757655172fb53ec52214",
+      "run_three_seeds.py": "d5b4872838d63b086b1659157aedb3da79ca75eff55576195291c74ac31703bd",
+      "process_control.py": "60fcc87501f7b07ee4db7b8bde4f67aface77e9977909e2c85d3d9d1ab5aa9b2",
+      "checkpoint_safety.py": "93a12a421c8dd3dc26774529e4c984745a098fb88a9fe4c2edab6ecbe0a33b45"
+    }
+  },
+  "physical_batch_per_gpu": 2,
+  "effective_batch_size": 16,
+  "accumulation_steps": 8,
+  "train_microsteps_per_epoch_per_rank": 600,
+  "optimizer_steps_per_epoch": 75,
+  "rank0_smoke_losses": [
+    {
+      "loss": 0.8252568244934082,
+      "loss_cls": 0.7397243976593018,
+      "loss_ffr": 0.05968581140041351,
+      "loss_mono": 0.025846628472208977
+    },
+    {
+      "loss": 0.6565983295440674,
+      "loss_cls": 0.6113861799240112,
+      "loss_ffr": 0.030771469697356224,
+      "loss_mono": 0.014440626837313175
+    },
+    {
+      "loss": 0.788128674030304,
+      "loss_cls": 0.7425134778022766,
+      "loss_ffr": 0.045615196228027344,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.7747319340705872,
+      "loss_cls": 0.7286476492881775,
+      "loss_ffr": 0.04608429595828056,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.7550431489944458,
+      "loss_cls": 0.680179238319397,
+      "loss_ffr": 0.027089297771453857,
+      "loss_mono": 0.04777458682656288
+    },
+    {
+      "loss": 0.7979505658149719,
+      "loss_cls": 0.7049170732498169,
+      "loss_ffr": 0.05888039618730545,
+      "loss_mono": 0.03415310010313988
+    },
+    {
+      "loss": 0.775842010974884,
+      "loss_cls": 0.74088054895401,
+      "loss_ffr": 0.03496146202087402,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.7630870342254639,
+      "loss_cls": 0.6955509185791016,
+      "loss_ffr": 0.0501636266708374,
+      "loss_mono": 0.017372488975524902
+    },
+    {
+      "loss": 0.7522069215774536,
+      "loss_cls": 0.6775858402252197,
+      "loss_ffr": 0.07462108880281448,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.7211546301841736,
+      "loss_cls": 0.6707123517990112,
+      "loss_ffr": 0.05044230446219444,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.7572100758552551,
+      "loss_cls": 0.6872710585594177,
+      "loss_ffr": 0.05355053395032883,
+      "loss_mono": 0.01638850010931492
+    },
+    {
+      "loss": 0.7389565706253052,
+      "loss_cls": 0.6618959307670593,
+      "loss_ffr": 0.07706062495708466,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.7629740238189697,
+      "loss_cls": 0.6878021955490112,
+      "loss_ffr": 0.04051600769162178,
+      "loss_mono": 0.03465581312775612
+    },
+    {
+      "loss": 0.7260971665382385,
+      "loss_cls": 0.6732134222984314,
+      "loss_ffr": 0.052883729338645935,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.6860827207565308,
+      "loss_cls": 0.6656641960144043,
+      "loss_ffr": 0.020418541505932808,
+      "loss_mono": 0.0
+    },
+    {
+      "loss": 0.7816722393035889,
+      "loss_cls": 0.7085495591163635,
+      "loss_ffr": 0.03946853429079056,
+      "loss_mono": 0.033654145896434784
+    }
+  ],
+  "smoke_microsteps": 16,
+  "nominal_smoke_optimizer_steps": 2,
+  "amp_scaler_state": {
+    "scale": 1024.0,
+    "growth_factor": 2.0,
+    "backoff_factor": 0.5,
+    "growth_interval": 2000,
+    "_growth_tracker": 2
+  },
+  "training_precision": "AMP float16 forward; original losses FP32",
+  "evaluation_precision": "FP32",
+  "mini_validation_passed": true,
+  "mini_validation_videos": 2,
+  "mini_validation_scope": "technical pipeline check after discarded smoke updates; NOT a trained-model result",
+  "world_size": 1,
+  "seconds_per_microstep": 1.609170106596624,
+  "rough_train_only_50_epoch_hours": 13.4097508883052,
+  "estimate_caveat": "15 post-warm-up microsteps including data wait; AMP updates may be skipped if gradients overflow. Excludes validation/preparation/test; not a runtime guarantee.",
+  "peak_memory_gb_max_across_gpus": 13.910780906677246,
+  "backbone_gradient_present": true,
+  "backbone_sgd_update_verified": true
+}

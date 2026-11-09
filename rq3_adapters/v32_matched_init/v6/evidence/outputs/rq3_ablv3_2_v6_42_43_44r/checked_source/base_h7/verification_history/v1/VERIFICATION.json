@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-29",
+  "release": "RQ2_Medium_H7_Checked_v1",
+  "legacy_zip_sha256": "a7d7e3505667ec6e689a90bcb7e2ece06c1378451826f9f2e995afb83b8525e7",
+  "status": "LOCAL_CPU_CHECKS_PASSED; FULL_CUDA_HOST_PREFLIGHT_REQUIRED",
+  "local_cpu_runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.5.1+cpu",
+    "numpy": "1.26.4",
+    "cuda_available": false
+  },
+  "local_tests": {
+    "passed": true,
+    "tests": 44,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "history": 7,
+    "elapsed_seconds": 97.13,
+    "returncode": 0,
+    "scope": "CPU tests, including actual2048-width LSTM backward; no fullCNN/CUDA"
+  },
+  "static_and_manifest_audit": true,
+  "local_full_cuda_smoke": false,
+  "local_full_nexar_training": false,
+  "target_gpu_preflight_required": true,
+  "production_runtime": "Python3.8.5/torch2.1.0+cu118; distinct from local CPU audit runtime",
+  "unchanged_scientific_files": [
+    "RiskProp-main.zip",
+    "amp_adapter.py",
+    "kaggle_adapter.py",
+    "rq2_capture.py",
+    "evaluate.py",
+    "checkpoint_safety.py",
+    "process_control.py",
+    "author_preprocessing/",
+    "rq1_evaluation/"
+  ],
+  "limitations": [
+    "No H7/H13 score improvement is established.",
+    "No local full224 CUDA training or live HF download was run.",
+    "Windows skips the real POSIX orphan-cleanup test; Linux reruns it before training."
+  ]
+}

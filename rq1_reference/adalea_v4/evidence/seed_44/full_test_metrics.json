@@ -1,0 +1,186 @@
+{
+  "complete": true,
+  "seed": 44,
+  "test_videos": 1344,
+  "scalar": {
+    "Combined": {
+      "mAP": 0.7696467025000344,
+      "mAUC_grouped": 0.7838392556275124,
+      "mPAUC_sklearn_standardized": 0.6161730047430899,
+      "mPAUC_raw_divided_by_0.1": 0.27072870901187085,
+      "groups": [
+        {
+          "group": 0,
+          "lead_time_s": 0.5,
+          "n": 568,
+          "AP": 0.7830409289558568,
+          "AUC": 0.7938901011704028,
+          "pAUC_sklearn_standardized": 0.6329179674041283,
+          "pAUC_raw_divided_by_0.1": 0.3025441380678437
+        },
+        {
+          "group": 1,
+          "lead_time_s": 1.0,
+          "n": 464,
+          "AP": 0.7666888754494232,
+          "AUC": 0.7832193816884662,
+          "pAUC_sklearn_standardized": 0.6041092997058639,
+          "pAUC_raw_divided_by_0.1": 0.24780766944114152
+        },
+        {
+          "group": 2,
+          "lead_time_s": 1.5,
+          "n": 312,
+          "AP": 0.7592103030948235,
+          "AUC": 0.7744082840236686,
+          "pAUC_sklearn_standardized": 0.6114917471192775,
+          "pAUC_raw_divided_by_0.1": 0.2618343195266272
+        }
+      ],
+      "mTTA": null,
+      "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+    },
+    "Public": {
+      "mAP": 0.76354653393994,
+      "mAUC_grouped": 0.7792702802978484,
+      "mPAUC_sklearn_standardized": 0.6075037904182218,
+      "mPAUC_raw_divided_by_0.1": 0.25425720179462136,
+      "groups": [
+        {
+          "group": 0,
+          "lead_time_s": 0.5,
+          "n": 284,
+          "AP": 0.7724982082206402,
+          "AUC": 0.7899722277325928,
+          "pAUC_sklearn_standardized": 0.6326438989757671,
+          "pAUC_raw_divided_by_0.1": 0.30202340805395755
+        },
+        {
+          "group": 1,
+          "lead_time_s": 1.0,
+          "n": 231,
+          "AP": 0.748943840517476,
+          "AUC": 0.7762368815592205,
+          "pAUC_sklearn_standardized": 0.5708198532312792,
+          "pAUC_raw_divided_by_0.1": 0.1845577211394303
+        },
+        {
+          "group": 2,
+          "lead_time_s": 1.5,
+          "n": 152,
+          "AP": 0.7691975530817038,
+          "AUC": 0.7716017316017316,
+          "pAUC_sklearn_standardized": 0.6190476190476191,
+          "pAUC_raw_divided_by_0.1": 0.27619047619047615
+        }
+      ],
+      "mTTA": null,
+      "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+    },
+    "Private": {
+      "mAP": 0.7795011722542481,
+      "mAUC_grouped": 0.7896553930942165,
+      "mPAUC_sklearn_standardized": 0.6299429807365032,
+      "mPAUC_raw_divided_by_0.1": 0.2968916633993562,
+      "groups": [
+        {
+          "group": 0,
+          "lead_time_s": 0.5,
+          "n": 284,
+          "AP": 0.7925814161483964,
+          "AUC": 0.7976096012695895,
+          "pAUC_sklearn_standardized": 0.6315476252623227,
+          "pAUC_raw_divided_by_0.1": 0.299940487998413
+        },
+        {
+          "group": 1,
+          "lead_time_s": 1.0,
+          "n": 233,
+          "AP": 0.790079021229331,
+          "AUC": 0.7917035072207486,
+          "pAUC_sklearn_standardized": 0.6462531217522143,
+          "pAUC_raw_divided_by_0.1": 0.3278809313292072
+        },
+        {
+          "group": 2,
+          "lead_time_s": 1.5,
+          "n": 160,
+          "AP": 0.7558430793850169,
+          "AUC": 0.7796530707923113,
+          "pAUC_sklearn_standardized": 0.6120281951949729,
+          "pAUC_raw_divided_by_0.1": 0.2628535708704485
+        }
+      ],
+      "mTTA": null,
+      "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+    }
+  },
+  "temporal": {
+    "Combined": {
+      "mTTA_test_author_index10_inferred_s": 0.625249393738977,
+      "mTTA_test_physical_strictFAR_inferred_s": 0.6013753156435677,
+      "mTTA_test_physical_TPonly_strictFAR_inferred_s": 1.6064372757391727,
+      "positive_videos": 672,
+      "negative_observations": 65880,
+      "threshold_ranks_averaged": 6588,
+      "positives_without_observed_index_window": 22,
+      "positives_without_observed_physical_onset_window": 33,
+      "maximum_actual_negative_frame_FAR_source": 0.1,
+      "maximum_actual_negative_frame_FAR_physical_strict": 0.09998482088646023,
+      "misses_contribute_zero": true,
+      "prediction_tail_extrapolated": false,
+      "paper_test_equivalence_confirmed": false,
+      "mapping_verified": false,
+      "index_clock": "sample index difference /10, not necessarily physical seconds",
+      "physical_clock": "ffprobe best_effort_timestamp_time, no future score extrapolation",
+      "threshold_policy": "descriptive test-negative-frame ranks, not validation calibration or deployment operating point",
+      "strict_threshold_policy": "nextafter each source rank threshold toward +inf; ties count as a group"
+    },
+    "Public": {
+      "mTTA_test_author_index10_inferred_s": 0.5791784932135116,
+      "mTTA_test_physical_strictFAR_inferred_s": 0.5609845694839176,
+      "mTTA_test_physical_TPonly_strictFAR_inferred_s": 1.6068597099473938,
+      "positive_videos": 334,
+      "negative_observations": 32512,
+      "threshold_ranks_averaged": 3251,
+      "positives_without_observed_index_window": 10,
+      "positives_without_observed_physical_onset_window": 17,
+      "maximum_actual_negative_frame_FAR_source": 0.09999384842519685,
+      "maximum_actual_negative_frame_FAR_physical_strict": 0.0999630905511811,
+      "misses_contribute_zero": true,
+      "prediction_tail_extrapolated": false,
+      "paper_test_equivalence_confirmed": false,
+      "mapping_verified": false,
+      "index_clock": "sample index difference /10, not necessarily physical seconds",
+      "physical_clock": "ffprobe best_effort_timestamp_time, no future score extrapolation",
+      "threshold_policy": "descriptive test-negative-frame ranks, not validation calibration or deployment operating point",
+      "strict_threshold_policy": "nextafter each source rank threshold toward +inf; ties count as a group"
+    },
+    "Private": {
+      "mTTA_test_author_index10_inferred_s": 0.6692024782540833,
+      "mTTA_test_physical_strictFAR_inferred_s": 0.6401546977805329,
+      "mTTA_test_physical_TPonly_strictFAR_inferred_s": 1.6042798712964785,
+      "positive_videos": 338,
+      "negative_observations": 33368,
+      "threshold_ranks_averaged": 3336,
+      "positives_without_observed_index_window": 12,
+      "positives_without_observed_physical_onset_window": 16,
+      "maximum_actual_negative_frame_FAR_source": 0.09997602493406857,
+      "maximum_actual_negative_frame_FAR_physical_strict": 0.09994605610165427,
+      "misses_contribute_zero": true,
+      "prediction_tail_extrapolated": false,
+      "paper_test_equivalence_confirmed": false,
+      "mapping_verified": false,
+      "index_clock": "sample index difference /10, not necessarily physical seconds",
+      "physical_clock": "ffprobe best_effort_timestamp_time, no future score extrapolation",
+      "threshold_policy": "descriptive test-negative-frame ranks, not validation calibration or deployment operating point",
+      "strict_threshold_policy": "nextafter each source rank threshold toward +inf; ties count as a group"
+    }
+  },
+  "max_scalar_replay_delta": 1.1920928955078125e-07,
+  "training_changed": false,
+  "paper_test_equivalence_confirmed": false,
+  "mapping_verified": false,
+  "original_scalar_scores_preserved": true,
+  "selection": "validation only before full test capture"
+}

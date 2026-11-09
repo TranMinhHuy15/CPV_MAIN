@@ -1,0 +1,20 @@
+{
+  "release": "RQ2_Medium_H7_Checked_v1_FIXED",
+  "history": 7,
+  "variant": "medium_h7",
+  "date": "2026-10-29",
+  "baseline_zip_sha256": "a7d7e3505667ec6e689a90bcb7e2ece06c1378451826f9f2e995afb83b8525e7",
+  "initialization": "fresh Kinetics710 per seed; not H1/H26 fine-tuning",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 50,
+  "attention_readout": false,
+  "data_revision": "7535d0656dac31d7da2846913bb69c6331d2a70a",
+  "operational_patch": "1.1-fixed",
+  "parent_zip_sha256": "3aaf66b627f3f60517e51df881725b9e4c7831ea9292090ad46a2854ec5689c9",
+  "model_loss_sampling_recipe_unchanged": true,
+  "production_GPU_execution_verified": false
+}

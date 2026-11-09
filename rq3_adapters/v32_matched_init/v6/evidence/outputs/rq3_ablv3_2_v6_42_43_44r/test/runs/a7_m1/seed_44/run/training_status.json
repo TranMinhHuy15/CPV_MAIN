@@ -1,0 +1,6 @@
+{
+  "best_checkpoint": "selected_adapter.npz",
+  "complete": true,
+  "completed_epochs": 50,
+  "target_epochs": 50
+}

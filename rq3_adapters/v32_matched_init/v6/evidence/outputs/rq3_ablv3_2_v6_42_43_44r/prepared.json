@@ -1,0 +1,83 @@
+{
+  "baselines": {
+    "v6": {
+      "42": {
+        "baseline_input_kind": "frozen_V6_selected_checkpoint",
+        "checkpoint": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth",
+        "checkpoint_sha256": "fda77d9bfc56258ceea39878e51d38e3ee7e174cf92e42f9ed610c4562d9943b",
+        "contract_sha256": "2eb85a457ec3cc90a706c5efba60d5dbbf6249f8dd87ba6cb6174443e0171c83",
+        "history": 0,
+        "manifest_sha256": "a4dcc7ebe72622b91873505c4835d9f22cb3ff4e6a57d245a0eeb70eb998932e",
+        "original_test_predictions_sha256": "f49ff6d3468b8753024151b477a1cc39940eeda204ca7e58297326311f7ade03",
+        "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+        "recipe_sha256": "3587fdfb792926c331e806fd9019eddf4f04b684618d05b7607579753b0906bb",
+        "run": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run",
+        "seed": 42,
+        "selected_epoch": 25,
+        "validation_history_sha256": "a722a352bfa3eacd027fc6c4fd9b6a66b40e3a1165dd6b115c70a82f4b448f6d",
+        "validation_metrics": {
+          "AP@0.5s": 0.930025367156527,
+          "AP@1.0s": 0.8631249973444908,
+          "AP@1.5s": 0.8064488330499099,
+          "mAP@": 0.8665330658503092,
+          "mAUC@": 0.8693037037037037
+        },
+        "validation_predictions_sha256": "5982f3892ec800629146e583bf9bb6ff24d977807d1519f8c0360eefd227f329",
+        "validation_threshold": 0.3118206858634949
+      },
+      "43": {
+        "baseline_input_kind": "frozen_V6_selected_checkpoint",
+        "checkpoint": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_43/run/best_mAUC@_epoch_11.pth",
+        "checkpoint_sha256": "65690bba89a0be6a12afd5885668e423a499a78a4312ce90210b2ed5b89acc17",
+        "contract_sha256": "b912d3409771b7d6b53e23890c8ab928cb3dc5864ec9f904ed9dca5847312674",
+        "history": 0,
+        "manifest_sha256": "0926f502e9882fafa3883e638e943da3ef695a5f7c1bcca9fe32de4b5e625c02",
+        "original_test_predictions_sha256": "77407c03522d5bd1f5cb6fd912dc925fe221ba2078a042407231f1127b79fc38",
+        "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+        "recipe_sha256": "3587fdfb792926c331e806fd9019eddf4f04b684618d05b7607579753b0906bb",
+        "run": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_43/run",
+        "seed": 43,
+        "selected_epoch": 11,
+        "validation_history_sha256": "84777defc0cf75401250cb1af36d5b85f1f83c6895ed6c85b639890775440774",
+        "validation_metrics": {
+          "AP@0.5s": 0.9319164254752325,
+          "AP@1.0s": 0.8675405349455633,
+          "AP@1.5s": 0.7991136581561211,
+          "mAP@": 0.8661902061923056,
+          "mAUC@": 0.8712592592592593
+        },
+        "validation_predictions_sha256": "205d8ccef6f9abc2a0218e6c20bf812db68c696a98c80e44c5696da462f16b33",
+        "validation_threshold": 0.33986759185791016
+      },
+      "44": {
+        "baseline_input_kind": "frozen_V6_selected_checkpoint",
+        "checkpoint": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_44_rerun/run/best_mAUC@_epoch_35.pth",
+        "checkpoint_sha256": "5c0e817995491932240f7c2533423b61d47f4d9b5af96e34b65978594b901a17",
+        "contract_sha256": "fd3452bf7ec1e20285f3823196717321dc27a1a13a935d9164fe3439e8ef21e6",
+        "history": 0,
+        "manifest_sha256": "ec683986156746be8a807ab89893b8a931fb1eee3e2e783d63d4237f10b1c347",
+        "original_test_predictions_sha256": "5f5739c19382333468a469db361ca0f732fb4c2b967f4ddbdb9d4cb01d34105c",
+        "protocol": "riskprop-v6-vast-batch2-eff16-amp-single-gpu-3seed-terminal-v3",
+        "recipe_sha256": "3587fdfb792926c331e806fd9019eddf4f04b684618d05b7607579753b0906bb",
+        "run": "/workspace/rq3abl32v6_inputs/V6_BASES/seed_44_rerun/run",
+        "seed": 44,
+        "selected_epoch": 35,
+        "validation_history_sha256": "10cf2598ec10bf482cb002ed55c79cb1a3942eb0de27468ed38a6017c5390673",
+        "validation_metrics": {
+          "AP@0.5s": 0.9200600924482373,
+          "AP@1.0s": 0.8556275091346377,
+          "AP@1.5s": 0.7970248839796805,
+          "mAP@": 0.8575708285208519,
+          "mAUC@": 0.8680888888888889
+        },
+        "validation_predictions_sha256": "5a1bf54b81eb3f2e6a4b6f0d56a0487e06cbd8e0f66cdb23335271b47b0bb03b",
+        "validation_threshold": 0.7071888446807861
+      }
+    }
+  },
+  "prior_study": {
+    "root": null,
+    "used_for_main": false
+  },
+  "source_root": "/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/checked_source"
+}

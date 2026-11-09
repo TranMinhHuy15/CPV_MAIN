@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "tests": 44,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "history": 13,
+  "elapsed_seconds": 81.17,
+  "returncode": 0,
+  "scope": "CPU tests, including actual2048-width LSTM backward; no fullCNN/CUDA"
+}

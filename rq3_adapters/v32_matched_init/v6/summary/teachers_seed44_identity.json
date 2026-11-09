@@ -1,0 +1,25 @@
+{
+  "cache_manifest_sha256": "a38fd1024a88790453a33699f2b019b06c6b45ce3c342bdaadf5a7e1e5372d66",
+  "checkpoint_sha256": "5c0e817995491932240f7c2533423b61d47f4d9b5af96e34b65978594b901a17",
+  "models_sha256": "2e404f69526ba11d39605915c14917622997d3f3a60b767f443d30a77c4068fd",
+  "runtime": {
+    "cuda": "11.8",
+    "cudnn": 8700,
+    "gpu": "NVIDIA GeForce RTX 4080",
+    "packages": {
+      "mmcv": "2.2.0",
+      "mmengine": "0.10.7",
+      "numpy": "1.24.4",
+      "opencv-python": "4.8.1.78",
+      "pandas": "2.0.3",
+      "scikit-learn": "1.3.2"
+    },
+    "python": [
+      3,
+      8,
+      5
+    ],
+    "torch": "2.1.0+cu118"
+  },
+  "seed": 44
+}

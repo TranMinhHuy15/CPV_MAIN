@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "python": "3.8.5 (default, Aug 30 2020, 16:01:16) [MSC v.1927 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "parsed_python_files": [
+    "data.py",
+    "features.py",
+    "full_eval.py",
+    "model.py",
+    "process_control.py",
+    "runner.py",
+    "run_vast.py",
+    "setup_environment.py",
+    "shared_reference.py",
+    "shared_test_metrics.py",
+    "temporal_metrics.py",
+    "test_adalea.py",
+    "test_full_eval.py",
+    "test_gpu_predictor.py",
+    "test_process_safety.py",
+    "verify_local.py",
+    "worker.py"
+  ],
+  "checks": [
+    {
+      "script": "test_adalea.py",
+      "exit_code": 0,
+      "elapsed_s": 30.76599999999962,
+      "log": "D:\\Takedo\\Documents\\CPV\\output\\AdaLEA_V4_Verification_20261024\\test_adalea.py.log"
+    },
+    {
+      "script": "test_full_eval.py",
+      "exit_code": 0,
+      "elapsed_s": 157.71899999999914,
+      "log": "D:\\Takedo\\Documents\\CPV\\output\\AdaLEA_V4_Verification_20261024\\test_full_eval.py.log"
+    },
+    {
+      "script": "test_process_safety.py",
+      "exit_code": 0,
+      "elapsed_s": 6.390000000001237,
+      "log": "D:\\Takedo\\Documents\\CPV\\output\\AdaLEA_V4_Verification_20261024\\test_process_safety.py.log"
+    }
+  ],
+  "gpu_rtx4080_verified": false,
+  "real_dataset_end_to_end_verified": false,
+  "real_legacy_checkpoint_verified": false,
+  "purpose": "CPU fixtures only. No paper-performance claim. No paid Vast run."
+}

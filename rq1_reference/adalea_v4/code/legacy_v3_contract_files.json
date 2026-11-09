@@ -1,0 +1,69 @@
+{
+  "config": {
+    "protocol": "adalea-v3-paper-method-nexar-v6eval-frozen-vgg-coco5-b2acc8-fixed-v2",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "epochs": 50,
+    "batch_size": 2,
+    "accumulation": 8,
+    "amp": true,
+    "learning_rate": 0.002,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "milestones": [
+      20,
+      40
+    ],
+    "lr_gamma": 0.1,
+    "clip_grad": 40,
+    "feature_dim": 4096,
+    "embedding": 256,
+    "hidden": 512,
+    "dropout": 0.5,
+    "gamma_frames": 5,
+    "max_objects": 5,
+    "detector_threshold": 0.5,
+    "traffic_classes": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8
+    ],
+    "vgg_chunk": 8,
+    "cache_reserve_gib": 8,
+    "selection": "mAUC@",
+    "deterministic": false
+  },
+  "files": {
+    "author_preprocessing/annotations.csv": "0cc944e13e11cdeed50036c2a28b190fb675173aed964b66c5c713ca87989d50",
+    "author_preprocessing/index.csv": "93cf949e27c4e6d9bb1b9ed13c97e6928ad9a2fa6fb0bd96f986b63433b13902",
+    "author_preprocessing/nexar_test_annotations.csv": "ab0d1a24ce9fd51f4560b88ef6c6aeff5063611af0e0f89511160dfc96dc0ea0",
+    "author_preprocessing/nexar_train_annotations.csv": "7e114a82115631ae6a91603740daadff24c63ef14a35750eb543bce78d4fa518",
+    "author_preprocessing/nexar_val_annotations.csv": "858245dc1e83871cbeb4977660067e8a4c16a857776774a3df96fe191767a0b1",
+    "author_preprocessing/nexar_val_references.csv": "57c3aec1bcf6aece39d3763561c86c7d1d68dff0fa6462aa0a1c22ae57417336",
+    "author_preprocessing/sample_submission.csv": "c64ecd83cac390e5cf3de8fe835d7c1f85c97bfdf952d8eeada965e5178a336f",
+    "author_preprocessing/test.csv": "128d561408be476fa144f30e0b6458d622d33df1f8f581fb2b6c47e3086e8db9",
+    "author_preprocessing/train.csv": "c0ba110b84e154b83885da39c55035e16b1626cc8d3398db7d5aa1620ec6d200",
+    "data.py": "4690aab1f615f308cd0ca58e382961b30f610c024182cf7fe7aab3e0da36dfd6",
+    "features.py": "165289ae9303a2288996baa57c227d626f1587abd634fea8d2f39c90594edb04",
+    "inference_inventory.csv": "3f67799eb41b468f5a06278e5cde61f97c32e92763d62ecc88671a3d381ce89b",
+    "metadata_snapshot/evaluate_submission.py": "4a351f3bd723a8ab2699812487f730dd7caec83f311e232dbba952ad1726394e",
+    "metadata_snapshot/solution.csv": "609affe8bbc9b03e7ce6068a74fc18f9a1b015deacd3273c8ca40cbdfc3f3753",
+    "model.py": "2104f80dc3483660f78c228b5c37be80fbe9d161f1d5ab81629a236c3fc421e3",
+    "process_control.py": "d44c92327ad83adfd9c531fbfb907b066f55a55e691d1de6ff73dbb5de66fb0b",
+    "run_vast.py": "5bff7fbb3fe49b4f26404dd8ebcd507fa3883378d1d1f2002ae3df3b9a4ba8f7",
+    "runner.py": "9ae9620aa08c21c4fc70c94b8d8f5ef9713ac38679efcee17888a29b16592564",
+    "setup_environment.py": "de3577811d5a573a2187316e6844a32ffde12abeaa210989456b06e07308c334",
+    "shared_reference.py": "af68d644ef4865b5b3f26213bae979f1fd9564f84d99f9eb6ffe02b379c81ff3",
+    "shared_test_metrics.py": "21d1e0bdb056e3e21201f2d7976454bf7126d59fb1dff0e6e6b12aac29f5d6c7",
+    "test_adalea.py": "2452e38a316ee48b6cf8c2768e6c78c7930775a367c258d5310f7b5bcb311f39",
+    "test_gpu_predictor.py": "9325769806dfdd652191077dfd37874c5346f9c33cc99283571037ecb16435b1",
+    "test_process_safety.py": "55d3855015ee846519879ae003d41cb231a85e203a24f51c0eafa0f2bfe3644b",
+    "worker.py": "cb42c30c819c4da63f94548b137f8164df6e1783dd98f8a8fb5bc8dd7a867f41"
+  }
+}

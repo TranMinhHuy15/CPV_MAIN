@@ -1,0 +1,35 @@
+{
+  "outer_zip_CRC_passed": true,
+  "files": [
+    {
+      "name": "seed_44/run/best_mAUC@_epoch_17.pth",
+      "bytes": 128450354,
+      "sha256": "85f7421dda95b04b7e6e02f8f1a77591d8b49a820ed0bc516cd4041e94e3005a"
+    },
+    {
+      "name": "seed_44/run/resume_latest.pth",
+      "bytes": 257993776,
+      "sha256": "446d27a3e7d21c5cb4ca41259d72c11bf994db05489d3255550c571e0c30fd68"
+    },
+    {
+      "name": "seed_44/run/rng_epoch31_rank0.pth",
+      "bytes": 14356,
+      "sha256": "fa42d3a86eab8665a998a5fa2045136514847d486b47d3c9f4ccbe395c332e03"
+    },
+    {
+      "name": "seed_44/run/rng_epoch32_rank0.pth",
+      "bytes": 14356,
+      "sha256": "da96e949e95780e2975643e80ecc0034acda9ee93fbc36fea8d22e19274a198a"
+    },
+    {
+      "name": "seed_44/run/rng_epoch50_rank0.pth",
+      "bytes": 14356,
+      "sha256": "ea7c74454ee2887975bcd51aba4eb3ab9daf5dd1da2b774920d326bdfc3d3dcb"
+    },
+    {
+      "name": "seed_44/run/safe_resume_snapshot.zip",
+      "bytes": 386501821,
+      "sha256": "a8ed0466dd88aea483549cddef04d879d679a1f9d301f0f3c38cd9571c48d0a9"
+    }
+  ]
+}

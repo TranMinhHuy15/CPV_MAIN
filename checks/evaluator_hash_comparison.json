@@ -1,0 +1,56 @@
+[
+  {
+    "history": 7,
+    "module": "author_report.py",
+    "sha256": "6cc095963f3515d7a45815b1d4f84abe24e7ac14a4052111cda4995fa15e649e",
+    "matches_v32": true
+  },
+  {
+    "history": 7,
+    "module": "author_reference_metrics.py",
+    "sha256": "08c985df806af2cced71f71990fce657a564063ad8fba8f7833a11e8e50e8493",
+    "matches_v32": true
+  },
+  {
+    "history": 7,
+    "module": "engine/metrics.py",
+    "sha256": "f4e6bb99c7818209bcebafb309e95fcdfd1ee1d4bb8643be1191583e01d62816",
+    "matches_v32": true
+  },
+  {
+    "history": 13,
+    "module": "author_report.py",
+    "sha256": "6cc095963f3515d7a45815b1d4f84abe24e7ac14a4052111cda4995fa15e649e",
+    "matches_v32": true
+  },
+  {
+    "history": 13,
+    "module": "author_reference_metrics.py",
+    "sha256": "08c985df806af2cced71f71990fce657a564063ad8fba8f7833a11e8e50e8493",
+    "matches_v32": true
+  },
+  {
+    "history": 13,
+    "module": "engine/metrics.py",
+    "sha256": "f4e6bb99c7818209bcebafb309e95fcdfd1ee1d4bb8643be1191583e01d62816",
+    "matches_v32": true
+  },
+  {
+    "history": 26,
+    "module": "author_report.py",
+    "sha256": "6cc095963f3515d7a45815b1d4f84abe24e7ac14a4052111cda4995fa15e649e",
+    "matches_v32": true
+  },
+  {
+    "history": 26,
+    "module": "author_reference_metrics.py",
+    "sha256": "08c985df806af2cced71f71990fce657a564063ad8fba8f7833a11e8e50e8493",
+    "matches_v32": true
+  },
+  {
+    "history": 26,
+    "module": "engine/metrics.py",
+    "sha256": "f4e6bb99c7818209bcebafb309e95fcdfd1ee1d4bb8643be1191583e01d62816",
+    "matches_v32": true
+  }
+]

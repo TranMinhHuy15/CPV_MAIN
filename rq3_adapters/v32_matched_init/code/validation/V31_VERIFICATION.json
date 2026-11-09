@@ -1,0 +1,21 @@
+{
+  "version": "V3.1 recovery",
+  "original_source_unchanged": true,
+  "pinned_training_and_analysis_core_unchanged": true,
+  "cpu_unittests": {
+    "H7": 53,
+    "V6": 53
+  },
+  "pinned_snapshot_and_pilot_fixture_pass": [
+    "H7",
+    "V6"
+  ],
+  "v6_same_directory_preflight_retry_pass": true,
+  "v6_baseline_epochs": [
+    25,
+    11,
+    35
+  ],
+  "v6_dataset_mount_fixture": true,
+  "cuda_end_to_end_executed": false
+}

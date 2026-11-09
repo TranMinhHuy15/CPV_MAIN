@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "tests_run": 8,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "platform": "nt",
+  "real_posix_process_tree_verified": false,
+  "scope": "Real local subprocess deadlines/Ctrl+C, lock and synthetic snapshot recovery; POSIX normal-exit cleanup skipped on Windows"
+}

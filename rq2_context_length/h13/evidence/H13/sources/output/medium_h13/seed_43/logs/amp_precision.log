@@ -1,0 +1,1 @@
+AMP precision adapter PASS: FP32 formula/gradient parity; half-logit loss FP32. CUDA feasibility not tested here.

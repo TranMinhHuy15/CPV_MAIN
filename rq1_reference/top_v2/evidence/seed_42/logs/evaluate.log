@@ -1,0 +1,942 @@
+10/09 23:48:37 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080 SUPER
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 12.8, V12.8.93
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+10/09 23:48:38 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'accident_anticipation',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=None,
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/top_v2_v6matched_fixed_3seeds/seed_42/run/best_mAUC@_epoch_12.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    backbone=dict(
+        conv1_kernel=[
+            1,
+            7,
+            7,
+        ],
+        conv1_stride_t=1,
+        depth=50,
+        inflate=[
+            0,
+            0,
+            1,
+            1,
+        ],
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained='https://download.pytorch.org/models/resnet50-11ad3fa6.pth',
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        clip_len=5,
+        label_with='annotation',
+        num_clips=30,
+        pos_weight=10,
+        two_stream=False,
+        type='AnticipationHead',
+        with_decoder=True,
+        with_rnn=False),
+    data_preprocessor=dict(
+        format_shape='NCTHW',
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='ActionDataPreprocessor'),
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='Recognizer3D')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40, norm_type=2),
+    dtype='float16',
+    loss_scale=dict(growth_interval=2000, init_scale=1024.0),
+    optimizer=dict(lr=0.002, momentum=0.9, type='SGD', weight_decay=0.0001),
+    type='AmpOptimWrapper')
+param_scheduler = [
+    dict(
+        begin=0,
+        by_epoch=True,
+        end=50,
+        gamma=0.1,
+        milestones=[
+            20,
+            40,
+        ],
+        type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/top_v2_v6matched_fixed_3seeds/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='V6SampleFramesBeforeAccident'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                    'have_accident',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='V6SampleFramesBeforeAccident'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                    'have_accident',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/top_v2_v6matched_fixed_3seeds/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='V6SampleFramesBeforeAccident'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                    'have_accident',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='V6SampleFramesBeforeAccident'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                    'have_accident',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='train',
+        test_mode=False,
+        type='NexarSubsetDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='V6SampleFramesBeforeAccident'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+            'have_accident',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/top_v2_v6matched_fixed_3seeds/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='V6SampleFramesBeforeAccident'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                    'have_accident',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='V6SampleFramesBeforeAccident'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                    'have_accident',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='validation',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='V6SampleFramesBeforeAccident'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+            'have_accident',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = []
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/top_v2_v6matched_fixed_3seeds/seed_42/run'
+
+10/09 23:48:40 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+10/09 23:48:40 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+10/09 23:48:42 - mmengine - WARNING - The prefix is not set in metric class SavingAnticipationMetric.
+Loads checkpoint by local backend from path: /workspace/top_v2_v6matched_fixed_3seeds/seed_42/run/best_mAUC@_epoch_12.pth
+10/09 23:48:43 - mmengine - INFO - Load checkpoint from /workspace/top_v2_v6matched_fixed_3seeds/seed_42/run/best_mAUC@_epoch_12.pth
+10/09 23:49:00 - mmengine - INFO - Epoch(val)  [0][ 20/300]    eta: 0:03:58  time: 0.8500  data_time: 0.7303  memory: 1121  
+10/09 23:49:15 - mmengine - INFO - Epoch(val)  [0][ 40/300]    eta: 0:03:30  time: 0.7686  data_time: 0.6635  memory: 1121  
+10/09 23:49:31 - mmengine - INFO - Epoch(val)  [0][ 60/300]    eta: 0:03:12  time: 0.7855  data_time: 0.6806  memory: 1121  
+10/09 23:49:46 - mmengine - INFO - Epoch(val)  [0][ 80/300]    eta: 0:02:52  time: 0.7297  data_time: 0.6213  memory: 1121  
+10/09 23:50:01 - mmengine - INFO - Epoch(val)  [0][100/300]    eta: 0:02:36  time: 0.7843  data_time: 0.6801  memory: 1121  
+10/09 23:50:16 - mmengine - INFO - Epoch(val)  [0][120/300]    eta: 0:02:19  time: 0.7185  data_time: 0.6145  memory: 1121  
+10/09 23:50:30 - mmengine - INFO - Epoch(val)  [0][140/300]    eta: 0:02:02  time: 0.7295  data_time: 0.6250  memory: 1121  
+10/09 23:50:46 - mmengine - INFO - Epoch(val)  [0][160/300]    eta: 0:01:47  time: 0.7903  data_time: 0.6851  memory: 1121  
+10/09 23:51:01 - mmengine - INFO - Epoch(val)  [0][180/300]    eta: 0:01:32  time: 0.7494  data_time: 0.6451  memory: 1121  
+10/09 23:51:15 - mmengine - INFO - Epoch(val)  [0][200/300]    eta: 0:01:16  time: 0.7169  data_time: 0.6123  memory: 1121  
+10/09 23:51:30 - mmengine - INFO - Epoch(val)  [0][220/300]    eta: 0:01:00  time: 0.7270  data_time: 0.6217  memory: 1121  
+10/09 23:51:45 - mmengine - INFO - Epoch(val)  [0][240/300]    eta: 0:00:45  time: 0.7735  data_time: 0.6685  memory: 1121  
+10/09 23:52:01 - mmengine - INFO - Epoch(val)  [0][260/300]    eta: 0:00:30  time: 0.7881  data_time: 0.6778  memory: 1121  
+10/09 23:52:16 - mmengine - INFO - Epoch(val)  [0][280/300]    eta: 0:00:15  time: 0.7145  data_time: 0.6102  memory: 1121  
+10/09 23:52:31 - mmengine - INFO - Epoch(val)  [0][300/300]    eta: 0:00:00  time: 0.7927  data_time: 0.6882  memory: 1121  
+10/09 23:52:32 - mmengine - INFO - Epoch(val) [0][300/300]    threshold@0.10: 0.1150  tta@0.01: 0.4500  tta@0.05: 0.8800  tta@0.1: 1.0860  mtta@0.1: 0.8007  tta@1: 1.5453  AUC@0.0s: 0.8599  AUC@0.5s: 0.7691  AUC@1.0s: 0.6835  AUC@1.5s: 0.6131  mAUC@0.1: 0.6886  AUC_full@0.0s: 0.9392  AUC_full@0.5s: 0.9078  AUC_full@1.0s: 0.8350  AUC_full@1.5s: 0.7728  mAUC@: 0.8385  AP@0.0s: 0.9489  AP@0.5s: 0.9129  AP@1.0s: 0.8421  AP@1.5s: 0.7777  mAP@: 0.8442  num_samples@: 300  data_time: 0.6550  time: 0.7612
+10/09 23:52:32 - mmengine - WARNING - The prefix is not set in metric class TestPredictionMetric.
+10/09 23:52:50 - mmengine - INFO - Epoch(test) [  20/1344]    eta: 0:18:31  time: 0.8398  data_time: 0.7330  memory: 1121  
+10/09 23:53:05 - mmengine - INFO - Epoch(test) [  40/1344]    eta: 0:17:40  time: 0.7866  data_time: 0.6800  memory: 1121  
+10/09 23:53:22 - mmengine - INFO - Epoch(test) [  60/1344]    eta: 0:17:25  time: 0.8172  data_time: 0.7128  memory: 1121  
+10/09 23:53:38 - mmengine - INFO - Epoch(test) [  80/1344]    eta: 0:17:14  time: 0.8310  data_time: 0.7232  memory: 1121  
+10/09 23:53:55 - mmengine - INFO - Epoch(test) [ 100/1344]    eta: 0:17:01  time: 0.8306  data_time: 0.7237  memory: 1121  
+10/09 23:54:12 - mmengine - INFO - Epoch(test) [ 120/1344]    eta: 0:16:49  time: 0.8456  data_time: 0.7352  memory: 1121  
+10/09 23:54:29 - mmengine - INFO - Epoch(test) [ 140/1344]    eta: 0:16:40  time: 0.8654  data_time: 0.7557  memory: 1121  
+10/09 23:54:46 - mmengine - INFO - Epoch(test) [ 160/1344]    eta: 0:16:26  time: 0.8483  data_time: 0.7406  memory: 1121  
+10/09 23:55:03 - mmengine - INFO - Epoch(test) [ 180/1344]    eta: 0:16:09  time: 0.8323  data_time: 0.7260  memory: 1121  
+10/09 23:55:19 - mmengine - INFO - Epoch(test) [ 200/1344]    eta: 0:15:48  time: 0.7930  data_time: 0.6826  memory: 1121  
+10/09 23:55:35 - mmengine - INFO - Epoch(test) [ 220/1344]    eta: 0:15:31  time: 0.8256  data_time: 0.7156  memory: 1121  
+10/09 23:55:52 - mmengine - INFO - Epoch(test) [ 240/1344]    eta: 0:15:17  time: 0.8554  data_time: 0.7452  memory: 1121  
+10/09 23:56:09 - mmengine - INFO - Epoch(test) [ 260/1344]    eta: 0:14:59  time: 0.8215  data_time: 0.7147  memory: 1121  
+10/09 23:56:25 - mmengine - INFO - Epoch(test) [ 280/1344]    eta: 0:14:40  time: 0.7869  data_time: 0.6819  memory: 1121  
+10/09 23:56:41 - mmengine - INFO - Epoch(test) [ 300/1344]    eta: 0:14:24  time: 0.8371  data_time: 0.7298  memory: 1121  
+10/09 23:56:59 - mmengine - INFO - Epoch(test) [ 320/1344]    eta: 0:14:10  time: 0.8715  data_time: 0.7588  memory: 1121  
+10/09 23:57:17 - mmengine - INFO - Epoch(test) [ 340/1344]    eta: 0:13:58  time: 0.9056  data_time: 0.7987  memory: 1121  
+10/09 23:57:33 - mmengine - INFO - Epoch(test) [ 360/1344]    eta: 0:13:40  time: 0.8241  data_time: 0.7168  memory: 1121  
+10/09 23:57:51 - mmengine - INFO - Epoch(test) [ 380/1344]    eta: 0:13:26  time: 0.8726  data_time: 0.7637  memory: 1121  
+10/09 23:58:08 - mmengine - INFO - Epoch(test) [ 400/1344]    eta: 0:13:11  time: 0.8837  data_time: 0.7780  memory: 1121  
+10/09 23:58:25 - mmengine - INFO - Epoch(test) [ 420/1344]    eta: 0:12:55  time: 0.8515  data_time: 0.7456  memory: 1121  
+10/09 23:58:43 - mmengine - INFO - Epoch(test) [ 440/1344]    eta: 0:12:39  time: 0.8573  data_time: 0.7501  memory: 1121  
+10/09 23:59:00 - mmengine - INFO - Epoch(test) [ 460/1344]    eta: 0:12:23  time: 0.8669  data_time: 0.7588  memory: 1121  
+10/09 23:59:17 - mmengine - INFO - Epoch(test) [ 480/1344]    eta: 0:12:07  time: 0.8626  data_time: 0.7551  memory: 1121  
+10/09 23:59:35 - mmengine - INFO - Epoch(test) [ 500/1344]    eta: 0:11:51  time: 0.8763  data_time: 0.7645  memory: 1121  
+10/09 23:59:53 - mmengine - INFO - Epoch(test) [ 520/1344]    eta: 0:11:37  time: 0.9236  data_time: 0.8137  memory: 1121  
+10/10 00:00:10 - mmengine - INFO - Epoch(test) [ 540/1344]    eta: 0:11:21  time: 0.8639  data_time: 0.7574  memory: 1121  
+10/10 00:00:27 - mmengine - INFO - Epoch(test) [ 560/1344]    eta: 0:11:02  time: 0.8024  data_time: 0.6964  memory: 1121  
+10/10 00:00:42 - mmengine - INFO - Epoch(test) [ 580/1344]    eta: 0:10:44  time: 0.7875  data_time: 0.6797  memory: 1121  
+10/10 00:00:58 - mmengine - INFO - Epoch(test) [ 600/1344]    eta: 0:10:26  time: 0.7809  data_time: 0.6735  memory: 1121  
+10/10 00:01:14 - mmengine - INFO - Epoch(test) [ 620/1344]    eta: 0:10:08  time: 0.7913  data_time: 0.6875  memory: 1121  
+10/10 00:01:30 - mmengine - INFO - Epoch(test) [ 640/1344]    eta: 0:09:50  time: 0.8184  data_time: 0.7138  memory: 1121  
+10/10 00:01:47 - mmengine - INFO - Epoch(test) [ 660/1344]    eta: 0:09:33  time: 0.8310  data_time: 0.7189  memory: 1121  
+10/10 00:02:03 - mmengine - INFO - Epoch(test) [ 680/1344]    eta: 0:09:16  time: 0.7950  data_time: 0.6887  memory: 1121  
+10/10 00:02:18 - mmengine - INFO - Epoch(test) [ 700/1344]    eta: 0:08:58  time: 0.7736  data_time: 0.6688  memory: 1121  
+10/10 00:02:34 - mmengine - INFO - Epoch(test) [ 720/1344]    eta: 0:08:40  time: 0.8005  data_time: 0.6951  memory: 1121  
+10/10 00:02:50 - mmengine - INFO - Epoch(test) [ 740/1344]    eta: 0:08:23  time: 0.8021  data_time: 0.6950  memory: 1121  
+10/10 00:03:07 - mmengine - INFO - Epoch(test) [ 760/1344]    eta: 0:08:07  time: 0.8371  data_time: 0.7327  memory: 1121  
+10/10 00:03:23 - mmengine - INFO - Epoch(test) [ 780/1344]    eta: 0:07:50  time: 0.8218  data_time: 0.7176  memory: 1121  
+10/10 00:03:40 - mmengine - INFO - Epoch(test) [ 800/1344]    eta: 0:07:33  time: 0.8439  data_time: 0.7382  memory: 1121  
+10/10 00:03:56 - mmengine - INFO - Epoch(test) [ 820/1344]    eta: 0:07:16  time: 0.8125  data_time: 0.7081  memory: 1121  
+10/10 00:04:12 - mmengine - INFO - Epoch(test) [ 840/1344]    eta: 0:06:59  time: 0.7772  data_time: 0.6701  memory: 1121  
+10/10 00:04:28 - mmengine - INFO - Epoch(test) [ 860/1344]    eta: 0:06:42  time: 0.8044  data_time: 0.7000  memory: 1121  
+10/10 00:04:44 - mmengine - INFO - Epoch(test) [ 880/1344]    eta: 0:06:25  time: 0.7800  data_time: 0.6753  memory: 1121  
+10/10 00:05:00 - mmengine - INFO - Epoch(test) [ 900/1344]    eta: 0:06:08  time: 0.7993  data_time: 0.6942  memory: 1121  
+10/10 00:05:15 - mmengine - INFO - Epoch(test) [ 920/1344]    eta: 0:05:51  time: 0.7824  data_time: 0.6782  memory: 1121  
+10/10 00:05:32 - mmengine - INFO - Epoch(test) [ 940/1344]    eta: 0:05:34  time: 0.8285  data_time: 0.7243  memory: 1121  
+10/10 00:05:48 - mmengine - INFO - Epoch(test) [ 960/1344]    eta: 0:05:17  time: 0.7892  data_time: 0.6848  memory: 1121  
+10/10 00:06:04 - mmengine - INFO - Epoch(test) [ 980/1344]    eta: 0:05:01  time: 0.8304  data_time: 0.7244  memory: 1121  
+10/10 00:06:20 - mmengine - INFO - Epoch(test) [1000/1344]    eta: 0:04:44  time: 0.7685  data_time: 0.6607  memory: 1121  
+10/10 00:06:35 - mmengine - INFO - Epoch(test) [1020/1344]    eta: 0:04:27  time: 0.7909  data_time: 0.6848  memory: 1121  
+10/10 00:06:51 - mmengine - INFO - Epoch(test) [1040/1344]    eta: 0:04:10  time: 0.7915  data_time: 0.6873  memory: 1121  
+10/10 00:07:07 - mmengine - INFO - Epoch(test) [1060/1344]    eta: 0:03:54  time: 0.7873  data_time: 0.6817  memory: 1121  
+10/10 00:07:23 - mmengine - INFO - Epoch(test) [1080/1344]    eta: 0:03:37  time: 0.7827  data_time: 0.6769  memory: 1121  
+10/10 00:07:38 - mmengine - INFO - Epoch(test) [1100/1344]    eta: 0:03:20  time: 0.7806  data_time: 0.6729  memory: 1121  
+10/10 00:07:54 - mmengine - INFO - Epoch(test) [1120/1344]    eta: 0:03:04  time: 0.7801  data_time: 0.6728  memory: 1121  
+10/10 00:08:10 - mmengine - INFO - Epoch(test) [1140/1344]    eta: 0:02:47  time: 0.8237  data_time: 0.7177  memory: 1121  
+10/10 00:08:27 - mmengine - INFO - Epoch(test) [1160/1344]    eta: 0:02:31  time: 0.8210  data_time: 0.7162  memory: 1121  
+10/10 00:08:43 - mmengine - INFO - Epoch(test) [1180/1344]    eta: 0:02:14  time: 0.8100  data_time: 0.7024  memory: 1121  
+10/10 00:08:59 - mmengine - INFO - Epoch(test) [1200/1344]    eta: 0:01:58  time: 0.8038  data_time: 0.6942  memory: 1121  
+10/10 00:09:15 - mmengine - INFO - Epoch(test) [1220/1344]    eta: 0:01:41  time: 0.8004  data_time: 0.6936  memory: 1121  
+10/10 00:09:32 - mmengine - INFO - Epoch(test) [1240/1344]    eta: 0:01:25  time: 0.8236  data_time: 0.7192  memory: 1121  
+10/10 00:09:47 - mmengine - INFO - Epoch(test) [1260/1344]    eta: 0:01:08  time: 0.7822  data_time: 0.6775  memory: 1121  
+10/10 00:10:03 - mmengine - INFO - Epoch(test) [1280/1344]    eta: 0:00:52  time: 0.7963  data_time: 0.6913  memory: 1121  
+10/10 00:10:20 - mmengine - INFO - Epoch(test) [1300/1344]    eta: 0:00:36  time: 0.8264  data_time: 0.7210  memory: 1121  
+10/10 00:10:35 - mmengine - INFO - Epoch(test) [1320/1344]    eta: 0:00:19  time: 0.7725  data_time: 0.6681  memory: 1121  
+10/10 00:10:51 - mmengine - INFO - Epoch(test) [1340/1344]    eta: 0:00:03  time: 0.7991  data_time: 0.6941  memory: 1121  
+10/10 00:10:54 - mmengine - INFO - Epoch(test) [1344/1344]    num_test_predictions: 1344  data_time: 0.7125  time: 0.8192
+mAP (Public): 0.744766
+mAP (Private): 0.826542
+
+Reports saved. Numerical comparisons are labeled provisional, not automatic paper reproduction claims.

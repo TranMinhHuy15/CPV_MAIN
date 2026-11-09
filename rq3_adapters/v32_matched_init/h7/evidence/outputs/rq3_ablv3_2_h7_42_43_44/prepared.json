@@ -1,0 +1,74 @@
+{
+  "baselines": {
+    "h7": {
+      "42": {
+        "baseline_input_kind": "selected_frozen_H7_export",
+        "checkpoint": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_42/run/best_mAUC@_epoch_10.pth",
+        "checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+        "contract_sha256": "dcb99bb199cec8abb98bdb70b6591ec3a92abd67631baa7ea1d724fd9c80007b",
+        "history": 7,
+        "manifest_sha256": "c0730f62d958d7996a9b642c051f62ed6a7241d1745bd5c58e8388ce7fb549c0",
+        "recipe_sha256": "2c7ecbb70a85cad088d20fa8aefd8ba9644cb26ad61ea6e8aebd281e6c7f2498",
+        "run": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_42/run",
+        "seed": 42,
+        "selected_epoch": 10,
+        "validation_history_sha256": "850cb38bf21288d820f488f8fcb40149128e6c43822426271f847eb5a3219ca5",
+        "validation_metrics": {
+          "AP@0.5s": 0.9141414157149051,
+          "AP@1.0s": 0.8467759808206329,
+          "AP@1.5s": 0.7666882516687357,
+          "mAP@": 0.8425352160680912,
+          "mAUC@": 0.859451851851852
+        },
+        "validation_threshold": 0.571291446685791
+      },
+      "43": {
+        "baseline_input_kind": "selected_frozen_H7_export",
+        "checkpoint": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_43/run/best_mAUC@_epoch_5.pth",
+        "checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+        "contract_sha256": "ab05e17f86a673030952784aeea72289618cc298baef9347b681ea9c3e03e6e0",
+        "history": 7,
+        "manifest_sha256": "4741a1b01aeca3b7b8c655e76b758cc1aa9aca938fb179a1a3f1e8759317bca0",
+        "recipe_sha256": "2c7ecbb70a85cad088d20fa8aefd8ba9644cb26ad61ea6e8aebd281e6c7f2498",
+        "run": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_43/run",
+        "seed": 43,
+        "selected_epoch": 5,
+        "validation_history_sha256": "e3ab398328ee54641575331140fdeee8c67c6086061f95cf320f7d41e5374628",
+        "validation_metrics": {
+          "AP@0.5s": 0.9035140547090041,
+          "AP@1.0s": 0.8325845232731683,
+          "AP@1.5s": 0.764390121937083,
+          "mAP@": 0.8334962333064185,
+          "mAUC@": 0.8532444444444445
+        },
+        "validation_threshold": 0.4009742736816406
+      },
+      "44": {
+        "baseline_input_kind": "selected_frozen_H7_export",
+        "checkpoint": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_44/run/best_mAUC@_epoch_8.pth",
+        "checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+        "contract_sha256": "431c2ccf54c36c810b383a2b3ba5e2e9c4bcce2a61a2637c7fb5dedb626d3413",
+        "history": 7,
+        "manifest_sha256": "f7e7aec9b5a9a9320dfa61c024fd80e803b05d8e74843a863f4aa030d303927d",
+        "recipe_sha256": "2c7ecbb70a85cad088d20fa8aefd8ba9644cb26ad61ea6e8aebd281e6c7f2498",
+        "run": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_44/run",
+        "seed": 44,
+        "selected_epoch": 8,
+        "validation_history_sha256": "810e8ed256238c10c7070bace7e2d59d6a1920d3c2a8bd65b673ac8753c23781",
+        "validation_metrics": {
+          "AP@0.5s": 0.9242001498863008,
+          "AP@1.0s": 0.8412912765534604,
+          "AP@1.5s": 0.774868217849048,
+          "mAP@": 0.8467865480962699,
+          "mAUC@": 0.8625629629629629
+        },
+        "validation_threshold": 0.49067187309265137
+      }
+    }
+  },
+  "prior_study": {
+    "root": null,
+    "used_for_main": false
+  },
+  "source_root": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/checked_source"
+}

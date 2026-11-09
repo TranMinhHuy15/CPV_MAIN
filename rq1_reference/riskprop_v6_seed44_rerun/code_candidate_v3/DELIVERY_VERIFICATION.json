@@ -1,0 +1,17 @@
+{
+  "package": "RiskProp_V6_Seed44_Rerun_FIXED_v2",
+  "CPU_tests": 40,
+  "passed": 40,
+  "failed": 0,
+  "skipped": 0,
+  "legacy_files_unchanged": 57,
+  "Python38_syntax_files": 39,
+  "real_seed44_artifact_gate": "PASS",
+  "GPU_inference_or_training_executed": false,
+  "Linux_POSIX_executed_locally": false,
+  "Linux_POSIX_gate_mandatory_before_GPU": true,
+  "includes_videos_or_trained_checkpoints": false,
+  "weights_changed": false,
+  "model_loss_recipe_changed": false,
+  "known_old_Windows_process_tree_failures": "Outside supported training OS; Linux gate must pass on target; not relabeled as CPU successes"
+}

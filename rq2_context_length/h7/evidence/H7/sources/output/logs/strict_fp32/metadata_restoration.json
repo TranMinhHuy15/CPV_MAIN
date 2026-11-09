@@ -1,0 +1,9 @@
+{
+  "restored": [
+    "rq1_evaluation/engine/references/riskprop/safety_checks.json",
+    "rq1_evaluation/engine/references/top/safety_checks.json"
+  ],
+  "source_archive_sha256": "a7d7e3505667ec6e689a90bcb7e2ece06c1378451826f9f2e995afb83b8525e7",
+  "restored_file_sha256": "919ae2bc11e4e1193d288e34eb1c397acbe5945864dd32206427cda65e5789b5",
+  "note": "Original historical Windows safety report restored byte-for-byte; not a new GPU test."
+}

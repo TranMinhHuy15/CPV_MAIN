@@ -1,0 +1,178 @@
+{
+  "best_mAUC@_epoch_17.pth": {
+    "meta": {
+      "epoch": 17,
+      "iter": 10200,
+      "seed": 44,
+      "mmengine_version": "0.10.7"
+    },
+    "keys": [
+      "meta",
+      "state_dict",
+      "message_hub"
+    ],
+    "model": {
+      "tensors": 320,
+      "elements": 31689718,
+      "nonfinite_paths": []
+    },
+    "message_hub_selection": {
+      "best_score": 0.8685185185185186,
+      "best_ckpt": "/workspace/riskprop_v6_vast_3seeds/seed_44/run/best_mAUC@_epoch_17.pth"
+    }
+  },
+  "resume_latest.pth": {
+    "meta": {
+      "epoch": 50,
+      "iter": 30000,
+      "seed": 44,
+      "mmengine_version": "0.10.7"
+    },
+    "keys": [
+      "meta",
+      "state_dict",
+      "message_hub",
+      "optimizer",
+      "param_schedulers"
+    ],
+    "model": {
+      "tensors": 320,
+      "elements": 31689718,
+      "nonfinite_paths": []
+    },
+    "message_hub_selection": {
+      "best_score": 0.8685185185185186,
+      "best_ckpt": "/workspace/riskprop_v6_vast_3seeds/seed_44/run/best_mAUC@_epoch_17.pth"
+    },
+    "optimizer": {
+      "tensors": 161,
+      "elements": 31636545,
+      "nonfinite_paths": []
+    },
+    "lr": [
+      2e-05
+    ],
+    "loss_scaler": {
+      "scale": 2048.0,
+      "growth_factor": 2.0,
+      "backoff_factor": 0.5,
+      "growth_interval": 2000,
+      "_growth_tracker": 1750
+    },
+    "scheduler": [
+      {
+        "milestones": {
+          "20": 1,
+          "40": 1
+        },
+        "gamma": 0.1,
+        "param_name": "lr",
+        "begin": 0,
+        "end": 50,
+        "by_epoch": true,
+        "base_values": [
+          0.002
+        ],
+        "last_step": 49,
+        "_global_step": 50,
+        "verbose": false,
+        "_last_value": [
+          2e-05
+        ]
+      }
+    ]
+  },
+  "snapshot": {
+    "CRC_passed": true,
+    "files": [
+      "resume_latest.pth",
+      "best_mAUC@_epoch_17.pth",
+      "rng_epoch50_rank0.pth",
+      "training_status.json",
+      "run_manifest.json",
+      "validation_history.jsonl"
+    ],
+    "status": {
+      "completed_epochs": 50,
+      "target_epochs": 50,
+      "complete": true,
+      "checkpoint_selection": "validation full mAUC@ (published config)",
+      "best_checkpoint": "best_mAUC@_epoch_17.pth"
+    },
+    "contract_seed": 44,
+    "file_hashes": {
+      "resume_latest.pth": {
+        "snapshot_sha256": "446d27a3e7d21c5cb4ca41259d72c11bf994db05489d3255550c571e0c30fd68",
+        "current_sha256": "446d27a3e7d21c5cb4ca41259d72c11bf994db05489d3255550c571e0c30fd68",
+        "matches": true
+      },
+      "best_mAUC@_epoch_17.pth": {
+        "snapshot_sha256": "85f7421dda95b04b7e6e02f8f1a77591d8b49a820ed0bc516cd4041e94e3005a",
+        "current_sha256": "85f7421dda95b04b7e6e02f8f1a77591d8b49a820ed0bc516cd4041e94e3005a",
+        "matches": true
+      },
+      "rng_epoch50_rank0.pth": {
+        "snapshot_sha256": "ea7c74454ee2887975bcd51aba4eb3ab9daf5dd1da2b774920d326bdfc3d3dcb",
+        "current_sha256": "ea7c74454ee2887975bcd51aba4eb3ab9daf5dd1da2b774920d326bdfc3d3dcb",
+        "matches": true
+      },
+      "training_status.json": {
+        "snapshot_sha256": "9b97dc3edfc0131cc8ad9945dd672f65aeef688fedae473f53cb5f2220ede5cc",
+        "current_sha256": "9b97dc3edfc0131cc8ad9945dd672f65aeef688fedae473f53cb5f2220ede5cc",
+        "matches": true
+      },
+      "run_manifest.json": {
+        "snapshot_sha256": "4867bb6fdc8a206a61f2e8ccbd2f616f3cdc7ac735ad89ba8584de12c6b3fc59",
+        "current_sha256": "4867bb6fdc8a206a61f2e8ccbd2f616f3cdc7ac735ad89ba8584de12c6b3fc59",
+        "matches": true
+      },
+      "validation_history.jsonl": {
+        "snapshot_sha256": "2a46ab18effa80e132f4f1a59add3509848f3120d56a29692055078e8ec6bb93",
+        "current_sha256": "2a46ab18effa80e132f4f1a59add3509848f3120d56a29692055078e8ec6bb93",
+        "matches": true
+      }
+    },
+    "all_current_artifacts_match": true
+  },
+  "rng_sidecars": {
+    "31": {
+      "saved_epoch": 31,
+      "keys": [
+        "epoch",
+        "python",
+        "numpy",
+        "torch",
+        "cuda"
+      ],
+      "torch_bytes": 5056,
+      "cuda_bytes": 16,
+      "contains_dataloader_worker_states": false
+    },
+    "32": {
+      "saved_epoch": 32,
+      "keys": [
+        "epoch",
+        "python",
+        "numpy",
+        "torch",
+        "cuda"
+      ],
+      "torch_bytes": 5056,
+      "cuda_bytes": 16,
+      "contains_dataloader_worker_states": false
+    },
+    "50": {
+      "saved_epoch": 50,
+      "keys": [
+        "epoch",
+        "python",
+        "numpy",
+        "torch",
+        "cuda"
+      ],
+      "torch_bytes": 5056,
+      "cuda_bytes": 16,
+      "contains_dataloader_worker_states": false
+    }
+  }
+}

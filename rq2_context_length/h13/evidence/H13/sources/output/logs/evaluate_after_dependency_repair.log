@@ -1,0 +1,1453 @@
+RUN: /venv/main/bin/python3 /workspace/RQ2_Medium_H13_Checked_v1/run_rq2.py --data-root /workspace/Nexar_HF --output-root /workspace/rq2_medium_h13 --runtime-root /workspace/rq2_runtime_medium_h13 --variants medium_h13 --seeds 42 43 44 --total-hours 47.999999337858625 --train
+RQ2 Medium H13: sequential selected seeds. Train= True ; billing is NOT stopped automatically.
+.....RQ2 Medium H13: sequential selected seeds. Train= True ; billing is NOT stopped automatically.
+START medium_h13 42 original Kinetics pretraining
+PARTIAL: later jobs blocked. Back up all outputs and rerun the SAME command.
+..RQ2 Medium H13: sequential selected seeds. Train= False ; billing is NOT stopped automatically.
+START medium_h13 42 original Kinetics pretraining
+START medium_h13 43 original Kinetics pretraining
+START medium_h13 44 original Kinetics pretraining
+OUTPUT /tmp/tmpnsatb46m/out ; three-seed study complete= False
+.
+----------------------------------------------------------------------
+Ran 8 tests in 0.005s
+
+OK
+test_changed_curve_is_not_silently_reused (__main__.CompletionTests.test_changed_curve_is_not_silently_reused) ... ok
+test_complete_artifacts_and_all1344_curves_are_accepted (__main__.CompletionTests.test_complete_artifacts_and_all1344_curves_are_accepted) ... ok
+test_complete_six_run_aggregate_has28_metrics_per_arm (__main__.CompletionTests.test_complete_six_run_aggregate_has28_metrics_per_arm) ... ok
+test_incomplete_or_nonfinite_metric_schema_is_rejected (__main__.CompletionTests.test_incomplete_or_nonfinite_metric_schema_is_rejected) ... ok
+test_missing_curve_cannot_count_as_complete (__main__.CompletionTests.test_missing_curve_cannot_count_as_complete) ... ok
+test_missing_or_modified_csv_requires_report_regeneration (__main__.CompletionTests.test_missing_or_modified_csv_requires_report_regeneration) ... ok
+test_partial_finalization_cannot_skip_evaluation (__main__.CompletionTests.test_partial_finalization_cannot_skip_evaluation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.667s
+
+OK
+test_deadline_stops_real_child_and_grandchild (__main__.SafetyChecks.test_deadline_stops_real_child_and_grandchild) ... ok
+test_expired_budget_does_not_launch (__main__.SafetyChecks.test_expired_budget_does_not_launch) ... ok
+test_global_budget_flags_and_strict_eval_contract (__main__.SafetyChecks.test_global_budget_flags_and_strict_eval_contract) ... ok
+test_interrupt_stops_real_child_and_grandchild (__main__.SafetyChecks.test_interrupt_stops_real_child_and_grandchild) ... ok
+test_normal_parent_exit_cleans_orphan (__main__.SafetyChecks.test_normal_parent_exit_cleans_orphan) ... ok
+test_output_lock (__main__.SafetyChecks.test_output_lock) ... ok
+test_sigterm_handler_and_cleanup (__main__.SafetyChecks.test_sigterm_handler_and_cleanup) ... ok
+test_snapshot_rolls_back_interrupted_save (__main__.SafetyChecks.test_snapshot_rolls_back_interrupted_save) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 6.313s
+
+OK
+test_backup_verifies_tar_and_preserves_source (__main__.MediumOperationsTests.test_backup_verifies_tar_and_preserves_source) ... VERIFIED BACKUP: /tmp/tmpvhunfu0d/rq2_medium_backups/RQ2_medium_h13_20261030_134241_UTC_3615782.tar 
+SHA256: 35412e455cd7435b37648c9c1c11d5567cc7928dfe389b480ea6b31e1a0e173d
+Verify downloaded backup locally before destroying the instance. Billing is still active.
+ok
+test_data_hash_mismatch_is_not_accepted (__main__.MediumOperationsTests.test_data_hash_mismatch_is_not_accepted) ... ok
+test_duplicate_and_unknown_video_ids_are_rejected (__main__.MediumOperationsTests.test_duplicate_and_unknown_video_ids_are_rejected) ... ok
+test_evaluation_phase_requires_all_selected_runs_complete (__main__.MediumOperationsTests.test_evaluation_phase_requires_all_selected_runs_complete) ... ok
+test_history_export_contains_all_seeds_and_epochs (__main__.MediumOperationsTests.test_history_export_contains_all_seeds_and_epochs) ... ARM: medium_h13 | H = 13 | OUTPUT: /tmp/tmpijn_kxtl
+seed epoch/50 best_checkpoint train_complete test_marker
+42 50/50 - True False
+43 50/50 - True False
+44 50/50 - True False
+Seed Ep    mAUC      mAP     AP@.5     AP@1    AP@1.5  pAUCstd  mTTAidx
+  42  1   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  2   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  3   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  4   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  5   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  6   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  7   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  8   0.8000   0.7000      nan      nan      nan      nan      nan
+  42  9   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 10   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 11   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 12   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 13   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 14   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 15   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 16   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 17   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 18   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 19   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 20   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 21   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 22   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 23   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 24   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 25   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 26   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 27   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 28   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 29   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 30   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 31   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 32   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 33   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 34   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 35   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 36   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 37   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 38   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 39   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 40   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 41   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 42   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 43   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 44   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 45   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 46   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 47   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 48   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 49   0.8000   0.7000      nan      nan      nan      nan      nan
+  42 50   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  1   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  2   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  3   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  4   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  5   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  6   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  7   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  8   0.8000   0.7000      nan      nan      nan      nan      nan
+  43  9   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 10   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 11   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 12   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 13   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 14   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 15   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 16   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 17   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 18   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 19   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 20   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 21   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 22   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 23   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 24   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 25   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 26   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 27   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 28   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 29   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 30   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 31   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 32   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 33   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 34   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 35   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 36   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 37   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 38   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 39   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 40   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 41   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 42   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 43   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 44   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 45   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 46   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 47   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 48   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 49   0.8000   0.7000      nan      nan      nan      nan      nan
+  43 50   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  1   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  2   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  3   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  4   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  5   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  6   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  7   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  8   0.8000   0.7000      nan      nan      nan      nan      nan
+  44  9   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 10   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 11   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 12   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 13   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 14   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 15   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 16   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 17   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 18   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 19   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 20   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 21   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 22   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 23   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 24   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 25   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 26   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 27   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 28   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 29   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 30   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 31   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 32   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 33   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 34   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 35   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 36   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 37   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 38   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 39   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 40   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 41   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 42   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 43   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 44   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 45   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 46   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 47   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 48   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 49   0.8000   0.7000      nan      nan      nan      nan      nan
+  44 50   0.8000   0.7000      nan      nan      nan      nan      nan
+Saved validation rows: 150 / expected 150
+Read-only live snapshot; a completion marker alone is not a fresh integrity audit.
+Saved all validation epochs: /tmp/tmpijn_kxtl/all_validation_epochs.csv
+ok
+test_incomplete_training_cannot_start_evaluation_or_training (__main__.MediumOperationsTests.test_incomplete_training_cannot_start_evaluation_or_training) ... ok
+test_nested_output_and_data_are_rejected (__main__.MediumOperationsTests.test_nested_output_and_data_are_rejected) ... ok
+test_training_phase_always_keeps_test_locked (__main__.MediumOperationsTests.test_training_phase_always_keeps_test_locked) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.009s
+
+OK
+START medium_h13 42 strict resume
+RESUME /workspace/rq2_medium_h13/medium_h13/seed_42/run: completed 50/50; strict full contract checked after runtime setup.
+GPU / total MiB / free MiB / driver: NVIDIA GeForce RTX 4080, 16376, 15935, 580.173.02
+Running: /venv/main/bin/python3 /workspace/RQ2_Medium_H13_Checked_v1/setup_environment.py --launcher /workspace/RQ2_Medium_H13_Checked_v1 --runtime-root /workspace/rq2_runtime_medium_h13 --world-size 1
+WARNING: Target directory /workspace/rq2_runtime_medium_h13/uv_tool/uv-0.9.3.dist-info already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /workspace/rq2_runtime_medium_h13/uv_tool/uv already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /workspace/rq2_runtime_medium_h13/uv_tool/bin already exists. Specify --upgrade to force replacement.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Installing isolated PyTorch CUDA/runtime dependencies; Kaggle kernel is unchanged.
+WARNING: Skipping decord as it is not installed.
+No broken requirements found.
+
+
+{
+  "python": "3.8.5 (default, Aug 23 2020, 01:02:51) \n[Clang 10.0.1 ]",
+  "torch": "2.1.0+cu118",
+  "torchvision": "0.16.0+cu118",
+  "cuda": "11.8",
+  "gpus": [
+    "NVIDIA GeForce RTX 4080"
+  ],
+  "packages": {
+    "numpy": "1.24.4",
+    "pandas": "2.0.3",
+    "scikit-learn": "1.3.2",
+    "scipy": "1.10.1",
+    "mmengine": "0.10.7",
+    "mmcv": "2.2.0",
+    "opencv-python": "4.8.1.78"
+  },
+  "mmcv_cuda_ops_verified": true,
+  "installed_packages": {
+    "wheel": "0.45.1",
+    "pip": "25.0.1",
+    "setuptools": "75.3.4",
+    "mpmath": "1.3.0",
+    "urllib3": "1.26.13",
+    "typing_extensions": "4.13.2",
+    "sympy": "1.13.3",
+    "pillow": "10.4.0",
+    "numpy": "1.24.4",
+    "networkx": "3.1",
+    "markupsafe": "2.1.5",
+    "idna": "3.4",
+    "fsspec": "2025.3.0",
+    "filelock": "3.16.1",
+    "charset-normalizer": "2.1.1",
+    "certifi": "2022.12.7",
+    "triton": "2.1.0",
+    "requests": "2.28.1",
+    "jinja2": "3.1.6",
+    "torch": "2.1.0+cu118",
+    "torchvision": "0.16.0+cu118",
+    "pytz": "2026.5",
+    "addict": "2.4.0",
+    "zipp": "3.20.2",
+    "wcwidth": "0.2.14",
+    "tzdata": "2026.6",
+    "tomli": "2.5.0",
+    "threadpoolctl": "3.5.0",
+    "termcolor": "2.4.0",
+    "six": "1.17.0",
+    "scipy": "1.10.1",
+    "pyyaml": "6.0.3",
+    "pyparsing": "3.1.4",
+    "pygments": "2.19.2",
+    "platformdirs": "4.3.6",
+    "packaging": "26.2",
+    "opencv-python": "4.8.1.78",
+    "mdurl": "0.1.2",
+    "kiwisolver": "1.4.7",
+    "joblib": "1.4.2",
+    "fonttools": "4.57.0",
+    "einops": "0.8.0",
+    "cycler": "0.12.1",
+    "contourpy": "1.1.1",
+    "scikit-learn": "1.3.2",
+    "python-dateutil": "3.0.0",
+    "markdown-it-py": "3.0.0",
+    "importlib_resources": "6.4.5",
+    "importlib_metadata": "8.5.0",
+    "ftfy": "6.2.3",
+    "yapf": "0.40.2",
+    "rich": "14.3.4",
+    "pandas": "2.0.3",
+    "matplotlib": "3.7.5",
+    "seaborn": "0.13.2",
+    "mmengine": "0.10.7",
+    "mmcv": "2.2.0"
+  },
+  "kernel_python": "3.12.15 (main, Oct 13 2026, 16:52:04) [GCC 15.3.0]",
+  "python_executable": "/workspace/rq2_runtime_medium_h13/venv/bin/python",
+  "contract": {
+    "python": "3.8.5",
+    "torch": "2.1.0+cu118",
+    "torchvision": "0.16.0+cu118",
+    "cuda": "11.8",
+    "mmengine": "0.10.7",
+    "mmcv": "2.2.0",
+    "mmaction2": "1.2.0-author-source",
+    "mmcv_wheel_sha256": "9733cbc2cf656e2d64780c93286847740c03c5da3c85ce531ae779d81f01c93c",
+    "installed_packages": {
+      "wheel": "0.45.1",
+      "pip": "25.0.1",
+      "setuptools": "75.3.4",
+      "mpmath": "1.3.0",
+      "urllib3": "1.26.13",
+      "typing_extensions": "4.13.2",
+      "sympy": "1.13.3",
+      "pillow": "10.4.0",
+      "numpy": "1.24.4",
+      "networkx": "3.1",
+      "markupsafe": "2.1.5",
+      "idna": "3.4",
+      "fsspec": "2025.3.0",
+      "filelock": "3.16.1",
+      "charset-normalizer": "2.1.1",
+      "certifi": "2022.12.7",
+      "triton": "2.1.0",
+      "requests": "2.28.1",
+      "jinja2": "3.1.6",
+      "torch": "2.1.0+cu118",
+      "torchvision": "0.16.0+cu118",
+      "pytz": "2026.5",
+      "addict": "2.4.0",
+      "zipp": "3.20.2",
+      "wcwidth": "0.2.14",
+      "tzdata": "2026.6",
+      "tomli": "2.5.0",
+      "threadpoolctl": "3.5.0",
+      "termcolor": "2.4.0",
+      "six": "1.17.0",
+      "scipy": "1.10.1",
+      "pyyaml": "6.0.3",
+      "pyparsing": "3.1.4",
+      "pygments": "2.19.2",
+      "platformdirs": "4.3.6",
+      "packaging": "26.2",
+      "opencv-python": "4.8.1.78",
+      "mdurl": "0.1.2",
+      "kiwisolver": "1.4.7",
+      "joblib": "1.4.2",
+      "fonttools": "4.57.0",
+      "einops": "0.8.0",
+      "cycler": "0.12.1",
+      "contourpy": "1.1.1",
+      "scikit-learn": "1.3.2",
+      "python-dateutil": "3.0.0",
+      "markdown-it-py": "3.0.0",
+      "importlib_resources": "6.4.5",
+      "importlib_metadata": "8.5.0",
+      "ftfy": "6.2.3",
+      "yapf": "0.40.2",
+      "rich": "14.3.4",
+      "pandas": "2.0.3",
+      "matplotlib": "3.7.5",
+      "seaborn": "0.13.2",
+      "mmengine": "0.10.7",
+      "mmcv": "2.2.0"
+    },
+    "requirements_sha256": "03c2fde11dee07b4f74444e6db047c003f5644850dc8be1744e04ea2a7018a8a"
+  },
+  "software_provenance": {
+    "reported_readme": [
+      "python=3.8.5",
+      "mmengine=0.10.7",
+      "mmcv=2.2.0",
+      "mmaction2=1.2.0"
+    ],
+    "inferred_not_author_reported": [
+      "torch=2.1.0",
+      "torchvision=0.16.0",
+      "cuda=11.8",
+      "other package pins"
+    ]
+  },
+  "unused_optional_dependency_omitted": "decord: Nexar uses OpenCV NativeJpegDecode; not DecordInit/Decode"
+}
+Running: /workspace/rq2_runtime_medium_h13/venv/bin/python /workspace/RQ2_Medium_H13_Checked_v1/repro.py prepare --settings /workspace/rq2_medium_h13/medium_h13/seed_42/settings.json
+Verified/indexed 250/2844 videos
+Verified/indexed 500/2844 videos
+Verified/indexed 750/2844 videos
+Verified/indexed 1000/2844 videos
+Verified/indexed 1250/2844 videos
+Verified/indexed 1500/2844 videos
+Verified/indexed 1750/2844 videos
+Verified/indexed 2000/2844 videos
+Verified/indexed 2250/2844 videos
+Verified/indexed 2500/2844 videos
+Verified/indexed 2750/2844 videos
+Running: /workspace/rq2_runtime_medium_h13/venv/bin/python /workspace/RQ2_Medium_H13_Checked_v1/test_repro.py --source /workspace/rq2_medium_h13/medium_h13/seed_42/author_source --report /workspace/rq2_medium_h13/medium_h13/seed_42/cpu_checks.json
+test_author_losses_and_gradients (__main__.ReproductionTests) ... ok
+test_effective_batch_flush (__main__.ReproductionTests) ... ok
+test_native_jpeg_decode (__main__.ReproductionTests) ... 10/30 13:43:49 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+10/30 13:43:49 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+ok
+test_official_metric_parity (__main__.ReproductionTests) ... ok
+test_original_model_forward_and_backward (__main__.ReproductionTests) ... ok
+test_published_preprocessing (__main__.ReproductionTests) ... ok
+test_published_sampler (__main__.ReproductionTests) ... ok
+test_report_pipeline (__main__.ReproductionTests) ... SYNTHETIC metric self-check from sample_submission.csv; NOT trained model scores.
+mAP (Public): 0.841203
+mAP (Private): 0.861791
+
+Reports saved. Numerical comparisons are labeled provisional, not automatic paper reproduction claims.
+ok
+test_resume_artifact_guard (__main__.ReproductionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.848s
+
+OK
+Running: /workspace/rq2_runtime_medium_h13/venv/bin/python /workspace/RQ2_Medium_H13_Checked_v1/test_amp_precision.py --source /workspace/rq2_medium_h13/medium_h13/seed_42/author_source
+AMP precision adapter PASS: FP32 formula/gradient parity; half-logit loss FP32. CUDA feasibility not tested here.
+Running: /workspace/rq2_runtime_medium_h13/venv/bin/python /workspace/RQ2_Medium_H13_Checked_v1/test_rq2_model.py
+/workspace/rq2_runtime_medium_h13/venv/lib/python3.8/site-packages/einops/_torch_specific.py:109: ImportWarning: allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0
+  warnings.warn("allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0", ImportWarning)
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.284s
+
+OK
+Running: /workspace/rq2_runtime_medium_h13/venv/bin/python /workspace/RQ2_Medium_H13_Checked_v1/test_rq2_integration.py --source /workspace/rq2_medium_h13/medium_h13/seed_42/author_source
+test_config_reaches_all_dataset_pipelines (__main__.SourceIntegration) ... ok
+test_prediction_warmup_alignment_variable_targets (__main__.SourceIntegration) ... ok
+test_same_parameter_count_and_original_losses (__main__.SourceIntegration) ... ok
+test_sampler_retains_exact_original_target_grid (__main__.SourceIntegration) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.046s
+
+OK
+Running: /workspace/rq2_runtime_medium_h13/venv/bin/python /workspace/RQ2_Medium_H13_Checked_v1/repro.py evaluate --settings /workspace/rq2_medium_h13/medium_h13/seed_42/settings.json
+10/30 13:43:57 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.0, V13.0.88
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+10/30 13:43:58 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=None,
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/rq2_medium_h13/medium_h13/seed_42/run/best_mAUC@_epoch_10.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=True,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained='https://download.pytorch.org/models/resnet50-11ad3fa6.pth',
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        clip_len=5,
+        history=13,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='RQ2Head',
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(
+        format_shape='NCTHW',
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='ActionDataPreprocessor'),
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='RQ2Recognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40, norm_type=2),
+    dtype='float16',
+    loss_scale=dict(growth_interval=2000, init_scale=1024.0),
+    optimizer=dict(lr=0.002, momentum=0.9, type='SGD', weight_decay=0.0001),
+    type='AmpOptimWrapper')
+param_scheduler = [
+    dict(
+        begin=0,
+        by_epoch=True,
+        end=50,
+        gamma=0.1,
+        milestones=[
+            20,
+            40,
+        ],
+        type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/rq2_medium_h13/medium_h13/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/rq2_medium_h13/medium_h13/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='train',
+        test_mode=False,
+        type='NexarSubsetDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/rq2_medium_h13/medium_h13/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='validation',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/rq2_medium_h13/medium_h13/seed_42/run'
+
+10/30 13:43:58 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+10/30 13:43:58 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+10/30 13:43:59 - mmengine - WARNING - The prefix is not set in metric class SavingAnticipationMetric.
+Loads checkpoint by local backend from path: /workspace/rq2_medium_h13/medium_h13/seed_42/run/best_mAUC@_epoch_10.pth
+10/30 13:43:59 - mmengine - INFO - Load checkpoint from /workspace/rq2_medium_h13/medium_h13/seed_42/run/best_mAUC@_epoch_10.pth
+10/30 13:44:10 - mmengine - INFO - Epoch(val)  [0][ 20/300]    eta: 0:02:35  time: 0.5564  data_time: 0.3546  memory: 1030  
+10/30 13:44:20 - mmengine - INFO - Epoch(val)  [0][ 40/300]    eta: 0:02:12  time: 0.4622  data_time: 0.2672  memory: 1030  
+10/30 13:44:29 - mmengine - INFO - Epoch(val)  [0][ 60/300]    eta: 0:01:59  time: 0.4767  data_time: 0.2815  memory: 1030  
+10/30 13:44:39 - mmengine - INFO - Epoch(val)  [0][ 80/300]    eta: 0:01:49  time: 0.4875  data_time: 0.2923  memory: 1030  
+10/30 13:44:49 - mmengine - INFO - Epoch(val)  [0][100/300]    eta: 0:01:39  time: 0.5092  data_time: 0.3140  memory: 1030  
+10/30 13:44:58 - mmengine - INFO - Epoch(val)  [0][120/300]    eta: 0:01:27  time: 0.4199  data_time: 0.2246  memory: 1030  
+10/30 13:45:07 - mmengine - INFO - Epoch(val)  [0][140/300]    eta: 0:01:17  time: 0.4652  data_time: 0.2696  memory: 1030  
+10/30 13:45:17 - mmengine - INFO - Epoch(val)  [0][160/300]    eta: 0:01:08  time: 0.5131  data_time: 0.3180  memory: 1030  
+10/30 13:45:28 - mmengine - INFO - Epoch(val)  [0][180/300]    eta: 0:00:58  time: 0.5203  data_time: 0.3249  memory: 1030  
+10/30 13:45:36 - mmengine - INFO - Epoch(val)  [0][200/300]    eta: 0:00:48  time: 0.4241  data_time: 0.2289  memory: 1030  
+10/30 13:45:45 - mmengine - INFO - Epoch(val)  [0][220/300]    eta: 0:00:38  time: 0.4663  data_time: 0.2712  memory: 1030  
+10/30 13:45:56 - mmengine - INFO - Epoch(val)  [0][240/300]    eta: 0:00:29  time: 0.5224  data_time: 0.3275  memory: 1030  
+10/30 13:46:06 - mmengine - INFO - Epoch(val)  [0][260/300]    eta: 0:00:19  time: 0.4987  data_time: 0.3038  memory: 1030  
+10/30 13:46:14 - mmengine - INFO - Epoch(val)  [0][280/300]    eta: 0:00:09  time: 0.4276  data_time: 0.2317  memory: 1030  
+10/30 13:46:25 - mmengine - INFO - Epoch(val)  [0][300/300]    eta: 0:00:00  time: 0.5261  data_time: 0.3310  memory: 1030  
+10/30 13:46:25 - mmengine - INFO - Epoch(val) [0][300/300]    threshold@0.10: 0.5615  tta@0.01: 0.3887  tta@0.05: 0.8813  tta@0.1: 1.0860  mtta@0.1: 0.8047  tta@1: 1.5453  AUC@0.0s: 0.8482  AUC@0.5s: 0.7871  AUC@1.0s: 0.6938  AUC@1.5s: 0.6042  mAUC@0.1: 0.6950  AUC_full@0.0s: 0.9423  AUC_full@0.5s: 0.9123  AUC_full@1.0s: 0.8693  AUC_full@1.5s: 0.8207  mAUC@: 0.8674  AP@0.0s: 0.9474  AP@0.5s: 0.9159  AP@1.0s: 0.8578  AP@1.5s: 0.7855  mAP@: 0.8531  num_samples@: 300  data_time: 0.2894  time: 0.4851
+CPU_DATA 100/1344
+CPU_DATA 200/1344
+CPU_DATA 300/1344
+CPU_DATA 400/1344
+CPU_DATA 500/1344
+CPU_DATA 600/1344
+CPU_DATA 700/1344
+CPU_DATA 800/1344
+CPU_DATA 900/1344
+CPU_DATA 1000/1344
+CPU_DATA 1100/1344
+CPU_DATA 1200/1344
+CPU_DATA 1300/1344
+Traceback (most recent call last):
+  File "/workspace/RQ2_Medium_H13_Checked_v1/worker.py", line 179, in <module>
+    main()
+  File "/workspace/RQ2_Medium_H13_Checked_v1/worker.py", line 175, in main
+    capture_and_report(settings, runner.model)
+  File "/workspace/RQ2_Medium_H13_Checked_v1/rq2_capture.py", line 277, in capture_and_report
+    checks.append(technical_capture_check(model,info,ends,pipeline,cache,encoded_ends,features,values))
+  File "/workspace/RQ2_Medium_H13_Checked_v1/rq2_capture.py", line 148, in technical_capture_check
+    raise ValueError('Full-pipeline/cached capture parity failed: %g'%worst)
+ValueError: Full-pipeline/cached capture parity failed: 0.000235856
+Traceback (most recent call last):
+  File "/workspace/RQ2_Medium_H13_Checked_v1/repro.py", line 519, in <module>
+    main()
+  File "/workspace/RQ2_Medium_H13_Checked_v1/repro.py", line 515, in main
+    launch(settings, source, args.stage)
+  File "/workspace/RQ2_Medium_H13_Checked_v1/repro.py", line 441, in launch
+    subprocess.run(command, check=True, env=env, cwd=Path(settings["workspace"]))
+  File "/workspace/rq2_runtime_medium_h13/managed_python/cpython-3.8.5-linux-x86_64-gnu/lib/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/rq2_runtime_medium_h13/venv/bin/python', '/workspace/RQ2_Medium_H13_Checked_v1/worker.py', '--settings', '/workspace/rq2_medium_h13/medium_h13/seed_42/settings.json', '--phase', 'evaluate']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/workspace/RQ2_Medium_H13_Checked_v1/run_vast.py", line 183, in <module>
+    main()
+  File "/workspace/RQ2_Medium_H13_Checked_v1/run_vast.py", line 159, in main
+    stage('evaluate')
+  File "/workspace/RQ2_Medium_H13_Checked_v1/run_vast.py", line 147, in stage
+    execute([python, str(HERE / 'repro.py'), name, '--settings', str(settings_file)], logs / (name+'.log'), env)
+  File "/workspace/RQ2_Medium_H13_Checked_v1/run_vast.py", line 102, in execute
+    return run_checked(command, log_path=log_path, env=env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/RQ2_Medium_H13_Checked_v1/process_control.py", line 114, in run_checked
+    raise subprocess.CalledProcessError(code,command)
+subprocess.CalledProcessError: Command '['/workspace/rq2_runtime_medium_h13/venv/bin/python', '/workspace/RQ2_Medium_H13_Checked_v1/repro.py', 'evaluate', '--settings', '/workspace/rq2_medium_h13/medium_h13/seed_42/settings.json']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/workspace/RQ2_Medium_H13_Checked_v1/run_rq2.py", line 265, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/RQ2_Medium_H13_Checked_v1/run_rq2.py", line 250, in main
+    run_checked(command,env=env,deadline=deadline)
+  File "/workspace/RQ2_Medium_H13_Checked_v1/process_control.py", line 114, in run_checked
+    raise subprocess.CalledProcessError(code,command)
+subprocess.CalledProcessError: Command '['/venv/main/bin/python3', '/workspace/RQ2_Medium_H13_Checked_v1/run_vast.py', '--data-root', '/workspace/Nexar_HF', '--workspace', '/workspace/rq2_medium_h13/medium_h13/seed_42', '--runtime-root', '/workspace/rq2_runtime_medium_h13', '--seed', '42', '--hours', '47.999999337858625', '--job-deadline', '1793540553.8892255', '--evaluate-only']' returned non-zero exit status 1.
+STOPPED: outputs preserved. No automatic recipe change. Instance is still billed.
+Use status/backup; rerun SAME all/train command for strict resume.
+Traceback (most recent call last):
+  File "/workspace/RQ2_Medium_H13_Checked_v1/medium_ops.py", line 338, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/RQ2_Medium_H13_Checked_v1/medium_ops.py", line 324, in main
+    queue(data, output, runtime, args.seeds, deadline, "evaluate")
+  File "/workspace/RQ2_Medium_H13_Checked_v1/medium_ops.py", line 163, in queue
+    return child(command, deadline, output / "logs" / (phase + "_master.log"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/RQ2_Medium_H13_Checked_v1/medium_ops.py", line 98, in child
+    return run_checked([str(x) for x in command], env=env, deadline=deadline, log_path=log)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/RQ2_Medium_H13_Checked_v1/process_control.py", line 114, in run_checked
+    raise subprocess.CalledProcessError(code,command)
+subprocess.CalledProcessError: Command '['/venv/main/bin/python3', '/workspace/RQ2_Medium_H13_Checked_v1/run_rq2.py', '--data-root', '/workspace/Nexar_HF', '--output-root', '/workspace/rq2_medium_h13', '--runtime-root', '/workspace/rq2_runtime_medium_h13', '--variants', 'medium_h13', '--seeds', '42', '43', '44', '--total-hours', '47.999999337858625', '--train']' returned non-zero exit status 1.

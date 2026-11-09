@@ -1,0 +1,6 @@
+{
+  "scan": "token-shaped values, private-key headers, SSH-root host literals, text members of source ZIPs/XLSX",
+  "redactions": [],
+  "remaining_findings": [],
+  "note": "Findings contain paths/types only; never credential values. No original source archives were modified."
+}

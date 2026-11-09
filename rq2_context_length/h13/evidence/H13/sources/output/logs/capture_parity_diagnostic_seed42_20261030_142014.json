@@ -1,0 +1,133 @@
+{
+  "kind": "ONE_VIDEO_NUMERICAL_DIAGNOSTIC_NOT_FINAL_TEST",
+  "seed": 42,
+  "video_id": "00030",
+  "checkpoint": "/workspace/rq2_medium_h13/medium_h13/seed_42/run/best_mAUC@_epoch_10.pth",
+  "checkpoint_sha256": "6bb66c27015b16334d5c3936decb0899cb9027ee6e650af02f676f8ab1036938",
+  "original_flags": {
+    "cudnn_tf32": true,
+    "matmul_tf32": false,
+    "cudnn_benchmark": false
+  },
+  "guard_threshold_unchanged": 0.0001,
+  "max_testing_views": 10,
+  "modes": [
+    {
+      "mode": "original_runtime_flags",
+      "cudnn_tf32": true,
+      "matmul_tf32": false,
+      "cases": [
+        {
+          "case": "first_endpoint",
+          "endpoints": [
+            0
+          ],
+          "pixel_equal": true,
+          "pixel_max_delta": 0.0,
+          "input_shape": [
+            26,
+            3,
+            5,
+            224,
+            224
+          ],
+          "cached_input_dtype": "torch.uint8",
+          "direct_input_dtype": "torch.uint8",
+          "same_batch_full_model_delta": 0.0,
+          "old_feature_cache_delta": 7.286667823791504e-06,
+          "original_guard_pass": true
+        },
+        {
+          "case": "last_10_endpoints",
+          "endpoints": [
+            273,
+            276,
+            279,
+            282,
+            285,
+            288,
+            291,
+            294,
+            297,
+            300
+          ],
+          "pixel_equal": true,
+          "pixel_max_delta": 0.0,
+          "input_shape": [
+            35,
+            3,
+            5,
+            224,
+            224
+          ],
+          "cached_input_dtype": "torch.uint8",
+          "direct_input_dtype": "torch.uint8",
+          "same_batch_full_model_delta": 0.0,
+          "old_feature_cache_delta": 0.0002358555793762207,
+          "original_guard_pass": false
+        }
+      ]
+    },
+    {
+      "mode": "tf32_off_diagnostic_only",
+      "cudnn_tf32": false,
+      "matmul_tf32": false,
+      "cases": [
+        {
+          "case": "first_endpoint",
+          "endpoints": [
+            0
+          ],
+          "pixel_equal": true,
+          "pixel_max_delta": 0.0,
+          "input_shape": [
+            26,
+            3,
+            5,
+            224,
+            224
+          ],
+          "cached_input_dtype": "torch.uint8",
+          "direct_input_dtype": "torch.uint8",
+          "same_batch_full_model_delta": 0.0,
+          "old_feature_cache_delta": 1.1175870895385742e-08,
+          "original_guard_pass": true
+        },
+        {
+          "case": "last_10_endpoints",
+          "endpoints": [
+            273,
+            276,
+            279,
+            282,
+            285,
+            288,
+            291,
+            294,
+            297,
+            300
+          ],
+          "pixel_equal": true,
+          "pixel_max_delta": 0.0,
+          "input_shape": [
+            35,
+            3,
+            5,
+            224,
+            224
+          ],
+          "cached_input_dtype": "torch.uint8",
+          "direct_input_dtype": "torch.uint8",
+          "same_batch_full_model_delta": 0.0,
+          "old_feature_cache_delta": 1.7881393432617188e-07,
+          "original_guard_pass": true
+        }
+      ]
+    }
+  ],
+  "conclusion": "BATCH_OR_TF32_SENSITIVE_DRIFT_SUPPORTED__NO_AUTOMATIC_PRECISION_CHANGE",
+  "no_training": true,
+  "no_checkpoint_written": true,
+  "no_test_curve_written": true,
+  "timestamp_utc": "2026-10-30T14:20:14.401232+00:00"
+}

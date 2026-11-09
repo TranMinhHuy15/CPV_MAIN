@@ -1,0 +1,55 @@
+test_missing_group_rejected (test_analysis.AnalysisTests.test_missing_group_rejected) ... ok
+test_paired_identical_predictions_zero_interval (test_analysis.AnalysisTests.test_paired_identical_predictions_zero_interval) ... ok
+test_all_arms_frozen_H7_and_fp32_optimizer (test_config.ConfigTests.test_all_arms_frozen_H7_and_fp32_optimizer) ... ok
+test_baseline_arm_uses_m1_structure_without_H1 (test_config.ConfigTests.test_baseline_arm_uses_m1_structure_without_H1) ... ok
+test_resume_does_not_reload_original_H7 (test_config.ConfigTests.test_resume_does_not_reload_original_H7) ... ok
+test_smoke_always_fresh_H7 (test_config.ConfigTests.test_smoke_always_fresh_H7) ... ok
+test_strict_precision_rejects_env_override (test_config.ConfigTests.test_strict_precision_rejects_env_override) ... ok
+test_age_term_only_decays_older_evidence (test_modules.ModuleTests.test_age_term_only_decays_older_evidence) ... ok
+test_attention_and_scale_normalization (test_modules.ModuleTests.test_attention_and_scale_normalization) ... ok
+test_bound_for_large_output (test_modules.ModuleTests.test_bound_for_large_output) ... ok
+test_encoder_pack_preserves_original_reduction (test_modules.ModuleTests.test_encoder_pack_preserves_original_reduction) ... ok
+test_histories_and_oldest_first (test_modules.ModuleTests.test_histories_and_oldest_first) ... ok
+test_initial_baseline_parity_all_arms (test_modules.ModuleTests.test_initial_baseline_parity_all_arms) ... ok
+test_input_baseline_detached_by_integration_contract (test_modules.ModuleTests.test_input_baseline_detached_by_integration_contract) ... ok
+test_motion_branch_gets_gradient (test_modules.ModuleTests.test_motion_branch_gets_gradient) ... ok
+test_motion_not_only_endpoint_difference (test_modules.ModuleTests.test_motion_not_only_endpoint_difference) ... ok
+test_motion_rejects_single_encoder_time_position (test_modules.ModuleTests.test_motion_rejects_single_encoder_time_position) ... ok
+test_no_future_leak_all_arms (test_modules.ModuleTests.test_no_future_leak_all_arms) ... ok
+test_readouts_are_independent_resets (test_modules.ModuleTests.test_readouts_are_independent_resets) ... ok
+test_reject_H1_H3_H5 (test_modules.ModuleTests.test_reject_H1_H3_H5) ... ok
+test_reject_nonfinite (test_modules.ModuleTests.test_reject_nonfinite) ... ok
+test_reject_old_pooled_cache (test_modules.ModuleTests.test_reject_old_pooled_cache) ... ok
+test_serialized_state_roundtrip (test_modules.ModuleTests.test_serialized_state_roundtrip) ... ok
+test_zero_head_learns_then_recurrent_branch_learns (test_modules.ModuleTests.test_zero_head_learns_then_recurrent_branch_learns) ... ok
+test_zero_temporal_change_gives_zero_motion_residual (test_modules.ModuleTests.test_zero_temporal_change_gives_zero_motion_residual) ... ok
+test_base_rnn_classifier_and_dropout_stay_frozen (test_plugin.PluginTests.test_base_rnn_classifier_and_dropout_stay_frozen) ... ok
+test_baseline_only_ignores_adapter_weights (test_plugin.PluginTests.test_baseline_only_ignores_adapter_weights) ... ok
+test_gradient_only_adapter (test_plugin.PluginTests.test_gradient_only_adapter) ... ok
+test_head_baseline_is_exact_frozen_H7 (test_plugin.PluginTests.test_head_baseline_is_exact_frozen_H7) ... ok
+test_head_spatial_pooling_preserves_time (test_plugin.PluginTests.test_head_spatial_pooling_preserves_time) ... ok
+test_old_cache_rejected_when_motion_enabled (test_plugin.PluginTests.test_old_cache_rejected_when_motion_enabled) ... ok
+test_recognizer_backbone_no_gradient_or_BN_change (test_plugin.PluginTests.test_recognizer_backbone_no_gradient_or_BN_change) ... ok
+test_atomic_save_failure_preserves_previous (test_study.StudyTests.test_atomic_save_failure_preserves_previous) ... ok
+test_atomic_settings_replaces_corrupt_file (test_study.StudyTests.test_atomic_settings_replaces_corrupt_file) ... ok
+test_changed_config_does_not_overwrite (test_study.StudyTests.test_changed_config_does_not_overwrite) ... ok
+test_h1_checkpoint_contract_rejected_even_if_same_tensor_shapes (test_study.StudyTests.test_h1_checkpoint_contract_rejected_even_if_same_tensor_shapes) ... ok
+test_inputs_valid (test_study.StudyTests.test_inputs_valid) ... ok
+test_missing_test_run_blocks_evaluation (test_study.StudyTests.test_missing_test_run_blocks_evaluation) ... ok
+test_other_arm_resume_rejected (test_study.StudyTests.test_other_arm_resume_rejected) ... ok
+test_reject_H1_arm (test_study.StudyTests.test_reject_H1_arm) ... ok
+test_reject_chunk_zero (test_study.StudyTests.test_reject_chunk_zero) ... ok
+test_reject_data_output_overlap (test_study.StudyTests.test_reject_data_output_overlap) ... ok
+test_reject_duplicate_arms (test_study.StudyTests.test_reject_duplicate_arms) ... ok
+test_reject_missing_seed (test_study.StudyTests.test_reject_missing_seed) ... ok
+test_reject_old_run_output_overlap (test_study.StudyTests.test_reject_old_run_output_overlap) ... ok
+test_smoke_rejects_other_config (test_study.StudyTests.test_smoke_rejects_other_config) ... ok
+test_smoke_requires_actual_updates (test_study.StudyTests.test_smoke_requires_actual_updates) ... ok
+test_smoke_requires_gradient (test_study.StudyTests.test_smoke_requires_gradient) ... ok
+test_valid_H7_records_recipe_without_modifying_source (test_study.StudyTests.test_valid_H7_records_recipe_without_modifying_source) ... ok
+test_valid_smoke (test_study.StudyTests.test_valid_smoke) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 4.152s
+
+OK

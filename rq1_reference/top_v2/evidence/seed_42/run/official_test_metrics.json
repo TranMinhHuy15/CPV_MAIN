@@ -1,0 +1,113 @@
+{
+  "Combined": {
+    "mAP": 0.78025213544363,
+    "mAUC_grouped": 0.8122320218380654,
+    "mPAUC_sklearn_standardized": 0.6131695840409565,
+    "mPAUC_raw_divided_by_0.1": 0.26502220967781726,
+    "groups": [
+      {
+        "group": 0,
+        "lead_time_s": 0.5,
+        "n": 568,
+        "AP": 0.8304802736986168,
+        "AUC": 0.8596012695893673,
+        "pAUC_sklearn_standardized": 0.6669155033984485,
+        "pAUC_raw_divided_by_0.1": 0.36713945645705215
+      },
+      {
+        "group": 1,
+        "lead_time_s": 1.0,
+        "n": 464,
+        "AP": 0.7721663857627961,
+        "AUC": 0.8097131391200951,
+        "pAUC_sklearn_standardized": 0.5999436760748482,
+        "pAUC_raw_divided_by_0.1": 0.23989298454221167
+      },
+      {
+        "group": 2,
+        "lead_time_s": 1.5,
+        "n": 312,
+        "AP": 0.7381097468694774,
+        "AUC": 0.7673816568047338,
+        "pAUC_sklearn_standardized": 0.5726495726495726,
+        "pAUC_raw_divided_by_0.1": 0.18803418803418806
+      }
+    ],
+    "mTTA": null,
+    "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+  },
+  "Public": {
+    "mAP": 0.7447660873459873,
+    "mAUC_grouped": 0.7899283612306659,
+    "mPAUC_sklearn_standardized": 0.5715513598994363,
+    "mPAUC_raw_divided_by_0.1": 0.18594758380892884,
+    "groups": [
+      {
+        "group": 0,
+        "lead_time_s": 0.5,
+        "n": 284,
+        "AP": 0.7733715286902719,
+        "AUC": 0.8218111485816306,
+        "pAUC_sklearn_standardized": 0.594483133045866,
+        "pAUC_raw_divided_by_0.1": 0.2295179527871454
+      },
+      {
+        "group": 1,
+        "lead_time_s": 1.0,
+        "n": 231,
+        "AP": 0.7302437763806366,
+        "AUC": 0.7971514242878561,
+        "pAUC_sklearn_standardized": 0.5471474788921329,
+        "pAUC_raw_divided_by_0.1": 0.1395802098950525
+      },
+      {
+        "group": 2,
+        "lead_time_s": 1.5,
+        "n": 152,
+        "AP": 0.7306829569670534,
+        "AUC": 0.7508225108225108,
+        "pAUC_sklearn_standardized": 0.5730234677603099,
+        "pAUC_raw_divided_by_0.1": 0.18874458874458871
+      }
+    ],
+    "mTTA": null,
+    "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+  },
+  "Private": {
+    "mAP": 0.8265423716346555,
+    "mAUC_grouped": 0.834462931783476,
+    "mPAUC_sklearn_standardized": 0.6668626604028245,
+    "mPAUC_raw_divided_by_0.1": 0.3670390547653666,
+    "groups": [
+      {
+        "group": 0,
+        "lead_time_s": 0.5,
+        "n": 284,
+        "AP": 0.8970832015156089,
+        "AUC": 0.8960027772267407,
+        "pAUC_sklearn_standardized": 0.7556353689222064,
+        "pAUC_raw_divided_by_0.1": 0.535707200952192
+      },
+      {
+        "group": 1,
+        "lead_time_s": 1.0,
+        "n": 233,
+        "AP": 0.8288569645566459,
+        "AUC": 0.8225758915414088,
+        "pAUC_sklearn_standardized": 0.669443281058526,
+        "pAUC_raw_divided_by_0.1": 0.3719422340111995
+      },
+      {
+        "group": 2,
+        "lead_time_s": 1.5,
+        "n": 160,
+        "AP": 0.7536869488317116,
+        "AUC": 0.7848101265822786,
+        "pAUC_sklearn_standardized": 0.5755093312277412,
+        "pAUC_raw_divided_by_0.1": 0.19346772933270825
+      }
+    ],
+    "mTTA": null,
+    "mTTA_reason": "Official clipped-test scalar evaluator does not define/reconstruct continuous-curve mTTA."
+  }
+}

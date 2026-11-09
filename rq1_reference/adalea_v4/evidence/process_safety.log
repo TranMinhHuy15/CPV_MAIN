@@ -1,0 +1,18 @@
+test_deadline_stops_grandchild (__main__.SafetyChecks) ... ok
+test_interrupt_and_sigterm_stop_grandchild (__main__.SafetyChecks) ... ok
+test_nonfinite_and_expired_deadlines_do_not_launch (__main__.SafetyChecks) ... ok
+test_normal_exit_stops_orphan (__main__.SafetyChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.230s
+
+OK
+test_deadline_stops_grandchild (__main__.SafetyChecks) ... ok
+test_interrupt_and_sigterm_stop_grandchild (__main__.SafetyChecks) ... ok
+test_nonfinite_and_expired_deadlines_do_not_launch (__main__.SafetyChecks) ... ok
+test_normal_exit_stops_orphan (__main__.SafetyChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.229s
+
+OK

@@ -1,0 +1,12 @@
+{
+  "source": "/workspace/rq2_medium_h7/medium_h7/seed_42/author_source",
+  "data": "/workspace/rq2_medium_h7/medium_h7/seed_42/prepared_nexar",
+  "protocol": "rq2-lstm-medium_h7-nominalclock-b2-eff16-amp-cp-medium-v1-20261029",
+  "paper_values": {
+    "mAP": 0.87,
+    "mAUC": 0.869,
+    "mAUC_0.1": 0.472,
+    "mTTA_0.1_s": 0.958
+  },
+  "training_not_yet_run": true
+}

@@ -1,0 +1,14 @@
+{
+  "protocol": "adalea-v4-v3training-unchanged-fullcurve-mtta-b2acc8",
+  "eval_batch_windows": 8,
+  "seeds": [42, 43, 44], "epochs": 50,
+  "batch_size": 2, "accumulation": 8, "amp": true,
+  "learning_rate": 0.002, "momentum": 0.9, "weight_decay": 0.0001,
+  "milestones": [20, 40], "lr_gamma": 0.1, "clip_grad": 40.0,
+  "feature_dim": 4096, "embedding": 256, "hidden": 512,
+  "dropout": 0.5, "gamma_frames": 5.0,
+  "max_objects": 5, "detector_threshold": 0.5,
+  "traffic_classes": [1, 2, 3, 4, 6, 8],
+  "vgg_chunk": 8, "cache_reserve_gib": 8,
+  "selection": "mAUC@", "deterministic": false
+}

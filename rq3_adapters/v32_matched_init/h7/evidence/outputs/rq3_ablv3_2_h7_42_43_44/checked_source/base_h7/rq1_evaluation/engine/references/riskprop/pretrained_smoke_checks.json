@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "reports": [
+    {
+      "seed": 42,
+      "passed": true,
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "microsteps": 16,
+      "accumulation": 8,
+      "backbone_updated": true,
+      "mini_validation": true
+    },
+    {
+      "seed": 43,
+      "passed": true,
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "microsteps": 16,
+      "accumulation": 8,
+      "backbone_updated": true,
+      "mini_validation": true
+    },
+    {
+      "seed": 44,
+      "passed": true,
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "microsteps": 16,
+      "accumulation": 8,
+      "backbone_updated": true,
+      "mini_validation": true
+    }
+  ],
+  "scope": "LOCAL RTX3050 32px with original pretraining and production worker; NOT rented Linux RTX4080 full224 validation"
+}

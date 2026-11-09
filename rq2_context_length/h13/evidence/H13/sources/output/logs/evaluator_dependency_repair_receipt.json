@@ -1,0 +1,36 @@
+{
+  "repair": "restore_two_original_evaluator_metadata_files",
+  "restored": [
+    "rq1_evaluation/engine/references/riskprop/safety_checks.json",
+    "rq1_evaluation/engine/references/top/safety_checks.json"
+  ],
+  "originally_missing": [
+    "rq1_evaluation/engine/references/riskprop/safety_checks.json",
+    "rq1_evaluation/engine/references/top/safety_checks.json"
+  ],
+  "restored_file_sha256": "919ae2bc11e4e1193d288e34eb1c397acbe5945864dd32206427cda65e5789b5",
+  "original_source_archive_sha256": "a7d7e3505667ec6e689a90bcb7e2ece06c1378451826f9f2e995afb83b8525e7",
+  "original_report_scope": "Historical Windows safety-check metadata; NOT a new GPU/test result.",
+  "manifests_changed": false,
+  "training_code_changed": false,
+  "checkpoint_files_written": false,
+  "nested_manifest_audit": {
+    "missing": [],
+    "checked_references": 462
+  },
+  "training_status_observed": {
+    "42": {
+      "completed_epochs": 50,
+      "best_checkpoint": "best_mAUC@_epoch_10.pth"
+    },
+    "43": {
+      "completed_epochs": 50,
+      "best_checkpoint": "best_mAUC@_epoch_5.pth"
+    },
+    "44": {
+      "completed_epochs": 50,
+      "best_checkpoint": "best_mAUC@_epoch_8.pth"
+    }
+  },
+  "timestamp_utc": "2026-10-30T13:42:33.214495+00:00"
+}

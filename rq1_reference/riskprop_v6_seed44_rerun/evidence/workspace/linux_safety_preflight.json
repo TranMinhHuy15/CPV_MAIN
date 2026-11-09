@@ -1,0 +1,7 @@
+{
+  "tests": 8,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "output": "test_deadline_stops_real_child_and_grandchild (test_safety.SafetyChecks.test_deadline_stops_real_child_and_grandchild) ... ok\ntest_expired_budget_does_not_launch (test_safety.SafetyChecks.test_expired_budget_does_not_launch) ... ok\ntest_global_budget_flags_and_strict_eval_contract (test_safety.SafetyChecks.test_global_budget_flags_and_strict_eval_contract) ... ok\ntest_interrupt_stops_real_child_and_grandchild (test_safety.SafetyChecks.test_interrupt_stops_real_child_and_grandchild) ... ok\ntest_normal_parent_exit_cleans_orphan (test_safety.SafetyChecks.test_normal_parent_exit_cleans_orphan) ... ok\ntest_output_lock (test_safety.SafetyChecks.test_output_lock) ... ok\ntest_sigterm_handler_and_cleanup (test_safety.SafetyChecks.test_sigterm_handler_and_cleanup) ... ok\ntest_snapshot_rolls_back_interrupted_save (test_safety.SafetyChecks.test_snapshot_rolls_back_interrupted_save) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 6.300s\n\nOK\n"
+}

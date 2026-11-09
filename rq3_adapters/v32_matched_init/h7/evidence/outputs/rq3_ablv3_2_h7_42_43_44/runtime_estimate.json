@@ -1,0 +1,49 @@
+{
+  "completed_runs": 18,
+  "current_GPU_projection": {
+    "completed_runs": 18,
+    "epochs": 900,
+    "extraction_hours": null,
+    "scope": "Measured on current GPU; one H7 encoder per test video shared by b0 and the four ablation arms. Setup, data audit, report I/O listed separately.",
+    "test_hours": null,
+    "training_hours": 7.151096770042083,
+    "training_runs": 18
+  },
+  "epochs": 900,
+  "estimated_remaining_training_hours": 0.0,
+  "extraction_videos": 4500,
+  "measured_epoch_seconds": {
+    "a26_m1": 28.10128098700079,
+    "a7_m1": 27.91997623599309,
+    "c7_current_repeat": 27.566219129003002,
+    "g3_learned": 30.769090235000476,
+    "r7_last_state": 27.093826779004303,
+    "u3_uniform": 30.17592911500833
+  },
+  "remaining_epochs_by_module": {
+    "a26_m1": 0,
+    "a7_m1": 0,
+    "c7_current_repeat": 0,
+    "g3_learned": 0,
+    "r7_last_state": 0,
+    "u3_uniform": 0
+  },
+  "runtime_and_data_audit": "separate, not hidden in training estimate",
+  "samples": {
+    "a26_m1": 9,
+    "a7_m1": 9,
+    "c7_current_repeat": 9,
+    "g3_learned": 9,
+    "r7_last_state": 9,
+    "u3_uniform": 9
+  },
+  "scenario_note": "Arithmetic examples, NOT a measured RTX4080 prediction.",
+  "scenario_training_hours_at_uniform_epoch_seconds": {
+    "15": 3.75,
+    "20": 5.0,
+    "30": 7.5,
+    "60": 15.0
+  },
+  "test_paired_videos": 4032,
+  "training_runs": 18
+}

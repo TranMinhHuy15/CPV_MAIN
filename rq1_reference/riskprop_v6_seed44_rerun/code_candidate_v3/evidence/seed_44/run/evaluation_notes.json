@@ -1,0 +1,11 @@
+{
+  "selected_checkpoint": "best_mAUC@_epoch_17.pth",
+  "completed_epochs": 50,
+  "test_was_not_used_for_selection": true,
+  "partial_auc": "Both normalizations reported on exactly the same predictions; do not pick the closest one to the paper.",
+  "code_mtta": "Original code averages over negative-frame thresholds, counts misses as zero, clips after alert onset.",
+  "paper_mtta": "Paper wording refers to true-positive alarms; equivalence to source implementation is unverified.",
+  "test_mtta": "Not fabricated from a scalar clipped-test score; use validation risk-curve proxy, labeled separately.",
+  "paper_score_0.472": "Code standardized partial AUC and paper value cannot be assumed to use the same normalization.",
+  "single_seed": "One baseline run, not a statistically supported replication across seeds."
+}

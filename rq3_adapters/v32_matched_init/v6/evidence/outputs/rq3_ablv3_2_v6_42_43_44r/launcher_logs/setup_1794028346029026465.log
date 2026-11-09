@@ -1,0 +1,5 @@
+time=2026-11-07T05:12:26.626460+00:00 | phase=INPUT READY | seeds=[42, 43, 44] | modules=['c7_current_repeat', 'r7_last_state', 'a7_m1', 'a26_m1', 'u3_uniform', 'g3_learned'] | candidates=1 | runs=18 | epochs_per_run=50 | module_parent=RiskProp V6 frozen | comparison_baselines=same-study b0 and all six newly trained adapters | disk_free_GiB=127.54
+time=2026-11-07T05:12:26.626679+00:00 | phase=START | job=runtime_setup | raw_log=/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/logs/runtime_setup_1794028346626669394.log
+time=2026-11-07T05:12:56.627331+00:00 | phase=RUNNING | job=runtime_setup | elapsed_s=30.0
+time=2026-11-07T05:13:26.627608+00:00 | phase=RUNNING | job=runtime_setup | elapsed_s=60.0
+time=2026-11-07T05:13:56.415487+00:00 | phase=DONE | job=runtime_setup | exit=0 | elapsed_s=89.8

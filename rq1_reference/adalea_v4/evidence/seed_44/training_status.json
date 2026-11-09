@@ -1,0 +1,10 @@
+{
+  "seed": 44,
+  "completed_epochs": 50,
+  "target_epochs": 50,
+  "complete": true,
+  "best_epoch": 36,
+  "best_metric": 0.7827259259259258,
+  "previous_attc_s": 1.2963941239592314,
+  "checkpoint_sha256": "73cacc2c5a36aa7caa46dd38301fcff662aff8d742639ab3be7b9aeae9f3c652"
+}

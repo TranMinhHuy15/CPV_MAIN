@@ -1,0 +1,6 @@
+{
+  "arm": "c7_current_repeat",
+  "candidate": "c2_lr_double",
+  "seed": 43,
+  "study_contract_sha256": "8c777e167d2b94f86d0c6b06d59763e047a5b8db096337c806883c8fef805b29"
+}

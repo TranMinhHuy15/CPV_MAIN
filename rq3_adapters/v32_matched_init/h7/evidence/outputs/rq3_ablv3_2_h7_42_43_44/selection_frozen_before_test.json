@@ -1,0 +1,531 @@
+{
+  "arms": [
+    "c7_current_repeat",
+    "r7_last_state",
+    "a7_m1",
+    "a26_m1",
+    "u3_uniform",
+    "g3_learned"
+  ],
+  "baselines": {
+    "h7": {
+      "42": {
+        "baseline_input_kind": "selected_frozen_H7_export",
+        "checkpoint": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_42/run/best_mAUC@_epoch_10.pth",
+        "checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+        "contract_sha256": "dcb99bb199cec8abb98bdb70b6591ec3a92abd67631baa7ea1d724fd9c80007b",
+        "history": 7,
+        "manifest_sha256": "c0730f62d958d7996a9b642c051f62ed6a7241d1745bd5c58e8388ce7fb549c0",
+        "recipe_sha256": "2c7ecbb70a85cad088d20fa8aefd8ba9644cb26ad61ea6e8aebd281e6c7f2498",
+        "run": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_42/run",
+        "seed": 42,
+        "selected_epoch": 10,
+        "validation_history_sha256": "850cb38bf21288d820f488f8fcb40149128e6c43822426271f847eb5a3219ca5",
+        "validation_metrics": {
+          "AP@0.5s": 0.9141414157149051,
+          "AP@1.0s": 0.8467759808206329,
+          "AP@1.5s": 0.7666882516687357,
+          "mAP@": 0.8425352160680912,
+          "mAUC@": 0.859451851851852
+        },
+        "validation_threshold": 0.571291446685791
+      },
+      "43": {
+        "baseline_input_kind": "selected_frozen_H7_export",
+        "checkpoint": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_43/run/best_mAUC@_epoch_5.pth",
+        "checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+        "contract_sha256": "ab05e17f86a673030952784aeea72289618cc298baef9347b681ea9c3e03e6e0",
+        "history": 7,
+        "manifest_sha256": "4741a1b01aeca3b7b8c655e76b758cc1aa9aca938fb179a1a3f1e8759317bca0",
+        "recipe_sha256": "2c7ecbb70a85cad088d20fa8aefd8ba9644cb26ad61ea6e8aebd281e6c7f2498",
+        "run": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_43/run",
+        "seed": 43,
+        "selected_epoch": 5,
+        "validation_history_sha256": "e3ab398328ee54641575331140fdeee8c67c6086061f95cf320f7d41e5374628",
+        "validation_metrics": {
+          "AP@0.5s": 0.9035140547090041,
+          "AP@1.0s": 0.8325845232731683,
+          "AP@1.5s": 0.764390121937083,
+          "mAP@": 0.8334962333064185,
+          "mAUC@": 0.8532444444444445
+        },
+        "validation_threshold": 0.4009742736816406
+      },
+      "44": {
+        "baseline_input_kind": "selected_frozen_H7_export",
+        "checkpoint": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_44/run/best_mAUC@_epoch_8.pth",
+        "checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+        "contract_sha256": "431c2ccf54c36c810b383a2b3ba5e2e9c4bcce2a61a2637c7fb5dedb626d3413",
+        "history": 7,
+        "manifest_sha256": "f7e7aec9b5a9a9320dfa61c024fd80e803b05d8e74843a863f4aa030d303927d",
+        "recipe_sha256": "2c7ecbb70a85cad088d20fa8aefd8ba9644cb26ad61ea6e8aebd281e6c7f2498",
+        "run": "/workspace/rq3abl32_inputs/H7/medium_h7/seed_44/run",
+        "seed": 44,
+        "selected_epoch": 8,
+        "validation_history_sha256": "810e8ed256238c10c7070bace7e2d59d6a1920d3c2a8bd65b673ac8753c23781",
+        "validation_metrics": {
+          "AP@0.5s": 0.9242001498863008,
+          "AP@1.0s": 0.8412912765534604,
+          "AP@1.5s": 0.774868217849048,
+          "mAP@": 0.8467865480962699,
+          "mAUC@": 0.8625629629629629
+        },
+        "validation_threshold": 0.49067187309265137
+      }
+    }
+  },
+  "chosen": {
+    "a26_m1": {
+      "candidate": "c2_lr_double",
+      "hyperparameters": {
+        "dropout": 0.1,
+        "id": "c2_lr_double",
+        "lr": 0.0002,
+        "rationale": "Configuration selected for M1 and M1+M2 in the v1.1 H7 study; reused unchanged so the ablation is matched.",
+        "weight_decay": 0.0001,
+        "width": 512
+      },
+      "reason": "Maximum mean full validation mAUC across42/43/44; ties: mean AP@1.5s then predeclared candidate order. Same candidate for all three seeds.",
+      "selected": [
+        {
+          "adapter_sha256": "52d095e19582ef664a5c35fb6466241bcd376ca1b4dad39785435248a8eb2c48",
+          "arm": "a26_m1",
+          "baseline_checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "be56156adca0db04839de95bdb9a06b9cd39f55803b8a60ad299d9d34743b02c",
+          "complete": true,
+          "contract_sha256": "9de84195f64a6d07dc770c6c7bc2c03b65420ace9e843d34c6281c97c80e8d2b",
+          "seed": 42,
+          "selected_epoch": 11,
+          "validation_metrics": {
+            "AP@0.5s": 0.9185213326924231,
+            "AP@1.0s": 0.8531443998808856,
+            "AP@1.5s": 0.7755324705775917,
+            "mAP@": 0.8490660677169668,
+            "mAUC@": 0.8643851851851853
+          },
+          "validation_threshold": 0.455388605594635,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/a26_m1/seed_42"
+        },
+        {
+          "adapter_sha256": "a0a3e8f84f3811251ba68184d6acd65c810d5d9dafbd564711b661ae7ede0486",
+          "arm": "a26_m1",
+          "baseline_checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "bdbbca5824e8e2327f4dde532a0e4cbdc34abab1d9edaf91c3a551fd2b748a47",
+          "complete": true,
+          "contract_sha256": "ebd7a17529aa1f6f9fc4c523ff03791415cf27599c5f5b8a6834688e52277130",
+          "seed": 43,
+          "selected_epoch": 9,
+          "validation_metrics": {
+            "AP@0.5s": 0.9269805663699292,
+            "AP@1.0s": 0.8604435284409941,
+            "AP@1.5s": 0.7944361639428195,
+            "mAP@": 0.8606200862512475,
+            "mAUC@": 0.8667259259259259
+          },
+          "validation_threshold": 0.43676507472991943,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/a26_m1/seed_43"
+        },
+        {
+          "adapter_sha256": "0719f7b2d17527b3ea088861db1b0766dbb4a9c2f143490ea999b595e523f45a",
+          "arm": "a26_m1",
+          "baseline_checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "d8edbc9d88396bcd86ac3d8e6f8d223066b3495a1b0056646b8a4e088df7903d",
+          "complete": true,
+          "contract_sha256": "f8519f661bf560502b0027b95668cddf97afb2c3f88c5aaf263f2e50b6389736",
+          "seed": 44,
+          "selected_epoch": 20,
+          "validation_metrics": {
+            "AP@0.5s": 0.9369821225995829,
+            "AP@1.0s": 0.8632044602329825,
+            "AP@1.5s": 0.7986652425690317,
+            "mAP@": 0.8662839418005324,
+            "mAUC@": 0.8683703703703703
+          },
+          "validation_threshold": 0.500093936920166,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/a26_m1/seed_44"
+        }
+      ]
+    },
+    "a7_m1": {
+      "candidate": "c2_lr_double",
+      "hyperparameters": {
+        "dropout": 0.1,
+        "id": "c2_lr_double",
+        "lr": 0.0002,
+        "rationale": "Configuration selected for M1 and M1+M2 in the v1.1 H7 study; reused unchanged so the ablation is matched.",
+        "weight_decay": 0.0001,
+        "width": 512
+      },
+      "reason": "Maximum mean full validation mAUC across42/43/44; ties: mean AP@1.5s then predeclared candidate order. Same candidate for all three seeds.",
+      "selected": [
+        {
+          "adapter_sha256": "15259324ffe7662a4888330d9804757c52d28becacd274a4ab07459c5d3070ee",
+          "arm": "a7_m1",
+          "baseline_checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "2960db1feb4a23cf975a0fe48b1ab3577465cd0805d52af7babd0ec96f92d625",
+          "complete": true,
+          "contract_sha256": "dc5135905cfda69c0fb0a7a7948f2ec65bf5aa3e525a3df9c98b43782fa0997a",
+          "seed": 42,
+          "selected_epoch": 14,
+          "validation_metrics": {
+            "AP@0.5s": 0.9162821101500647,
+            "AP@1.0s": 0.8505157035232895,
+            "AP@1.5s": 0.772972224362988,
+            "mAP@": 0.8465900126787806,
+            "mAUC@": 0.8620444444444444
+          },
+          "validation_threshold": 0.4822480380535126,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/a7_m1/seed_42"
+        },
+        {
+          "adapter_sha256": "b0c21eea2428639ed21086e4db568615c420a3685ad9d90e157167caada8c442",
+          "arm": "a7_m1",
+          "baseline_checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "2c79d595051ec23071c4e4f6c33c55a198f1c34b5d0954fefa7fe9b958123c4a",
+          "complete": true,
+          "contract_sha256": "79ffa925dd56a943fcf3f27516686cdaf8785d0fd906e27459bc126c7c339c3a",
+          "seed": 43,
+          "selected_epoch": 15,
+          "validation_metrics": {
+            "AP@0.5s": 0.914440927061984,
+            "AP@1.0s": 0.8449947439732843,
+            "AP@1.5s": 0.7820252315054386,
+            "mAP@": 0.8471536341802356,
+            "mAUC@": 0.8590814814814814
+          },
+          "validation_threshold": 0.31377217173576355,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/a7_m1/seed_43"
+        },
+        {
+          "adapter_sha256": "91aebef9ff675c5954637b01b6b2c131993ab10599912266513d627e79fc56ae",
+          "arm": "a7_m1",
+          "baseline_checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "8a560d438dae5c7c013f32231faf479d37fd1de3f13b34e2dc67a96a130e0441",
+          "complete": true,
+          "contract_sha256": "fc41355e9f4b3d6fafbf47379924c6284fa3a94d773dac91b88bc63f4c788081",
+          "seed": 44,
+          "selected_epoch": 9,
+          "validation_metrics": {
+            "AP@0.5s": 0.9281955649675167,
+            "AP@1.0s": 0.8495784744035746,
+            "AP@1.5s": 0.7829004221284981,
+            "mAP@": 0.8535581538331964,
+            "mAUC@": 0.8671111111111109
+          },
+          "validation_threshold": 0.359053373336792,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/a7_m1/seed_44"
+        }
+      ]
+    },
+    "c7_current_repeat": {
+      "candidate": "c2_lr_double",
+      "hyperparameters": {
+        "dropout": 0.1,
+        "id": "c2_lr_double",
+        "lr": 0.0002,
+        "rationale": "Configuration selected for M1 and M1+M2 in the v1.1 H7 study; reused unchanged so the ablation is matched.",
+        "weight_decay": 0.0001,
+        "width": 512
+      },
+      "reason": "Maximum mean full validation mAUC across42/43/44; ties: mean AP@1.5s then predeclared candidate order. Same candidate for all three seeds.",
+      "selected": [
+        {
+          "adapter_sha256": "e8625a234241e7517f93a81c1f743c37ce92d77da40d34c0640d4595d693b6e7",
+          "arm": "c7_current_repeat",
+          "baseline_checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "bf71a08aea0c611641d5402527a4bda87184c0a4c4d527c0c0b7db012a47d15f",
+          "complete": true,
+          "contract_sha256": "0ae205513cc9b5a3d812279a48f306767fdf268d3abdb781b18f704bbfb23467",
+          "seed": 42,
+          "selected_epoch": 11,
+          "validation_metrics": {
+            "AP@0.5s": 0.9174260963942248,
+            "AP@1.0s": 0.8497485246795314,
+            "AP@1.5s": 0.773801674842447,
+            "mAP@": 0.8469920986387344,
+            "mAUC@": 0.861274074074074
+          },
+          "validation_threshold": 0.4737441837787628,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_42"
+        },
+        {
+          "adapter_sha256": "4b5b4b268f8349dbc3750e8a3aa3d0021ed00fe7e298b0ed49097e6d15075804",
+          "arm": "c7_current_repeat",
+          "baseline_checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "fe1357273b6688f1ca569980b8c0c0fd871e7aebfe7d5af4ff37720bdfcdebf4",
+          "complete": true,
+          "contract_sha256": "a0a78b6cb1e295932bca89bfc04fa4bb5670450f5d85e41e79a43bfb027efe6a",
+          "seed": 43,
+          "selected_epoch": 40,
+          "validation_metrics": {
+            "AP@0.5s": 0.9136206731827895,
+            "AP@1.0s": 0.8416953861209568,
+            "AP@1.5s": 0.7805756021734582,
+            "mAP@": 0.8452972204924016,
+            "mAUC@": 0.8605037037037037
+          },
+          "validation_threshold": 0.38583406805992126,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_43"
+        },
+        {
+          "adapter_sha256": "9418bdc329fe9356657d909f6a398e6daa1d5dcf0f91383c0b86e52cb7490f6e",
+          "arm": "c7_current_repeat",
+          "baseline_checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "de15b7b7c1e6113b06610b9cda7ba63f3f1ba4541d1157a1f7f1c5fc9eae9983",
+          "complete": true,
+          "contract_sha256": "6cef1fd22befca32861272759c4f3c09a67273a17ee2bdac36c6cfd684eba542",
+          "seed": 44,
+          "selected_epoch": 18,
+          "validation_metrics": {
+            "AP@0.5s": 0.9265950613531927,
+            "AP@1.0s": 0.8478917495337119,
+            "AP@1.5s": 0.783011539637835,
+            "mAP@": 0.8524994501749132,
+            "mAUC@": 0.865762962962963
+          },
+          "validation_threshold": 0.41137123107910156,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/c7_current_repeat/seed_44"
+        }
+      ]
+    },
+    "g3_learned": {
+      "candidate": "c2_lr_double",
+      "hyperparameters": {
+        "dropout": 0.1,
+        "id": "c2_lr_double",
+        "lr": 0.0002,
+        "rationale": "Configuration selected for M1 and M1+M2 in the v1.1 H7 study; reused unchanged so the ablation is matched.",
+        "weight_decay": 0.0001,
+        "width": 512
+      },
+      "reason": "Maximum mean full validation mAUC across42/43/44; ties: mean AP@1.5s then predeclared candidate order. Same candidate for all three seeds.",
+      "selected": [
+        {
+          "adapter_sha256": "6b1b3c04d6559bf952ef27092a831916d76d85733ee7b6a1c1f4620680ba4504",
+          "arm": "g3_learned",
+          "baseline_checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "56ce1b1ba0fdccfc29bbcf5e5d7dfed4887a30cbed1f164f413b2605b85facf4",
+          "complete": true,
+          "contract_sha256": "af650765a94700d257e393c790420632b1fda2ba940b443fb58a42ea05c2bb67",
+          "seed": 42,
+          "selected_epoch": 14,
+          "validation_metrics": {
+            "AP@0.5s": 0.9197609442152851,
+            "AP@1.0s": 0.8524355219009443,
+            "AP@1.5s": 0.7758506894458362,
+            "mAP@": 0.8493490518540218,
+            "mAUC@": 0.8630814814814816
+          },
+          "validation_threshold": 0.4723186492919922,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/g3_learned/seed_42"
+        },
+        {
+          "adapter_sha256": "cd9c6bed021889aa842cb183d707b29c87c1c32294f8cd63090140ad44bcefa7",
+          "arm": "g3_learned",
+          "baseline_checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "4ad1d94826e9081c78665d5b23dcf18b338df7e7d4afffcec2b6d416f22b7a8b",
+          "complete": true,
+          "contract_sha256": "55eeec5a94cd9087d05e1c30d8dc536615fa2b484131e6df70d3049bf3fc0138",
+          "seed": 43,
+          "selected_epoch": 9,
+          "validation_metrics": {
+            "AP@0.5s": 0.9302730888407071,
+            "AP@1.0s": 0.8641843917445001,
+            "AP@1.5s": 0.7920611206696871,
+            "mAP@": 0.8621728670849648,
+            "mAUC@": 0.8668888888888889
+          },
+          "validation_threshold": 0.363406240940094,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/g3_learned/seed_43"
+        },
+        {
+          "adapter_sha256": "192b2c89a45453ab39b0d8abf9d6208c0d63709504e31b2cc386542609f07cf4",
+          "arm": "g3_learned",
+          "baseline_checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "e029df847892bcef516ae530ca0451c6ce4c68b8dfce6339edae46d3c61bcb2c",
+          "complete": true,
+          "contract_sha256": "19fd992b19472f44fd29174e6d95ca5887662036ed8a5cb6a9f7f4f69a3acaee",
+          "seed": 44,
+          "selected_epoch": 9,
+          "validation_metrics": {
+            "AP@0.5s": 0.9340331409819087,
+            "AP@1.0s": 0.8504678814958384,
+            "AP@1.5s": 0.7861204669688686,
+            "mAP@": 0.8568738298155386,
+            "mAUC@": 0.8692148148148148
+          },
+          "validation_threshold": 0.3821677565574646,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/g3_learned/seed_44"
+        }
+      ]
+    },
+    "r7_last_state": {
+      "candidate": "c2_lr_double",
+      "hyperparameters": {
+        "dropout": 0.1,
+        "id": "c2_lr_double",
+        "lr": 0.0002,
+        "rationale": "Configuration selected for M1 and M1+M2 in the v1.1 H7 study; reused unchanged so the ablation is matched.",
+        "weight_decay": 0.0001,
+        "width": 512
+      },
+      "reason": "Maximum mean full validation mAUC across42/43/44; ties: mean AP@1.5s then predeclared candidate order. Same candidate for all three seeds.",
+      "selected": [
+        {
+          "adapter_sha256": "4fed1a97947ba09714d080aed50e7a37f86598b47fefca02a85ebdadbf2ee433",
+          "arm": "r7_last_state",
+          "baseline_checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "e8411d6267645d2c30cb7ae8003f3c424921f2da87ab78edd81f2b4ee3662418",
+          "complete": true,
+          "contract_sha256": "e1218c2dd25f4c7c3f1206a41cf2f26ed35f26ba833aca1a38eee5889e5e08a9",
+          "seed": 42,
+          "selected_epoch": 14,
+          "validation_metrics": {
+            "AP@0.5s": 0.9158974093535757,
+            "AP@1.0s": 0.8506286193318312,
+            "AP@1.5s": 0.7740475922827635,
+            "mAP@": 0.8468578736560568,
+            "mAUC@": 0.8619703703703704
+          },
+          "validation_threshold": 0.44950345158576965,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/r7_last_state/seed_42"
+        },
+        {
+          "adapter_sha256": "b0d847417ef9018c5eb5ed3e7a909c895075f0476c07f02641df25899e266722",
+          "arm": "r7_last_state",
+          "baseline_checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "101b737f5d6d302f857208809fc1887be3f2ddc56f9deb5df7d816ab8653b4cd",
+          "complete": true,
+          "contract_sha256": "70439501c31f18f9a7f9d711ab3dfe4ffe98f2e91cbdc8037ef301ef66df6dba",
+          "seed": 43,
+          "selected_epoch": 9,
+          "validation_metrics": {
+            "AP@0.5s": 0.9126556664197611,
+            "AP@1.0s": 0.8466755857367734,
+            "AP@1.5s": 0.7788388595452702,
+            "mAP@": 0.8460567039006016,
+            "mAUC@": 0.859362962962963
+          },
+          "validation_threshold": 0.3723296523094177,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/r7_last_state/seed_43"
+        },
+        {
+          "adapter_sha256": "a35026a44920f2ce4c621f1353e1050c881c632b7a62b3ccfa20b8f64466933e",
+          "arm": "r7_last_state",
+          "baseline_checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "aed08738904e1971e8cb21be67adc4389e8b1ce82fca0b140bfc2532af6855e8",
+          "complete": true,
+          "contract_sha256": "bac939b89f0edb23170e35d82b169d6d71a80f9ef5bdfcd751e9b26e8c8e57d2",
+          "seed": 44,
+          "selected_epoch": 20,
+          "validation_metrics": {
+            "AP@0.5s": 0.9267099295136252,
+            "AP@1.0s": 0.8474172182938412,
+            "AP@1.5s": 0.7820116768418437,
+            "mAP@": 0.8520462748831034,
+            "mAUC@": 0.8663703703703703
+          },
+          "validation_threshold": 0.45104941725730896,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/r7_last_state/seed_44"
+        }
+      ]
+    },
+    "u3_uniform": {
+      "candidate": "c2_lr_double",
+      "hyperparameters": {
+        "dropout": 0.1,
+        "id": "c2_lr_double",
+        "lr": 0.0002,
+        "rationale": "Configuration selected for M1 and M1+M2 in the v1.1 H7 study; reused unchanged so the ablation is matched.",
+        "weight_decay": 0.0001,
+        "width": 512
+      },
+      "reason": "Maximum mean full validation mAUC across42/43/44; ties: mean AP@1.5s then predeclared candidate order. Same candidate for all three seeds.",
+      "selected": [
+        {
+          "adapter_sha256": "7d2a33515bc6675c73ace1adc07fdc87cddce0d9d2266ebe69b349653f5bb211",
+          "arm": "u3_uniform",
+          "baseline_checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "3e1adb2193ceee1fa45e4507dbc08678d84c84fe067627a0a7ba2d8ce7a58c09",
+          "complete": true,
+          "contract_sha256": "4ff6b41415bdb64b55cfdb8f041b620034ac67c3f14162ebec02d8c6f12e921c",
+          "seed": 42,
+          "selected_epoch": 12,
+          "validation_metrics": {
+            "AP@0.5s": 0.9192928727650693,
+            "AP@1.0s": 0.8522831283161199,
+            "AP@1.5s": 0.7733134351802136,
+            "mAP@": 0.8482964787538009,
+            "mAUC@": 0.8629037037037036
+          },
+          "validation_threshold": 0.45881417393684387,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/u3_uniform/seed_42"
+        },
+        {
+          "adapter_sha256": "87aa7d897b6bd3462ac07badb981b65598e71abdb1176a2fe6ade16cc4423bfa",
+          "arm": "u3_uniform",
+          "baseline_checkpoint_sha256": "a7878b19bdd572dbc8c746b8e627a946bac9f6e209213481233fc0e4fefad730",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "fecebff8beb74aed3e159e17d158bf584109bad6d48d6f8730ac348ec3d6bb41",
+          "complete": true,
+          "contract_sha256": "b6e734bab6bbd32405a960814fa1f947872d34c3751e74baa8497c12ccf4b556",
+          "seed": 43,
+          "selected_epoch": 9,
+          "validation_metrics": {
+            "AP@0.5s": 0.9269469395094984,
+            "AP@1.0s": 0.8587394919059887,
+            "AP@1.5s": 0.7920968060850282,
+            "mAP@": 0.8592610791668385,
+            "mAUC@": 0.8654962962962962
+          },
+          "validation_threshold": 0.383293479681015,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/u3_uniform/seed_43"
+        },
+        {
+          "adapter_sha256": "9fc535e3ffb3cfd9a16f75e87730daf859988a569826d1823e55ca71f0c4c1f2",
+          "arm": "u3_uniform",
+          "baseline_checkpoint_sha256": "be2330bf18c74ce1318bdc6c977cdf43a7f038570ade2d900e662e9326a07256",
+          "candidate": "c2_lr_double",
+          "checkpoint_sha256": "daba591889108912fe8bab25dc2878b082a670be095ac228e8849c25a0c6f61d",
+          "complete": true,
+          "contract_sha256": "e5d2e14e96c34b1466311c619d7cacc6d4e9479b082a044ba6e25ae43ebc37cf",
+          "seed": 44,
+          "selected_epoch": 18,
+          "validation_metrics": {
+            "AP@0.5s": 0.9307017516800321,
+            "AP@1.0s": 0.8504594237779302,
+            "AP@1.5s": 0.788969787670281,
+            "mAP@": 0.8567103210427479,
+            "mAUC@": 0.8671703703703703
+          },
+          "validation_threshold": 0.41475042700767517,
+          "workspace": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/u3_uniform/seed_44"
+        }
+      ]
+    }
+  },
+  "primary_selection": "mean validation full mAUC across all3seeds",
+  "runtime_identity_sha256": "4a0ddd2d7a81cd436e3446ee4a2c4228d3c9d522f467fd4001ed726d948b2fe3",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "study_contract_sha256": "629265c4f96813f159f88fea644ef470231645682d6624ba90d8d4e89a1031f3"
+}

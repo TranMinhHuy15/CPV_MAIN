@@ -1,0 +1,13 @@
+{
+  "complete": true,
+  "test_count": 1344,
+  "metric_schema": "rq2-28-v1",
+  "checkpoint_sha256": "9418bdc329fe9356657d909f6a398e6daa1d5dcf0f91383c0b86e52cb7490f6e",
+  "files": {
+    "rq2_test_report.json": "2205619b7d7abf0a3e044aae5c313993aabcb947916fbc06ecb4f199fb2403fd",
+    "rq2_test_metrics.csv": "2144347d7e03e71b13599820e51b46993d25729dcfe1da2600ea0ee889bdaf72",
+    "test_predictions.json": "5c15a1f6dd365f97b3e48d19a2db0f9730d1e2d73512fcc0c46307f522dc307b",
+    "test_capture/capture_manifest.json": "51bd2e76cf4e86faf640537de36e19adb27d4b48c5f10b237f695903f8a3ed8f",
+    "test_capture/capture_contract.json": "f12c4473ee7d84eb4e29a386b82243b88edb7911b0edd66be897c8bfd1650514"
+  }
+}

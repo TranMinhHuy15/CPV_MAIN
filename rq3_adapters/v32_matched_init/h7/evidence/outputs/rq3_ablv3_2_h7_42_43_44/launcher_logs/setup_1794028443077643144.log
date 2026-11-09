@@ -1,0 +1,8 @@
+time=2026-11-07T05:14:04.305587+00:00 | phase=INPUT READY | seeds=[42, 43, 44] | modules=['c7_current_repeat', 'r7_last_state', 'a7_m1', 'a26_m1', 'u3_uniform', 'g3_learned'] | candidates=1 | runs=18 | epochs_per_run=50 | module_parent=H7 frozen | comparison_baselines=same-study b0 and all six newly trained adapters | disk_free_GiB=126.74
+time=2026-11-07T05:14:04.305906+00:00 | phase=START | job=runtime_setup | raw_log=/workspace/outputs/rq3_ablv3_2_h7_42_43_44/logs/runtime_setup_1794028444305895856.log
+time=2026-11-07T05:14:34.306758+00:00 | phase=RUNNING | job=runtime_setup | elapsed_s=30.0
+time=2026-11-07T05:15:04.307059+00:00 | phase=RUNNING | job=runtime_setup | elapsed_s=60.0
+time=2026-11-07T05:15:34.307865+00:00 | phase=RUNNING | job=runtime_setup | elapsed_s=90.0
+time=2026-11-07T05:16:04.308158+00:00 | phase=RUNNING | job=runtime_setup | elapsed_s=120.0
+time=2026-11-07T05:16:34.308975+00:00 | phase=RUNNING | job=runtime_setup | elapsed_s=150.0
+time=2026-11-07T05:16:38.330127+00:00 | phase=DONE | job=runtime_setup | exit=0 | elapsed_s=154.0

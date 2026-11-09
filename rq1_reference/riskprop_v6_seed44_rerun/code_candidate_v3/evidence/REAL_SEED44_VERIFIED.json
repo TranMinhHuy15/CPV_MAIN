@@ -1,0 +1,115 @@
+{
+  "seed": 44,
+  "status": {
+    "completed_epochs": 50,
+    "target_epochs": 50,
+    "complete": true,
+    "checkpoint_selection": "validation full mAUC@ (published config)",
+    "best_checkpoint": "best_mAUC@_epoch_17.pth"
+  },
+  "history_epochs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "best_checkpoint_sha256": "85f7421dda95b04b7e6e02f8f1a77591d8b49a820ed0bc516cd4041e94e3005a",
+  "metrics": {
+    "Public": {
+      "mAP": 0.7774630378911094,
+      "mAUC": 0.817629388755944
+    },
+    "Private": {
+      "mAP": 0.8226925526327054,
+      "mAUC": 0.8436780101222103
+    },
+    "Combined": {
+      "mAP": 0.7962148361915307,
+      "mAUC": 0.8301414992660412
+    }
+  },
+  "GPU_inference_rerun": false,
+  "weights_changed": false,
+  "warning": "Parent RNG restored does not guarantee persistent DataLoader worker RNG equivalence.",
+  "artifact_seal": {
+    "schema": "v6-verified-artifact-seal-v1",
+    "seed": 44,
+    "files": {
+      "validation_metrics.json": "d1cc43fff6da53c344ab613ba5656a2241f906906df462d884d19b655eb25729",
+      "validation_predictions.json": "aa6f53047d17447b7c4775b6aafd31243e4cdfe63da7615ed6ab584a85b81441",
+      "official_test_metrics.json": "57bd1e0b5afd88a083dfbc71589f4da1b4d4e5730fc567dca6db6d4a6ddbee0f",
+      "evaluation_notes.json": "cecc9a379b45a711e960f8ba2fae4aa8280d41d0789cf3754509e80e559e11b7",
+      "test_predictions.json": "8deb6a33fe7d4697370e49d4933b15180aa05895623ded32fe7ddb3bc6292ba6",
+      "submission.csv": "89d316a678d85d31bd231f2d15ad8a09d72ec5448a845ea087122226981793ae",
+      "run_manifest.json": "4867bb6fdc8a206a61f2e8ccbd2f616f3cdc7ac735ad89ba8584de12c6b3fc59",
+      "training_status.json": "9b97dc3edfc0131cc8ad9945dd672f65aeef688fedae473f53cb5f2220ede5cc",
+      "validation_history.jsonl": "2a46ab18effa80e132f4f1a59add3509848f3120d56a29692055078e8ec6bb93",
+      "best_mAUC@_epoch_17.pth": "85f7421dda95b04b7e6e02f8f1a77591d8b49a820ed0bc516cd4041e94e3005a",
+      "resume_latest.pth": "446d27a3e7d21c5cb4ca41259d72c11bf994db05489d3255550c571e0c30fd68",
+      "rng_epoch50_rank0.pth": "ea7c74454ee2887975bcd51aba4eb3ab9daf5dd1da2b774920d326bdfc3d3dcb",
+      "safe_resume_snapshot.zip": "a8ed0466dd88aea483549cddef04d879d679a1f9d301f0f3c38cd9571c48d0a9"
+    },
+    "measured": {
+      "Public": {
+        "mAP": 0.7774630378911094,
+        "mAUC": 0.817629388755944
+      },
+      "Private": {
+        "mAP": 0.8226925526327054,
+        "mAUC": 0.8436780101222103
+      },
+      "Combined": {
+        "mAP": 0.7962148361915307,
+        "mAUC": 0.8301414992660412
+      }
+    },
+    "inference_rerun": false,
+    "scope": "stored prediction arithmetic and artifact integrity; GPU inference only if explicitly rerun"
+  }
+}

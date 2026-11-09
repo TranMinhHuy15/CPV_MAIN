@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "files": {
+    "run/adapter_diagnostics_validation.jsonl": "b1c1df0973bd810635b3f51af7bf1ec532665f632ef3fc328883677dc976dd8a",
+    "run/adapter_samples_validation.jsonl": "14f06045e979f2085a73a463ed01213030355285bc2712402162a53ef0803502",
+    "run/run_manifest.json": "6433fef2c05aa48ad0c7ffd895e7ebf1491135e339996e9bd4cda2b1aaea707e",
+    "run/training_status.json": "0c2c8d48bae3078b69c90033b78bb614193bb59938ad692a0dd564b861193da6",
+    "run/validation_history.jsonl": "825aa8758571baedc3d82982731f6570e01e564f0d0346f8785780549af97c76",
+    "selected_adapter.npz": "b0c21eea2428639ed21086e4db568615c420a3685ad9d90e157167caada8c442"
+  },
+  "frozen_weights_equal_original": true,
+  "original_full_commit_crc_checked": true,
+  "original_snapshot_sha256": "cb79cac8b865b2611711f4d2fb39209de7f98c8bbcaf5499c4c63ec0a0ef1514",
+  "selected_full_checkpoint_sha256": "2c79d595051ec23071c4e4f6c33c55a198f1c34b5d0954fefa7fe9b958123c4a"
+}

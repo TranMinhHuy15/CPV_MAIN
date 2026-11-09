@@ -1,0 +1,16 @@
+{
+  "release": "RQ2_Medium_H13_Checked_v1",
+  "history": 13,
+  "variant": "medium_h13",
+  "date": "2026-10-29",
+  "baseline_zip_sha256": "a7d7e3505667ec6e689a90bcb7e2ece06c1378451826f9f2e995afb83b8525e7",
+  "initialization": "fresh Kinetics710 per seed; not H1/H26 fine-tuning",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 50,
+  "attention_readout": false,
+  "data_revision": "7535d0656dac31d7da2846913bb69c6331d2a70a"
+}

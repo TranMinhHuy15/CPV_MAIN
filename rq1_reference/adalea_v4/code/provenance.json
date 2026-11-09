@@ -1,0 +1,18 @@
+{
+  "reference_repo": "https://github.com/xingyueye5/RiskProp",
+  "reference_commit": "579376fa1d879f28a9d68c2565d1e449de24b666",
+  "annotations_sha256": "0cc944e13e11cdeed50036c2a28b190fb675173aed964b66c5c713ca87989d50",
+  "input_source_sha256": {
+    "v6_reference.py": "a5226d57d150240cf133d872b8b99f826cdeff424dab25a48fb21f469c2d1bb3",
+    "evaluate.py": "70578e9d3b80634bb4f6326268ef7eb5ba3e0994cb0c4bebd9d95c8119a02656",
+    "process_control.py": "16594be20222ecfc8a1926a77ef8b6bc83bd98b1b45074c072c3a152fa43348a",
+    "setup_environment.py": "de3577811d5a573a2187316e6844a32ffde12abeaa210989456b06e07308c334"
+  },
+  "ada_model_source": "Our PyTorch reimplementation of Suzuki2018; not original author implementation.",
+  "paper_url": "https://openaccess.thecvf.com/content_cvpr_2018/papers/Suzuki_Anticipating_Traffic_Accidents_CVPR_2018_paper.pdf",
+  "dsa_reference": "https://github.com/smallcorgi/Anticipating-Accidents/blob/master/accident.py",
+  "qrnn_reference": "https://github.com/salesforce/pytorch-qrnn/blob/master/torchqrnn/qrnn.py",
+  "execution_repairs": [
+    "Close completed child stdout pipe after reader joins (new copy only)."
+  ]
+}

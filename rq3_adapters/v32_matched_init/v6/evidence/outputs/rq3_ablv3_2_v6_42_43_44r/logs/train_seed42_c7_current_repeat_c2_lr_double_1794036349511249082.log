@@ -1,0 +1,2811 @@
+TRIAL module=c7_current_repeat seed=42 hyperparameters={'id': 'c2_lr_double', 'lr': 0.0002, 'weight_decay': 0.0001, 'dropout': 0.1, 'width': 512, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.'}
+CACHE VERIFY 250/1500
+CACHE VERIFY 500/1500
+CACHE VERIFY 750/1500
+CACHE VERIFY 1000/1500
+CACHE VERIFY 1250/1500
+CACHE VERIFY 1500/1500
+SMOKE START seed42 c7_current_repeat: 24 microbatches / 3 optimizer updates (discarded weights).
+11/07 07:26:06 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.2, V13.2.86
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+11/07 07:26:06 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+    dict(
+        deadline=1.7976931348623157e+308,
+        seed=42,
+        type='ReproductionStateHook'),
+    dict(type='RQ3StrictHook'),
+    dict(type='CacheEpochTimingHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=1,
+        rule='greater',
+        save_best='mAUC@',
+        type='CheckpointHook'),
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=False,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained=None,
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        adapter_dropout=0.1,
+        adapter_init_seed=42,
+        arm='c7_current_repeat',
+        clip_len=5,
+        history=7,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        reference_history=7,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='VastTunedV6Head',
+        width=512,
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(type='VastTeacherPreprocessor'),
+    encode_chunk=4,
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='VastTeacherCachedRecognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40.0, norm_type=2),
+    optimizer=dict(lr=0.0002, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(
+        custom_keys=dict({
+            'backbone': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.fc_cls': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.rnn': dict(decay_mult=0.0, lr_mult=0.0)
+        })),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        20,
+        40,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/caches/seed_42',
+        manifest_sha256=
+        '1b2386e49be0633c7223335a3758d181c36160dab83f4cbcf19f90c5144e25c1',
+        split='train',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/caches/seed_42',
+        manifest_sha256=
+        '1b2386e49be0633c7223335a3758d181c36160dab83f4cbcf19f90c5144e25c1',
+        split='validation',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/smoke'
+
+11/07 07:26:07 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+11/07 07:26:07 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Loads checkpoint by local backend from path: /workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth
+The model and loaded state dict do not match exactly
+
+missing keys in source state_dict: cls_head.adapter.decay_raw, cls_head.adapter.proj.weight, cls_head.adapter.proj.bias, cls_head.adapter.norm.weight, cls_head.adapter.norm.bias, cls_head.adapter.rnn.weight_ih_l0, cls_head.adapter.rnn.weight_hh_l0, cls_head.adapter.rnn.bias_ih_l0, cls_head.adapter.rnn.bias_hh_l0, cls_head.adapter.query.weight, cls_head.adapter.key.weight, cls_head.adapter.residual_gate.weight, cls_head.adapter.residual_gate.bias, cls_head.adapter.output.weight, cls_head.adapter.output.bias
+
+11/07 07:26:07 - mmengine - WARNING - backbone.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer1.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer2.3.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.3.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.4.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer3.5.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - backbone.layer4.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - cls_head.fc_cls.weight is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - cls_head.fc_cls.bias is skipped since its requires_grad=False
+11/07 07:26:07 - mmengine - WARNING - Gradient accumulative may slightly decrease performance because the model has BatchNorm layers.
+SMOKE c7_current_repeat 1/24 updates=0
+SMOKE c7_current_repeat 2/24 updates=0
+SMOKE c7_current_repeat 3/24 updates=0
+SMOKE c7_current_repeat 4/24 updates=0
+SMOKE c7_current_repeat 5/24 updates=0
+SMOKE c7_current_repeat 6/24 updates=0
+SMOKE c7_current_repeat 7/24 updates=0
+SMOKE c7_current_repeat 8/24 updates=1
+SMOKE c7_current_repeat 9/24 updates=1
+SMOKE c7_current_repeat 10/24 updates=1
+SMOKE c7_current_repeat 11/24 updates=1
+SMOKE c7_current_repeat 12/24 updates=1
+SMOKE c7_current_repeat 13/24 updates=1
+SMOKE c7_current_repeat 14/24 updates=1
+SMOKE c7_current_repeat 15/24 updates=1
+SMOKE c7_current_repeat 16/24 updates=2
+SMOKE c7_current_repeat 17/24 updates=2
+SMOKE c7_current_repeat 18/24 updates=2
+SMOKE c7_current_repeat 19/24 updates=2
+SMOKE c7_current_repeat 20/24 updates=2
+SMOKE c7_current_repeat 21/24 updates=2
+SMOKE c7_current_repeat 22/24 updates=2
+SMOKE c7_current_repeat 23/24 updates=2
+SMOKE c7_current_repeat 24/24 updates=3
+11/07 07:26:09 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.2, V13.2.86
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+11/07 07:26:09 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+    dict(
+        deadline=1.7976931348623157e+308,
+        seed=42,
+        type='ReproductionStateHook'),
+    dict(type='RQ3StrictHook'),
+    dict(type='CacheEpochTimingHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=1,
+        rule='greater',
+        save_best='mAUC@',
+        type='CheckpointHook'),
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=False,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained=None,
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        adapter_dropout=0.1,
+        adapter_init_seed=42,
+        arm='c7_current_repeat',
+        clip_len=5,
+        history=7,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        reference_history=7,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='VastTunedV6Head',
+        width=512,
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(type='VastTeacherPreprocessor'),
+    encode_chunk=4,
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='VastTeacherCachedRecognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40.0, norm_type=2),
+    optimizer=dict(lr=0.0002, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(
+        custom_keys=dict({
+            'backbone': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.fc_cls': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.rnn': dict(decay_mult=0.0, lr_mult=0.0)
+        })),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        20,
+        40,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/caches/seed_42',
+        manifest_sha256=
+        '1b2386e49be0633c7223335a3758d181c36160dab83f4cbcf19f90c5144e25c1',
+        split='train',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/caches/seed_42',
+        manifest_sha256=
+        '1b2386e49be0633c7223335a3758d181c36160dab83f4cbcf19f90c5144e25c1',
+        split='validation',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/smoke'
+
+11/07 07:26:10 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+11/07 07:26:10 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Loads checkpoint by local backend from path: /workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth
+The model and loaded state dict do not match exactly
+
+missing keys in source state_dict: cls_head.adapter.decay_raw, cls_head.adapter.proj.weight, cls_head.adapter.proj.bias, cls_head.adapter.norm.weight, cls_head.adapter.norm.bias, cls_head.adapter.rnn.weight_ih_l0, cls_head.adapter.rnn.weight_hh_l0, cls_head.adapter.rnn.bias_ih_l0, cls_head.adapter.rnn.bias_hh_l0, cls_head.adapter.query.weight, cls_head.adapter.key.weight, cls_head.adapter.residual_gate.weight, cls_head.adapter.residual_gate.bias, cls_head.adapter.output.weight, cls_head.adapter.output.bias
+
+11/07 07:26:11 - mmengine - WARNING - The prefix is not set in metric class SavingAnticipationMetric.
+TIMING PILOT c7_current_repeat seed42 | train batch2 0.0452s | val batch1 0.0106s | epoch compute+IO 30.3s | 50epoch 0.42h + metrics/checkpoints/setup | peak 0.28GiB
+11/07 07:26:11 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.2, V13.2.86
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+11/07 07:26:12 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+    dict(
+        deadline=1.7976931348623157e+308,
+        seed=42,
+        type='ReproductionStateHook'),
+    dict(type='RQ3StrictHook'),
+    dict(type='CacheEpochTimingHook'),
+    dict(
+        arm='c7_current_repeat',
+        seed=42,
+        type='MatchedValidationDiagnosticsHook'),
+    dict(
+        arm='c7_current_repeat',
+        candidate='c2_lr_double',
+        every=20,
+        seed=42,
+        type='VastNamedLogHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=1,
+        rule='greater',
+        save_best='mAUC@',
+        type='CheckpointHook'),
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=False,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained=None,
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        adapter_dropout=0.1,
+        adapter_init_seed=42,
+        arm='c7_current_repeat',
+        clip_len=5,
+        history=7,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        reference_history=7,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='VastTunedV6Head',
+        width=512,
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(type='VastTeacherPreprocessor'),
+    encode_chunk=4,
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='VastTeacherCachedRecognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40.0, norm_type=2),
+    optimizer=dict(lr=0.0002, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(
+        custom_keys=dict({
+            'backbone': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.fc_cls': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.rnn': dict(decay_mult=0.0, lr_mult=0.0)
+        })),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        20,
+        40,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/caches/seed_42',
+        manifest_sha256=
+        '1b2386e49be0633c7223335a3758d181c36160dab83f4cbcf19f90c5144e25c1',
+        split='train',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/caches/seed_42',
+        manifest_sha256=
+        '1b2386e49be0633c7223335a3758d181c36160dab83f4cbcf19f90c5144e25c1',
+        split='validation',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/run'
+
+11/07 07:26:13 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+11/07 07:26:13 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(80          ) MatchedValidationDiagnosticsHook   
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+(80          ) MatchedValidationDiagnosticsHook   
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+(80          ) MatchedValidationDiagnosticsHook   
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(80          ) MatchedValidationDiagnosticsHook   
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(80          ) MatchedValidationDiagnosticsHook   
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+(LOWEST      ) VastNamedLogHook                   
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Loads checkpoint by local backend from path: /workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth
+The model and loaded state dict do not match exactly
+
+missing keys in source state_dict: cls_head.adapter.decay_raw, cls_head.adapter.proj.weight, cls_head.adapter.proj.bias, cls_head.adapter.norm.weight, cls_head.adapter.norm.bias, cls_head.adapter.rnn.weight_ih_l0, cls_head.adapter.rnn.weight_hh_l0, cls_head.adapter.rnn.bias_ih_l0, cls_head.adapter.rnn.bias_hh_l0, cls_head.adapter.query.weight, cls_head.adapter.key.weight, cls_head.adapter.residual_gate.weight, cls_head.adapter.residual_gate.bias, cls_head.adapter.output.weight, cls_head.adapter.output.bias
+
+11/07 07:26:13 - mmengine - WARNING - backbone.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer1.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer2.3.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.3.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.4.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer3.5.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.downsample.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.downsample.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.0.downsample.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.1.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv1.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv1.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv1.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv2.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv2.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv2.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv3.conv.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv3.bn.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - backbone.layer4.2.conv3.bn.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - cls_head.fc_cls.weight is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - cls_head.fc_cls.bias is skipped since its requires_grad=False
+11/07 07:26:13 - mmengine - WARNING - The prefix is not set in metric class SavingAnticipationMetric.
+11/07 07:26:14 - mmengine - WARNING - init_weights of VastTeacherCachedRecognizer has been called more than once.
+Loads checkpoint by local backend from path: /workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth
+The model and loaded state dict do not match exactly
+
+missing keys in source state_dict: cls_head.adapter.decay_raw, cls_head.adapter.proj.weight, cls_head.adapter.proj.bias, cls_head.adapter.norm.weight, cls_head.adapter.norm.bias, cls_head.adapter.rnn.weight_ih_l0, cls_head.adapter.rnn.weight_hh_l0, cls_head.adapter.rnn.bias_ih_l0, cls_head.adapter.rnn.bias_hh_l0, cls_head.adapter.query.weight, cls_head.adapter.key.weight, cls_head.adapter.residual_gate.weight, cls_head.adapter.residual_gate.bias, cls_head.adapter.output.weight, cls_head.adapter.output.bias
+
+11/07 07:26:14 - mmengine - INFO - Load checkpoint from /workspace/rq3abl32v6_inputs/V6_BASES/seed_42/run/best_mAUC@_epoch_25.pth
+11/07 07:26:14 - mmengine - WARNING - Gradient accumulative may slightly decrease performance because the model has BatchNorm layers.
+11/07 07:26:14 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+11/07 07:26:14 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+11/07 07:26:14 - mmengine - INFO - Checkpoints will be saved to /workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/run.
+11/07 07:26:15 - mmengine - INFO - Epoch(train)  [1][ 20/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:26  time: 0.0309  data_time: 0.0185  memory: 285  loss: 0.2602  loss_cls: 0.1811  loss_ffr: 0.0704  loss_mono: 0.0086  grad_norm: 0.0308
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=20/600 loss=0.242413 BCE=0.168140 FFR=0.062784 AMC=0.011489 lr=0.0002 batches_per_s=32.298 gpu_GiB=0.236
+11/07 07:26:15 - mmengine - INFO - Epoch(train)  [1][ 40/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:13  time: 0.0301  data_time: 0.0186  memory: 285  loss: 0.3681  loss_cls: 0.2732  loss_ffr: 0.0762  loss_mono: 0.0187  grad_norm: 0.0618
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=40/600 loss=0.125634 BCE=0.092703 FFR=0.032931 AMC=0.000000 lr=0.0002 batches_per_s=32.755 gpu_GiB=0.222
+11/07 07:26:16 - mmengine - INFO - Epoch(train)  [1][ 60/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:07  time: 0.0299  data_time: 0.0185  memory: 285  loss: 0.2071  loss_cls: 0.1306  loss_ffr: 0.0684  loss_mono: 0.0081  grad_norm: 0.0669
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=60/600 loss=0.184351 BCE=0.097392 FFR=0.077705 AMC=0.009254 lr=0.0002 batches_per_s=32.961 gpu_GiB=0.236
+11/07 07:26:16 - mmengine - INFO - Epoch(train)  [1][ 80/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:12  time: 0.0310  data_time: 0.0186  memory: 285  loss: 0.3136  loss_cls: 0.2291  loss_ffr: 0.0708  loss_mono: 0.0138  grad_norm: 0.1515
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=80/600 loss=0.563675 BCE=0.500014 FFR=0.040055 AMC=0.023606 lr=0.0002 batches_per_s=32.770 gpu_GiB=0.222
+11/07 07:26:17 - mmengine - INFO - Epoch(train)  [1][100/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:21  time: 0.0322  data_time: 0.0185  memory: 285  loss: 0.3844  loss_cls: 0.3056  loss_ffr: 0.0689  loss_mono: 0.0099  grad_norm: 0.2353
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=100/600 loss=0.540515 BCE=0.482509 FFR=0.055466 AMC=0.002540 lr=0.0002 batches_per_s=32.417 gpu_GiB=0.236
+11/07 07:26:18 - mmengine - INFO - Epoch(train)  [1][120/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:39  time: 0.0345  data_time: 0.0186  memory: 285  loss: 0.3244  loss_cls: 0.2260  loss_ffr: 0.0860  loss_mono: 0.0124  grad_norm: 0.3204
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=120/600 loss=0.427819 BCE=0.333261 FFR=0.085143 AMC=0.009415 lr=0.0002 batches_per_s=31.788 gpu_GiB=0.222
+11/07 07:26:18 - mmengine - INFO - Epoch(train)  [1][140/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:37  time: 0.0312  data_time: 0.0186  memory: 285  loss: 0.3230  loss_cls: 0.2303  loss_ffr: 0.0777  loss_mono: 0.0150  grad_norm: 0.3116
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=140/600 loss=0.195491 BCE=0.068753 FFR=0.089883 AMC=0.036856 lr=0.0002 batches_per_s=31.820 gpu_GiB=0.236
+11/07 07:26:19 - mmengine - INFO - Epoch(train)  [1][160/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:29  time: 0.0295  data_time: 0.0185  memory: 285  loss: 0.2421  loss_cls: 0.1448  loss_ffr: 0.0785  loss_mono: 0.0187  grad_norm: 0.3334
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=160/600 loss=0.202500 BCE=0.165267 FFR=0.037233 AMC=0.000000 lr=0.0002 batches_per_s=32.068 gpu_GiB=0.222
+11/07 07:26:20 - mmengine - INFO - Epoch(train)  [1][180/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:34  time: 0.0328  data_time: 0.0185  memory: 285  loss: 0.3448  loss_cls: 0.2308  loss_ffr: 0.1029  loss_mono: 0.0111  grad_norm: 0.3801
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=180/600 loss=0.488978 BCE=0.346115 FFR=0.130810 AMC=0.012053 lr=0.0002 batches_per_s=31.879 gpu_GiB=0.236
+11/07 07:26:20 - mmengine - INFO - Epoch(train)  [1][200/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:34  time: 0.0316  data_time: 0.0185  memory: 285  loss: 0.3171  loss_cls: 0.2027  loss_ffr: 0.0906  loss_mono: 0.0237  grad_norm: 0.4521
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=200/600 loss=0.101846 BCE=0.061117 FFR=0.040729 AMC=0.000000 lr=0.0002 batches_per_s=31.853 gpu_GiB=0.222
+11/07 07:26:21 - mmengine - INFO - Epoch(train)  [1][220/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:38  time: 0.0329  data_time: 0.0185  memory: 285  loss: 0.3329  loss_cls: 0.2210  loss_ffr: 0.0951  loss_mono: 0.0168  grad_norm: 0.4895
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=220/600 loss=0.108238 BCE=0.052013 FFR=0.024066 AMC=0.032159 lr=0.0002 batches_per_s=31.716 gpu_GiB=0.236
+11/07 07:26:21 - mmengine - INFO - Epoch(train)  [1][240/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:39  time: 0.0321  data_time: 0.0188  memory: 285  loss: 0.3385  loss_cls: 0.2567  loss_ffr: 0.0612  loss_mono: 0.0205  grad_norm: 0.5492
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=240/600 loss=0.955513 BCE=0.903098 FFR=0.049946 AMC=0.002469 lr=0.0002 batches_per_s=31.669 gpu_GiB=0.222
+11/07 07:26:22 - mmengine - INFO - Epoch(train)  [1][260/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:43  time: 0.0338  data_time: 0.0185  memory: 285  loss: 0.3876  loss_cls: 0.2705  loss_ffr: 0.0972  loss_mono: 0.0198  grad_norm: 0.5307
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=260/600 loss=0.280463 BCE=0.179366 FFR=0.101096 AMC=0.000000 lr=0.0002 batches_per_s=31.498 gpu_GiB=0.236
+11/07 07:26:23 - mmengine - INFO - Epoch(train)  [1][280/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:44  time: 0.0325  data_time: 0.0185  memory: 285  loss: 0.3577  loss_cls: 0.2369  loss_ffr: 0.1104  loss_mono: 0.0105  grad_norm: 0.4905
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=280/600 loss=0.486518 BCE=0.434327 FFR=0.052191 AMC=0.000000 lr=0.0002 batches_per_s=31.442 gpu_GiB=0.222
+11/07 07:26:23 - mmengine - INFO - Epoch(train)  [1][300/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:46  time: 0.0331  data_time: 0.0185  memory: 285  loss: 0.3652  loss_cls: 0.2458  loss_ffr: 0.1091  loss_mono: 0.0104  grad_norm: 0.5027
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=300/600 loss=0.170345 BCE=0.079460 FFR=0.087339 AMC=0.003546 lr=0.0002 batches_per_s=31.356 gpu_GiB=0.236
+11/07 07:26:24 - mmengine - INFO - Epoch(train)  [1][320/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:44  time: 0.0310  data_time: 0.0185  memory: 285  loss: 0.3399  loss_cls: 0.2031  loss_ffr: 0.1221  loss_mono: 0.0147  grad_norm: 0.5020
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=320/600 loss=0.207232 BCE=0.112661 FFR=0.030037 AMC=0.064535 lr=0.0002 batches_per_s=31.407 gpu_GiB=0.222
+11/07 07:26:25 - mmengine - INFO - Epoch(train)  [1][340/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:41  time: 0.0302  data_time: 0.0184  memory: 285  loss: 0.3323  loss_cls: 0.2242  loss_ffr: 0.0963  loss_mono: 0.0118  grad_norm: 0.4934
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=340/600 loss=0.709533 BCE=0.513719 FFR=0.138306 AMC=0.057508 lr=0.0002 batches_per_s=31.501 gpu_GiB=0.236
+11/07 07:26:25 - mmengine - INFO - Epoch(train)  [1][360/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:36  time: 0.0291  data_time: 0.0185  memory: 285  loss: 0.2380  loss_cls: 0.1478  loss_ffr: 0.0820  loss_mono: 0.0082  grad_norm: 0.4721
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=360/600 loss=0.174370 BCE=0.085137 FFR=0.018938 AMC=0.070295 lr=0.0002 batches_per_s=31.647 gpu_GiB=0.222
+11/07 07:26:26 - mmengine - INFO - Epoch(train)  [1][380/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:34  time: 0.0313  data_time: 0.0184  memory: 285  loss: 0.3339  loss_cls: 0.2079  loss_ffr: 0.1137  loss_mono: 0.0122  grad_norm: 0.4669
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=380/600 loss=0.357267 BCE=0.217872 FFR=0.134399 AMC=0.004996 lr=0.0002 batches_per_s=31.664 gpu_GiB=0.236
+11/07 07:26:27 - mmengine - INFO - Epoch(train)  [1][400/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:32  time: 0.0307  data_time: 0.0184  memory: 285  loss: 0.2948  loss_cls: 0.1717  loss_ffr: 0.1148  loss_mono: 0.0083  grad_norm: 0.4164
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=400/600 loss=0.516019 BCE=0.303203 FFR=0.203271 AMC=0.009545 lr=0.0002 batches_per_s=31.709 gpu_GiB=0.222
+11/07 07:26:27 - mmengine - INFO - Epoch(train)  [1][420/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:34  time: 0.0329  data_time: 0.0186  memory: 285  loss: 0.3683  loss_cls: 0.2166  loss_ffr: 0.1316  loss_mono: 0.0201  grad_norm: 0.4396
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=420/600 loss=0.195870 BCE=0.087015 FFR=0.058037 AMC=0.050818 lr=0.0002 batches_per_s=31.643 gpu_GiB=0.236
+11/07 07:26:28 - mmengine - INFO - Epoch(train)  [1][440/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:34  time: 0.0325  data_time: 0.0185  memory: 285  loss: 0.3447  loss_cls: 0.2458  loss_ffr: 0.0926  loss_mono: 0.0064  grad_norm: 0.4454
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=440/600 loss=0.431953 BCE=0.296415 FFR=0.129471 AMC=0.006067 lr=0.0002 batches_per_s=31.602 gpu_GiB=0.222
+11/07 07:26:28 - mmengine - INFO - Epoch(train)  [1][460/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:33  time: 0.0311  data_time: 0.0185  memory: 285  loss: 0.3319  loss_cls: 0.2240  loss_ffr: 0.0981  loss_mono: 0.0098  grad_norm: 0.4473
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=460/600 loss=0.420655 BCE=0.298351 FFR=0.121376 AMC=0.000927 lr=0.0002 batches_per_s=31.627 gpu_GiB=0.236
+11/07 07:26:29 - mmengine - INFO - Epoch(train)  [1][480/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:32  time: 0.0314  data_time: 0.0184  memory: 285  loss: 0.3504  loss_cls: 0.2455  loss_ffr: 0.0937  loss_mono: 0.0112  grad_norm: 0.4317
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=480/600 loss=0.135010 BCE=0.094060 FFR=0.031498 AMC=0.009452 lr=0.0002 batches_per_s=31.636 gpu_GiB=0.222
+11/07 07:26:30 - mmengine - INFO - Epoch(train)  [1][500/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:32  time: 0.0320  data_time: 0.0185  memory: 285  loss: 0.3571  loss_cls: 0.2367  loss_ffr: 0.1036  loss_mono: 0.0169  grad_norm: 0.4415
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=500/600 loss=0.188729 BCE=0.090242 FFR=0.092580 AMC=0.005907 lr=0.0002 batches_per_s=31.621 gpu_GiB=0.236
+11/07 07:26:30 - mmengine - INFO - Epoch(train)  [1][520/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:29  time: 0.0292  data_time: 0.0184  memory: 285  loss: 0.2686  loss_cls: 0.1669  loss_ffr: 0.0951  loss_mono: 0.0066  grad_norm: 0.4037
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=520/600 loss=0.310511 BCE=0.184122 FFR=0.123736 AMC=0.002653 lr=0.0002 batches_per_s=31.712 gpu_GiB=0.222
+11/07 07:26:31 - mmengine - INFO - Epoch(train)  [1][540/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:30  time: 0.0332  data_time: 0.0185  memory: 285  loss: 0.3739  loss_cls: 0.2431  loss_ffr: 0.1190  loss_mono: 0.0118  grad_norm: 0.4054
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=540/600 loss=0.284551 BCE=0.150390 FFR=0.103309 AMC=0.030852 lr=0.0002 batches_per_s=31.651 gpu_GiB=0.236
+11/07 07:26:32 - mmengine - INFO - Epoch(train)  [1][560/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:28  time: 0.0309  data_time: 0.0185  memory: 285  loss: 0.3581  loss_cls: 0.2355  loss_ffr: 0.1109  loss_mono: 0.0117  grad_norm: 0.3911
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=560/600 loss=0.143283 BCE=0.057168 FFR=0.086115 AMC=0.000000 lr=0.0002 batches_per_s=31.677 gpu_GiB=0.222
+11/07 07:26:32 - mmengine - INFO - Epoch(train)  [1][580/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:27  time: 0.0304  data_time: 0.0185  memory: 285  loss: 0.3946  loss_cls: 0.2824  loss_ffr: 0.1020  loss_mono: 0.0102  grad_norm: 0.3511
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=580/600 loss=0.170323 BCE=0.049539 FFR=0.120783 AMC=0.000000 lr=0.0002 batches_per_s=31.718 gpu_GiB=0.236
+11/07 07:26:33 - mmengine - INFO - Exp name: predict_anomaly_snippet_20261107_072611
+11/07 07:26:33 - mmengine - INFO - Epoch(train)  [1][600/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:26  time: 0.0312  data_time: 0.0185  memory: 285  loss: 0.2822  loss_cls: 0.1730  loss_ffr: 0.0971  loss_mono: 0.0121  grad_norm: 0.3380
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 batch=600/600 loss=0.161353 BCE=0.077871 FFR=0.059845 AMC=0.023637 lr=0.0002 batches_per_s=31.727 gpu_GiB=0.222
+11/07 07:26:33 - mmengine - INFO - Saving checkpoint at 1 epochs
+11/07 07:26:34 - mmengine - INFO - Epoch(val)  [1][ 20/300]    eta: 0:00:03  time: 0.0133  data_time: 0.0114  memory: 252  
+11/07 07:26:34 - mmengine - INFO - Epoch(val)  [1][ 40/300]    eta: 0:00:03  time: 0.0118  data_time: 0.0099  memory: 252  
+11/07 07:26:34 - mmengine - INFO - Epoch(val)  [1][ 60/300]    eta: 0:00:02  time: 0.0118  data_time: 0.0099  memory: 252  
+11/07 07:26:34 - mmengine - INFO - Epoch(val)  [1][ 80/300]    eta: 0:00:02  time: 0.0117  data_time: 0.0099  memory: 252  
+11/07 07:26:35 - mmengine - INFO - Epoch(val)  [1][100/300]    eta: 0:00:02  time: 0.0142  data_time: 0.0115  memory: 252  
+11/07 07:26:35 - mmengine - INFO - Epoch(val)  [1][120/300]    eta: 0:00:02  time: 0.0117  data_time: 0.0099  memory: 252  
+11/07 07:26:35 - mmengine - INFO - Epoch(val)  [1][140/300]    eta: 0:00:01  time: 0.0118  data_time: 0.0099  memory: 252  
+11/07 07:26:35 - mmengine - INFO - Epoch(val)  [1][160/300]    eta: 0:00:01  time: 0.0120  data_time: 0.0100  memory: 252  
+11/07 07:26:36 - mmengine - INFO - Epoch(val)  [1][180/300]    eta: 0:00:01  time: 0.0122  data_time: 0.0102  memory: 252  
+11/07 07:26:36 - mmengine - INFO - Epoch(val)  [1][200/300]    eta: 0:00:01  time: 0.0119  data_time: 0.0100  memory: 252  
+11/07 07:26:36 - mmengine - INFO - Epoch(val)  [1][220/300]    eta: 0:00:00  time: 0.0119  data_time: 0.0100  memory: 252  
+11/07 07:26:36 - mmengine - INFO - Epoch(val)  [1][240/300]    eta: 0:00:00  time: 0.0119  data_time: 0.0100  memory: 252  
+11/07 07:26:37 - mmengine - INFO - Epoch(val)  [1][260/300]    eta: 0:00:00  time: 0.0119  data_time: 0.0100  memory: 252  
+11/07 07:26:37 - mmengine - INFO - Epoch(val)  [1][280/300]    eta: 0:00:00  time: 0.0121  data_time: 0.0102  memory: 252  
+11/07 07:26:37 - mmengine - INFO - Epoch(val)  [1][300/300]    eta: 0:00:00  time: 0.0122  data_time: 0.0102  memory: 252  
+11/07 07:26:37 - mmengine - INFO - Epoch(val) [1][300/300]    threshold@0.10: 0.3335  tta@0.01: 0.5773  tta@0.05: 0.9700  tta@0.1: 1.2200  mtta@0.1: 0.8973  tta@1: 1.5453  AUC@0.0s: 0.8585  AUC@0.5s: 0.8056  AUC@1.0s: 0.6980  AUC@1.5s: 0.6414  mAUC@0.1: 0.7150  AUC_full@0.0s: 0.9468  AUC_full@0.5s: 0.9267  AUC_full@1.0s: 0.8709  AUC_full@1.5s: 0.8169  mAUC@: 0.8715  AP@0.0s: 0.9538  AP@0.5s: 0.9317  AP@1.0s: 0.8655  AP@1.5s: 0.8089  mAP@: 0.8687  num_samples@: 300  data_time: 0.0102  time: 0.0121
+DIAGNOSTICS module=c7_current_repeat seed=42 epoch=1 correction_mean=0.103391 correction_std=0.318861 saturation=0.0000 gate_mean=0.814023
+11/07 07:26:38 - mmengine - INFO - The best checkpoint with 0.8715 mAUC@ at 1 epoch is saved to best_mAUC@_epoch_1.pth.
+EPOCH TIME 1/50 | train+regular-save 19.5s | val+metric+best+snapshot 6.0s | total 25.5s | remaining 49 epochs ~0.35h (rolling1; excludes setup/extraction)
+EPOCH module=c7_current_repeat seed=42 config=c2_lr_double epoch=1/50 val_mAP=86.8703% val_mAUC=87.1526% AP_0.5s=93.1701% AP_1.0s=86.5523% AP_1.5s=80.8884% selected=best_mAUC@_epoch_1.pth epoch_s=25.50 remaining_h=0.347
+11/07 07:26:40 - mmengine - INFO - Epoch(train)  [2][ 20/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:23  time: 0.0290  data_time: 0.0186  memory: 285  loss: 0.3165  loss_cls: 0.2128  loss_ffr: 0.0933  loss_mono: 0.0104  grad_norm: 0.3509
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=20/600 loss=0.280309 BCE=0.062777 FFR=0.179670 AMC=0.037862 lr=0.0002 batches_per_s=34.375 gpu_GiB=0.236
+11/07 07:26:41 - mmengine - INFO - Epoch(train)  [2][ 40/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:21  time: 0.0305  data_time: 0.0185  memory: 285  loss: 0.2968  loss_cls: 0.1859  loss_ffr: 0.1016  loss_mono: 0.0093  grad_norm: 0.3509
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=40/600 loss=0.141658 BCE=0.057192 FFR=0.083843 AMC=0.000623 lr=0.0002 batches_per_s=33.544 gpu_GiB=0.222
+11/07 07:26:41 - mmengine - INFO - Epoch(train)  [2][ 60/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:22  time: 0.0327  data_time: 0.0186  memory: 285  loss: 0.4096  loss_cls: 0.2456  loss_ffr: 0.1524  loss_mono: 0.0116  grad_norm: 0.3322
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=60/600 loss=0.124216 BCE=0.048731 FFR=0.065456 AMC=0.010029 lr=0.0002 batches_per_s=32.493 gpu_GiB=0.236
+11/07 07:26:42 - mmengine - INFO - Epoch(train)  [2][ 80/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:20  time: 0.0302  data_time: 0.0185  memory: 285  loss: 0.2598  loss_cls: 0.1400  loss_ffr: 0.1057  loss_mono: 0.0140  grad_norm: 0.3609
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=80/600 loss=0.091212 BCE=0.056991 FFR=0.034221 AMC=0.000000 lr=0.0002 batches_per_s=32.633 gpu_GiB=0.222
+11/07 07:26:42 - mmengine - INFO - Epoch(train)  [2][100/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:19  time: 0.0314  data_time: 0.0185  memory: 285  loss: 0.3580  loss_cls: 0.2002  loss_ffr: 0.1399  loss_mono: 0.0179  grad_norm: 0.3761
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=100/600 loss=0.181768 BCE=0.102695 FFR=0.079073 AMC=0.000000 lr=0.0002 batches_per_s=32.459 gpu_GiB=0.236
+11/07 07:26:43 - mmengine - INFO - Epoch(train)  [2][120/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:20  time: 0.0323  data_time: 0.0185  memory: 285  loss: 0.3850  loss_cls: 0.2436  loss_ffr: 0.1299  loss_mono: 0.0115  grad_norm: 0.3910
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=120/600 loss=0.408361 BCE=0.242686 FFR=0.165675 AMC=0.000000 lr=0.0002 batches_per_s=32.199 gpu_GiB=0.222
+11/07 07:26:44 - mmengine - INFO - Epoch(train)  [2][140/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:19  time: 0.0318  data_time: 0.0187  memory: 285  loss: 0.3715  loss_cls: 0.2560  loss_ffr: 0.1049  loss_mono: 0.0106  grad_norm: 0.4190
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=140/600 loss=0.212186 BCE=0.102035 FFR=0.110150 AMC=0.000000 lr=0.0002 batches_per_s=32.092 gpu_GiB=0.236
+11/07 07:26:44 - mmengine - INFO - Epoch(train)  [2][160/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:19  time: 0.0326  data_time: 0.0185  memory: 285  loss: 0.4017  loss_cls: 0.2849  loss_ffr: 0.1035  loss_mono: 0.0133  grad_norm: 0.4070
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=160/600 loss=0.457901 BCE=0.305950 FFR=0.124800 AMC=0.027151 lr=0.0002 batches_per_s=31.907 gpu_GiB=0.222
+11/07 07:26:45 - mmengine - INFO - Epoch(train)  [2][180/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:19  time: 0.0322  data_time: 0.0185  memory: 285  loss: 0.3998  loss_cls: 0.2656  loss_ffr: 0.1123  loss_mono: 0.0220  grad_norm: 0.4203
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=180/600 loss=0.220334 BCE=0.115046 FFR=0.094176 AMC=0.011112 lr=0.0002 batches_per_s=31.809 gpu_GiB=0.236
+11/07 07:26:46 - mmengine - INFO - Epoch(train)  [2][200/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:19  time: 0.0312  data_time: 0.0185  memory: 285  loss: 0.4151  loss_cls: 0.3105  loss_ffr: 0.0918  loss_mono: 0.0127  grad_norm: 0.4711
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=200/600 loss=0.344078 BCE=0.156950 FFR=0.180692 AMC=0.006436 lr=0.0002 batches_per_s=31.831 gpu_GiB=0.222
+11/07 07:26:46 - mmengine - INFO - Epoch(train)  [2][220/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:18  time: 0.0318  data_time: 0.0185  memory: 285  loss: 0.2910  loss_cls: 0.1705  loss_ffr: 0.1081  loss_mono: 0.0124  grad_norm: 0.4793
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=220/600 loss=0.055282 BCE=0.031779 FFR=0.023503 AMC=0.000000 lr=0.0002 batches_per_s=31.792 gpu_GiB=0.236
+11/07 07:26:47 - mmengine - INFO - Epoch(train)  [2][240/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:17  time: 0.0305  data_time: 0.0185  memory: 285  loss: 0.2918  loss_cls: 0.1757  loss_ffr: 0.1011  loss_mono: 0.0150  grad_norm: 0.4581
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=240/600 loss=0.174614 BCE=0.064502 FFR=0.106245 AMC=0.003866 lr=0.0002 batches_per_s=31.869 gpu_GiB=0.222
+11/07 07:26:48 - mmengine - INFO - Epoch(train)  [2][260/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:16  time: 0.0314  data_time: 0.0185  memory: 285  loss: 0.3682  loss_cls: 0.2316  loss_ffr: 0.1268  loss_mono: 0.0099  grad_norm: 0.4238
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=260/600 loss=0.393241 BCE=0.215184 FFR=0.178058 AMC=0.000000 lr=0.0002 batches_per_s=31.863 gpu_GiB=0.236
+11/07 07:26:48 - mmengine - INFO - Epoch(train)  [2][280/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:16  time: 0.0326  data_time: 0.0185  memory: 285  loss: 0.4076  loss_cls: 0.2778  loss_ffr: 0.1107  loss_mono: 0.0192  grad_norm: 0.4061
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=280/600 loss=0.141166 BCE=0.064883 FFR=0.076283 AMC=0.000000 lr=0.0002 batches_per_s=31.771 gpu_GiB=0.222
+11/07 07:26:49 - mmengine - INFO - Epoch(train)  [2][300/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:16  time: 0.0316  data_time: 0.0186  memory: 285  loss: 0.3744  loss_cls: 0.2539  loss_ffr: 0.1112  loss_mono: 0.0093  grad_norm: 0.3929
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=300/600 loss=0.410850 BCE=0.260499 FFR=0.124008 AMC=0.026343 lr=0.0002 batches_per_s=31.758 gpu_GiB=0.236
+11/07 07:26:49 - mmengine - INFO - Epoch(train)  [2][320/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:15  time: 0.0312  data_time: 0.0185  memory: 285  loss: 0.3034  loss_cls: 0.1870  loss_ffr: 0.1018  loss_mono: 0.0146  grad_norm: 0.3850
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=320/600 loss=0.651039 BCE=0.477184 FFR=0.155106 AMC=0.018749 lr=0.0002 batches_per_s=31.775 gpu_GiB=0.222
+11/07 07:26:50 - mmengine - INFO - Epoch(train)  [2][340/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:13  time: 0.0298  data_time: 0.0185  memory: 285  loss: 0.2306  loss_cls: 0.1176  loss_ffr: 0.1050  loss_mono: 0.0080  grad_norm: 0.3481
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=340/600 loss=0.199465 BCE=0.108893 FFR=0.054415 AMC=0.036157 lr=0.0002 batches_per_s=31.874 gpu_GiB=0.236
+11/07 07:26:51 - mmengine - INFO - Epoch(train)  [2][360/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:14  time: 0.0328  data_time: 0.0187  memory: 285  loss: 0.3642  loss_cls: 0.2213  loss_ffr: 0.1333  loss_mono: 0.0096  grad_norm: 0.3001
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=360/600 loss=0.114931 BCE=0.058860 FFR=0.049606 AMC=0.006466 lr=0.0002 batches_per_s=31.791 gpu_GiB=0.222
+11/07 07:26:51 - mmengine - INFO - Epoch(train)  [2][380/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:14  time: 0.0329  data_time: 0.0185  memory: 285  loss: 0.3988  loss_cls: 0.2742  loss_ffr: 0.1071  loss_mono: 0.0175  grad_norm: 0.2886
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=380/600 loss=0.151626 BCE=0.077503 FFR=0.059375 AMC=0.014748 lr=0.0002 batches_per_s=31.715 gpu_GiB=0.236
+11/07 07:26:52 - mmengine - INFO - Exp name: predict_anomaly_snippet_20261107_072611
+11/07 07:26:52 - mmengine - INFO - Epoch(train)  [2][400/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:13  time: 0.0309  data_time: 0.0185  memory: 285  loss: 0.3322  loss_cls: 0.2098  loss_ffr: 0.1049  loss_mono: 0.0175  grad_norm: 0.2872
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=400/600 loss=0.257774 BCE=0.088078 FFR=0.157787 AMC=0.011908 lr=0.0002 batches_per_s=31.747 gpu_GiB=0.222
+11/07 07:26:53 - mmengine - INFO - Epoch(train)  [2][420/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:12  time: 0.0307  data_time: 0.0185  memory: 285  loss: 0.4052  loss_cls: 0.2541  loss_ffr: 0.1357  loss_mono: 0.0154  grad_norm: 0.3214
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=420/600 loss=0.833884 BCE=0.638128 FFR=0.185592 AMC=0.010164 lr=0.0002 batches_per_s=31.784 gpu_GiB=0.236
+11/07 07:26:53 - mmengine - INFO - Epoch(train)  [2][440/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:11  time: 0.0312  data_time: 0.0185  memory: 285  loss: 0.3627  loss_cls: 0.2372  loss_ffr: 0.1108  loss_mono: 0.0147  grad_norm: 0.3159
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=440/600 loss=0.120897 BCE=0.079238 FFR=0.041658 AMC=0.000000 lr=0.0002 batches_per_s=31.793 gpu_GiB=0.222
+11/07 07:26:54 - mmengine - INFO - Epoch(train)  [2][460/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:11  time: 0.0324  data_time: 0.0186  memory: 285  loss: 0.3967  loss_cls: 0.2727  loss_ffr: 0.1071  loss_mono: 0.0169  grad_norm: 0.3037
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=460/600 loss=0.147229 BCE=0.085605 FFR=0.061625 AMC=0.000000 lr=0.0002 batches_per_s=31.753 gpu_GiB=0.236
+11/07 07:26:55 - mmengine - INFO - Epoch(train)  [2][480/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:11  time: 0.0329  data_time: 0.0185  memory: 285  loss: 0.3888  loss_cls: 0.2603  loss_ffr: 0.1157  loss_mono: 0.0128  grad_norm: 0.3402
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=480/600 loss=0.137263 BCE=0.076116 FFR=0.046952 AMC=0.014195 lr=0.0002 batches_per_s=31.692 gpu_GiB=0.222
+11/07 07:26:55 - mmengine - INFO - Epoch(train)  [2][500/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:11  time: 0.0336  data_time: 0.0185  memory: 285  loss: 0.3601  loss_cls: 0.2331  loss_ffr: 0.1079  loss_mono: 0.0191  grad_norm: 0.3426
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=500/600 loss=0.170248 BCE=0.072286 FFR=0.056040 AMC=0.041922 lr=0.0002 batches_per_s=31.611 gpu_GiB=0.236
+11/07 07:26:56 - mmengine - INFO - Epoch(train)  [2][520/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:11  time: 0.0329  data_time: 0.0185  memory: 285  loss: 0.3483  loss_cls: 0.2273  loss_ffr: 0.1052  loss_mono: 0.0157  grad_norm: 0.3344
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=520/600 loss=0.655214 BCE=0.546400 FFR=0.100063 AMC=0.008751 lr=0.0002 batches_per_s=31.561 gpu_GiB=0.222
+11/07 07:26:56 - mmengine - INFO - Epoch(train)  [2][540/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:10  time: 0.0304  data_time: 0.0185  memory: 285  loss: 0.2861  loss_cls: 0.1619  loss_ffr: 0.1121  loss_mono: 0.0120  grad_norm: 0.3309
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=540/600 loss=0.293562 BCE=0.083096 FFR=0.197804 AMC=0.012662 lr=0.0002 batches_per_s=31.608 gpu_GiB=0.236
+11/07 07:26:57 - mmengine - INFO - Epoch(train)  [2][560/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:10  time: 0.0321  data_time: 0.0186  memory: 285  loss: 0.2951  loss_cls: 0.1431  loss_ffr: 0.1440  loss_mono: 0.0079  grad_norm: 0.3637
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=560/600 loss=0.323514 BCE=0.166823 FFR=0.134668 AMC=0.022024 lr=0.0002 batches_per_s=31.592 gpu_GiB=0.222
+11/07 07:26:58 - mmengine - INFO - Epoch(train)  [2][580/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:08  time: 0.0297  data_time: 0.0185  memory: 285  loss: 0.3230  loss_cls: 0.1990  loss_ffr: 0.1131  loss_mono: 0.0109  grad_norm: 0.3206
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=580/600 loss=0.763415 BCE=0.611672 FFR=0.151743 AMC=0.000000 lr=0.0002 batches_per_s=31.659 gpu_GiB=0.236
+11/07 07:26:58 - mmengine - INFO - Exp name: predict_anomaly_snippet_20261107_072611
+11/07 07:26:58 - mmengine - INFO - Epoch(train)  [2][600/600]  base_lr: 2.0000e-04 lr: 2.0000e-04  eta: 0:15:08  time: 0.0315  data_time: 0.0185  memory: 285  loss: 0.3124  loss_cls: 0.2139  loss_ffr: 0.0911  loss_mono: 0.0073  grad_norm: 0.3288
+TRAIN module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 batch=600/600 loss=0.241574 BCE=0.090369 FFR=0.151139 AMC=0.000066 lr=0.0002 batches_per_s=31.660 gpu_GiB=0.222
+11/07 07:26:58 - mmengine - INFO - Saving checkpoint at 2 epochs
+11/07 07:26:59 - mmengine - INFO - Epoch(val)  [2][ 20/300]    eta: 0:00:03  time: 0.0123  data_time: 0.0104  memory: 252  
+11/07 07:26:59 - mmengine - INFO - Epoch(val)  [2][ 40/300]    eta: 0:00:03  time: 0.0117  data_time: 0.0099  memory: 252  
+11/07 07:27:00 - mmengine - INFO - Epoch(val)  [2][ 60/300]    eta: 0:00:02  time: 0.0117  data_time: 0.0099  memory: 252  
+11/07 07:27:00 - mmengine - INFO - Epoch(val)  [2][ 80/300]    eta: 0:00:02  time: 0.0118  data_time: 0.0099  memory: 252  
+11/07 07:27:00 - mmengine - INFO - Epoch(val)  [2][100/300]    eta: 0:00:02  time: 0.0117  data_time: 0.0099  memory: 252  
+11/07 07:27:00 - mmengine - INFO - Epoch(val)  [2][120/300]    eta: 0:00:02  time: 0.0117  data_time: 0.0099  memory: 252  
+11/07 07:27:01 - mmengine - INFO - Epoch(val)  [2][140/300]    eta: 0:00:01  time: 0.0117  data_time: 0.0099  memory: 252  
+11/07 07:27:01 - mmengine - INFO - Epoch(val)  [2][160/300]    eta: 0:00:01  time: 0.0120  data_time: 0.0101  memory: 252  
+11/07 07:27:01 - mmengine - INFO - Epoch(val)  [2][180/300]    eta: 0:00:01  time: 0.0118  data_time: 0.0100  memory: 252  
+11/07 07:27:01 - mmengine - INFO - Epoch(val)  [2][200/300]    eta: 0:00:01  time: 0.0119  data_time: 0.0100  memory: 252  
+11/07 07:27:02 - mmengine - INFO - Epoch(val)  [2][220/300]    eta: 0:00:00  time: 0.0121  data_time: 0.0102  memory: 252  
+11/07 07:27:02 - mmengine - INFO - Epoch(val)  [2][240/300]    eta: 0:00:00  time: 0.0119  data_time: 0.0100  memory: 252  
+11/07 07:27:02 - mmengine - INFO - Epoch(val)  [2][260/300]    eta: 0:00:00  time: 0.0118  data_time: 0.0100  memory: 252  
+11/07 07:27:02 - mmengine - INFO - Epoch(val)  [2][280/300]    eta: 0:00:00  time: 0.0118  data_time: 0.0100  memory: 252  
+11/07 07:27:03 - mmengine - INFO - Epoch(val)  [2][300/300]    eta: 0:00:00  time: 0.0118  data_time: 0.0099  memory: 252  
+11/07 07:27:03 - mmengine - INFO - Epoch(val) [2][300/300]    threshold@0.10: 0.3362  tta@0.01: 0.5780  tta@0.05: 0.9660  tta@0.1: 1.2073  mtta@0.1: 0.9001  tta@1: 1.5453  AUC@0.0s: 0.8592  AUC@0.5s: 0.8051  AUC@1.0s: 0.6978  AUC@1.5s: 0.6412  mAUC@0.1: 0.7147  AUC_full@0.0s: 0.9475  AUC_full@0.5s: 0.9272  AUC_full@1.0s: 0.8721  AUC_full@1.5s: 0.8192  mAUC@: 0.8728  AP@0.0s: 0.9544  AP@0.5s: 0.9320  AP@1.0s: 0.8660  AP@1.5s: 0.8097  mAP@: 0.8693  num_samples@: 300  data_time: 0.0100  time: 0.0119
+DIAGNOSTICS module=c7_current_repeat seed=42 epoch=2 correction_mean=0.104906 correction_std=0.371825 saturation=0.0000 gate_mean=0.754251
+11/07 07:27:03 - mmengine - INFO - The previous best checkpoint /workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/c7_current_repeat/seed_42/run/best_mAUC@_epoch_1.pth is removed
+11/07 07:27:03 - mmengine - INFO - The best checkpoint with 0.8728 mAUC@ at 2 epoch is saved to best_mAUC@_epoch_2.pth.
+EPOCH TIME 2/50 | train+regular-save 19.6s | val+metric+best+snapshot 5.9s | total 25.4s | remaining 48 epochs ~0.34h (rolling2; excludes setup/extraction)
+EPOCH module=c7_current_repeat seed=42 config=c2_lr_double epoch=2/50 val_mAP=86.9253% val_mAUC=87.2844% AP_0.5s=93.2018% AP_1.0s=86.6046% AP_1.5s=80.9695% selected=best_mAUC@_epoch_2.pth epoch_s=25.45 remaining_h=0.340
+PLANNED STOP after committed epoch2; safe snapshot preserved for resume.

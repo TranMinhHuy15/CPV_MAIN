@@ -1,0 +1,2212 @@
+test_deadline_stops_grandchild (__main__.SafetyChecks) ... ok
+test_interrupt_and_sigterm_stop_grandchild (__main__.SafetyChecks) ... ok
+test_nonfinite_and_expired_deadlines_do_not_launch (__main__.SafetyChecks) ... ok
+test_normal_exit_stops_orphan (__main__.SafetyChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.229s
+
+OK
+test_accumulation_partial_window_and_budget (__main__.Checks) ... /workspace/adalea_v4_runtime/venv/lib/python3.8/site-packages/einops/_torch_specific.py:109: ImportWarning: allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0
+  warnings.warn("allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0", ImportWarning)
+ok
+test_adaptive_changes_weights_not_negative (__main__.Checks) ... ok
+test_aggregate_refuses_missing_seed (__main__.Checks) ... ok
+test_atomic_cache_real_video_and_warm_cache (__main__.Checks) ... ok
+test_attc_uses_native_clock_and_excludes_after_event (__main__.Checks) ... ok
+test_causal_model_empty_objects_gradients (__main__.Checks) ... ok
+test_checkpoint_resume_adaptive_rng_exact (__main__.Checks) ... Seed 42 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Resume seed 42 from completed epoch 1, ATTC 2.900000s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+ok
+test_disk_resume_credits_existing_cache_without_changing_features (__main__.Checks) ... ok
+test_full_train_val_test_three_seed_fixture (__main__.Checks) ... Seed 42 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 42 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+Seed 43 epoch 1: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Seed 43 epoch 2: mAUC 0.6667, mAP 0.8333, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+Seed 44 epoch 1: mAUC 0.3333, mAP 0.6667, ATTC_next 2.9000s; 0.0s
+Seed 44 epoch 2: mAUC 0.3333, mAP 0.6667, ATTC_next 2.9000s; 0.0s
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+ok
+test_invalid_cache_and_nonfinite_cli_stop_before_work (__main__.Checks) ... ok
+test_large_cache_decompresses_each_member_once (__main__.Checks) ... ok
+test_loss_equation_frames_negative_and_post_event (__main__.Checks) ... ok
+test_preflight_measurement_is_cold_even_with_warm_production_cache (__main__.Checks) ... ok
+test_process_deadline_and_output_lock (__main__.Checks) ... started
+ok
+test_sampler_v6_and_test_hidden (__main__.Checks) ... ok
+test_shared_validation_and_pooled_test_metrics (__main__.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 10.049s
+
+OK
+test_bad_temporal_inputs_fail_closed (__main__.FullChecks) ... ok
+test_ffprobe_clock_count_boundary_validation (__main__.FullChecks) ... ok
+test_full_1344_three_seed_capture_report_and_resume (__main__.FullChecks)
+Real ID/metadata structure, tiny synthetic predictions/model; NOT research results. ... FULL CURVES seed42 50/1344, max scalar delta 0.00000000
+FULL CURVES seed42 100/1344, max scalar delta 0.00000000
+FULL CURVES seed42 150/1344, max scalar delta 0.00000000
+FULL CURVES seed42 200/1344, max scalar delta 0.00000000
+FULL CURVES seed42 250/1344, max scalar delta 0.00000000
+FULL CURVES seed42 300/1344, max scalar delta 0.00000000
+FULL CURVES seed42 350/1344, max scalar delta 0.00000000
+FULL CURVES seed42 400/1344, max scalar delta 0.00000000
+FULL CURVES seed42 450/1344, max scalar delta 0.00000000
+FULL CURVES seed42 500/1344, max scalar delta 0.00000000
+FULL CURVES seed42 550/1344, max scalar delta 0.00000000
+FULL CURVES seed42 600/1344, max scalar delta 0.00000000
+FULL CURVES seed42 650/1344, max scalar delta 0.00000000
+FULL CURVES seed42 700/1344, max scalar delta 0.00000000
+FULL CURVES seed42 750/1344, max scalar delta 0.00000000
+FULL CURVES seed42 800/1344, max scalar delta 0.00000000
+FULL CURVES seed42 850/1344, max scalar delta 0.00000000
+FULL CURVES seed42 900/1344, max scalar delta 0.00000000
+FULL CURVES seed42 950/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1000/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1050/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1100/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1150/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1200/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1250/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1300/1344, max scalar delta 0.00000000
+FULL CURVES seed43 50/1344, max scalar delta 0.00000000
+FULL CURVES seed43 100/1344, max scalar delta 0.00000000
+FULL CURVES seed43 150/1344, max scalar delta 0.00000000
+FULL CURVES seed43 200/1344, max scalar delta 0.00000000
+FULL CURVES seed43 250/1344, max scalar delta 0.00000000
+FULL CURVES seed43 300/1344, max scalar delta 0.00000000
+FULL CURVES seed43 350/1344, max scalar delta 0.00000000
+FULL CURVES seed43 400/1344, max scalar delta 0.00000000
+FULL CURVES seed43 450/1344, max scalar delta 0.00000000
+FULL CURVES seed43 500/1344, max scalar delta 0.00000000
+FULL CURVES seed43 550/1344, max scalar delta 0.00000000
+FULL CURVES seed43 600/1344, max scalar delta 0.00000000
+FULL CURVES seed43 650/1344, max scalar delta 0.00000000
+FULL CURVES seed43 700/1344, max scalar delta 0.00000000
+FULL CURVES seed43 750/1344, max scalar delta 0.00000000
+FULL CURVES seed43 800/1344, max scalar delta 0.00000000
+FULL CURVES seed43 850/1344, max scalar delta 0.00000000
+FULL CURVES seed43 900/1344, max scalar delta 0.00000000
+FULL CURVES seed43 950/1344, max scalar delta 0.00000000
+FULL CURVES seed43 1000/1344, max scalar delta 0.00000000
+FULL CURVES seed43 1050/1344, max scalar delta 0.00000000
+FULL CURVES seed43 1100/1344, max scalar delta 0.00000000
+FULL CURVES seed43 1150/1344, max scalar delta 0.00000000
+FULL CURVES seed43 1200/1344, max scalar delta 0.00000000
+FULL CURVES seed43 1250/1344, max scalar delta 0.00000000
+FULL CURVES seed43 1300/1344, max scalar delta 0.00000000
+FULL CURVES seed44 50/1344, max scalar delta 0.00000000
+FULL CURVES seed44 100/1344, max scalar delta 0.00000000
+FULL CURVES seed44 150/1344, max scalar delta 0.00000000
+FULL CURVES seed44 200/1344, max scalar delta 0.00000000
+FULL CURVES seed44 250/1344, max scalar delta 0.00000000
+FULL CURVES seed44 300/1344, max scalar delta 0.00000000
+FULL CURVES seed44 350/1344, max scalar delta 0.00000000
+FULL CURVES seed44 400/1344, max scalar delta 0.00000000
+FULL CURVES seed44 450/1344, max scalar delta 0.00000000
+FULL CURVES seed44 500/1344, max scalar delta 0.00000000
+FULL CURVES seed44 550/1344, max scalar delta 0.00000000
+FULL CURVES seed44 600/1344, max scalar delta 0.00000000
+FULL CURVES seed44 650/1344, max scalar delta 0.00000000
+FULL CURVES seed44 700/1344, max scalar delta 0.00000000
+FULL CURVES seed44 750/1344, max scalar delta 0.00000000
+FULL CURVES seed44 800/1344, max scalar delta 0.00000000
+FULL CURVES seed44 850/1344, max scalar delta 0.00000000
+FULL CURVES seed44 900/1344, max scalar delta 0.00000000
+FULL CURVES seed44 950/1344, max scalar delta 0.00000000
+FULL CURVES seed44 1000/1344, max scalar delta 0.00000000
+FULL CURVES seed44 1050/1344, max scalar delta 0.00000000
+FULL CURVES seed44 1100/1344, max scalar delta 0.00000000
+FULL CURVES seed44 1150/1344, max scalar delta 0.00000000
+FULL CURVES seed44 1200/1344, max scalar delta 0.00000000
+FULL CURVES seed44 1250/1344, max scalar delta 0.00000000
+FULL CURVES seed44 1300/1344, max scalar delta 0.00000000
+FULL CURVES seed42 50/1344, max scalar delta 0.00000000
+FULL CURVES seed42 100/1344, max scalar delta 0.00000000
+FULL CURVES seed42 150/1344, max scalar delta 0.00000000
+FULL CURVES seed42 200/1344, max scalar delta 0.00000000
+FULL CURVES seed42 250/1344, max scalar delta 0.00000000
+FULL CURVES seed42 300/1344, max scalar delta 0.00000000
+FULL CURVES seed42 350/1344, max scalar delta 0.00000000
+FULL CURVES seed42 400/1344, max scalar delta 0.00000000
+FULL CURVES seed42 450/1344, max scalar delta 0.00000000
+FULL CURVES seed42 500/1344, max scalar delta 0.00000000
+FULL CURVES seed42 550/1344, max scalar delta 0.00000000
+FULL CURVES seed42 600/1344, max scalar delta 0.00000000
+FULL CURVES seed42 650/1344, max scalar delta 0.00000000
+FULL CURVES seed42 700/1344, max scalar delta 0.00000000
+FULL CURVES seed42 750/1344, max scalar delta 0.00000000
+FULL CURVES seed42 800/1344, max scalar delta 0.00000000
+FULL CURVES seed42 850/1344, max scalar delta 0.00000000
+FULL CURVES seed42 900/1344, max scalar delta 0.00000000
+FULL CURVES seed42 950/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1000/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1050/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1100/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1150/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1200/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1250/1344, max scalar delta 0.00000000
+FULL CURVES seed42 1300/1344, max scalar delta 0.00000000
+ok
+test_legacy_cache_is_never_written (__main__.FullChecks) ... ok
+test_legacy_v3_source_model_unchanged (__main__.FullChecks) ... ok
+test_missing_onset_and_misses_remain_in_denominator (__main__.FullChecks) ... ok
+test_physical_and_source_clocks_are_separate (__main__.FullChecks) ... ok
+test_rolling_exact_manual_and_label_guard (__main__.FullChecks) ... ok
+test_source_arithmetic_parity (__main__.FullChecks) ... ok
+test_temporal_no_post_event_alarm (__main__.FullChecks) ... ok
+test_window_grid_causal_and_tail_matches_v3 (__main__.FullChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.751s
+
+OK
+{
+  "success": true,
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "torch": "2.1.0+cu118",
+  "optimizer_steps": 2,
+  "microbatches": 16,
+  "empty_object_amp_finite": true,
+  "validation_fp32": true,
+  "peak_memory_gib": 0.0810236930847168,
+  "synthetic_features_only": true,
+  "pretrained_extractor_tested": false,
+  "rtx4080_tested": false
+}
+Verified 250/2844 videos
+Verified 500/2844 videos
+Verified 750/2844 videos
+Verified 1000/2844 videos
+Verified 1250/2844 videos
+Verified 1500/2844 videos
+Verified 1750/2844 videos
+Verified 2000/2844 videos
+Verified 2250/2844 videos
+Verified 2500/2844 videos
+Verified 2750/2844 videos
+Epoch 1: 160/1200 examples, loss 0.310894, optimizer_steps 10, ATTC_prev 0.000000s
+Epoch 1: 320/1200 examples, loss 0.290912, optimizer_steps 20, ATTC_prev 0.000000s
+Epoch 1: 480/1200 examples, loss 0.263523, optimizer_steps 30, ATTC_prev 0.000000s
+Epoch 1: 640/1200 examples, loss 0.238172, optimizer_steps 40, ATTC_prev 0.000000s
+Epoch 1: 800/1200 examples, loss 0.220818, optimizer_steps 50, ATTC_prev 0.000000s
+Epoch 1: 960/1200 examples, loss 0.208495, optimizer_steps 60, ATTC_prev 0.000000s
+Epoch 1: 1120/1200 examples, loss 0.198550, optimizer_steps 70, ATTC_prev 0.000000s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 1: mAUC 0.5661, mAP 0.5179, ATTC_next 2.8861s; 2204.2s
+Epoch 2: 160/1200 examples, loss 1.114405, optimizer_steps 10, ATTC_prev 2.886076s
+Epoch 2: 320/1200 examples, loss 0.932047, optimizer_steps 20, ATTC_prev 2.886076s
+Epoch 2: 480/1200 examples, loss 0.850561, optimizer_steps 30, ATTC_prev 2.886076s
+Epoch 2: 640/1200 examples, loss 0.809565, optimizer_steps 40, ATTC_prev 2.886076s
+Epoch 2: 800/1200 examples, loss 0.782506, optimizer_steps 50, ATTC_prev 2.886076s
+Epoch 2: 960/1200 examples, loss 0.764641, optimizer_steps 60, ATTC_prev 2.886076s
+Epoch 2: 1120/1200 examples, loss 0.752145, optimizer_steps 70, ATTC_prev 2.886076s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 2: mAUC 0.7101, mAP 0.6748, ATTC_next 2.0215s; 1504.6s
+Epoch 3: 160/1200 examples, loss 0.605095, optimizer_steps 10, ATTC_prev 2.021481s
+Epoch 3: 320/1200 examples, loss 0.590820, optimizer_steps 20, ATTC_prev 2.021481s
+Epoch 3: 480/1200 examples, loss 0.584958, optimizer_steps 30, ATTC_prev 2.021481s
+Epoch 3: 640/1200 examples, loss 0.581459, optimizer_steps 40, ATTC_prev 2.021481s
+Epoch 3: 800/1200 examples, loss 0.579601, optimizer_steps 50, ATTC_prev 2.021481s
+Epoch 3: 960/1200 examples, loss 0.575736, optimizer_steps 60, ATTC_prev 2.021481s
+Epoch 3: 1120/1200 examples, loss 0.577811, optimizer_steps 70, ATTC_prev 2.021481s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 3: mAUC 0.7199, mAP 0.6894, ATTC_next 2.1194s; 1305.7s
+Epoch 4: 160/1200 examples, loss 0.579044, optimizer_steps 10, ATTC_prev 2.119376s
+Epoch 4: 320/1200 examples, loss 0.559135, optimizer_steps 20, ATTC_prev 2.119376s
+Epoch 4: 480/1200 examples, loss 0.559903, optimizer_steps 30, ATTC_prev 2.119376s
+Epoch 4: 640/1200 examples, loss 0.554203, optimizer_steps 40, ATTC_prev 2.119376s
+Epoch 4: 800/1200 examples, loss 0.551894, optimizer_steps 50, ATTC_prev 2.119376s
+Epoch 4: 960/1200 examples, loss 0.553765, optimizer_steps 60, ATTC_prev 2.119376s
+Epoch 4: 1120/1200 examples, loss 0.549751, optimizer_steps 70, ATTC_prev 2.119376s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 4: mAUC 0.7331, mAP 0.7022, ATTC_next 2.0179s; 1202.3s
+Epoch 5: 160/1200 examples, loss 0.518100, optimizer_steps 10, ATTC_prev 2.017935s
+Epoch 5: 320/1200 examples, loss 0.515750, optimizer_steps 20, ATTC_prev 2.017935s
+Epoch 5: 480/1200 examples, loss 0.504638, optimizer_steps 30, ATTC_prev 2.017935s
+Epoch 5: 640/1200 examples, loss 0.510499, optimizer_steps 40, ATTC_prev 2.017935s
+Epoch 5: 800/1200 examples, loss 0.503193, optimizer_steps 50, ATTC_prev 2.017935s
+Epoch 5: 960/1200 examples, loss 0.501896, optimizer_steps 60, ATTC_prev 2.017935s
+Epoch 5: 1120/1200 examples, loss 0.505041, optimizer_steps 70, ATTC_prev 2.017935s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 5: mAUC 0.7426, mAP 0.7150, ATTC_next 1.9765s; 1123.8s
+Epoch 6: 160/1200 examples, loss 0.516585, optimizer_steps 10, ATTC_prev 1.976479s
+Epoch 6: 320/1200 examples, loss 0.510373, optimizer_steps 20, ATTC_prev 1.976479s
+Epoch 6: 480/1200 examples, loss 0.505768, optimizer_steps 30, ATTC_prev 1.976479s
+Epoch 6: 640/1200 examples, loss 0.509591, optimizer_steps 40, ATTC_prev 1.976479s
+Epoch 6: 800/1200 examples, loss 0.505330, optimizer_steps 50, ATTC_prev 1.976479s
+Epoch 6: 960/1200 examples, loss 0.505081, optimizer_steps 60, ATTC_prev 1.976479s
+Epoch 6: 1120/1200 examples, loss 0.507595, optimizer_steps 70, ATTC_prev 1.976479s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 6: mAUC 0.7500, mAP 0.7267, ATTC_next 1.9529s; 1058.8s
+Epoch 7: 160/1200 examples, loss 0.476246, optimizer_steps 10, ATTC_prev 1.952900s
+Epoch 7: 320/1200 examples, loss 0.483536, optimizer_steps 20, ATTC_prev 1.952900s
+Epoch 7: 480/1200 examples, loss 0.478455, optimizer_steps 30, ATTC_prev 1.952900s
+Epoch 7: 640/1200 examples, loss 0.483142, optimizer_steps 40, ATTC_prev 1.952900s
+Epoch 7: 800/1200 examples, loss 0.486282, optimizer_steps 50, ATTC_prev 1.952900s
+Epoch 7: 960/1200 examples, loss 0.483725, optimizer_steps 60, ATTC_prev 1.952900s
+Epoch 7: 1120/1200 examples, loss 0.483386, optimizer_steps 70, ATTC_prev 1.952900s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 7: mAUC 0.7529, mAP 0.7246, ATTC_next 1.8327s; 1044.8s
+Epoch 8: 160/1200 examples, loss 0.468166, optimizer_steps 10, ATTC_prev 1.832706s
+Epoch 8: 320/1200 examples, loss 0.468024, optimizer_steps 20, ATTC_prev 1.832706s
+Epoch 8: 480/1200 examples, loss 0.462427, optimizer_steps 30, ATTC_prev 1.832706s
+Epoch 8: 640/1200 examples, loss 0.460414, optimizer_steps 40, ATTC_prev 1.832706s
+Epoch 8: 800/1200 examples, loss 0.457850, optimizer_steps 50, ATTC_prev 1.832706s
+Epoch 8: 960/1200 examples, loss 0.460642, optimizer_steps 60, ATTC_prev 1.832706s
+Epoch 8: 1120/1200 examples, loss 0.464943, optimizer_steps 70, ATTC_prev 1.832706s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 8: mAUC 0.7574, mAP 0.7311, ATTC_next 1.8190s; 984.1s
+Epoch 9: 160/1200 examples, loss 0.429925, optimizer_steps 10, ATTC_prev 1.818950s
+Epoch 9: 320/1200 examples, loss 0.437081, optimizer_steps 20, ATTC_prev 1.818950s
+Epoch 9: 480/1200 examples, loss 0.452507, optimizer_steps 30, ATTC_prev 1.818950s
+Epoch 9: 640/1200 examples, loss 0.443333, optimizer_steps 40, ATTC_prev 1.818950s
+Epoch 9: 800/1200 examples, loss 0.461824, optimizer_steps 50, ATTC_prev 1.818950s
+Epoch 9: 960/1200 examples, loss 0.458919, optimizer_steps 60, ATTC_prev 1.818950s
+Epoch 9: 1120/1200 examples, loss 0.463447, optimizer_steps 70, ATTC_prev 1.818950s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 9: mAUC 0.7625, mAP 0.7414, ATTC_next 1.7319s; 997.6s
+Epoch 10: 160/1200 examples, loss 0.430873, optimizer_steps 10, ATTC_prev 1.731929s
+Epoch 10: 320/1200 examples, loss 0.414707, optimizer_steps 20, ATTC_prev 1.731929s
+Epoch 10: 480/1200 examples, loss 0.424520, optimizer_steps 30, ATTC_prev 1.731929s
+Epoch 10: 640/1200 examples, loss 0.419752, optimizer_steps 40, ATTC_prev 1.731929s
+Epoch 10: 800/1200 examples, loss 0.429434, optimizer_steps 50, ATTC_prev 1.731929s
+Epoch 10: 960/1200 examples, loss 0.435706, optimizer_steps 60, ATTC_prev 1.731929s
+Epoch 10: 1120/1200 examples, loss 0.439553, optimizer_steps 70, ATTC_prev 1.731929s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 10: mAUC 0.7666, mAP 0.7444, ATTC_next 1.6738s; 989.2s
+Epoch 11: 160/1200 examples, loss 0.473161, optimizer_steps 10, ATTC_prev 1.673788s
+Epoch 11: 320/1200 examples, loss 0.446124, optimizer_steps 20, ATTC_prev 1.673788s
+Epoch 11: 480/1200 examples, loss 0.441355, optimizer_steps 30, ATTC_prev 1.673788s
+Epoch 11: 640/1200 examples, loss 0.433468, optimizer_steps 40, ATTC_prev 1.673788s
+Epoch 11: 800/1200 examples, loss 0.431158, optimizer_steps 50, ATTC_prev 1.673788s
+Epoch 11: 960/1200 examples, loss 0.432689, optimizer_steps 60, ATTC_prev 1.673788s
+Epoch 11: 1120/1200 examples, loss 0.433673, optimizer_steps 70, ATTC_prev 1.673788s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 11: mAUC 0.7682, mAP 0.7500, ATTC_next 1.6786s; 984.8s
+Epoch 12: 160/1200 examples, loss 0.422236, optimizer_steps 10, ATTC_prev 1.678604s
+Epoch 12: 320/1200 examples, loss 0.428255, optimizer_steps 20, ATTC_prev 1.678604s
+Epoch 12: 480/1200 examples, loss 0.427801, optimizer_steps 30, ATTC_prev 1.678604s
+Epoch 12: 640/1200 examples, loss 0.428012, optimizer_steps 40, ATTC_prev 1.678604s
+Epoch 12: 800/1200 examples, loss 0.426699, optimizer_steps 50, ATTC_prev 1.678604s
+Epoch 12: 960/1200 examples, loss 0.423846, optimizer_steps 60, ATTC_prev 1.678604s
+Epoch 12: 1120/1200 examples, loss 0.421523, optimizer_steps 70, ATTC_prev 1.678604s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 12: mAUC 0.7674, mAP 0.7473, ATTC_next 1.6656s; 1010.2s
+Epoch 13: 160/1200 examples, loss 0.420876, optimizer_steps 10, ATTC_prev 1.665608s
+Epoch 13: 320/1200 examples, loss 0.423469, optimizer_steps 20, ATTC_prev 1.665608s
+Epoch 13: 480/1200 examples, loss 0.410300, optimizer_steps 30, ATTC_prev 1.665608s
+Epoch 13: 640/1200 examples, loss 0.405934, optimizer_steps 40, ATTC_prev 1.665608s
+Epoch 13: 800/1200 examples, loss 0.412769, optimizer_steps 50, ATTC_prev 1.665608s
+Epoch 13: 960/1200 examples, loss 0.416675, optimizer_steps 60, ATTC_prev 1.665608s
+Epoch 13: 1120/1200 examples, loss 0.415059, optimizer_steps 70, ATTC_prev 1.665608s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 13: mAUC 0.7730, mAP 0.7529, ATTC_next 1.5644s; 1008.5s
+Epoch 14: 160/1200 examples, loss 0.381447, optimizer_steps 10, ATTC_prev 1.564381s
+Epoch 14: 320/1200 examples, loss 0.381150, optimizer_steps 20, ATTC_prev 1.564381s
+Epoch 14: 480/1200 examples, loss 0.376314, optimizer_steps 30, ATTC_prev 1.564381s
+Epoch 14: 640/1200 examples, loss 0.380705, optimizer_steps 40, ATTC_prev 1.564381s
+Epoch 14: 800/1200 examples, loss 0.384509, optimizer_steps 50, ATTC_prev 1.564381s
+Epoch 14: 960/1200 examples, loss 0.387794, optimizer_steps 60, ATTC_prev 1.564381s
+Epoch 14: 1120/1200 examples, loss 0.398207, optimizer_steps 70, ATTC_prev 1.564381s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 14: mAUC 0.7746, mAP 0.7596, ATTC_next 1.5430s; 969.4s
+Epoch 15: 160/1200 examples, loss 0.390746, optimizer_steps 10, ATTC_prev 1.542994s
+Epoch 15: 320/1200 examples, loss 0.419380, optimizer_steps 20, ATTC_prev 1.542994s
+Epoch 15: 480/1200 examples, loss 0.412602, optimizer_steps 30, ATTC_prev 1.542994s
+Epoch 15: 640/1200 examples, loss 0.400716, optimizer_steps 40, ATTC_prev 1.542994s
+Epoch 15: 800/1200 examples, loss 0.397192, optimizer_steps 50, ATTC_prev 1.542994s
+Epoch 15: 960/1200 examples, loss 0.394826, optimizer_steps 60, ATTC_prev 1.542994s
+Epoch 15: 1120/1200 examples, loss 0.395810, optimizer_steps 70, ATTC_prev 1.542994s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 15: mAUC 0.7753, mAP 0.7631, ATTC_next 1.5120s; 997.3s
+Epoch 16: 160/1200 examples, loss 0.406999, optimizer_steps 10, ATTC_prev 1.512048s
+Epoch 16: 320/1200 examples, loss 0.396244, optimizer_steps 20, ATTC_prev 1.512048s
+Epoch 16: 480/1200 examples, loss 0.382597, optimizer_steps 30, ATTC_prev 1.512048s
+Epoch 16: 640/1200 examples, loss 0.383155, optimizer_steps 40, ATTC_prev 1.512048s
+Epoch 16: 800/1200 examples, loss 0.378762, optimizer_steps 50, ATTC_prev 1.512048s
+Epoch 16: 960/1200 examples, loss 0.379196, optimizer_steps 60, ATTC_prev 1.512048s
+Epoch 16: 1120/1200 examples, loss 0.386258, optimizer_steps 70, ATTC_prev 1.512048s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 16: mAUC 0.7771, mAP 0.7695, ATTC_next 1.4961s; 962.0s
+Epoch 17: 160/1200 examples, loss 0.373160, optimizer_steps 10, ATTC_prev 1.496128s
+Epoch 17: 320/1200 examples, loss 0.379199, optimizer_steps 20, ATTC_prev 1.496128s
+Epoch 17: 480/1200 examples, loss 0.377832, optimizer_steps 30, ATTC_prev 1.496128s
+Epoch 17: 640/1200 examples, loss 0.378066, optimizer_steps 40, ATTC_prev 1.496128s
+Epoch 17: 800/1200 examples, loss 0.374498, optimizer_steps 50, ATTC_prev 1.496128s
+Epoch 17: 960/1200 examples, loss 0.373380, optimizer_steps 60, ATTC_prev 1.496128s
+Epoch 17: 1120/1200 examples, loss 0.375719, optimizer_steps 70, ATTC_prev 1.496128s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 17: mAUC 0.7794, mAP 0.7665, ATTC_next 1.4530s; 987.7s
+Epoch 18: 160/1200 examples, loss 0.311715, optimizer_steps 10, ATTC_prev 1.453001s
+Epoch 18: 320/1200 examples, loss 0.343532, optimizer_steps 20, ATTC_prev 1.453001s
+Epoch 18: 480/1200 examples, loss 0.353781, optimizer_steps 30, ATTC_prev 1.453001s
+Epoch 18: 640/1200 examples, loss 0.368195, optimizer_steps 40, ATTC_prev 1.453001s
+Epoch 18: 800/1200 examples, loss 0.369993, optimizer_steps 50, ATTC_prev 1.453001s
+Epoch 18: 960/1200 examples, loss 0.364458, optimizer_steps 60, ATTC_prev 1.453001s
+Epoch 18: 1120/1200 examples, loss 0.366449, optimizer_steps 70, ATTC_prev 1.453001s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 18: mAUC 0.7790, mAP 0.7718, ATTC_next 1.4145s; 986.3s
+Epoch 19: 160/1200 examples, loss 0.355389, optimizer_steps 10, ATTC_prev 1.414540s
+Epoch 19: 320/1200 examples, loss 0.354588, optimizer_steps 20, ATTC_prev 1.414540s
+Epoch 19: 480/1200 examples, loss 0.353707, optimizer_steps 30, ATTC_prev 1.414540s
+Epoch 19: 640/1200 examples, loss 0.357884, optimizer_steps 40, ATTC_prev 1.414540s
+Epoch 19: 800/1200 examples, loss 0.367536, optimizer_steps 50, ATTC_prev 1.414540s
+Epoch 19: 960/1200 examples, loss 0.373685, optimizer_steps 60, ATTC_prev 1.414540s
+Epoch 19: 1120/1200 examples, loss 0.361275, optimizer_steps 70, ATTC_prev 1.414540s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 19: mAUC 0.7773, mAP 0.7612, ATTC_next 1.4268s; 997.9s
+Epoch 20: 160/1200 examples, loss 0.315900, optimizer_steps 10, ATTC_prev 1.426834s
+Epoch 20: 320/1200 examples, loss 0.327340, optimizer_steps 20, ATTC_prev 1.426834s
+Epoch 20: 480/1200 examples, loss 0.343068, optimizer_steps 30, ATTC_prev 1.426834s
+Epoch 20: 640/1200 examples, loss 0.355850, optimizer_steps 40, ATTC_prev 1.426834s
+Epoch 20: 800/1200 examples, loss 0.360032, optimizer_steps 50, ATTC_prev 1.426834s
+Epoch 20: 960/1200 examples, loss 0.360870, optimizer_steps 60, ATTC_prev 1.426834s
+Epoch 20: 1120/1200 examples, loss 0.356743, optimizer_steps 70, ATTC_prev 1.426834s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 20: mAUC 0.7806, mAP 0.7724, ATTC_next 1.3991s; 1005.0s
+Epoch 21: 160/1200 examples, loss 0.329200, optimizer_steps 10, ATTC_prev 1.399097s
+Epoch 21: 320/1200 examples, loss 0.325678, optimizer_steps 20, ATTC_prev 1.399097s
+Epoch 21: 480/1200 examples, loss 0.336891, optimizer_steps 30, ATTC_prev 1.399097s
+Epoch 21: 640/1200 examples, loss 0.333352, optimizer_steps 40, ATTC_prev 1.399097s
+Epoch 21: 800/1200 examples, loss 0.338275, optimizer_steps 50, ATTC_prev 1.399097s
+Epoch 21: 960/1200 examples, loss 0.334710, optimizer_steps 60, ATTC_prev 1.399097s
+Epoch 21: 1120/1200 examples, loss 0.332317, optimizer_steps 70, ATTC_prev 1.399097s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 21: mAUC 0.7813, mAP 0.7745, ATTC_next 1.3940s; 1026.9s
+Epoch 22: 160/1200 examples, loss 0.347810, optimizer_steps 10, ATTC_prev 1.393991s
+Epoch 22: 320/1200 examples, loss 0.337944, optimizer_steps 20, ATTC_prev 1.393991s
+Epoch 22: 480/1200 examples, loss 0.336217, optimizer_steps 30, ATTC_prev 1.393991s
+Epoch 22: 640/1200 examples, loss 0.337891, optimizer_steps 40, ATTC_prev 1.393991s
+Epoch 22: 800/1200 examples, loss 0.331615, optimizer_steps 50, ATTC_prev 1.393991s
+Epoch 22: 960/1200 examples, loss 0.330565, optimizer_steps 60, ATTC_prev 1.393991s
+Epoch 22: 1120/1200 examples, loss 0.331546, optimizer_steps 70, ATTC_prev 1.393991s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 22: mAUC 0.7808, mAP 0.7725, ATTC_next 1.3950s; 986.0s
+Epoch 23: 160/1200 examples, loss 0.351921, optimizer_steps 10, ATTC_prev 1.394974s
+Epoch 23: 320/1200 examples, loss 0.332084, optimizer_steps 20, ATTC_prev 1.394974s
+Epoch 23: 480/1200 examples, loss 0.343833, optimizer_steps 30, ATTC_prev 1.394974s
+Epoch 23: 640/1200 examples, loss 0.332850, optimizer_steps 40, ATTC_prev 1.394974s
+Epoch 23: 800/1200 examples, loss 0.342595, optimizer_steps 50, ATTC_prev 1.394974s
+Epoch 23: 960/1200 examples, loss 0.342715, optimizer_steps 60, ATTC_prev 1.394974s
+Epoch 23: 1120/1200 examples, loss 0.339886, optimizer_steps 70, ATTC_prev 1.394974s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 23: mAUC 0.7805, mAP 0.7743, ATTC_next 1.3889s; 954.8s
+Epoch 24: 160/1200 examples, loss 0.333690, optimizer_steps 10, ATTC_prev 1.388887s
+Epoch 24: 320/1200 examples, loss 0.337711, optimizer_steps 20, ATTC_prev 1.388887s
+Epoch 24: 480/1200 examples, loss 0.342196, optimizer_steps 30, ATTC_prev 1.388887s
+Epoch 24: 640/1200 examples, loss 0.335147, optimizer_steps 40, ATTC_prev 1.388887s
+Epoch 24: 800/1200 examples, loss 0.338389, optimizer_steps 50, ATTC_prev 1.388887s
+Epoch 24: 960/1200 examples, loss 0.339584, optimizer_steps 60, ATTC_prev 1.388887s
+Epoch 24: 1120/1200 examples, loss 0.333417, optimizer_steps 70, ATTC_prev 1.388887s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 24: mAUC 0.7805, mAP 0.7733, ATTC_next 1.3894s; 1004.4s
+Epoch 25: 160/1200 examples, loss 0.363754, optimizer_steps 10, ATTC_prev 1.389398s
+Epoch 25: 320/1200 examples, loss 0.334653, optimizer_steps 20, ATTC_prev 1.389398s
+Epoch 25: 480/1200 examples, loss 0.340526, optimizer_steps 30, ATTC_prev 1.389398s
+Epoch 25: 640/1200 examples, loss 0.333103, optimizer_steps 40, ATTC_prev 1.389398s
+Epoch 25: 800/1200 examples, loss 0.333374, optimizer_steps 50, ATTC_prev 1.389398s
+Epoch 25: 960/1200 examples, loss 0.334326, optimizer_steps 60, ATTC_prev 1.389398s
+Epoch 25: 1120/1200 examples, loss 0.332704, optimizer_steps 70, ATTC_prev 1.389398s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 25: mAUC 0.7807, mAP 0.7734, ATTC_next 1.3842s; 1005.6s
+Epoch 26: 160/1200 examples, loss 0.343301, optimizer_steps 10, ATTC_prev 1.384223s
+Epoch 26: 320/1200 examples, loss 0.331805, optimizer_steps 20, ATTC_prev 1.384223s
+Epoch 26: 480/1200 examples, loss 0.335275, optimizer_steps 30, ATTC_prev 1.384223s
+Epoch 26: 640/1200 examples, loss 0.333528, optimizer_steps 40, ATTC_prev 1.384223s
+Epoch 26: 800/1200 examples, loss 0.339425, optimizer_steps 50, ATTC_prev 1.384223s
+Epoch 26: 960/1200 examples, loss 0.336715, optimizer_steps 60, ATTC_prev 1.384223s
+Epoch 26: 1120/1200 examples, loss 0.334349, optimizer_steps 70, ATTC_prev 1.384223s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 26: mAUC 0.7812, mAP 0.7740, ATTC_next 1.3836s; 979.7s
+Epoch 27: 160/1200 examples, loss 0.311727, optimizer_steps 10, ATTC_prev 1.383561s
+Epoch 27: 320/1200 examples, loss 0.308833, optimizer_steps 20, ATTC_prev 1.383561s
+Epoch 27: 480/1200 examples, loss 0.334732, optimizer_steps 30, ATTC_prev 1.383561s
+Epoch 27: 640/1200 examples, loss 0.326982, optimizer_steps 40, ATTC_prev 1.383561s
+Epoch 27: 800/1200 examples, loss 0.323364, optimizer_steps 50, ATTC_prev 1.383561s
+Epoch 27: 960/1200 examples, loss 0.330382, optimizer_steps 60, ATTC_prev 1.383561s
+Epoch 27: 1120/1200 examples, loss 0.327066, optimizer_steps 70, ATTC_prev 1.383561s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 27: mAUC 0.7809, mAP 0.7730, ATTC_next 1.3794s; 996.3s
+Epoch 28: 160/1200 examples, loss 0.340148, optimizer_steps 10, ATTC_prev 1.379369s
+Epoch 28: 320/1200 examples, loss 0.347572, optimizer_steps 20, ATTC_prev 1.379369s
+Epoch 28: 480/1200 examples, loss 0.337907, optimizer_steps 30, ATTC_prev 1.379369s
+Epoch 28: 640/1200 examples, loss 0.332167, optimizer_steps 40, ATTC_prev 1.379369s
+Epoch 28: 800/1200 examples, loss 0.328098, optimizer_steps 50, ATTC_prev 1.379369s
+Epoch 28: 960/1200 examples, loss 0.325779, optimizer_steps 60, ATTC_prev 1.379369s
+Epoch 28: 1120/1200 examples, loss 0.324164, optimizer_steps 70, ATTC_prev 1.379369s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 28: mAUC 0.7814, mAP 0.7761, ATTC_next 1.3727s; 984.0s
+Epoch 29: 160/1200 examples, loss 0.330121, optimizer_steps 10, ATTC_prev 1.372736s
+Epoch 29: 320/1200 examples, loss 0.316740, optimizer_steps 20, ATTC_prev 1.372736s
+Epoch 29: 480/1200 examples, loss 0.312750, optimizer_steps 30, ATTC_prev 1.372736s
+Epoch 29: 640/1200 examples, loss 0.331602, optimizer_steps 40, ATTC_prev 1.372736s
+Epoch 29: 800/1200 examples, loss 0.330086, optimizer_steps 50, ATTC_prev 1.372736s
+Epoch 29: 960/1200 examples, loss 0.330872, optimizer_steps 60, ATTC_prev 1.372736s
+Epoch 29: 1120/1200 examples, loss 0.326071, optimizer_steps 70, ATTC_prev 1.372736s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 29: mAUC 0.7814, mAP 0.7744, ATTC_next 1.3687s; 982.2s
+Epoch 30: 160/1200 examples, loss 0.343078, optimizer_steps 10, ATTC_prev 1.368655s
+Epoch 30: 320/1200 examples, loss 0.343507, optimizer_steps 20, ATTC_prev 1.368655s
+Epoch 30: 480/1200 examples, loss 0.345459, optimizer_steps 30, ATTC_prev 1.368655s
+Epoch 30: 640/1200 examples, loss 0.339459, optimizer_steps 40, ATTC_prev 1.368655s
+Epoch 30: 800/1200 examples, loss 0.330813, optimizer_steps 50, ATTC_prev 1.368655s
+Epoch 30: 960/1200 examples, loss 0.330980, optimizer_steps 60, ATTC_prev 1.368655s
+Epoch 30: 1120/1200 examples, loss 0.326880, optimizer_steps 70, ATTC_prev 1.368655s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 30: mAUC 0.7824, mAP 0.7766, ATTC_next 1.3623s; 962.2s
+Epoch 31: 160/1200 examples, loss 0.320381, optimizer_steps 10, ATTC_prev 1.362306s
+Epoch 31: 320/1200 examples, loss 0.315250, optimizer_steps 20, ATTC_prev 1.362306s
+Epoch 31: 480/1200 examples, loss 0.318160, optimizer_steps 30, ATTC_prev 1.362306s
+Epoch 31: 640/1200 examples, loss 0.312779, optimizer_steps 40, ATTC_prev 1.362306s
+Epoch 31: 800/1200 examples, loss 0.308864, optimizer_steps 50, ATTC_prev 1.362306s
+Epoch 31: 960/1200 examples, loss 0.314963, optimizer_steps 60, ATTC_prev 1.362306s
+Epoch 31: 1120/1200 examples, loss 0.318984, optimizer_steps 70, ATTC_prev 1.362306s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 31: mAUC 0.7830, mAP 0.7768, ATTC_next 1.3643s; 958.2s
+Epoch 32: 160/1200 examples, loss 0.311939, optimizer_steps 10, ATTC_prev 1.364349s
+Epoch 32: 320/1200 examples, loss 0.312338, optimizer_steps 20, ATTC_prev 1.364349s
+Epoch 32: 480/1200 examples, loss 0.315671, optimizer_steps 30, ATTC_prev 1.364349s
+Epoch 32: 640/1200 examples, loss 0.318301, optimizer_steps 40, ATTC_prev 1.364349s
+Epoch 32: 800/1200 examples, loss 0.314075, optimizer_steps 50, ATTC_prev 1.364349s
+Epoch 32: 960/1200 examples, loss 0.313095, optimizer_steps 60, ATTC_prev 1.364349s
+Epoch 32: 1120/1200 examples, loss 0.314479, optimizer_steps 70, ATTC_prev 1.364349s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 32: mAUC 0.7831, mAP 0.7761, ATTC_next 1.3620s; 997.5s
+Epoch 33: 160/1200 examples, loss 0.298412, optimizer_steps 10, ATTC_prev 1.362012s
+Epoch 33: 320/1200 examples, loss 0.307373, optimizer_steps 20, ATTC_prev 1.362012s
+Epoch 33: 480/1200 examples, loss 0.312736, optimizer_steps 30, ATTC_prev 1.362012s
+Epoch 33: 640/1200 examples, loss 0.312326, optimizer_steps 40, ATTC_prev 1.362012s
+Epoch 33: 800/1200 examples, loss 0.312053, optimizer_steps 50, ATTC_prev 1.362012s
+Epoch 33: 960/1200 examples, loss 0.313566, optimizer_steps 60, ATTC_prev 1.362012s
+Epoch 33: 1120/1200 examples, loss 0.314804, optimizer_steps 70, ATTC_prev 1.362012s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 33: mAUC 0.7831, mAP 0.7773, ATTC_next 1.3607s; 948.5s
+Epoch 34: 160/1200 examples, loss 0.301861, optimizer_steps 10, ATTC_prev 1.360692s
+Epoch 34: 320/1200 examples, loss 0.322406, optimizer_steps 20, ATTC_prev 1.360692s
+Epoch 34: 480/1200 examples, loss 0.325224, optimizer_steps 30, ATTC_prev 1.360692s
+Epoch 34: 640/1200 examples, loss 0.325926, optimizer_steps 40, ATTC_prev 1.360692s
+Epoch 34: 800/1200 examples, loss 0.317891, optimizer_steps 50, ATTC_prev 1.360692s
+Epoch 34: 960/1200 examples, loss 0.318675, optimizer_steps 60, ATTC_prev 1.360692s
+Epoch 34: 1120/1200 examples, loss 0.317451, optimizer_steps 70, ATTC_prev 1.360692s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 34: mAUC 0.7834, mAP 0.7767, ATTC_next 1.3592s; 999.5s
+Epoch 35: 160/1200 examples, loss 0.304799, optimizer_steps 10, ATTC_prev 1.359178s
+Epoch 35: 320/1200 examples, loss 0.323583, optimizer_steps 20, ATTC_prev 1.359178s
+Epoch 35: 480/1200 examples, loss 0.326842, optimizer_steps 30, ATTC_prev 1.359178s
+Epoch 35: 640/1200 examples, loss 0.323437, optimizer_steps 40, ATTC_prev 1.359178s
+Epoch 35: 800/1200 examples, loss 0.323512, optimizer_steps 50, ATTC_prev 1.359178s
+Epoch 35: 960/1200 examples, loss 0.326389, optimizer_steps 60, ATTC_prev 1.359178s
+Epoch 35: 1120/1200 examples, loss 0.317431, optimizer_steps 70, ATTC_prev 1.359178s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 35: mAUC 0.7825, mAP 0.7770, ATTC_next 1.3538s; 952.3s
+Epoch 36: 160/1200 examples, loss 0.335498, optimizer_steps 10, ATTC_prev 1.353755s
+Epoch 36: 320/1200 examples, loss 0.346427, optimizer_steps 20, ATTC_prev 1.353755s
+Epoch 36: 480/1200 examples, loss 0.337609, optimizer_steps 30, ATTC_prev 1.353755s
+Epoch 36: 640/1200 examples, loss 0.336692, optimizer_steps 40, ATTC_prev 1.353755s
+Epoch 36: 800/1200 examples, loss 0.329325, optimizer_steps 50, ATTC_prev 1.353755s
+Epoch 36: 960/1200 examples, loss 0.329091, optimizer_steps 60, ATTC_prev 1.353755s
+Epoch 36: 1120/1200 examples, loss 0.319684, optimizer_steps 70, ATTC_prev 1.353755s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 36: mAUC 0.7841, mAP 0.7785, ATTC_next 1.3495s; 987.5s
+Epoch 37: 160/1200 examples, loss 0.287670, optimizer_steps 10, ATTC_prev 1.349492s
+Epoch 37: 320/1200 examples, loss 0.288709, optimizer_steps 20, ATTC_prev 1.349492s
+Epoch 37: 480/1200 examples, loss 0.303623, optimizer_steps 30, ATTC_prev 1.349492s
+Epoch 37: 640/1200 examples, loss 0.300191, optimizer_steps 40, ATTC_prev 1.349492s
+Epoch 37: 800/1200 examples, loss 0.299389, optimizer_steps 50, ATTC_prev 1.349492s
+Epoch 37: 960/1200 examples, loss 0.302816, optimizer_steps 60, ATTC_prev 1.349492s
+Epoch 37: 1120/1200 examples, loss 0.306984, optimizer_steps 70, ATTC_prev 1.349492s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 37: mAUC 0.7831, mAP 0.7779, ATTC_next 1.3499s; 986.8s
+Epoch 38: 160/1200 examples, loss 0.294787, optimizer_steps 10, ATTC_prev 1.349910s
+Epoch 38: 320/1200 examples, loss 0.305956, optimizer_steps 20, ATTC_prev 1.349910s
+Epoch 38: 480/1200 examples, loss 0.307452, optimizer_steps 30, ATTC_prev 1.349910s
+Epoch 38: 640/1200 examples, loss 0.305850, optimizer_steps 40, ATTC_prev 1.349910s
+Epoch 38: 800/1200 examples, loss 0.302193, optimizer_steps 50, ATTC_prev 1.349910s
+Epoch 38: 960/1200 examples, loss 0.305767, optimizer_steps 60, ATTC_prev 1.349910s
+Epoch 38: 1120/1200 examples, loss 0.307218, optimizer_steps 70, ATTC_prev 1.349910s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 38: mAUC 0.7841, mAP 0.7776, ATTC_next 1.3436s; 963.2s
+Epoch 39: 160/1200 examples, loss 0.265977, optimizer_steps 10, ATTC_prev 1.343565s
+Epoch 39: 320/1200 examples, loss 0.297722, optimizer_steps 20, ATTC_prev 1.343565s
+Epoch 39: 480/1200 examples, loss 0.300804, optimizer_steps 30, ATTC_prev 1.343565s
+Epoch 39: 640/1200 examples, loss 0.302584, optimizer_steps 40, ATTC_prev 1.343565s
+Epoch 39: 800/1200 examples, loss 0.308405, optimizer_steps 50, ATTC_prev 1.343565s
+Epoch 39: 960/1200 examples, loss 0.306349, optimizer_steps 60, ATTC_prev 1.343565s
+Epoch 39: 1120/1200 examples, loss 0.307830, optimizer_steps 70, ATTC_prev 1.343565s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 39: mAUC 0.7844, mAP 0.7780, ATTC_next 1.3383s; 983.3s
+Epoch 40: 160/1200 examples, loss 0.320707, optimizer_steps 10, ATTC_prev 1.338292s
+Epoch 40: 320/1200 examples, loss 0.300857, optimizer_steps 20, ATTC_prev 1.338292s
+Epoch 40: 480/1200 examples, loss 0.302414, optimizer_steps 30, ATTC_prev 1.338292s
+Epoch 40: 640/1200 examples, loss 0.298009, optimizer_steps 40, ATTC_prev 1.338292s
+Epoch 40: 800/1200 examples, loss 0.298266, optimizer_steps 50, ATTC_prev 1.338292s
+Epoch 40: 960/1200 examples, loss 0.302725, optimizer_steps 60, ATTC_prev 1.338292s
+Epoch 40: 1120/1200 examples, loss 0.307073, optimizer_steps 70, ATTC_prev 1.338292s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 40: mAUC 0.7849, mAP 0.7778, ATTC_next 1.3370s; 936.4s
+Epoch 41: 160/1200 examples, loss 0.381119, optimizer_steps 10, ATTC_prev 1.336951s
+Epoch 41: 320/1200 examples, loss 0.322542, optimizer_steps 20, ATTC_prev 1.336951s
+Epoch 41: 480/1200 examples, loss 0.309112, optimizer_steps 30, ATTC_prev 1.336951s
+Epoch 41: 640/1200 examples, loss 0.311037, optimizer_steps 40, ATTC_prev 1.336951s
+Epoch 41: 800/1200 examples, loss 0.309028, optimizer_steps 50, ATTC_prev 1.336951s
+Epoch 41: 960/1200 examples, loss 0.312381, optimizer_steps 60, ATTC_prev 1.336951s
+Epoch 41: 1120/1200 examples, loss 0.312036, optimizer_steps 70, ATTC_prev 1.336951s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 41: mAUC 0.7848, mAP 0.7781, ATTC_next 1.3381s; 907.2s
+Epoch 42: 160/1200 examples, loss 0.314014, optimizer_steps 10, ATTC_prev 1.338086s
+Epoch 42: 320/1200 examples, loss 0.320774, optimizer_steps 20, ATTC_prev 1.338086s
+Epoch 42: 480/1200 examples, loss 0.323946, optimizer_steps 30, ATTC_prev 1.338086s
+Epoch 42: 640/1200 examples, loss 0.320833, optimizer_steps 40, ATTC_prev 1.338086s
+Epoch 42: 800/1200 examples, loss 0.313834, optimizer_steps 50, ATTC_prev 1.338086s
+Epoch 42: 960/1200 examples, loss 0.307458, optimizer_steps 60, ATTC_prev 1.338086s
+Epoch 42: 1120/1200 examples, loss 0.305704, optimizer_steps 70, ATTC_prev 1.338086s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 42: mAUC 0.7844, mAP 0.7778, ATTC_next 1.3376s; 954.3s
+Epoch 43: 160/1200 examples, loss 0.296678, optimizer_steps 10, ATTC_prev 1.337647s
+Epoch 43: 320/1200 examples, loss 0.297335, optimizer_steps 20, ATTC_prev 1.337647s
+Epoch 43: 480/1200 examples, loss 0.295212, optimizer_steps 30, ATTC_prev 1.337647s
+Epoch 43: 640/1200 examples, loss 0.301791, optimizer_steps 40, ATTC_prev 1.337647s
+Epoch 43: 800/1200 examples, loss 0.293277, optimizer_steps 50, ATTC_prev 1.337647s
+Epoch 43: 960/1200 examples, loss 0.298875, optimizer_steps 60, ATTC_prev 1.337647s
+Epoch 43: 1120/1200 examples, loss 0.303116, optimizer_steps 70, ATTC_prev 1.337647s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 43: mAUC 0.7844, mAP 0.7778, ATTC_next 1.3386s; 889.8s
+Epoch 44: 160/1200 examples, loss 0.328138, optimizer_steps 10, ATTC_prev 1.338555s
+Epoch 44: 320/1200 examples, loss 0.317424, optimizer_steps 20, ATTC_prev 1.338555s
+Epoch 44: 480/1200 examples, loss 0.308039, optimizer_steps 30, ATTC_prev 1.338555s
+Epoch 44: 640/1200 examples, loss 0.305496, optimizer_steps 40, ATTC_prev 1.338555s
+Epoch 44: 800/1200 examples, loss 0.304447, optimizer_steps 50, ATTC_prev 1.338555s
+Epoch 44: 960/1200 examples, loss 0.304246, optimizer_steps 60, ATTC_prev 1.338555s
+Epoch 44: 1120/1200 examples, loss 0.305795, optimizer_steps 70, ATTC_prev 1.338555s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 44: mAUC 0.7844, mAP 0.7778, ATTC_next 1.3381s; 908.2s
+Epoch 45: 160/1200 examples, loss 0.308069, optimizer_steps 10, ATTC_prev 1.338064s
+Epoch 45: 320/1200 examples, loss 0.291452, optimizer_steps 20, ATTC_prev 1.338064s
+Epoch 45: 480/1200 examples, loss 0.302638, optimizer_steps 30, ATTC_prev 1.338064s
+Epoch 45: 640/1200 examples, loss 0.304327, optimizer_steps 40, ATTC_prev 1.338064s
+Epoch 45: 800/1200 examples, loss 0.304963, optimizer_steps 50, ATTC_prev 1.338064s
+Epoch 45: 960/1200 examples, loss 0.308319, optimizer_steps 60, ATTC_prev 1.338064s
+Epoch 45: 1120/1200 examples, loss 0.307507, optimizer_steps 70, ATTC_prev 1.338064s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 45: mAUC 0.7845, mAP 0.7774, ATTC_next 1.3370s; 922.5s
+Epoch 46: 160/1200 examples, loss 0.292734, optimizer_steps 10, ATTC_prev 1.337001s
+Epoch 46: 320/1200 examples, loss 0.301960, optimizer_steps 20, ATTC_prev 1.337001s
+Epoch 46: 480/1200 examples, loss 0.299302, optimizer_steps 30, ATTC_prev 1.337001s
+Epoch 46: 640/1200 examples, loss 0.300203, optimizer_steps 40, ATTC_prev 1.337001s
+Epoch 46: 800/1200 examples, loss 0.302437, optimizer_steps 50, ATTC_prev 1.337001s
+Epoch 46: 960/1200 examples, loss 0.302220, optimizer_steps 60, ATTC_prev 1.337001s
+Epoch 46: 1120/1200 examples, loss 0.303799, optimizer_steps 70, ATTC_prev 1.337001s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 46: mAUC 0.7844, mAP 0.7776, ATTC_next 1.3353s; 908.3s
+Epoch 47: 160/1200 examples, loss 0.325114, optimizer_steps 10, ATTC_prev 1.335313s
+Epoch 47: 320/1200 examples, loss 0.308419, optimizer_steps 20, ATTC_prev 1.335313s
+Epoch 47: 480/1200 examples, loss 0.321599, optimizer_steps 30, ATTC_prev 1.335313s
+Epoch 47: 640/1200 examples, loss 0.317357, optimizer_steps 40, ATTC_prev 1.335313s
+Epoch 47: 800/1200 examples, loss 0.312993, optimizer_steps 50, ATTC_prev 1.335313s
+Epoch 47: 960/1200 examples, loss 0.314427, optimizer_steps 60, ATTC_prev 1.335313s
+Epoch 47: 1120/1200 examples, loss 0.310907, optimizer_steps 70, ATTC_prev 1.335313s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 47: mAUC 0.7845, mAP 0.7779, ATTC_next 1.3373s; 884.8s
+Epoch 48: 160/1200 examples, loss 0.307421, optimizer_steps 10, ATTC_prev 1.337260s
+Epoch 48: 320/1200 examples, loss 0.302214, optimizer_steps 20, ATTC_prev 1.337260s
+Epoch 48: 480/1200 examples, loss 0.316990, optimizer_steps 30, ATTC_prev 1.337260s
+Epoch 48: 640/1200 examples, loss 0.312735, optimizer_steps 40, ATTC_prev 1.337260s
+Epoch 48: 800/1200 examples, loss 0.307040, optimizer_steps 50, ATTC_prev 1.337260s
+Epoch 48: 960/1200 examples, loss 0.311698, optimizer_steps 60, ATTC_prev 1.337260s
+Epoch 48: 1120/1200 examples, loss 0.307413, optimizer_steps 70, ATTC_prev 1.337260s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 48: mAUC 0.7845, mAP 0.7780, ATTC_next 1.3376s; 856.3s
+Epoch 49: 160/1200 examples, loss 0.339407, optimizer_steps 10, ATTC_prev 1.337568s
+Epoch 49: 320/1200 examples, loss 0.331533, optimizer_steps 20, ATTC_prev 1.337568s
+Epoch 49: 480/1200 examples, loss 0.321924, optimizer_steps 30, ATTC_prev 1.337568s
+Epoch 49: 640/1200 examples, loss 0.318866, optimizer_steps 40, ATTC_prev 1.337568s
+Epoch 49: 800/1200 examples, loss 0.317107, optimizer_steps 50, ATTC_prev 1.337568s
+Epoch 49: 960/1200 examples, loss 0.308185, optimizer_steps 60, ATTC_prev 1.337568s
+Epoch 49: 1120/1200 examples, loss 0.312172, optimizer_steps 70, ATTC_prev 1.337568s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 49: mAUC 0.7845, mAP 0.7781, ATTC_next 1.3362s; 874.9s
+Epoch 50: 160/1200 examples, loss 0.305235, optimizer_steps 10, ATTC_prev 1.336244s
+Epoch 50: 320/1200 examples, loss 0.307516, optimizer_steps 20, ATTC_prev 1.336244s
+Epoch 50: 480/1200 examples, loss 0.305005, optimizer_steps 30, ATTC_prev 1.336244s
+Epoch 50: 640/1200 examples, loss 0.304604, optimizer_steps 40, ATTC_prev 1.336244s
+Epoch 50: 800/1200 examples, loss 0.303660, optimizer_steps 50, ATTC_prev 1.336244s
+Epoch 50: 960/1200 examples, loss 0.305475, optimizer_steps 60, ATTC_prev 1.336244s
+Epoch 50: 1120/1200 examples, loss 0.304395, optimizer_steps 70, ATTC_prev 1.336244s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 42 epoch 50: mAUC 0.7844, mAP 0.7783, ATTC_next 1.3358s; 820.8s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+FULL CURVES seed42 50/1344, max scalar delta 0.00000006
+FULL CURVES seed42 100/1344, max scalar delta 0.00000006
+FULL CURVES seed42 150/1344, max scalar delta 0.00000006
+FULL CURVES seed42 200/1344, max scalar delta 0.00000012
+FULL CURVES seed42 250/1344, max scalar delta 0.00000012
+FULL CURVES seed42 300/1344, max scalar delta 0.00000012
+FULL CURVES seed42 350/1344, max scalar delta 0.00000012
+FULL CURVES seed42 400/1344, max scalar delta 0.00000012
+FULL CURVES seed42 450/1344, max scalar delta 0.00000012
+FULL CURVES seed42 500/1344, max scalar delta 0.00000012
+FULL CURVES seed42 550/1344, max scalar delta 0.00000012
+FULL CURVES seed42 600/1344, max scalar delta 0.00000012
+FULL CURVES seed42 650/1344, max scalar delta 0.00000012
+FULL CURVES seed42 700/1344, max scalar delta 0.00000012
+FULL CURVES seed42 750/1344, max scalar delta 0.00000012
+FULL CURVES seed42 800/1344, max scalar delta 0.00000012
+FULL CURVES seed42 850/1344, max scalar delta 0.00000012
+FULL CURVES seed42 900/1344, max scalar delta 0.00000012
+FULL CURVES seed42 950/1344, max scalar delta 0.00000012
+FULL CURVES seed42 1000/1344, max scalar delta 0.00000012
+FULL CURVES seed42 1050/1344, max scalar delta 0.00000012
+FULL CURVES seed42 1100/1344, max scalar delta 0.00000012
+FULL CURVES seed42 1150/1344, max scalar delta 0.00000012
+FULL CURVES seed42 1200/1344, max scalar delta 0.00000012
+FULL CURVES seed42 1250/1344, max scalar delta 0.00000012
+FULL CURVES seed42 1300/1344, max scalar delta 0.00000012
+Epoch 1: 160/1200 examples, loss 0.372724, optimizer_steps 10, ATTC_prev 0.000000s
+Epoch 1: 320/1200 examples, loss 0.312214, optimizer_steps 20, ATTC_prev 0.000000s
+Epoch 1: 480/1200 examples, loss 0.274562, optimizer_steps 30, ATTC_prev 0.000000s
+Epoch 1: 640/1200 examples, loss 0.244178, optimizer_steps 40, ATTC_prev 0.000000s
+Epoch 1: 800/1200 examples, loss 0.225444, optimizer_steps 50, ATTC_prev 0.000000s
+Epoch 1: 960/1200 examples, loss 0.211906, optimizer_steps 60, ATTC_prev 0.000000s
+Epoch 1: 1120/1200 examples, loss 0.202789, optimizer_steps 70, ATTC_prev 0.000000s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 1: mAUC 0.5825, mAP 0.5290, ATTC_next 2.8860s; 879.0s
+Epoch 2: 160/1200 examples, loss 1.188218, optimizer_steps 10, ATTC_prev 2.885987s
+Epoch 2: 320/1200 examples, loss 0.946270, optimizer_steps 20, ATTC_prev 2.885987s
+Epoch 2: 480/1200 examples, loss 0.856025, optimizer_steps 30, ATTC_prev 2.885987s
+Epoch 2: 640/1200 examples, loss 0.813526, optimizer_steps 40, ATTC_prev 2.885987s
+Epoch 2: 800/1200 examples, loss 0.785440, optimizer_steps 50, ATTC_prev 2.885987s
+Epoch 2: 960/1200 examples, loss 0.766040, optimizer_steps 60, ATTC_prev 2.885987s
+Epoch 2: 1120/1200 examples, loss 0.753377, optimizer_steps 70, ATTC_prev 2.885987s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 2: mAUC 0.7194, mAP 0.6947, ATTC_next 1.9718s; 815.1s
+Epoch 3: 160/1200 examples, loss 0.579384, optimizer_steps 10, ATTC_prev 1.971760s
+Epoch 3: 320/1200 examples, loss 0.570295, optimizer_steps 20, ATTC_prev 1.971760s
+Epoch 3: 480/1200 examples, loss 0.567415, optimizer_steps 30, ATTC_prev 1.971760s
+Epoch 3: 640/1200 examples, loss 0.564901, optimizer_steps 40, ATTC_prev 1.971760s
+Epoch 3: 800/1200 examples, loss 0.564168, optimizer_steps 50, ATTC_prev 1.971760s
+Epoch 3: 960/1200 examples, loss 0.559223, optimizer_steps 60, ATTC_prev 1.971760s
+Epoch 3: 1120/1200 examples, loss 0.556475, optimizer_steps 70, ATTC_prev 1.971760s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 3: mAUC 0.7306, mAP 0.7060, ATTC_next 1.9778s; 815.5s
+Epoch 4: 160/1200 examples, loss 0.513041, optimizer_steps 10, ATTC_prev 1.977847s
+Epoch 4: 320/1200 examples, loss 0.519445, optimizer_steps 20, ATTC_prev 1.977847s
+Epoch 4: 480/1200 examples, loss 0.521101, optimizer_steps 30, ATTC_prev 1.977847s
+Epoch 4: 640/1200 examples, loss 0.514719, optimizer_steps 40, ATTC_prev 1.977847s
+Epoch 4: 800/1200 examples, loss 0.511320, optimizer_steps 50, ATTC_prev 1.977847s
+Epoch 4: 960/1200 examples, loss 0.512209, optimizer_steps 60, ATTC_prev 1.977847s
+Epoch 4: 1120/1200 examples, loss 0.515281, optimizer_steps 70, ATTC_prev 1.977847s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 4: mAUC 0.7404, mAP 0.7196, ATTC_next 1.8891s; 837.4s
+Epoch 5: 160/1200 examples, loss 0.498935, optimizer_steps 10, ATTC_prev 1.889105s
+Epoch 5: 320/1200 examples, loss 0.499091, optimizer_steps 20, ATTC_prev 1.889105s
+Epoch 5: 480/1200 examples, loss 0.494917, optimizer_steps 30, ATTC_prev 1.889105s
+Epoch 5: 640/1200 examples, loss 0.490278, optimizer_steps 40, ATTC_prev 1.889105s
+Epoch 5: 800/1200 examples, loss 0.488467, optimizer_steps 50, ATTC_prev 1.889105s
+Epoch 5: 960/1200 examples, loss 0.491914, optimizer_steps 60, ATTC_prev 1.889105s
+Epoch 5: 1120/1200 examples, loss 0.488954, optimizer_steps 70, ATTC_prev 1.889105s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 5: mAUC 0.7471, mAP 0.7275, ATTC_next 1.8659s; 816.1s
+Epoch 6: 160/1200 examples, loss 0.437408, optimizer_steps 10, ATTC_prev 1.865934s
+Epoch 6: 320/1200 examples, loss 0.465016, optimizer_steps 20, ATTC_prev 1.865934s
+Epoch 6: 480/1200 examples, loss 0.475695, optimizer_steps 30, ATTC_prev 1.865934s
+Epoch 6: 640/1200 examples, loss 0.487434, optimizer_steps 40, ATTC_prev 1.865934s
+Epoch 6: 800/1200 examples, loss 0.477809, optimizer_steps 50, ATTC_prev 1.865934s
+Epoch 6: 960/1200 examples, loss 0.479176, optimizer_steps 60, ATTC_prev 1.865934s
+Epoch 6: 1120/1200 examples, loss 0.481058, optimizer_steps 70, ATTC_prev 1.865934s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 6: mAUC 0.7515, mAP 0.7284, ATTC_next 1.8379s; 804.7s
+Epoch 7: 160/1200 examples, loss 0.462575, optimizer_steps 10, ATTC_prev 1.837926s
+Epoch 7: 320/1200 examples, loss 0.478209, optimizer_steps 20, ATTC_prev 1.837926s
+Epoch 7: 480/1200 examples, loss 0.481118, optimizer_steps 30, ATTC_prev 1.837926s
+Epoch 7: 640/1200 examples, loss 0.477791, optimizer_steps 40, ATTC_prev 1.837926s
+Epoch 7: 800/1200 examples, loss 0.474254, optimizer_steps 50, ATTC_prev 1.837926s
+Epoch 7: 960/1200 examples, loss 0.473731, optimizer_steps 60, ATTC_prev 1.837926s
+Epoch 7: 1120/1200 examples, loss 0.465780, optimizer_steps 70, ATTC_prev 1.837926s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 7: mAUC 0.7542, mAP 0.7331, ATTC_next 1.7994s; 797.7s
+Epoch 8: 160/1200 examples, loss 0.429962, optimizer_steps 10, ATTC_prev 1.799412s
+Epoch 8: 320/1200 examples, loss 0.424711, optimizer_steps 20, ATTC_prev 1.799412s
+Epoch 8: 480/1200 examples, loss 0.443010, optimizer_steps 30, ATTC_prev 1.799412s
+Epoch 8: 640/1200 examples, loss 0.455805, optimizer_steps 40, ATTC_prev 1.799412s
+Epoch 8: 800/1200 examples, loss 0.456930, optimizer_steps 50, ATTC_prev 1.799412s
+Epoch 8: 960/1200 examples, loss 0.460452, optimizer_steps 60, ATTC_prev 1.799412s
+Epoch 8: 1120/1200 examples, loss 0.461396, optimizer_steps 70, ATTC_prev 1.799412s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 8: mAUC 0.7568, mAP 0.7344, ATTC_next 1.7349s; 757.3s
+Epoch 9: 160/1200 examples, loss 0.430394, optimizer_steps 10, ATTC_prev 1.734903s
+Epoch 9: 320/1200 examples, loss 0.454186, optimizer_steps 20, ATTC_prev 1.734903s
+Epoch 9: 480/1200 examples, loss 0.449610, optimizer_steps 30, ATTC_prev 1.734903s
+Epoch 9: 640/1200 examples, loss 0.439024, optimizer_steps 40, ATTC_prev 1.734903s
+Epoch 9: 800/1200 examples, loss 0.436401, optimizer_steps 50, ATTC_prev 1.734903s
+Epoch 9: 960/1200 examples, loss 0.433492, optimizer_steps 60, ATTC_prev 1.734903s
+Epoch 9: 1120/1200 examples, loss 0.440548, optimizer_steps 70, ATTC_prev 1.734903s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 9: mAUC 0.7594, mAP 0.7399, ATTC_next 1.7958s; 764.4s
+Epoch 10: 160/1200 examples, loss 0.472624, optimizer_steps 10, ATTC_prev 1.795783s
+Epoch 10: 320/1200 examples, loss 0.455959, optimizer_steps 20, ATTC_prev 1.795783s
+Epoch 10: 480/1200 examples, loss 0.462975, optimizer_steps 30, ATTC_prev 1.795783s
+Epoch 10: 640/1200 examples, loss 0.452922, optimizer_steps 40, ATTC_prev 1.795783s
+Epoch 10: 800/1200 examples, loss 0.457546, optimizer_steps 50, ATTC_prev 1.795783s
+Epoch 10: 960/1200 examples, loss 0.455136, optimizer_steps 60, ATTC_prev 1.795783s
+Epoch 10: 1120/1200 examples, loss 0.450317, optimizer_steps 70, ATTC_prev 1.795783s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 10: mAUC 0.7632, mAP 0.7442, ATTC_next 1.7024s; 770.7s
+Epoch 11: 160/1200 examples, loss 0.406869, optimizer_steps 10, ATTC_prev 1.702444s
+Epoch 11: 320/1200 examples, loss 0.427458, optimizer_steps 20, ATTC_prev 1.702444s
+Epoch 11: 480/1200 examples, loss 0.437744, optimizer_steps 30, ATTC_prev 1.702444s
+Epoch 11: 640/1200 examples, loss 0.426406, optimizer_steps 40, ATTC_prev 1.702444s
+Epoch 11: 800/1200 examples, loss 0.426651, optimizer_steps 50, ATTC_prev 1.702444s
+Epoch 11: 960/1200 examples, loss 0.431127, optimizer_steps 60, ATTC_prev 1.702444s
+Epoch 11: 1120/1200 examples, loss 0.430046, optimizer_steps 70, ATTC_prev 1.702444s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 11: mAUC 0.7648, mAP 0.7443, ATTC_next 1.6539s; 739.5s
+Epoch 12: 160/1200 examples, loss 0.436302, optimizer_steps 10, ATTC_prev 1.653940s
+Epoch 12: 320/1200 examples, loss 0.447365, optimizer_steps 20, ATTC_prev 1.653940s
+Epoch 12: 480/1200 examples, loss 0.440902, optimizer_steps 30, ATTC_prev 1.653940s
+Epoch 12: 640/1200 examples, loss 0.428623, optimizer_steps 40, ATTC_prev 1.653940s
+Epoch 12: 800/1200 examples, loss 0.428662, optimizer_steps 50, ATTC_prev 1.653940s
+Epoch 12: 960/1200 examples, loss 0.422976, optimizer_steps 60, ATTC_prev 1.653940s
+Epoch 12: 1120/1200 examples, loss 0.420759, optimizer_steps 70, ATTC_prev 1.653940s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 12: mAUC 0.7655, mAP 0.7508, ATTC_next 1.6342s; 798.4s
+Epoch 13: 160/1200 examples, loss 0.418983, optimizer_steps 10, ATTC_prev 1.634234s
+Epoch 13: 320/1200 examples, loss 0.413924, optimizer_steps 20, ATTC_prev 1.634234s
+Epoch 13: 480/1200 examples, loss 0.410270, optimizer_steps 30, ATTC_prev 1.634234s
+Epoch 13: 640/1200 examples, loss 0.408994, optimizer_steps 40, ATTC_prev 1.634234s
+Epoch 13: 800/1200 examples, loss 0.404806, optimizer_steps 50, ATTC_prev 1.634234s
+Epoch 13: 960/1200 examples, loss 0.411329, optimizer_steps 60, ATTC_prev 1.634234s
+Epoch 13: 1120/1200 examples, loss 0.408072, optimizer_steps 70, ATTC_prev 1.634234s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 13: mAUC 0.7691, mAP 0.7565, ATTC_next 1.5994s; 770.6s
+Epoch 14: 160/1200 examples, loss 0.454137, optimizer_steps 10, ATTC_prev 1.599421s
+Epoch 14: 320/1200 examples, loss 0.431179, optimizer_steps 20, ATTC_prev 1.599421s
+Epoch 14: 480/1200 examples, loss 0.425073, optimizer_steps 30, ATTC_prev 1.599421s
+Epoch 14: 640/1200 examples, loss 0.417556, optimizer_steps 40, ATTC_prev 1.599421s
+Epoch 14: 800/1200 examples, loss 0.416969, optimizer_steps 50, ATTC_prev 1.599421s
+Epoch 14: 960/1200 examples, loss 0.414913, optimizer_steps 60, ATTC_prev 1.599421s
+Epoch 14: 1120/1200 examples, loss 0.413349, optimizer_steps 70, ATTC_prev 1.599421s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 14: mAUC 0.7705, mAP 0.7603, ATTC_next 1.5660s; 649.6s
+Epoch 15: 160/1200 examples, loss 0.370586, optimizer_steps 10, ATTC_prev 1.566038s
+Epoch 15: 320/1200 examples, loss 0.382036, optimizer_steps 20, ATTC_prev 1.566038s
+Epoch 15: 480/1200 examples, loss 0.381410, optimizer_steps 30, ATTC_prev 1.566038s
+Epoch 15: 640/1200 examples, loss 0.398582, optimizer_steps 40, ATTC_prev 1.566038s
+Epoch 15: 800/1200 examples, loss 0.392852, optimizer_steps 50, ATTC_prev 1.566038s
+Epoch 15: 960/1200 examples, loss 0.397145, optimizer_steps 60, ATTC_prev 1.566038s
+Epoch 15: 1120/1200 examples, loss 0.396173, optimizer_steps 70, ATTC_prev 1.566038s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 15: mAUC 0.7699, mAP 0.7586, ATTC_next 1.5327s; 665.1s
+Epoch 16: 160/1200 examples, loss 0.335389, optimizer_steps 10, ATTC_prev 1.532742s
+Epoch 16: 320/1200 examples, loss 0.368705, optimizer_steps 20, ATTC_prev 1.532742s
+Epoch 16: 480/1200 examples, loss 0.376709, optimizer_steps 30, ATTC_prev 1.532742s
+Epoch 16: 640/1200 examples, loss 0.390847, optimizer_steps 40, ATTC_prev 1.532742s
+Epoch 16: 800/1200 examples, loss 0.385660, optimizer_steps 50, ATTC_prev 1.532742s
+Epoch 16: 960/1200 examples, loss 0.388825, optimizer_steps 60, ATTC_prev 1.532742s
+Epoch 16: 1120/1200 examples, loss 0.383514, optimizer_steps 70, ATTC_prev 1.532742s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 16: mAUC 0.7702, mAP 0.7604, ATTC_next 1.5286s; 701.6s
+Epoch 17: 160/1200 examples, loss 0.346918, optimizer_steps 10, ATTC_prev 1.528592s
+Epoch 17: 320/1200 examples, loss 0.361497, optimizer_steps 20, ATTC_prev 1.528592s
+Epoch 17: 480/1200 examples, loss 0.365601, optimizer_steps 30, ATTC_prev 1.528592s
+Epoch 17: 640/1200 examples, loss 0.358004, optimizer_steps 40, ATTC_prev 1.528592s
+Epoch 17: 800/1200 examples, loss 0.377732, optimizer_steps 50, ATTC_prev 1.528592s
+Epoch 17: 960/1200 examples, loss 0.384601, optimizer_steps 60, ATTC_prev 1.528592s
+Epoch 17: 1120/1200 examples, loss 0.383439, optimizer_steps 70, ATTC_prev 1.528592s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 17: mAUC 0.7720, mAP 0.7583, ATTC_next 1.4769s; 673.2s
+Epoch 18: 160/1200 examples, loss 0.395221, optimizer_steps 10, ATTC_prev 1.476874s
+Epoch 18: 320/1200 examples, loss 0.384926, optimizer_steps 20, ATTC_prev 1.476874s
+Epoch 18: 480/1200 examples, loss 0.377022, optimizer_steps 30, ATTC_prev 1.476874s
+Epoch 18: 640/1200 examples, loss 0.377290, optimizer_steps 40, ATTC_prev 1.476874s
+Epoch 18: 800/1200 examples, loss 0.369884, optimizer_steps 50, ATTC_prev 1.476874s
+Epoch 18: 960/1200 examples, loss 0.366305, optimizer_steps 60, ATTC_prev 1.476874s
+Epoch 18: 1120/1200 examples, loss 0.363472, optimizer_steps 70, ATTC_prev 1.476874s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 18: mAUC 0.7717, mAP 0.7633, ATTC_next 1.4418s; 700.2s
+Epoch 19: 160/1200 examples, loss 0.313208, optimizer_steps 10, ATTC_prev 1.441842s
+Epoch 19: 320/1200 examples, loss 0.327774, optimizer_steps 20, ATTC_prev 1.441842s
+Epoch 19: 480/1200 examples, loss 0.345890, optimizer_steps 30, ATTC_prev 1.441842s
+Epoch 19: 640/1200 examples, loss 0.345656, optimizer_steps 40, ATTC_prev 1.441842s
+Epoch 19: 800/1200 examples, loss 0.355139, optimizer_steps 50, ATTC_prev 1.441842s
+Epoch 19: 960/1200 examples, loss 0.360791, optimizer_steps 60, ATTC_prev 1.441842s
+Epoch 19: 1120/1200 examples, loss 0.361677, optimizer_steps 70, ATTC_prev 1.441842s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 19: mAUC 0.7721, mAP 0.7613, ATTC_next 1.3903s; 726.9s
+Epoch 20: 160/1200 examples, loss 0.365787, optimizer_steps 10, ATTC_prev 1.390251s
+Epoch 20: 320/1200 examples, loss 0.339339, optimizer_steps 20, ATTC_prev 1.390251s
+Epoch 20: 480/1200 examples, loss 0.348706, optimizer_steps 30, ATTC_prev 1.390251s
+Epoch 20: 640/1200 examples, loss 0.350793, optimizer_steps 40, ATTC_prev 1.390251s
+Epoch 20: 800/1200 examples, loss 0.341982, optimizer_steps 50, ATTC_prev 1.390251s
+Epoch 20: 960/1200 examples, loss 0.340825, optimizer_steps 60, ATTC_prev 1.390251s
+Epoch 20: 1120/1200 examples, loss 0.346518, optimizer_steps 70, ATTC_prev 1.390251s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 20: mAUC 0.7749, mAP 0.7659, ATTC_next 1.3569s; 740.9s
+Epoch 21: 160/1200 examples, loss 0.313996, optimizer_steps 10, ATTC_prev 1.356937s
+Epoch 21: 320/1200 examples, loss 0.304648, optimizer_steps 20, ATTC_prev 1.356937s
+Epoch 21: 480/1200 examples, loss 0.311593, optimizer_steps 30, ATTC_prev 1.356937s
+Epoch 21: 640/1200 examples, loss 0.306884, optimizer_steps 40, ATTC_prev 1.356937s
+Epoch 21: 800/1200 examples, loss 0.311589, optimizer_steps 50, ATTC_prev 1.356937s
+Epoch 21: 960/1200 examples, loss 0.317802, optimizer_steps 60, ATTC_prev 1.356937s
+Epoch 21: 1120/1200 examples, loss 0.317180, optimizer_steps 70, ATTC_prev 1.356937s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 21: mAUC 0.7755, mAP 0.7648, ATTC_next 1.3559s; 638.5s
+Epoch 22: 160/1200 examples, loss 0.295642, optimizer_steps 10, ATTC_prev 1.355937s
+Epoch 22: 320/1200 examples, loss 0.317517, optimizer_steps 20, ATTC_prev 1.355937s
+Epoch 22: 480/1200 examples, loss 0.308736, optimizer_steps 30, ATTC_prev 1.355937s
+Epoch 22: 640/1200 examples, loss 0.327309, optimizer_steps 40, ATTC_prev 1.355937s
+Epoch 22: 800/1200 examples, loss 0.327408, optimizer_steps 50, ATTC_prev 1.355937s
+Epoch 22: 960/1200 examples, loss 0.324980, optimizer_steps 60, ATTC_prev 1.355937s
+Epoch 22: 1120/1200 examples, loss 0.325969, optimizer_steps 70, ATTC_prev 1.355937s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 22: mAUC 0.7761, mAP 0.7649, ATTC_next 1.3467s; 685.9s
+Epoch 23: 160/1200 examples, loss 0.327044, optimizer_steps 10, ATTC_prev 1.346713s
+Epoch 23: 320/1200 examples, loss 0.311258, optimizer_steps 20, ATTC_prev 1.346713s
+Epoch 23: 480/1200 examples, loss 0.321357, optimizer_steps 30, ATTC_prev 1.346713s
+Epoch 23: 640/1200 examples, loss 0.331848, optimizer_steps 40, ATTC_prev 1.346713s
+Epoch 23: 800/1200 examples, loss 0.327270, optimizer_steps 50, ATTC_prev 1.346713s
+Epoch 23: 960/1200 examples, loss 0.320778, optimizer_steps 60, ATTC_prev 1.346713s
+Epoch 23: 1120/1200 examples, loss 0.323142, optimizer_steps 70, ATTC_prev 1.346713s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 23: mAUC 0.7762, mAP 0.7658, ATTC_next 1.3381s; 679.2s
+Epoch 24: 160/1200 examples, loss 0.343168, optimizer_steps 10, ATTC_prev 1.338098s
+Epoch 24: 320/1200 examples, loss 0.334370, optimizer_steps 20, ATTC_prev 1.338098s
+Epoch 24: 480/1200 examples, loss 0.330568, optimizer_steps 30, ATTC_prev 1.338098s
+Epoch 24: 640/1200 examples, loss 0.315340, optimizer_steps 40, ATTC_prev 1.338098s
+Epoch 24: 800/1200 examples, loss 0.312700, optimizer_steps 50, ATTC_prev 1.338098s
+Epoch 24: 960/1200 examples, loss 0.317185, optimizer_steps 60, ATTC_prev 1.338098s
+Epoch 24: 1120/1200 examples, loss 0.314770, optimizer_steps 70, ATTC_prev 1.338098s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 24: mAUC 0.7766, mAP 0.7667, ATTC_next 1.3382s; 711.1s
+Epoch 25: 160/1200 examples, loss 0.331960, optimizer_steps 10, ATTC_prev 1.338184s
+Epoch 25: 320/1200 examples, loss 0.326104, optimizer_steps 20, ATTC_prev 1.338184s
+Epoch 25: 480/1200 examples, loss 0.326588, optimizer_steps 30, ATTC_prev 1.338184s
+Epoch 25: 640/1200 examples, loss 0.326276, optimizer_steps 40, ATTC_prev 1.338184s
+Epoch 25: 800/1200 examples, loss 0.321064, optimizer_steps 50, ATTC_prev 1.338184s
+Epoch 25: 960/1200 examples, loss 0.324363, optimizer_steps 60, ATTC_prev 1.338184s
+Epoch 25: 1120/1200 examples, loss 0.321004, optimizer_steps 70, ATTC_prev 1.338184s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 25: mAUC 0.7767, mAP 0.7687, ATTC_next 1.3396s; 656.7s
+Epoch 26: 160/1200 examples, loss 0.332635, optimizer_steps 10, ATTC_prev 1.339631s
+Epoch 26: 320/1200 examples, loss 0.326579, optimizer_steps 20, ATTC_prev 1.339631s
+Epoch 26: 480/1200 examples, loss 0.317755, optimizer_steps 30, ATTC_prev 1.339631s
+Epoch 26: 640/1200 examples, loss 0.318283, optimizer_steps 40, ATTC_prev 1.339631s
+Epoch 26: 800/1200 examples, loss 0.317272, optimizer_steps 50, ATTC_prev 1.339631s
+Epoch 26: 960/1200 examples, loss 0.318998, optimizer_steps 60, ATTC_prev 1.339631s
+Epoch 26: 1120/1200 examples, loss 0.318164, optimizer_steps 70, ATTC_prev 1.339631s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 26: mAUC 0.7760, mAP 0.7670, ATTC_next 1.3312s; 663.5s
+Epoch 27: 160/1200 examples, loss 0.332923, optimizer_steps 10, ATTC_prev 1.331203s
+Epoch 27: 320/1200 examples, loss 0.318581, optimizer_steps 20, ATTC_prev 1.331203s
+Epoch 27: 480/1200 examples, loss 0.321592, optimizer_steps 30, ATTC_prev 1.331203s
+Epoch 27: 640/1200 examples, loss 0.319536, optimizer_steps 40, ATTC_prev 1.331203s
+Epoch 27: 800/1200 examples, loss 0.314344, optimizer_steps 50, ATTC_prev 1.331203s
+Epoch 27: 960/1200 examples, loss 0.317416, optimizer_steps 60, ATTC_prev 1.331203s
+Epoch 27: 1120/1200 examples, loss 0.314987, optimizer_steps 70, ATTC_prev 1.331203s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 27: mAUC 0.7775, mAP 0.7690, ATTC_next 1.3270s; 575.7s
+Epoch 28: 160/1200 examples, loss 0.343242, optimizer_steps 10, ATTC_prev 1.327029s
+Epoch 28: 320/1200 examples, loss 0.318306, optimizer_steps 20, ATTC_prev 1.327029s
+Epoch 28: 480/1200 examples, loss 0.328394, optimizer_steps 30, ATTC_prev 1.327029s
+Epoch 28: 640/1200 examples, loss 0.320917, optimizer_steps 40, ATTC_prev 1.327029s
+Epoch 28: 800/1200 examples, loss 0.319432, optimizer_steps 50, ATTC_prev 1.327029s
+Epoch 28: 960/1200 examples, loss 0.318323, optimizer_steps 60, ATTC_prev 1.327029s
+Epoch 28: 1120/1200 examples, loss 0.313198, optimizer_steps 70, ATTC_prev 1.327029s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 28: mAUC 0.7767, mAP 0.7666, ATTC_next 1.3231s; 570.7s
+Epoch 29: 160/1200 examples, loss 0.378344, optimizer_steps 10, ATTC_prev 1.323137s
+Epoch 29: 320/1200 examples, loss 0.324285, optimizer_steps 20, ATTC_prev 1.323137s
+Epoch 29: 480/1200 examples, loss 0.326218, optimizer_steps 30, ATTC_prev 1.323137s
+Epoch 29: 640/1200 examples, loss 0.322674, optimizer_steps 40, ATTC_prev 1.323137s
+Epoch 29: 800/1200 examples, loss 0.311735, optimizer_steps 50, ATTC_prev 1.323137s
+Epoch 29: 960/1200 examples, loss 0.303135, optimizer_steps 60, ATTC_prev 1.323137s
+Epoch 29: 1120/1200 examples, loss 0.307226, optimizer_steps 70, ATTC_prev 1.323137s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 29: mAUC 0.7771, mAP 0.7684, ATTC_next 1.3232s; 617.6s
+Epoch 30: 160/1200 examples, loss 0.278957, optimizer_steps 10, ATTC_prev 1.323168s
+Epoch 30: 320/1200 examples, loss 0.304015, optimizer_steps 20, ATTC_prev 1.323168s
+Epoch 30: 480/1200 examples, loss 0.301022, optimizer_steps 30, ATTC_prev 1.323168s
+Epoch 30: 640/1200 examples, loss 0.297007, optimizer_steps 40, ATTC_prev 1.323168s
+Epoch 30: 800/1200 examples, loss 0.297608, optimizer_steps 50, ATTC_prev 1.323168s
+Epoch 30: 960/1200 examples, loss 0.303225, optimizer_steps 60, ATTC_prev 1.323168s
+Epoch 30: 1120/1200 examples, loss 0.303399, optimizer_steps 70, ATTC_prev 1.323168s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 30: mAUC 0.7774, mAP 0.7689, ATTC_next 1.3229s; 621.8s
+Epoch 31: 160/1200 examples, loss 0.325530, optimizer_steps 10, ATTC_prev 1.322883s
+Epoch 31: 320/1200 examples, loss 0.316172, optimizer_steps 20, ATTC_prev 1.322883s
+Epoch 31: 480/1200 examples, loss 0.322507, optimizer_steps 30, ATTC_prev 1.322883s
+Epoch 31: 640/1200 examples, loss 0.319939, optimizer_steps 40, ATTC_prev 1.322883s
+Epoch 31: 800/1200 examples, loss 0.320457, optimizer_steps 50, ATTC_prev 1.322883s
+Epoch 31: 960/1200 examples, loss 0.314864, optimizer_steps 60, ATTC_prev 1.322883s
+Epoch 31: 1120/1200 examples, loss 0.317795, optimizer_steps 70, ATTC_prev 1.322883s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 31: mAUC 0.7764, mAP 0.7688, ATTC_next 1.3138s; 587.3s
+Epoch 32: 160/1200 examples, loss 0.285914, optimizer_steps 10, ATTC_prev 1.313832s
+Epoch 32: 320/1200 examples, loss 0.292068, optimizer_steps 20, ATTC_prev 1.313832s
+Epoch 32: 480/1200 examples, loss 0.298141, optimizer_steps 30, ATTC_prev 1.313832s
+Epoch 32: 640/1200 examples, loss 0.305523, optimizer_steps 40, ATTC_prev 1.313832s
+Epoch 32: 800/1200 examples, loss 0.308778, optimizer_steps 50, ATTC_prev 1.313832s
+Epoch 32: 960/1200 examples, loss 0.310012, optimizer_steps 60, ATTC_prev 1.313832s
+Epoch 32: 1120/1200 examples, loss 0.309626, optimizer_steps 70, ATTC_prev 1.313832s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 32: mAUC 0.7766, mAP 0.7688, ATTC_next 1.3149s; 566.0s
+Epoch 33: 160/1200 examples, loss 0.322350, optimizer_steps 10, ATTC_prev 1.314874s
+Epoch 33: 320/1200 examples, loss 0.309292, optimizer_steps 20, ATTC_prev 1.314874s
+Epoch 33: 480/1200 examples, loss 0.292816, optimizer_steps 30, ATTC_prev 1.314874s
+Epoch 33: 640/1200 examples, loss 0.291379, optimizer_steps 40, ATTC_prev 1.314874s
+Epoch 33: 800/1200 examples, loss 0.297221, optimizer_steps 50, ATTC_prev 1.314874s
+Epoch 33: 960/1200 examples, loss 0.298506, optimizer_steps 60, ATTC_prev 1.314874s
+Epoch 33: 1120/1200 examples, loss 0.302525, optimizer_steps 70, ATTC_prev 1.314874s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 33: mAUC 0.7772, mAP 0.7676, ATTC_next 1.3067s; 662.5s
+Epoch 34: 160/1200 examples, loss 0.286104, optimizer_steps 10, ATTC_prev 1.306675s
+Epoch 34: 320/1200 examples, loss 0.328756, optimizer_steps 20, ATTC_prev 1.306675s
+Epoch 34: 480/1200 examples, loss 0.310707, optimizer_steps 30, ATTC_prev 1.306675s
+Epoch 34: 640/1200 examples, loss 0.304334, optimizer_steps 40, ATTC_prev 1.306675s
+Epoch 34: 800/1200 examples, loss 0.299024, optimizer_steps 50, ATTC_prev 1.306675s
+Epoch 34: 960/1200 examples, loss 0.295313, optimizer_steps 60, ATTC_prev 1.306675s
+Epoch 34: 1120/1200 examples, loss 0.295217, optimizer_steps 70, ATTC_prev 1.306675s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 34: mAUC 0.7775, mAP 0.7689, ATTC_next 1.3046s; 618.5s
+Epoch 35: 160/1200 examples, loss 0.279422, optimizer_steps 10, ATTC_prev 1.304573s
+Epoch 35: 320/1200 examples, loss 0.280293, optimizer_steps 20, ATTC_prev 1.304573s
+Epoch 35: 480/1200 examples, loss 0.288704, optimizer_steps 30, ATTC_prev 1.304573s
+Epoch 35: 640/1200 examples, loss 0.301605, optimizer_steps 40, ATTC_prev 1.304573s
+Epoch 35: 800/1200 examples, loss 0.306709, optimizer_steps 50, ATTC_prev 1.304573s
+Epoch 35: 960/1200 examples, loss 0.303286, optimizer_steps 60, ATTC_prev 1.304573s
+Epoch 35: 1120/1200 examples, loss 0.298343, optimizer_steps 70, ATTC_prev 1.304573s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 35: mAUC 0.7775, mAP 0.7690, ATTC_next 1.3000s; 572.5s
+Epoch 36: 160/1200 examples, loss 0.285338, optimizer_steps 10, ATTC_prev 1.299951s
+Epoch 36: 320/1200 examples, loss 0.282867, optimizer_steps 20, ATTC_prev 1.299951s
+Epoch 36: 480/1200 examples, loss 0.295654, optimizer_steps 30, ATTC_prev 1.299951s
+Epoch 36: 640/1200 examples, loss 0.298140, optimizer_steps 40, ATTC_prev 1.299951s
+Epoch 36: 800/1200 examples, loss 0.291571, optimizer_steps 50, ATTC_prev 1.299951s
+Epoch 36: 960/1200 examples, loss 0.297853, optimizer_steps 60, ATTC_prev 1.299951s
+Epoch 36: 1120/1200 examples, loss 0.303123, optimizer_steps 70, ATTC_prev 1.299951s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 36: mAUC 0.7766, mAP 0.7678, ATTC_next 1.2963s; 499.3s
+Epoch 37: 160/1200 examples, loss 0.350344, optimizer_steps 10, ATTC_prev 1.296268s
+Epoch 37: 320/1200 examples, loss 0.333044, optimizer_steps 20, ATTC_prev 1.296268s
+Epoch 37: 480/1200 examples, loss 0.327592, optimizer_steps 30, ATTC_prev 1.296268s
+Epoch 37: 640/1200 examples, loss 0.318892, optimizer_steps 40, ATTC_prev 1.296268s
+Epoch 37: 800/1200 examples, loss 0.309036, optimizer_steps 50, ATTC_prev 1.296268s
+Epoch 37: 960/1200 examples, loss 0.311183, optimizer_steps 60, ATTC_prev 1.296268s
+Epoch 37: 1120/1200 examples, loss 0.305627, optimizer_steps 70, ATTC_prev 1.296268s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 37: mAUC 0.7763, mAP 0.7685, ATTC_next 1.2882s; 561.5s
+Epoch 38: 160/1200 examples, loss 0.272808, optimizer_steps 10, ATTC_prev 1.288237s
+Epoch 38: 320/1200 examples, loss 0.301651, optimizer_steps 20, ATTC_prev 1.288237s
+Epoch 38: 480/1200 examples, loss 0.295742, optimizer_steps 30, ATTC_prev 1.288237s
+Epoch 38: 640/1200 examples, loss 0.298375, optimizer_steps 40, ATTC_prev 1.288237s
+Epoch 38: 800/1200 examples, loss 0.299036, optimizer_steps 50, ATTC_prev 1.288237s
+Epoch 38: 960/1200 examples, loss 0.299311, optimizer_steps 60, ATTC_prev 1.288237s
+Epoch 38: 1120/1200 examples, loss 0.297481, optimizer_steps 70, ATTC_prev 1.288237s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 38: mAUC 0.7771, mAP 0.7694, ATTC_next 1.2872s; 523.8s
+Epoch 39: 160/1200 examples, loss 0.300858, optimizer_steps 10, ATTC_prev 1.287230s
+Epoch 39: 320/1200 examples, loss 0.300672, optimizer_steps 20, ATTC_prev 1.287230s
+Epoch 39: 480/1200 examples, loss 0.300158, optimizer_steps 30, ATTC_prev 1.287230s
+Epoch 39: 640/1200 examples, loss 0.301722, optimizer_steps 40, ATTC_prev 1.287230s
+Epoch 39: 800/1200 examples, loss 0.303683, optimizer_steps 50, ATTC_prev 1.287230s
+Epoch 39: 960/1200 examples, loss 0.307110, optimizer_steps 60, ATTC_prev 1.287230s
+Epoch 39: 1120/1200 examples, loss 0.303510, optimizer_steps 70, ATTC_prev 1.287230s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 39: mAUC 0.7768, mAP 0.7679, ATTC_next 1.2784s; 525.0s
+Epoch 40: 160/1200 examples, loss 0.280242, optimizer_steps 10, ATTC_prev 1.278381s
+Epoch 40: 320/1200 examples, loss 0.302197, optimizer_steps 20, ATTC_prev 1.278381s
+Epoch 40: 480/1200 examples, loss 0.300227, optimizer_steps 30, ATTC_prev 1.278381s
+Epoch 40: 640/1200 examples, loss 0.292702, optimizer_steps 40, ATTC_prev 1.278381s
+Epoch 40: 800/1200 examples, loss 0.300826, optimizer_steps 50, ATTC_prev 1.278381s
+Epoch 40: 960/1200 examples, loss 0.304860, optimizer_steps 60, ATTC_prev 1.278381s
+Epoch 40: 1120/1200 examples, loss 0.295515, optimizer_steps 70, ATTC_prev 1.278381s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 40: mAUC 0.7772, mAP 0.7688, ATTC_next 1.2735s; 543.7s
+Epoch 41: 160/1200 examples, loss 0.273024, optimizer_steps 10, ATTC_prev 1.273477s
+Epoch 41: 320/1200 examples, loss 0.299582, optimizer_steps 20, ATTC_prev 1.273477s
+Epoch 41: 480/1200 examples, loss 0.279261, optimizer_steps 30, ATTC_prev 1.273477s
+Epoch 41: 640/1200 examples, loss 0.280999, optimizer_steps 40, ATTC_prev 1.273477s
+Epoch 41: 800/1200 examples, loss 0.276619, optimizer_steps 50, ATTC_prev 1.273477s
+Epoch 41: 960/1200 examples, loss 0.289891, optimizer_steps 60, ATTC_prev 1.273477s
+Epoch 41: 1120/1200 examples, loss 0.288267, optimizer_steps 70, ATTC_prev 1.273477s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 41: mAUC 0.7769, mAP 0.7681, ATTC_next 1.2712s; 524.5s
+Epoch 42: 160/1200 examples, loss 0.298660, optimizer_steps 10, ATTC_prev 1.271236s
+Epoch 42: 320/1200 examples, loss 0.288944, optimizer_steps 20, ATTC_prev 1.271236s
+Epoch 42: 480/1200 examples, loss 0.289443, optimizer_steps 30, ATTC_prev 1.271236s
+Epoch 42: 640/1200 examples, loss 0.279554, optimizer_steps 40, ATTC_prev 1.271236s
+Epoch 42: 800/1200 examples, loss 0.278483, optimizer_steps 50, ATTC_prev 1.271236s
+Epoch 42: 960/1200 examples, loss 0.283808, optimizer_steps 60, ATTC_prev 1.271236s
+Epoch 42: 1120/1200 examples, loss 0.288047, optimizer_steps 70, ATTC_prev 1.271236s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 42: mAUC 0.7768, mAP 0.7678, ATTC_next 1.2718s; 484.7s
+Epoch 43: 160/1200 examples, loss 0.272301, optimizer_steps 10, ATTC_prev 1.271841s
+Epoch 43: 320/1200 examples, loss 0.290439, optimizer_steps 20, ATTC_prev 1.271841s
+Epoch 43: 480/1200 examples, loss 0.288752, optimizer_steps 30, ATTC_prev 1.271841s
+Epoch 43: 640/1200 examples, loss 0.290685, optimizer_steps 40, ATTC_prev 1.271841s
+Epoch 43: 800/1200 examples, loss 0.295213, optimizer_steps 50, ATTC_prev 1.271841s
+Epoch 43: 960/1200 examples, loss 0.290654, optimizer_steps 60, ATTC_prev 1.271841s
+Epoch 43: 1120/1200 examples, loss 0.292885, optimizer_steps 70, ATTC_prev 1.271841s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 43: mAUC 0.7768, mAP 0.7680, ATTC_next 1.2711s; 509.8s
+Epoch 44: 160/1200 examples, loss 0.302619, optimizer_steps 10, ATTC_prev 1.271086s
+Epoch 44: 320/1200 examples, loss 0.301806, optimizer_steps 20, ATTC_prev 1.271086s
+Epoch 44: 480/1200 examples, loss 0.301318, optimizer_steps 30, ATTC_prev 1.271086s
+Epoch 44: 640/1200 examples, loss 0.298590, optimizer_steps 40, ATTC_prev 1.271086s
+Epoch 44: 800/1200 examples, loss 0.303902, optimizer_steps 50, ATTC_prev 1.271086s
+Epoch 44: 960/1200 examples, loss 0.295917, optimizer_steps 60, ATTC_prev 1.271086s
+Epoch 44: 1120/1200 examples, loss 0.294057, optimizer_steps 70, ATTC_prev 1.271086s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 44: mAUC 0.7769, mAP 0.7676, ATTC_next 1.2703s; 507.8s
+Epoch 45: 160/1200 examples, loss 0.299735, optimizer_steps 10, ATTC_prev 1.270258s
+Epoch 45: 320/1200 examples, loss 0.286661, optimizer_steps 20, ATTC_prev 1.270258s
+Epoch 45: 480/1200 examples, loss 0.285046, optimizer_steps 30, ATTC_prev 1.270258s
+Epoch 45: 640/1200 examples, loss 0.277850, optimizer_steps 40, ATTC_prev 1.270258s
+Epoch 45: 800/1200 examples, loss 0.284440, optimizer_steps 50, ATTC_prev 1.270258s
+Epoch 45: 960/1200 examples, loss 0.287364, optimizer_steps 60, ATTC_prev 1.270258s
+Epoch 45: 1120/1200 examples, loss 0.292346, optimizer_steps 70, ATTC_prev 1.270258s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 45: mAUC 0.7768, mAP 0.7677, ATTC_next 1.2699s; 504.6s
+Epoch 46: 160/1200 examples, loss 0.270512, optimizer_steps 10, ATTC_prev 1.269890s
+Epoch 46: 320/1200 examples, loss 0.286757, optimizer_steps 20, ATTC_prev 1.269890s
+Epoch 46: 480/1200 examples, loss 0.275549, optimizer_steps 30, ATTC_prev 1.269890s
+Epoch 46: 640/1200 examples, loss 0.275497, optimizer_steps 40, ATTC_prev 1.269890s
+Epoch 46: 800/1200 examples, loss 0.279464, optimizer_steps 50, ATTC_prev 1.269890s
+Epoch 46: 960/1200 examples, loss 0.287650, optimizer_steps 60, ATTC_prev 1.269890s
+Epoch 46: 1120/1200 examples, loss 0.285347, optimizer_steps 70, ATTC_prev 1.269890s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 46: mAUC 0.7772, mAP 0.7684, ATTC_next 1.2713s; 515.2s
+Epoch 47: 160/1200 examples, loss 0.286172, optimizer_steps 10, ATTC_prev 1.271266s
+Epoch 47: 320/1200 examples, loss 0.286052, optimizer_steps 20, ATTC_prev 1.271266s
+Epoch 47: 480/1200 examples, loss 0.298589, optimizer_steps 30, ATTC_prev 1.271266s
+Epoch 47: 640/1200 examples, loss 0.295219, optimizer_steps 40, ATTC_prev 1.271266s
+Epoch 47: 800/1200 examples, loss 0.298151, optimizer_steps 50, ATTC_prev 1.271266s
+Epoch 47: 960/1200 examples, loss 0.299828, optimizer_steps 60, ATTC_prev 1.271266s
+Epoch 47: 1120/1200 examples, loss 0.297296, optimizer_steps 70, ATTC_prev 1.271266s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 47: mAUC 0.7769, mAP 0.7682, ATTC_next 1.2700s; 493.4s
+Epoch 48: 160/1200 examples, loss 0.296361, optimizer_steps 10, ATTC_prev 1.270048s
+Epoch 48: 320/1200 examples, loss 0.282789, optimizer_steps 20, ATTC_prev 1.270048s
+Epoch 48: 480/1200 examples, loss 0.288230, optimizer_steps 30, ATTC_prev 1.270048s
+Epoch 48: 640/1200 examples, loss 0.288210, optimizer_steps 40, ATTC_prev 1.270048s
+Epoch 48: 800/1200 examples, loss 0.284744, optimizer_steps 50, ATTC_prev 1.270048s
+Epoch 48: 960/1200 examples, loss 0.293157, optimizer_steps 60, ATTC_prev 1.270048s
+Epoch 48: 1120/1200 examples, loss 0.288673, optimizer_steps 70, ATTC_prev 1.270048s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 48: mAUC 0.7770, mAP 0.7684, ATTC_next 1.2701s; 477.8s
+Epoch 49: 160/1200 examples, loss 0.296730, optimizer_steps 10, ATTC_prev 1.270083s
+Epoch 49: 320/1200 examples, loss 0.281409, optimizer_steps 20, ATTC_prev 1.270083s
+Epoch 49: 480/1200 examples, loss 0.277436, optimizer_steps 30, ATTC_prev 1.270083s
+Epoch 49: 640/1200 examples, loss 0.284708, optimizer_steps 40, ATTC_prev 1.270083s
+Epoch 49: 800/1200 examples, loss 0.285751, optimizer_steps 50, ATTC_prev 1.270083s
+Epoch 49: 960/1200 examples, loss 0.287253, optimizer_steps 60, ATTC_prev 1.270083s
+Epoch 49: 1120/1200 examples, loss 0.294145, optimizer_steps 70, ATTC_prev 1.270083s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 49: mAUC 0.7769, mAP 0.7683, ATTC_next 1.2708s; 460.3s
+Epoch 50: 160/1200 examples, loss 0.273267, optimizer_steps 10, ATTC_prev 1.270778s
+Epoch 50: 320/1200 examples, loss 0.280116, optimizer_steps 20, ATTC_prev 1.270778s
+Epoch 50: 480/1200 examples, loss 0.296331, optimizer_steps 30, ATTC_prev 1.270778s
+Epoch 50: 640/1200 examples, loss 0.294369, optimizer_steps 40, ATTC_prev 1.270778s
+Epoch 50: 800/1200 examples, loss 0.292502, optimizer_steps 50, ATTC_prev 1.270778s
+Epoch 50: 960/1200 examples, loss 0.289574, optimizer_steps 60, ATTC_prev 1.270778s
+Epoch 50: 1120/1200 examples, loss 0.290522, optimizer_steps 70, ATTC_prev 1.270778s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 43 epoch 50: mAUC 0.7769, mAP 0.7684, ATTC_next 1.2713s; 465.3s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+FULL CURVES seed43 50/1344, max scalar delta 0.00000012
+FULL CURVES seed43 100/1344, max scalar delta 0.00000012
+FULL CURVES seed43 150/1344, max scalar delta 0.00000012
+FULL CURVES seed43 200/1344, max scalar delta 0.00000012
+FULL CURVES seed43 250/1344, max scalar delta 0.00000012
+FULL CURVES seed43 300/1344, max scalar delta 0.00000012
+FULL CURVES seed43 350/1344, max scalar delta 0.00000012
+FULL CURVES seed43 400/1344, max scalar delta 0.00000012
+FULL CURVES seed43 450/1344, max scalar delta 0.00000012
+FULL CURVES seed43 500/1344, max scalar delta 0.00000012
+FULL CURVES seed43 550/1344, max scalar delta 0.00000012
+FULL CURVES seed43 600/1344, max scalar delta 0.00000012
+FULL CURVES seed43 650/1344, max scalar delta 0.00000012
+FULL CURVES seed43 700/1344, max scalar delta 0.00000012
+FULL CURVES seed43 750/1344, max scalar delta 0.00000012
+FULL CURVES seed43 800/1344, max scalar delta 0.00000012
+FULL CURVES seed43 850/1344, max scalar delta 0.00000012
+FULL CURVES seed43 900/1344, max scalar delta 0.00000012
+FULL CURVES seed43 950/1344, max scalar delta 0.00000012
+FULL CURVES seed43 1000/1344, max scalar delta 0.00000012
+FULL CURVES seed43 1050/1344, max scalar delta 0.00000012
+FULL CURVES seed43 1100/1344, max scalar delta 0.00000012
+FULL CURVES seed43 1150/1344, max scalar delta 0.00000012
+FULL CURVES seed43 1200/1344, max scalar delta 0.00000012
+FULL CURVES seed43 1250/1344, max scalar delta 0.00000012
+FULL CURVES seed43 1300/1344, max scalar delta 0.00000012
+Epoch 1: 160/1200 examples, loss 0.337637, optimizer_steps 10, ATTC_prev 0.000000s
+Epoch 1: 320/1200 examples, loss 0.305048, optimizer_steps 20, ATTC_prev 0.000000s
+Epoch 1: 480/1200 examples, loss 0.266844, optimizer_steps 30, ATTC_prev 0.000000s
+Epoch 1: 640/1200 examples, loss 0.240757, optimizer_steps 40, ATTC_prev 0.000000s
+Epoch 1: 800/1200 examples, loss 0.221594, optimizer_steps 50, ATTC_prev 0.000000s
+Epoch 1: 960/1200 examples, loss 0.208856, optimizer_steps 60, ATTC_prev 0.000000s
+Epoch 1: 1120/1200 examples, loss 0.199216, optimizer_steps 70, ATTC_prev 0.000000s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 1: mAUC 0.5823, mAP 0.5288, ATTC_next 2.8870s; 495.8s
+Epoch 2: 160/1200 examples, loss 1.106668, optimizer_steps 10, ATTC_prev 2.886976s
+Epoch 2: 320/1200 examples, loss 0.940194, optimizer_steps 20, ATTC_prev 2.886976s
+Epoch 2: 480/1200 examples, loss 0.853531, optimizer_steps 30, ATTC_prev 2.886976s
+Epoch 2: 640/1200 examples, loss 0.810648, optimizer_steps 40, ATTC_prev 2.886976s
+Epoch 2: 800/1200 examples, loss 0.783963, optimizer_steps 50, ATTC_prev 2.886976s
+Epoch 2: 960/1200 examples, loss 0.765420, optimizer_steps 60, ATTC_prev 2.886976s
+Epoch 2: 1120/1200 examples, loss 0.751894, optimizer_steps 70, ATTC_prev 2.886976s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 2: mAUC 0.7108, mAP 0.6704, ATTC_next 1.9804s; 417.2s
+Epoch 3: 160/1200 examples, loss 0.582600, optimizer_steps 10, ATTC_prev 1.980402s
+Epoch 3: 320/1200 examples, loss 0.585908, optimizer_steps 20, ATTC_prev 1.980402s
+Epoch 3: 480/1200 examples, loss 0.576489, optimizer_steps 30, ATTC_prev 1.980402s
+Epoch 3: 640/1200 examples, loss 0.573538, optimizer_steps 40, ATTC_prev 1.980402s
+Epoch 3: 800/1200 examples, loss 0.570607, optimizer_steps 50, ATTC_prev 1.980402s
+Epoch 3: 960/1200 examples, loss 0.568285, optimizer_steps 60, ATTC_prev 1.980402s
+Epoch 3: 1120/1200 examples, loss 0.563443, optimizer_steps 70, ATTC_prev 1.980402s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 3: mAUC 0.7239, mAP 0.6937, ATTC_next 2.0669s; 444.9s
+Epoch 4: 160/1200 examples, loss 0.553083, optimizer_steps 10, ATTC_prev 2.066924s
+Epoch 4: 320/1200 examples, loss 0.539540, optimizer_steps 20, ATTC_prev 2.066924s
+Epoch 4: 480/1200 examples, loss 0.540329, optimizer_steps 30, ATTC_prev 2.066924s
+Epoch 4: 640/1200 examples, loss 0.547597, optimizer_steps 40, ATTC_prev 2.066924s
+Epoch 4: 800/1200 examples, loss 0.545691, optimizer_steps 50, ATTC_prev 2.066924s
+Epoch 4: 960/1200 examples, loss 0.538998, optimizer_steps 60, ATTC_prev 2.066924s
+Epoch 4: 1120/1200 examples, loss 0.543963, optimizer_steps 70, ATTC_prev 2.066924s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 4: mAUC 0.7365, mAP 0.7083, ATTC_next 1.9602s; 482.2s
+Epoch 5: 160/1200 examples, loss 0.497533, optimizer_steps 10, ATTC_prev 1.960158s
+Epoch 5: 320/1200 examples, loss 0.497892, optimizer_steps 20, ATTC_prev 1.960158s
+Epoch 5: 480/1200 examples, loss 0.493464, optimizer_steps 30, ATTC_prev 1.960158s
+Epoch 5: 640/1200 examples, loss 0.496307, optimizer_steps 40, ATTC_prev 1.960158s
+Epoch 5: 800/1200 examples, loss 0.503481, optimizer_steps 50, ATTC_prev 1.960158s
+Epoch 5: 960/1200 examples, loss 0.500717, optimizer_steps 60, ATTC_prev 1.960158s
+Epoch 5: 1120/1200 examples, loss 0.499615, optimizer_steps 70, ATTC_prev 1.960158s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 5: mAUC 0.7442, mAP 0.7185, ATTC_next 1.8832s; 459.4s
+Epoch 6: 160/1200 examples, loss 0.456211, optimizer_steps 10, ATTC_prev 1.883154s
+Epoch 6: 320/1200 examples, loss 0.473273, optimizer_steps 20, ATTC_prev 1.883154s
+Epoch 6: 480/1200 examples, loss 0.484961, optimizer_steps 30, ATTC_prev 1.883154s
+Epoch 6: 640/1200 examples, loss 0.471627, optimizer_steps 40, ATTC_prev 1.883154s
+Epoch 6: 800/1200 examples, loss 0.473514, optimizer_steps 50, ATTC_prev 1.883154s
+Epoch 6: 960/1200 examples, loss 0.474661, optimizer_steps 60, ATTC_prev 1.883154s
+Epoch 6: 1120/1200 examples, loss 0.482490, optimizer_steps 70, ATTC_prev 1.883154s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 6: mAUC 0.7520, mAP 0.7282, ATTC_next 1.8277s; 511.9s
+Epoch 7: 160/1200 examples, loss 0.472654, optimizer_steps 10, ATTC_prev 1.827715s
+Epoch 7: 320/1200 examples, loss 0.490409, optimizer_steps 20, ATTC_prev 1.827715s
+Epoch 7: 480/1200 examples, loss 0.475695, optimizer_steps 30, ATTC_prev 1.827715s
+Epoch 7: 640/1200 examples, loss 0.478199, optimizer_steps 40, ATTC_prev 1.827715s
+Epoch 7: 800/1200 examples, loss 0.472536, optimizer_steps 50, ATTC_prev 1.827715s
+Epoch 7: 960/1200 examples, loss 0.474659, optimizer_steps 60, ATTC_prev 1.827715s
+Epoch 7: 1120/1200 examples, loss 0.475023, optimizer_steps 70, ATTC_prev 1.827715s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 7: mAUC 0.7571, mAP 0.7314, ATTC_next 1.8072s; 443.3s
+Epoch 8: 160/1200 examples, loss 0.430567, optimizer_steps 10, ATTC_prev 1.807212s
+Epoch 8: 320/1200 examples, loss 0.453645, optimizer_steps 20, ATTC_prev 1.807212s
+Epoch 8: 480/1200 examples, loss 0.446623, optimizer_steps 30, ATTC_prev 1.807212s
+Epoch 8: 640/1200 examples, loss 0.453274, optimizer_steps 40, ATTC_prev 1.807212s
+Epoch 8: 800/1200 examples, loss 0.464756, optimizer_steps 50, ATTC_prev 1.807212s
+Epoch 8: 960/1200 examples, loss 0.460566, optimizer_steps 60, ATTC_prev 1.807212s
+Epoch 8: 1120/1200 examples, loss 0.459185, optimizer_steps 70, ATTC_prev 1.807212s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 8: mAUC 0.7607, mAP 0.7358, ATTC_next 1.7280s; 406.4s
+Epoch 9: 160/1200 examples, loss 0.459273, optimizer_steps 10, ATTC_prev 1.727980s
+Epoch 9: 320/1200 examples, loss 0.454980, optimizer_steps 20, ATTC_prev 1.727980s
+Epoch 9: 480/1200 examples, loss 0.451932, optimizer_steps 30, ATTC_prev 1.727980s
+Epoch 9: 640/1200 examples, loss 0.457205, optimizer_steps 40, ATTC_prev 1.727980s
+Epoch 9: 800/1200 examples, loss 0.459248, optimizer_steps 50, ATTC_prev 1.727980s
+Epoch 9: 960/1200 examples, loss 0.454743, optimizer_steps 60, ATTC_prev 1.727980s
+Epoch 9: 1120/1200 examples, loss 0.453157, optimizer_steps 70, ATTC_prev 1.727980s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 9: mAUC 0.7607, mAP 0.7380, ATTC_next 1.7351s; 427.4s
+Epoch 10: 160/1200 examples, loss 0.431373, optimizer_steps 10, ATTC_prev 1.735111s
+Epoch 10: 320/1200 examples, loss 0.449659, optimizer_steps 20, ATTC_prev 1.735111s
+Epoch 10: 480/1200 examples, loss 0.452633, optimizer_steps 30, ATTC_prev 1.735111s
+Epoch 10: 640/1200 examples, loss 0.449710, optimizer_steps 40, ATTC_prev 1.735111s
+Epoch 10: 800/1200 examples, loss 0.446617, optimizer_steps 50, ATTC_prev 1.735111s
+Epoch 10: 960/1200 examples, loss 0.447539, optimizer_steps 60, ATTC_prev 1.735111s
+Epoch 10: 1120/1200 examples, loss 0.445409, optimizer_steps 70, ATTC_prev 1.735111s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 10: mAUC 0.7620, mAP 0.7381, ATTC_next 1.6793s; 371.0s
+Epoch 11: 160/1200 examples, loss 0.444292, optimizer_steps 10, ATTC_prev 1.679348s
+Epoch 11: 320/1200 examples, loss 0.438278, optimizer_steps 20, ATTC_prev 1.679348s
+Epoch 11: 480/1200 examples, loss 0.446661, optimizer_steps 30, ATTC_prev 1.679348s
+Epoch 11: 640/1200 examples, loss 0.434140, optimizer_steps 40, ATTC_prev 1.679348s
+Epoch 11: 800/1200 examples, loss 0.430319, optimizer_steps 50, ATTC_prev 1.679348s
+Epoch 11: 960/1200 examples, loss 0.431809, optimizer_steps 60, ATTC_prev 1.679348s
+Epoch 11: 1120/1200 examples, loss 0.431979, optimizer_steps 70, ATTC_prev 1.679348s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 11: mAUC 0.7665, mAP 0.7430, ATTC_next 1.6235s; 463.0s
+Epoch 12: 160/1200 examples, loss 0.429486, optimizer_steps 10, ATTC_prev 1.623455s
+Epoch 12: 320/1200 examples, loss 0.418408, optimizer_steps 20, ATTC_prev 1.623455s
+Epoch 12: 480/1200 examples, loss 0.395469, optimizer_steps 30, ATTC_prev 1.623455s
+Epoch 12: 640/1200 examples, loss 0.395143, optimizer_steps 40, ATTC_prev 1.623455s
+Epoch 12: 800/1200 examples, loss 0.399698, optimizer_steps 50, ATTC_prev 1.623455s
+Epoch 12: 960/1200 examples, loss 0.408543, optimizer_steps 60, ATTC_prev 1.623455s
+Epoch 12: 1120/1200 examples, loss 0.407947, optimizer_steps 70, ATTC_prev 1.623455s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 12: mAUC 0.7696, mAP 0.7520, ATTC_next 1.5758s; 387.6s
+Epoch 13: 160/1200 examples, loss 0.420983, optimizer_steps 10, ATTC_prev 1.575755s
+Epoch 13: 320/1200 examples, loss 0.392395, optimizer_steps 20, ATTC_prev 1.575755s
+Epoch 13: 480/1200 examples, loss 0.395760, optimizer_steps 30, ATTC_prev 1.575755s
+Epoch 13: 640/1200 examples, loss 0.401693, optimizer_steps 40, ATTC_prev 1.575755s
+Epoch 13: 800/1200 examples, loss 0.408895, optimizer_steps 50, ATTC_prev 1.575755s
+Epoch 13: 960/1200 examples, loss 0.404212, optimizer_steps 60, ATTC_prev 1.575755s
+Epoch 13: 1120/1200 examples, loss 0.406320, optimizer_steps 70, ATTC_prev 1.575755s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 13: mAUC 0.7729, mAP 0.7586, ATTC_next 1.5401s; 398.4s
+Epoch 14: 160/1200 examples, loss 0.365087, optimizer_steps 10, ATTC_prev 1.540057s
+Epoch 14: 320/1200 examples, loss 0.368224, optimizer_steps 20, ATTC_prev 1.540057s
+Epoch 14: 480/1200 examples, loss 0.372195, optimizer_steps 30, ATTC_prev 1.540057s
+Epoch 14: 640/1200 examples, loss 0.380081, optimizer_steps 40, ATTC_prev 1.540057s
+Epoch 14: 800/1200 examples, loss 0.390748, optimizer_steps 50, ATTC_prev 1.540057s
+Epoch 14: 960/1200 examples, loss 0.395930, optimizer_steps 60, ATTC_prev 1.540057s
+Epoch 14: 1120/1200 examples, loss 0.393251, optimizer_steps 70, ATTC_prev 1.540057s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 14: mAUC 0.7740, mAP 0.7644, ATTC_next 1.5086s; 411.2s
+Epoch 15: 160/1200 examples, loss 0.392553, optimizer_steps 10, ATTC_prev 1.508588s
+Epoch 15: 320/1200 examples, loss 0.378910, optimizer_steps 20, ATTC_prev 1.508588s
+Epoch 15: 480/1200 examples, loss 0.392917, optimizer_steps 30, ATTC_prev 1.508588s
+Epoch 15: 640/1200 examples, loss 0.388839, optimizer_steps 40, ATTC_prev 1.508588s
+Epoch 15: 800/1200 examples, loss 0.387448, optimizer_steps 50, ATTC_prev 1.508588s
+Epoch 15: 960/1200 examples, loss 0.389959, optimizer_steps 60, ATTC_prev 1.508588s
+Epoch 15: 1120/1200 examples, loss 0.392395, optimizer_steps 70, ATTC_prev 1.508588s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 15: mAUC 0.7761, mAP 0.7666, ATTC_next 1.5011s; 416.2s
+Epoch 16: 160/1200 examples, loss 0.363852, optimizer_steps 10, ATTC_prev 1.501143s
+Epoch 16: 320/1200 examples, loss 0.392537, optimizer_steps 20, ATTC_prev 1.501143s
+Epoch 16: 480/1200 examples, loss 0.379675, optimizer_steps 30, ATTC_prev 1.501143s
+Epoch 16: 640/1200 examples, loss 0.374589, optimizer_steps 40, ATTC_prev 1.501143s
+Epoch 16: 800/1200 examples, loss 0.370685, optimizer_steps 50, ATTC_prev 1.501143s
+Epoch 16: 960/1200 examples, loss 0.366272, optimizer_steps 60, ATTC_prev 1.501143s
+Epoch 16: 1120/1200 examples, loss 0.371033, optimizer_steps 70, ATTC_prev 1.501143s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 16: mAUC 0.7762, mAP 0.7675, ATTC_next 1.4905s; 401.2s
+Epoch 17: 160/1200 examples, loss 0.420410, optimizer_steps 10, ATTC_prev 1.490485s
+Epoch 17: 320/1200 examples, loss 0.406588, optimizer_steps 20, ATTC_prev 1.490485s
+Epoch 17: 480/1200 examples, loss 0.388891, optimizer_steps 30, ATTC_prev 1.490485s
+Epoch 17: 640/1200 examples, loss 0.381926, optimizer_steps 40, ATTC_prev 1.490485s
+Epoch 17: 800/1200 examples, loss 0.380737, optimizer_steps 50, ATTC_prev 1.490485s
+Epoch 17: 960/1200 examples, loss 0.378445, optimizer_steps 60, ATTC_prev 1.490485s
+Epoch 17: 1120/1200 examples, loss 0.372259, optimizer_steps 70, ATTC_prev 1.490485s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 17: mAUC 0.7797, mAP 0.7673, ATTC_next 1.4351s; 349.4s
+Epoch 18: 160/1200 examples, loss 0.359146, optimizer_steps 10, ATTC_prev 1.435134s
+Epoch 18: 320/1200 examples, loss 0.341488, optimizer_steps 20, ATTC_prev 1.435134s
+Epoch 18: 480/1200 examples, loss 0.346931, optimizer_steps 30, ATTC_prev 1.435134s
+Epoch 18: 640/1200 examples, loss 0.353660, optimizer_steps 40, ATTC_prev 1.435134s
+Epoch 18: 800/1200 examples, loss 0.354043, optimizer_steps 50, ATTC_prev 1.435134s
+Epoch 18: 960/1200 examples, loss 0.358137, optimizer_steps 60, ATTC_prev 1.435134s
+Epoch 18: 1120/1200 examples, loss 0.355723, optimizer_steps 70, ATTC_prev 1.435134s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 18: mAUC 0.7765, mAP 0.7632, ATTC_next 1.4023s; 391.5s
+Epoch 19: 160/1200 examples, loss 0.367819, optimizer_steps 10, ATTC_prev 1.402297s
+Epoch 19: 320/1200 examples, loss 0.360443, optimizer_steps 20, ATTC_prev 1.402297s
+Epoch 19: 480/1200 examples, loss 0.367833, optimizer_steps 30, ATTC_prev 1.402297s
+Epoch 19: 640/1200 examples, loss 0.357806, optimizer_steps 40, ATTC_prev 1.402297s
+Epoch 19: 800/1200 examples, loss 0.363595, optimizer_steps 50, ATTC_prev 1.402297s
+Epoch 19: 960/1200 examples, loss 0.364246, optimizer_steps 60, ATTC_prev 1.402297s
+Epoch 19: 1120/1200 examples, loss 0.364641, optimizer_steps 70, ATTC_prev 1.402297s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 19: mAUC 0.7793, mAP 0.7673, ATTC_next 1.4054s; 369.5s
+Epoch 20: 160/1200 examples, loss 0.327883, optimizer_steps 10, ATTC_prev 1.405406s
+Epoch 20: 320/1200 examples, loss 0.313182, optimizer_steps 20, ATTC_prev 1.405406s
+Epoch 20: 480/1200 examples, loss 0.335582, optimizer_steps 30, ATTC_prev 1.405406s
+Epoch 20: 640/1200 examples, loss 0.343998, optimizer_steps 40, ATTC_prev 1.405406s
+Epoch 20: 800/1200 examples, loss 0.357452, optimizer_steps 50, ATTC_prev 1.405406s
+Epoch 20: 960/1200 examples, loss 0.353494, optimizer_steps 60, ATTC_prev 1.405406s
+Epoch 20: 1120/1200 examples, loss 0.358410, optimizer_steps 70, ATTC_prev 1.405406s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 20: mAUC 0.7801, mAP 0.7702, ATTC_next 1.3541s; 436.3s
+Epoch 21: 160/1200 examples, loss 0.337095, optimizer_steps 10, ATTC_prev 1.354088s
+Epoch 21: 320/1200 examples, loss 0.342293, optimizer_steps 20, ATTC_prev 1.354088s
+Epoch 21: 480/1200 examples, loss 0.335517, optimizer_steps 30, ATTC_prev 1.354088s
+Epoch 21: 640/1200 examples, loss 0.342268, optimizer_steps 40, ATTC_prev 1.354088s
+Epoch 21: 800/1200 examples, loss 0.338347, optimizer_steps 50, ATTC_prev 1.354088s
+Epoch 21: 960/1200 examples, loss 0.329221, optimizer_steps 60, ATTC_prev 1.354088s
+Epoch 21: 1120/1200 examples, loss 0.329995, optimizer_steps 70, ATTC_prev 1.354088s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 21: mAUC 0.7802, mAP 0.7714, ATTC_next 1.3491s; 363.4s
+Epoch 22: 160/1200 examples, loss 0.299367, optimizer_steps 10, ATTC_prev 1.349059s
+Epoch 22: 320/1200 examples, loss 0.321861, optimizer_steps 20, ATTC_prev 1.349059s
+Epoch 22: 480/1200 examples, loss 0.324539, optimizer_steps 30, ATTC_prev 1.349059s
+Epoch 22: 640/1200 examples, loss 0.320226, optimizer_steps 40, ATTC_prev 1.349059s
+Epoch 22: 800/1200 examples, loss 0.322241, optimizer_steps 50, ATTC_prev 1.349059s
+Epoch 22: 960/1200 examples, loss 0.322626, optimizer_steps 60, ATTC_prev 1.349059s
+Epoch 22: 1120/1200 examples, loss 0.327375, optimizer_steps 70, ATTC_prev 1.349059s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 22: mAUC 0.7805, mAP 0.7735, ATTC_next 1.3479s; 394.5s
+Epoch 23: 160/1200 examples, loss 0.318021, optimizer_steps 10, ATTC_prev 1.347894s
+Epoch 23: 320/1200 examples, loss 0.312001, optimizer_steps 20, ATTC_prev 1.347894s
+Epoch 23: 480/1200 examples, loss 0.319723, optimizer_steps 30, ATTC_prev 1.347894s
+Epoch 23: 640/1200 examples, loss 0.331272, optimizer_steps 40, ATTC_prev 1.347894s
+Epoch 23: 800/1200 examples, loss 0.333469, optimizer_steps 50, ATTC_prev 1.347894s
+Epoch 23: 960/1200 examples, loss 0.332427, optimizer_steps 60, ATTC_prev 1.347894s
+Epoch 23: 1120/1200 examples, loss 0.328786, optimizer_steps 70, ATTC_prev 1.347894s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 23: mAUC 0.7804, mAP 0.7738, ATTC_next 1.3481s; 374.0s
+Epoch 24: 160/1200 examples, loss 0.305603, optimizer_steps 10, ATTC_prev 1.348116s
+Epoch 24: 320/1200 examples, loss 0.311209, optimizer_steps 20, ATTC_prev 1.348116s
+Epoch 24: 480/1200 examples, loss 0.318712, optimizer_steps 30, ATTC_prev 1.348116s
+Epoch 24: 640/1200 examples, loss 0.320136, optimizer_steps 40, ATTC_prev 1.348116s
+Epoch 24: 800/1200 examples, loss 0.317427, optimizer_steps 50, ATTC_prev 1.348116s
+Epoch 24: 960/1200 examples, loss 0.318440, optimizer_steps 60, ATTC_prev 1.348116s
+Epoch 24: 1120/1200 examples, loss 0.319425, optimizer_steps 70, ATTC_prev 1.348116s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 24: mAUC 0.7811, mAP 0.7756, ATTC_next 1.3475s; 394.9s
+Epoch 25: 160/1200 examples, loss 0.288656, optimizer_steps 10, ATTC_prev 1.347458s
+Epoch 25: 320/1200 examples, loss 0.307211, optimizer_steps 20, ATTC_prev 1.347458s
+Epoch 25: 480/1200 examples, loss 0.314282, optimizer_steps 30, ATTC_prev 1.347458s
+Epoch 25: 640/1200 examples, loss 0.306176, optimizer_steps 40, ATTC_prev 1.347458s
+Epoch 25: 800/1200 examples, loss 0.307116, optimizer_steps 50, ATTC_prev 1.347458s
+Epoch 25: 960/1200 examples, loss 0.312299, optimizer_steps 60, ATTC_prev 1.347458s
+Epoch 25: 1120/1200 examples, loss 0.320638, optimizer_steps 70, ATTC_prev 1.347458s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 25: mAUC 0.7812, mAP 0.7735, ATTC_next 1.3451s; 385.4s
+Epoch 26: 160/1200 examples, loss 0.312881, optimizer_steps 10, ATTC_prev 1.345081s
+Epoch 26: 320/1200 examples, loss 0.316272, optimizer_steps 20, ATTC_prev 1.345081s
+Epoch 26: 480/1200 examples, loss 0.317840, optimizer_steps 30, ATTC_prev 1.345081s
+Epoch 26: 640/1200 examples, loss 0.316278, optimizer_steps 40, ATTC_prev 1.345081s
+Epoch 26: 800/1200 examples, loss 0.312255, optimizer_steps 50, ATTC_prev 1.345081s
+Epoch 26: 960/1200 examples, loss 0.313831, optimizer_steps 60, ATTC_prev 1.345081s
+Epoch 26: 1120/1200 examples, loss 0.315425, optimizer_steps 70, ATTC_prev 1.345081s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 26: mAUC 0.7821, mAP 0.7734, ATTC_next 1.3439s; 349.9s
+Epoch 27: 160/1200 examples, loss 0.329864, optimizer_steps 10, ATTC_prev 1.343922s
+Epoch 27: 320/1200 examples, loss 0.335574, optimizer_steps 20, ATTC_prev 1.343922s
+Epoch 27: 480/1200 examples, loss 0.329929, optimizer_steps 30, ATTC_prev 1.343922s
+Epoch 27: 640/1200 examples, loss 0.324184, optimizer_steps 40, ATTC_prev 1.343922s
+Epoch 27: 800/1200 examples, loss 0.322777, optimizer_steps 50, ATTC_prev 1.343922s
+Epoch 27: 960/1200 examples, loss 0.320711, optimizer_steps 60, ATTC_prev 1.343922s
+Epoch 27: 1120/1200 examples, loss 0.317716, optimizer_steps 70, ATTC_prev 1.343922s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 27: mAUC 0.7823, mAP 0.7735, ATTC_next 1.3436s; 333.9s
+Epoch 28: 160/1200 examples, loss 0.317462, optimizer_steps 10, ATTC_prev 1.343571s
+Epoch 28: 320/1200 examples, loss 0.318234, optimizer_steps 20, ATTC_prev 1.343571s
+Epoch 28: 480/1200 examples, loss 0.326776, optimizer_steps 30, ATTC_prev 1.343571s
+Epoch 28: 640/1200 examples, loss 0.326995, optimizer_steps 40, ATTC_prev 1.343571s
+Epoch 28: 800/1200 examples, loss 0.326835, optimizer_steps 50, ATTC_prev 1.343571s
+Epoch 28: 960/1200 examples, loss 0.322548, optimizer_steps 60, ATTC_prev 1.343571s
+Epoch 28: 1120/1200 examples, loss 0.324695, optimizer_steps 70, ATTC_prev 1.343571s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 28: mAUC 0.7815, mAP 0.7758, ATTC_next 1.3378s; 388.2s
+Epoch 29: 160/1200 examples, loss 0.341814, optimizer_steps 10, ATTC_prev 1.337827s
+Epoch 29: 320/1200 examples, loss 0.325673, optimizer_steps 20, ATTC_prev 1.337827s
+Epoch 29: 480/1200 examples, loss 0.318107, optimizer_steps 30, ATTC_prev 1.337827s
+Epoch 29: 640/1200 examples, loss 0.317750, optimizer_steps 40, ATTC_prev 1.337827s
+Epoch 29: 800/1200 examples, loss 0.324418, optimizer_steps 50, ATTC_prev 1.337827s
+Epoch 29: 960/1200 examples, loss 0.320297, optimizer_steps 60, ATTC_prev 1.337827s
+Epoch 29: 1120/1200 examples, loss 0.317378, optimizer_steps 70, ATTC_prev 1.337827s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 29: mAUC 0.7820, mAP 0.7766, ATTC_next 1.3386s; 342.3s
+Epoch 30: 160/1200 examples, loss 0.344253, optimizer_steps 10, ATTC_prev 1.338575s
+Epoch 30: 320/1200 examples, loss 0.332463, optimizer_steps 20, ATTC_prev 1.338575s
+Epoch 30: 480/1200 examples, loss 0.330746, optimizer_steps 30, ATTC_prev 1.338575s
+Epoch 30: 640/1200 examples, loss 0.323922, optimizer_steps 40, ATTC_prev 1.338575s
+Epoch 30: 800/1200 examples, loss 0.326814, optimizer_steps 50, ATTC_prev 1.338575s
+Epoch 30: 960/1200 examples, loss 0.322753, optimizer_steps 60, ATTC_prev 1.338575s
+Epoch 30: 1120/1200 examples, loss 0.323535, optimizer_steps 70, ATTC_prev 1.338575s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 30: mAUC 0.7814, mAP 0.7767, ATTC_next 1.3383s; 380.0s
+Epoch 31: 160/1200 examples, loss 0.307663, optimizer_steps 10, ATTC_prev 1.338341s
+Epoch 31: 320/1200 examples, loss 0.311063, optimizer_steps 20, ATTC_prev 1.338341s
+Epoch 31: 480/1200 examples, loss 0.319846, optimizer_steps 30, ATTC_prev 1.338341s
+Epoch 31: 640/1200 examples, loss 0.310274, optimizer_steps 40, ATTC_prev 1.338341s
+Epoch 31: 800/1200 examples, loss 0.315405, optimizer_steps 50, ATTC_prev 1.338341s
+Epoch 31: 960/1200 examples, loss 0.314988, optimizer_steps 60, ATTC_prev 1.338341s
+Epoch 31: 1120/1200 examples, loss 0.318809, optimizer_steps 70, ATTC_prev 1.338341s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 31: mAUC 0.7822, mAP 0.7774, ATTC_next 1.3333s; 395.3s
+Epoch 32: 160/1200 examples, loss 0.340497, optimizer_steps 10, ATTC_prev 1.333331s
+Epoch 32: 320/1200 examples, loss 0.329001, optimizer_steps 20, ATTC_prev 1.333331s
+Epoch 32: 480/1200 examples, loss 0.324740, optimizer_steps 30, ATTC_prev 1.333331s
+Epoch 32: 640/1200 examples, loss 0.311791, optimizer_steps 40, ATTC_prev 1.333331s
+Epoch 32: 800/1200 examples, loss 0.313147, optimizer_steps 50, ATTC_prev 1.333331s
+Epoch 32: 960/1200 examples, loss 0.314462, optimizer_steps 60, ATTC_prev 1.333331s
+Epoch 32: 1120/1200 examples, loss 0.316099, optimizer_steps 70, ATTC_prev 1.333331s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 32: mAUC 0.7821, mAP 0.7766, ATTC_next 1.3308s; 319.8s
+Epoch 33: 160/1200 examples, loss 0.270740, optimizer_steps 10, ATTC_prev 1.330775s
+Epoch 33: 320/1200 examples, loss 0.288580, optimizer_steps 20, ATTC_prev 1.330775s
+Epoch 33: 480/1200 examples, loss 0.297266, optimizer_steps 30, ATTC_prev 1.330775s
+Epoch 33: 640/1200 examples, loss 0.308258, optimizer_steps 40, ATTC_prev 1.330775s
+Epoch 33: 800/1200 examples, loss 0.315734, optimizer_steps 50, ATTC_prev 1.330775s
+Epoch 33: 960/1200 examples, loss 0.315010, optimizer_steps 60, ATTC_prev 1.330775s
+Epoch 33: 1120/1200 examples, loss 0.316172, optimizer_steps 70, ATTC_prev 1.330775s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 33: mAUC 0.7826, mAP 0.7739, ATTC_next 1.3249s; 336.9s
+Epoch 34: 160/1200 examples, loss 0.307540, optimizer_steps 10, ATTC_prev 1.324872s
+Epoch 34: 320/1200 examples, loss 0.304287, optimizer_steps 20, ATTC_prev 1.324872s
+Epoch 34: 480/1200 examples, loss 0.315870, optimizer_steps 30, ATTC_prev 1.324872s
+Epoch 34: 640/1200 examples, loss 0.312502, optimizer_steps 40, ATTC_prev 1.324872s
+Epoch 34: 800/1200 examples, loss 0.311071, optimizer_steps 50, ATTC_prev 1.324872s
+Epoch 34: 960/1200 examples, loss 0.310222, optimizer_steps 60, ATTC_prev 1.324872s
+Epoch 34: 1120/1200 examples, loss 0.318082, optimizer_steps 70, ATTC_prev 1.324872s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 34: mAUC 0.7826, mAP 0.7755, ATTC_next 1.3228s; 316.2s
+Epoch 35: 160/1200 examples, loss 0.281522, optimizer_steps 10, ATTC_prev 1.322807s
+Epoch 35: 320/1200 examples, loss 0.308645, optimizer_steps 20, ATTC_prev 1.322807s
+Epoch 35: 480/1200 examples, loss 0.317956, optimizer_steps 30, ATTC_prev 1.322807s
+Epoch 35: 640/1200 examples, loss 0.317084, optimizer_steps 40, ATTC_prev 1.322807s
+Epoch 35: 800/1200 examples, loss 0.317365, optimizer_steps 50, ATTC_prev 1.322807s
+Epoch 35: 960/1200 examples, loss 0.314002, optimizer_steps 60, ATTC_prev 1.322807s
+Epoch 35: 1120/1200 examples, loss 0.312394, optimizer_steps 70, ATTC_prev 1.322807s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 35: mAUC 0.7820, mAP 0.7774, ATTC_next 1.3263s; 328.1s
+Epoch 36: 160/1200 examples, loss 0.282391, optimizer_steps 10, ATTC_prev 1.326261s
+Epoch 36: 320/1200 examples, loss 0.283034, optimizer_steps 20, ATTC_prev 1.326261s
+Epoch 36: 480/1200 examples, loss 0.280116, optimizer_steps 30, ATTC_prev 1.326261s
+Epoch 36: 640/1200 examples, loss 0.295723, optimizer_steps 40, ATTC_prev 1.326261s
+Epoch 36: 800/1200 examples, loss 0.301518, optimizer_steps 50, ATTC_prev 1.326261s
+Epoch 36: 960/1200 examples, loss 0.310030, optimizer_steps 60, ATTC_prev 1.326261s
+Epoch 36: 1120/1200 examples, loss 0.305966, optimizer_steps 70, ATTC_prev 1.326261s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 36: mAUC 0.7827, mAP 0.7764, ATTC_next 1.3200s; 360.1s
+Epoch 37: 160/1200 examples, loss 0.266603, optimizer_steps 10, ATTC_prev 1.320035s
+Epoch 37: 320/1200 examples, loss 0.289737, optimizer_steps 20, ATTC_prev 1.320035s
+Epoch 37: 480/1200 examples, loss 0.302732, optimizer_steps 30, ATTC_prev 1.320035s
+Epoch 37: 640/1200 examples, loss 0.306342, optimizer_steps 40, ATTC_prev 1.320035s
+Epoch 37: 800/1200 examples, loss 0.308852, optimizer_steps 50, ATTC_prev 1.320035s
+Epoch 37: 960/1200 examples, loss 0.316931, optimizer_steps 60, ATTC_prev 1.320035s
+Epoch 37: 1120/1200 examples, loss 0.314111, optimizer_steps 70, ATTC_prev 1.320035s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 37: mAUC 0.7817, mAP 0.7749, ATTC_next 1.3102s; 348.4s
+Epoch 38: 160/1200 examples, loss 0.282708, optimizer_steps 10, ATTC_prev 1.310243s
+Epoch 38: 320/1200 examples, loss 0.293939, optimizer_steps 20, ATTC_prev 1.310243s
+Epoch 38: 480/1200 examples, loss 0.283934, optimizer_steps 30, ATTC_prev 1.310243s
+Epoch 38: 640/1200 examples, loss 0.295935, optimizer_steps 40, ATTC_prev 1.310243s
+Epoch 38: 800/1200 examples, loss 0.300626, optimizer_steps 50, ATTC_prev 1.310243s
+Epoch 38: 960/1200 examples, loss 0.300872, optimizer_steps 60, ATTC_prev 1.310243s
+Epoch 38: 1120/1200 examples, loss 0.297445, optimizer_steps 70, ATTC_prev 1.310243s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 38: mAUC 0.7822, mAP 0.7769, ATTC_next 1.3107s; 294.4s
+Epoch 39: 160/1200 examples, loss 0.329159, optimizer_steps 10, ATTC_prev 1.310714s
+Epoch 39: 320/1200 examples, loss 0.311419, optimizer_steps 20, ATTC_prev 1.310714s
+Epoch 39: 480/1200 examples, loss 0.311549, optimizer_steps 30, ATTC_prev 1.310714s
+Epoch 39: 640/1200 examples, loss 0.318534, optimizer_steps 40, ATTC_prev 1.310714s
+Epoch 39: 800/1200 examples, loss 0.318838, optimizer_steps 50, ATTC_prev 1.310714s
+Epoch 39: 960/1200 examples, loss 0.313158, optimizer_steps 60, ATTC_prev 1.310714s
+Epoch 39: 1120/1200 examples, loss 0.307889, optimizer_steps 70, ATTC_prev 1.310714s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 39: mAUC 0.7822, mAP 0.7772, ATTC_next 1.3048s; 298.7s
+Epoch 40: 160/1200 examples, loss 0.316298, optimizer_steps 10, ATTC_prev 1.304796s
+Epoch 40: 320/1200 examples, loss 0.298176, optimizer_steps 20, ATTC_prev 1.304796s
+Epoch 40: 480/1200 examples, loss 0.304055, optimizer_steps 30, ATTC_prev 1.304796s
+Epoch 40: 640/1200 examples, loss 0.306503, optimizer_steps 40, ATTC_prev 1.304796s
+Epoch 40: 800/1200 examples, loss 0.302783, optimizer_steps 50, ATTC_prev 1.304796s
+Epoch 40: 960/1200 examples, loss 0.302674, optimizer_steps 60, ATTC_prev 1.304796s
+Epoch 40: 1120/1200 examples, loss 0.304572, optimizer_steps 70, ATTC_prev 1.304796s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 40: mAUC 0.7816, mAP 0.7726, ATTC_next 1.3021s; 285.6s
+Epoch 41: 160/1200 examples, loss 0.311977, optimizer_steps 10, ATTC_prev 1.302063s
+Epoch 41: 320/1200 examples, loss 0.318118, optimizer_steps 20, ATTC_prev 1.302063s
+Epoch 41: 480/1200 examples, loss 0.316276, optimizer_steps 30, ATTC_prev 1.302063s
+Epoch 41: 640/1200 examples, loss 0.310888, optimizer_steps 40, ATTC_prev 1.302063s
+Epoch 41: 800/1200 examples, loss 0.301575, optimizer_steps 50, ATTC_prev 1.302063s
+Epoch 41: 960/1200 examples, loss 0.300491, optimizer_steps 60, ATTC_prev 1.302063s
+Epoch 41: 1120/1200 examples, loss 0.301875, optimizer_steps 70, ATTC_prev 1.302063s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 41: mAUC 0.7820, mAP 0.7733, ATTC_next 1.3008s; 295.6s
+Epoch 42: 160/1200 examples, loss 0.321650, optimizer_steps 10, ATTC_prev 1.300756s
+Epoch 42: 320/1200 examples, loss 0.299032, optimizer_steps 20, ATTC_prev 1.300756s
+Epoch 42: 480/1200 examples, loss 0.295747, optimizer_steps 30, ATTC_prev 1.300756s
+Epoch 42: 640/1200 examples, loss 0.298261, optimizer_steps 40, ATTC_prev 1.300756s
+Epoch 42: 800/1200 examples, loss 0.300824, optimizer_steps 50, ATTC_prev 1.300756s
+Epoch 42: 960/1200 examples, loss 0.296350, optimizer_steps 60, ATTC_prev 1.300756s
+Epoch 42: 1120/1200 examples, loss 0.297747, optimizer_steps 70, ATTC_prev 1.300756s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 42: mAUC 0.7823, mAP 0.7740, ATTC_next 1.3005s; 336.0s
+Epoch 43: 160/1200 examples, loss 0.306423, optimizer_steps 10, ATTC_prev 1.300485s
+Epoch 43: 320/1200 examples, loss 0.310198, optimizer_steps 20, ATTC_prev 1.300485s
+Epoch 43: 480/1200 examples, loss 0.294130, optimizer_steps 30, ATTC_prev 1.300485s
+Epoch 43: 640/1200 examples, loss 0.296003, optimizer_steps 40, ATTC_prev 1.300485s
+Epoch 43: 800/1200 examples, loss 0.300304, optimizer_steps 50, ATTC_prev 1.300485s
+Epoch 43: 960/1200 examples, loss 0.302797, optimizer_steps 60, ATTC_prev 1.300485s
+Epoch 43: 1120/1200 examples, loss 0.305961, optimizer_steps 70, ATTC_prev 1.300485s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 43: mAUC 0.7824, mAP 0.7742, ATTC_next 1.3003s; 309.1s
+Epoch 44: 160/1200 examples, loss 0.324424, optimizer_steps 10, ATTC_prev 1.300330s
+Epoch 44: 320/1200 examples, loss 0.310451, optimizer_steps 20, ATTC_prev 1.300330s
+Epoch 44: 480/1200 examples, loss 0.315713, optimizer_steps 30, ATTC_prev 1.300330s
+Epoch 44: 640/1200 examples, loss 0.319107, optimizer_steps 40, ATTC_prev 1.300330s
+Epoch 44: 800/1200 examples, loss 0.311415, optimizer_steps 50, ATTC_prev 1.300330s
+Epoch 44: 960/1200 examples, loss 0.307239, optimizer_steps 60, ATTC_prev 1.300330s
+Epoch 44: 1120/1200 examples, loss 0.304110, optimizer_steps 70, ATTC_prev 1.300330s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 44: mAUC 0.7825, mAP 0.7743, ATTC_next 1.2999s; 288.7s
+Epoch 45: 160/1200 examples, loss 0.290211, optimizer_steps 10, ATTC_prev 1.299921s
+Epoch 45: 320/1200 examples, loss 0.285435, optimizer_steps 20, ATTC_prev 1.299921s
+Epoch 45: 480/1200 examples, loss 0.282367, optimizer_steps 30, ATTC_prev 1.299921s
+Epoch 45: 640/1200 examples, loss 0.288362, optimizer_steps 40, ATTC_prev 1.299921s
+Epoch 45: 800/1200 examples, loss 0.288642, optimizer_steps 50, ATTC_prev 1.299921s
+Epoch 45: 960/1200 examples, loss 0.286708, optimizer_steps 60, ATTC_prev 1.299921s
+Epoch 45: 1120/1200 examples, loss 0.297445, optimizer_steps 70, ATTC_prev 1.299921s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 45: mAUC 0.7824, mAP 0.7745, ATTC_next 1.2988s; 278.6s
+Epoch 46: 160/1200 examples, loss 0.322482, optimizer_steps 10, ATTC_prev 1.298825s
+Epoch 46: 320/1200 examples, loss 0.296996, optimizer_steps 20, ATTC_prev 1.298825s
+Epoch 46: 480/1200 examples, loss 0.289882, optimizer_steps 30, ATTC_prev 1.298825s
+Epoch 46: 640/1200 examples, loss 0.291799, optimizer_steps 40, ATTC_prev 1.298825s
+Epoch 46: 800/1200 examples, loss 0.293425, optimizer_steps 50, ATTC_prev 1.298825s
+Epoch 46: 960/1200 examples, loss 0.296983, optimizer_steps 60, ATTC_prev 1.298825s
+Epoch 46: 1120/1200 examples, loss 0.300863, optimizer_steps 70, ATTC_prev 1.298825s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 46: mAUC 0.7824, mAP 0.7742, ATTC_next 1.2993s; 264.6s
+Epoch 47: 160/1200 examples, loss 0.289700, optimizer_steps 10, ATTC_prev 1.299269s
+Epoch 47: 320/1200 examples, loss 0.280191, optimizer_steps 20, ATTC_prev 1.299269s
+Epoch 47: 480/1200 examples, loss 0.282152, optimizer_steps 30, ATTC_prev 1.299269s
+Epoch 47: 640/1200 examples, loss 0.287799, optimizer_steps 40, ATTC_prev 1.299269s
+Epoch 47: 800/1200 examples, loss 0.291177, optimizer_steps 50, ATTC_prev 1.299269s
+Epoch 47: 960/1200 examples, loss 0.290083, optimizer_steps 60, ATTC_prev 1.299269s
+Epoch 47: 1120/1200 examples, loss 0.297086, optimizer_steps 70, ATTC_prev 1.299269s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 47: mAUC 0.7826, mAP 0.7747, ATTC_next 1.2994s; 274.9s
+Epoch 48: 160/1200 examples, loss 0.312070, optimizer_steps 10, ATTC_prev 1.299397s
+Epoch 48: 320/1200 examples, loss 0.301715, optimizer_steps 20, ATTC_prev 1.299397s
+Epoch 48: 480/1200 examples, loss 0.304563, optimizer_steps 30, ATTC_prev 1.299397s
+Epoch 48: 640/1200 examples, loss 0.298082, optimizer_steps 40, ATTC_prev 1.299397s
+Epoch 48: 800/1200 examples, loss 0.302803, optimizer_steps 50, ATTC_prev 1.299397s
+Epoch 48: 960/1200 examples, loss 0.298399, optimizer_steps 60, ATTC_prev 1.299397s
+Epoch 48: 1120/1200 examples, loss 0.304733, optimizer_steps 70, ATTC_prev 1.299397s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 48: mAUC 0.7825, mAP 0.7748, ATTC_next 1.2983s; 282.8s
+Epoch 49: 160/1200 examples, loss 0.315589, optimizer_steps 10, ATTC_prev 1.298322s
+Epoch 49: 320/1200 examples, loss 0.292010, optimizer_steps 20, ATTC_prev 1.298322s
+Epoch 49: 480/1200 examples, loss 0.304630, optimizer_steps 30, ATTC_prev 1.298322s
+Epoch 49: 640/1200 examples, loss 0.299711, optimizer_steps 40, ATTC_prev 1.298322s
+Epoch 49: 800/1200 examples, loss 0.302500, optimizer_steps 50, ATTC_prev 1.298322s
+Epoch 49: 960/1200 examples, loss 0.301105, optimizer_steps 60, ATTC_prev 1.298322s
+Epoch 49: 1120/1200 examples, loss 0.302529, optimizer_steps 70, ATTC_prev 1.298322s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 49: mAUC 0.7824, mAP 0.7748, ATTC_next 1.2985s; 306.5s
+Epoch 50: 160/1200 examples, loss 0.253921, optimizer_steps 10, ATTC_prev 1.298541s
+Epoch 50: 320/1200 examples, loss 0.264799, optimizer_steps 20, ATTC_prev 1.298541s
+Epoch 50: 480/1200 examples, loss 0.276934, optimizer_steps 30, ATTC_prev 1.298541s
+Epoch 50: 640/1200 examples, loss 0.281777, optimizer_steps 40, ATTC_prev 1.298541s
+Epoch 50: 800/1200 examples, loss 0.289898, optimizer_steps 50, ATTC_prev 1.298541s
+Epoch 50: 960/1200 examples, loss 0.297595, optimizer_steps 60, ATTC_prev 1.298541s
+Epoch 50: 1120/1200 examples, loss 0.301274, optimizer_steps 70, ATTC_prev 1.298541s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Seed 44 epoch 50: mAUC 0.7825, mAP 0.7748, ATTC_next 1.2964s; 309.4s
+Inference 100/300
+Inference 200/300
+Inference 300/300
+Inference 100/1344
+Inference 200/1344
+Inference 300/1344
+Inference 400/1344
+Inference 500/1344
+Inference 600/1344
+Inference 700/1344
+Inference 800/1344
+Inference 900/1344
+Inference 1000/1344
+Inference 1100/1344
+Inference 1200/1344
+Inference 1300/1344
+FULL CURVES seed44 50/1344, max scalar delta 0.00000006
+FULL CURVES seed44 100/1344, max scalar delta 0.00000012
+FULL CURVES seed44 150/1344, max scalar delta 0.00000012
+FULL CURVES seed44 200/1344, max scalar delta 0.00000012
+FULL CURVES seed44 250/1344, max scalar delta 0.00000012
+FULL CURVES seed44 300/1344, max scalar delta 0.00000012
+FULL CURVES seed44 350/1344, max scalar delta 0.00000012
+FULL CURVES seed44 400/1344, max scalar delta 0.00000012
+FULL CURVES seed44 450/1344, max scalar delta 0.00000012
+FULL CURVES seed44 500/1344, max scalar delta 0.00000012
+FULL CURVES seed44 550/1344, max scalar delta 0.00000012
+FULL CURVES seed44 600/1344, max scalar delta 0.00000012
+FULL CURVES seed44 650/1344, max scalar delta 0.00000012
+FULL CURVES seed44 700/1344, max scalar delta 0.00000012
+FULL CURVES seed44 750/1344, max scalar delta 0.00000012
+FULL CURVES seed44 800/1344, max scalar delta 0.00000012
+FULL CURVES seed44 850/1344, max scalar delta 0.00000012
+FULL CURVES seed44 900/1344, max scalar delta 0.00000012
+FULL CURVES seed44 950/1344, max scalar delta 0.00000012
+FULL CURVES seed44 1000/1344, max scalar delta 0.00000012
+FULL CURVES seed44 1050/1344, max scalar delta 0.00000012
+FULL CURVES seed44 1100/1344, max scalar delta 0.00000012
+FULL CURVES seed44 1150/1344, max scalar delta 0.00000012
+FULL CURVES seed44 1200/1344, max scalar delta 0.00000012
+FULL CURVES seed44 1250/1344, max scalar delta 0.00000012
+FULL CURVES seed44 1300/1344, max scalar delta 0.00000012
+{
+  "complete": true,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "n": 3,
+  "sample_sd_ddof": 1,
+  "paper_equivalence_confirmed": false,
+  "mapping_verified": false,
+  "scopes": {
+    "Combined": {
+      "mAP": {
+        "per_seed": [
+          0.7668089741028851,
+          0.7620788067478874,
+          0.7696467025000344
+        ],
+        "mean": 0.7661781611169356,
+        "sd": 0.0038231799978908905
+      },
+      "mAUC_grouped": {
+        "per_seed": [
+          0.7864694611657522,
+          0.7837792048893676,
+          0.7838392556275124
+        ],
+        "mean": 0.7846959738942108,
+        "sd": 0.0015361784888246717
+      },
+      "mPAUC_sklearn_standardized": {
+        "per_seed": [
+          0.611404009872481,
+          0.6091252247181091,
+          0.6161730047430899
+        ],
+        "mean": 0.6122340797778933,
+        "sd": 0.003596465328073223
+      },
+      "mPAUC_raw_divided_by_0.1": {
+        "per_seed": [
+          0.26166761875771377,
+          0.2573379269644073,
+          0.27072870901187085
+        ],
+        "mean": 0.2632447515779973,
+        "sd": 0.006833284123339193
+      },
+      "mTTA_test_author_index10_inferred_s": {
+        "per_seed": [
+          0.6320961226400093,
+          0.6250015133937608,
+          0.625249393738977
+        ],
+        "mean": 0.627449009924249,
+        "sd": 0.004026425661939073
+      },
+      "mTTA_test_physical_strictFAR_inferred_s": {
+        "per_seed": [
+          0.6058371613176106,
+          0.6000980738021152,
+          0.6013753156435677
+        ],
+        "mean": 0.6024368502544312,
+        "sd": 0.003013208120122868
+      },
+      "mTTA_test_physical_TPonly_strictFAR_inferred_s": {
+        "per_seed": [
+          1.6170806350788218,
+          1.6283306026435695,
+          1.6064372757391727
+        ],
+        "mean": 1.6172828378205213,
+        "sd": 0.010948063993111275
+      }
+    },
+    "Public": {
+      "mAP": {
+        "per_seed": [
+          0.7627205002801701,
+          0.7533718685524246,
+          0.76354653393994
+        ],
+        "mean": 0.7598796342575116,
+        "sd": 0.005651003783045816
+      },
+      "mAUC_grouped": {
+        "per_seed": [
+          0.7798511314764723,
+          0.7763466129441087,
+          0.7792702802978484
+        ],
+        "mean": 0.7784893415728098,
+        "sd": 0.0018782469233619876
+      },
+      "mPAUC_sklearn_standardized": {
+        "per_seed": [
+          0.6070151138780754,
+          0.5996537412483351,
+          0.6075037904182218
+        ],
+        "mean": 0.6047242151815441,
+        "sd": 0.004397951866577894
+      },
+      "mPAUC_raw_divided_by_0.1": {
+        "per_seed": [
+          0.25332871636834314,
+          0.2393421083718367,
+          0.25425720179462136
+        ],
+        "mean": 0.24897600884493373,
+        "sd": 0.008356108546498018
+      },
+      "mTTA_test_author_index10_inferred_s": {
+        "per_seed": [
+          0.5910896140662386,
+          0.6019508506825171,
+          0.5791784932135116
+        ],
+        "mean": 0.5907396526540891,
+        "sd": 0.011390211627381562
+      },
+      "mTTA_test_physical_strictFAR_inferred_s": {
+        "per_seed": [
+          0.5718955024221014,
+          0.5836417832735024,
+          0.5609845694839176
+        ],
+        "mean": 0.5721739517265071,
+        "sd": 0.011331173138209489
+      },
+      "mTTA_test_physical_TPonly_strictFAR_inferred_s": {
+        "per_seed": [
+          1.623353665529864,
+          1.6573330712193752,
+          1.6068597099473938
+        ],
+        "mean": 1.6291821488988776,
+        "sd": 0.0257365200310792
+      }
+    },
+    "Private": {
+      "mAP": {
+        "per_seed": [
+          0.7753030886865041,
+          0.7726933546160836,
+          0.7795011722542481
+        ],
+        "mean": 0.7758325385189453,
+        "sd": 0.0034346518153125713
+      },
+      "mAUC_grouped": {
+        "per_seed": [
+          0.7948191134680526,
+          0.7914719036564523,
+          0.7896553930942165
+        ],
+        "mean": 0.7919821367395737,
+        "sd": 0.0026193998118130345
+      },
+      "mPAUC_sklearn_standardized": {
+        "per_seed": [
+          0.620926614874202,
+          0.6227515526142102,
+          0.6299429807365032
+        ],
+        "mean": 0.6245403827416385,
+        "sd": 0.004766932793664508
+      },
+      "mPAUC_raw_divided_by_0.1": {
+        "per_seed": [
+          0.2797605682609835,
+          0.2832279499669995,
+          0.2968916633993562
+        ],
+        "mean": 0.2866267272091131,
+        "sd": 0.00905717230796267
+      },
+      "mTTA_test_author_index10_inferred_s": {
+        "per_seed": [
+          0.6733258659344715,
+          0.650372749137968,
+          0.6692024782540833
+        ],
+        "mean": 0.6643003644421743,
+        "sd": 0.012236602164700959
+      },
+      "mTTA_test_physical_strictFAR_inferred_s": {
+        "per_seed": [
+          0.6407900259328042,
+          0.6196693113719084,
+          0.6401546977805329
+        ],
+        "mean": 0.6335380116950818,
+        "sd": 0.012014846938507394
+      },
+      "mTTA_test_physical_TPonly_strictFAR_inferred_s": {
+        "per_seed": [
+          1.6029513318322173,
+          1.5939311099803326,
+          1.6042798712964785
+        ],
+        "mean": 1.6003874377030094,
+        "sd": 0.005630664261344239
+      }
+    }
+  }
+}

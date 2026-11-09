@@ -1,0 +1,2465 @@
+Verified/indexed 250/2844 videos
+Verified/indexed 500/2844 videos
+Verified/indexed 750/2844 videos
+Verified/indexed 1000/2844 videos
+Verified/indexed 1250/2844 videos
+Verified/indexed 1500/2844 videos
+Verified/indexed 1750/2844 videos
+Verified/indexed 2000/2844 videos
+Verified/indexed 2250/2844 videos
+Verified/indexed 2500/2844 videos
+Verified/indexed 2750/2844 videos
+11/07 06:07:04 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 43
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.2, V13.2.86
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 43
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+11/07 06:07:05 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+    dict(
+        deadline=1.7976931348623157e+308,
+        seed=43,
+        type='ReproductionStateHook'),
+    dict(type='RQ3StrictHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=1,
+        rule='greater',
+        save_best='mAUC@',
+        type='CheckpointHook'),
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/rq3abl32_inputs/H7/medium_h7/seed_43/run/best_mAUC@_epoch_5.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=False,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained=None,
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        adapter_dropout=0.1,
+        adapter_init_seed=43,
+        arm='m1',
+        clip_len=5,
+        history=7,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        reference_history=7,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='VastTunedH7AblationHead',
+        width=512,
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(
+        format_shape='NCTHW',
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='ActionDataPreprocessor'),
+    encode_chunk=4,
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='RQ3H7Recognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40.0, norm_type=2),
+    optimizer=dict(lr=0.0002, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(
+        custom_keys=dict({
+            'backbone': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.fc_cls': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.rnn': dict(decay_mult=0.0, lr_mult=0.0)
+        })),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        20,
+        40,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=43)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/extraction/m1/seed_43/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=43,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/extraction/m1/seed_43/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=False,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(
+                area_range=(
+                    0.8,
+                    1.0,
+                ),
+                aspect_ratio_range=(
+                    1.3333333333333333,
+                    1.7777777777777777,
+                ),
+                type='RandomResizedCrop'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(flip_ratio=0.5, type='Flip'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=43,
+        split='train',
+        test_mode=False,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/extraction/m1/seed_43/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=43,
+        split='validation',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/extraction/m1/seed_43/smoke'
+
+11/07 06:07:06 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+11/07 06:07:06 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Loads checkpoint by local backend from path: /workspace/rq3abl32_inputs/H7/medium_h7/seed_43/run/best_mAUC@_epoch_5.pth
+The model and loaded state dict do not match exactly
+
+missing keys in source state_dict: cls_head.adapter.decay_raw, cls_head.adapter.proj.weight, cls_head.adapter.proj.bias, cls_head.adapter.norm.weight, cls_head.adapter.norm.bias, cls_head.adapter.rnn.weight_ih_l0, cls_head.adapter.rnn.weight_hh_l0, cls_head.adapter.rnn.bias_ih_l0, cls_head.adapter.rnn.bias_hh_l0, cls_head.adapter.query.weight, cls_head.adapter.key.weight, cls_head.adapter.residual_gate.weight, cls_head.adapter.residual_gate.bias, cls_head.adapter.output.weight, cls_head.adapter.output.bias
+
+11/07 06:07:07 - mmengine - WARNING - The prefix is not set in metric class SavingAnticipationMetric.
+EXTRACT seed43 train 1/1200 | total 1/1500 | 2.3s/video | ETA 0.96h | 2.6MiB/file
+EXTRACT seed43 train 2/1200 | total 2/1500 | 2.0s/video | ETA 0.89h | 2.6MiB/file
+EXTRACT seed43 train 3/1200 | total 3/1500 | 1.9s/video | ETA 0.86h | 2.6MiB/file
+EXTRACT seed43 train 4/1200 | total 4/1500 | 2.0s/video | ETA 0.85h | 2.6MiB/file
+EXTRACT seed43 train 5/1200 | total 5/1500 | 2.0s/video | ETA 0.84h | 2.6MiB/file
+EXTRACT seed43 train 6/1200 | total 6/1500 | 1.8s/video | ETA 0.82h | 2.6MiB/file
+EXTRACT seed43 train 7/1200 | total 7/1500 | 1.9s/video | ETA 0.82h | 2.6MiB/file
+EXTRACT seed43 train 8/1200 | total 8/1500 | 1.9s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 9/1200 | total 9/1500 | 2.1s/video | ETA 0.82h | 2.6MiB/file
+EXTRACT seed43 train 10/1200 | total 10/1500 | 1.8s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 11/1200 | total 11/1500 | 2.0s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 12/1200 | total 12/1500 | 2.1s/video | ETA 0.82h | 2.6MiB/file
+EXTRACT seed43 train 13/1200 | total 13/1500 | 2.0s/video | ETA 0.82h | 2.6MiB/file
+EXTRACT seed43 train 14/1200 | total 14/1500 | 1.9s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 15/1200 | total 15/1500 | 1.8s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 16/1200 | total 16/1500 | 1.9s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 17/1200 | total 17/1500 | 1.9s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 18/1200 | total 18/1500 | 2.1s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 19/1200 | total 19/1500 | 2.0s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 20/1200 | total 20/1500 | 2.1s/video | ETA 0.81h | 2.6MiB/file
+EXTRACT seed43 train 21/1200 | total 21/1500 | 1.8s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 22/1200 | total 22/1500 | 2.0s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 23/1200 | total 23/1500 | 2.0s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 24/1200 | total 24/1500 | 2.0s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 25/1200 | total 25/1500 | 1.9s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 26/1200 | total 26/1500 | 1.7s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 27/1200 | total 27/1500 | 2.0s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 28/1200 | total 28/1500 | 1.9s/video | ETA 0.80h | 2.6MiB/file
+EXTRACT seed43 train 29/1200 | total 29/1500 | 2.0s/video | ETA 0.79h | 2.6MiB/file
+EXTRACT seed43 train 30/1200 | total 30/1500 | 1.6s/video | ETA 0.79h | 2.6MiB/file
+EXTRACT seed43 train 31/1200 | total 31/1500 | 1.9s/video | ETA 0.79h | 2.6MiB/file
+EXTRACT seed43 train 32/1200 | total 32/1500 | 2.0s/video | ETA 0.79h | 2.6MiB/file
+EXTRACT seed43 train 33/1200 | total 33/1500 | 1.8s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 34/1200 | total 34/1500 | 2.0s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 35/1200 | total 35/1500 | 1.8s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 36/1200 | total 36/1500 | 1.9s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 37/1200 | total 37/1500 | 1.9s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 38/1200 | total 38/1500 | 1.9s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 39/1200 | total 39/1500 | 1.9s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 40/1200 | total 40/1500 | 1.8s/video | ETA 0.77h | 2.6MiB/file
+EXTRACT seed43 train 41/1200 | total 41/1500 | 2.1s/video | ETA 0.78h | 2.6MiB/file
+EXTRACT seed43 train 42/1200 | total 42/1500 | 1.6s/video | ETA 0.77h | 2.6MiB/file
+EXTRACT seed43 train 43/1200 | total 43/1500 | 1.8s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 44/1200 | total 44/1500 | 1.8s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 45/1200 | total 45/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 46/1200 | total 46/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 47/1200 | total 47/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 48/1200 | total 48/1500 | 1.9s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 49/1200 | total 49/1500 | 1.9s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 50/1200 | total 50/1500 | 1.9s/video | ETA 0.77h | 2.6MiB/file
+EXTRACT seed43 train 51/1200 | total 51/1500 | 1.8s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 52/1200 | total 52/1500 | 1.9s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 53/1200 | total 53/1500 | 1.8s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 54/1200 | total 54/1500 | 2.1s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 55/1200 | total 55/1500 | 1.9s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 56/1200 | total 56/1500 | 2.1s/video | ETA 0.77h | 2.6MiB/file
+EXTRACT seed43 train 57/1200 | total 57/1500 | 2.0s/video | ETA 0.77h | 2.6MiB/file
+EXTRACT seed43 train 58/1200 | total 58/1500 | 2.0s/video | ETA 0.77h | 2.6MiB/file
+EXTRACT seed43 train 59/1200 | total 59/1500 | 1.5s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 60/1200 | total 60/1500 | 1.5s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 61/1200 | total 61/1500 | 2.0s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 62/1200 | total 62/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 63/1200 | total 63/1500 | 2.1s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 64/1200 | total 64/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 65/1200 | total 65/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 66/1200 | total 66/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 67/1200 | total 67/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 68/1200 | total 68/1500 | 1.9s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 69/1200 | total 69/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 70/1200 | total 70/1500 | 2.0s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 71/1200 | total 71/1500 | 1.7s/video | ETA 0.76h | 2.6MiB/file
+EXTRACT seed43 train 72/1200 | total 72/1500 | 1.5s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 73/1200 | total 73/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 74/1200 | total 74/1500 | 2.0s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 75/1200 | total 75/1500 | 1.5s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 76/1200 | total 76/1500 | 2.0s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 77/1200 | total 77/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 78/1200 | total 78/1500 | 1.8s/video | ETA 0.73h | 2.6MiB/file
+EXTRACT seed43 train 79/1200 | total 79/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 80/1200 | total 80/1500 | 1.8s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 81/1200 | total 81/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 82/1200 | total 82/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 83/1200 | total 83/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 84/1200 | total 84/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 85/1200 | total 85/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 86/1200 | total 86/1500 | 2.0s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 87/1200 | total 87/1500 | 2.0s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 88/1200 | total 88/1500 | 2.0s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 89/1200 | total 89/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 90/1200 | total 90/1500 | 1.9s/video | ETA 0.73h | 2.6MiB/file
+EXTRACT seed43 train 91/1200 | total 91/1500 | 2.1s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 92/1200 | total 92/1500 | 2.0s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 93/1200 | total 93/1500 | 1.5s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 94/1200 | total 94/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 95/1200 | total 95/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 96/1200 | total 96/1500 | 1.8s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 97/1200 | total 97/1500 | 2.0s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 98/1200 | total 98/1500 | 2.0s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 99/1200 | total 99/1500 | 2.0s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 100/1200 | total 100/1500 | 2.0s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 101/1200 | total 101/1500 | 2.0s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 102/1200 | total 102/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 103/1200 | total 103/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 104/1200 | total 104/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 105/1200 | total 105/1500 | 1.9s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 106/1200 | total 106/1500 | 1.8s/video | ETA 0.75h | 2.6MiB/file
+EXTRACT seed43 train 107/1200 | total 107/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 108/1200 | total 108/1500 | 1.8s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 109/1200 | total 109/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 110/1200 | total 110/1500 | 2.1s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 111/1200 | total 111/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 112/1200 | total 112/1500 | 2.1s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 113/1200 | total 113/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 114/1200 | total 114/1500 | 2.0s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 115/1200 | total 115/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 116/1200 | total 116/1500 | 1.8s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 117/1200 | total 117/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 118/1200 | total 118/1500 | 1.9s/video | ETA 0.74h | 2.6MiB/file
+EXTRACT seed43 train 119/1200 | total 119/1500 | 1.9s/video | ETA 0.73h | 2.6MiB/file
+EXTRACT seed43 train 120/1200 | total 120/1500 | 1.9s/video | ETA 0.73h | 2.6MiB/file
+EXTRACT seed43 train 121/1200 | total 121/1500 | 1.8s/video | ETA 0.73h | 2.6MiB/file
+EXTRACT seed43 train 122/1200 | total 122/1500 | 1.8s/video | ETA 0.73h | 2.6MiB/file
+EXTRACT seed43 train 123/1200 | total 123/1500 | 1.8s/video | ETA 0.72h | 2.6MiB/file
+EXTRACT seed43 train 124/1200 | total 124/1500 | 1.8s/video | ETA 0.72h | 2.6MiB/file
+EXTRACT seed43 train 125/1200 | total 125/1500 | 1.8s/video | ETA 0.72h | 2.6MiB/file
+EXTRACT seed43 train 126/1200 | total 126/1500 | 1.8s/video | ETA 0.72h | 2.6MiB/file
+EXTRACT seed43 train 127/1200 | total 127/1500 | 1.9s/video | ETA 0.72h | 2.6MiB/file
+EXTRACT seed43 train 128/1200 | total 128/1500 | 2.0s/video | ETA 0.72h | 2.6MiB/file
+EXTRACT seed43 train 129/1200 | total 129/1500 | 1.8s/video | ETA 0.72h | 2.6MiB/file
+EXTRACT seed43 train 130/1200 | total 130/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 131/1200 | total 131/1500 | 1.8s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 132/1200 | total 132/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 133/1200 | total 133/1500 | 2.0s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 134/1200 | total 134/1500 | 2.0s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 135/1200 | total 135/1500 | 2.1s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 136/1200 | total 136/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 137/1200 | total 137/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 138/1200 | total 138/1500 | 1.6s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 139/1200 | total 139/1500 | 1.8s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 140/1200 | total 140/1500 | 2.0s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 141/1200 | total 141/1500 | 1.8s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 142/1200 | total 142/1500 | 2.0s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 143/1200 | total 143/1500 | 1.8s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 144/1200 | total 144/1500 | 1.8s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 145/1200 | total 145/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 146/1200 | total 146/1500 | 1.5s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 147/1200 | total 147/1500 | 1.7s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 148/1200 | total 148/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 149/1200 | total 149/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 150/1200 | total 150/1500 | 2.1s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 151/1200 | total 151/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 152/1200 | total 152/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 153/1200 | total 153/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 154/1200 | total 154/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 155/1200 | total 155/1500 | 2.1s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 156/1200 | total 156/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 157/1200 | total 157/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 158/1200 | total 158/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 159/1200 | total 159/1500 | 1.6s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 160/1200 | total 160/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 161/1200 | total 161/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 162/1200 | total 162/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 163/1200 | total 163/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 164/1200 | total 164/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 165/1200 | total 165/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 166/1200 | total 166/1500 | 2.0s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 167/1200 | total 167/1500 | 1.8s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 168/1200 | total 168/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 169/1200 | total 169/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 170/1200 | total 170/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 171/1200 | total 171/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 172/1200 | total 172/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 173/1200 | total 173/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 174/1200 | total 174/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 175/1200 | total 175/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 176/1200 | total 176/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 177/1200 | total 177/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 178/1200 | total 178/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 179/1200 | total 179/1500 | 2.0s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 180/1200 | total 180/1500 | 1.9s/video | ETA 0.71h | 2.6MiB/file
+EXTRACT seed43 train 181/1200 | total 181/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 182/1200 | total 182/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 183/1200 | total 183/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 184/1200 | total 184/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 185/1200 | total 185/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 186/1200 | total 186/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 187/1200 | total 187/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 188/1200 | total 188/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 189/1200 | total 189/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 190/1200 | total 190/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 191/1200 | total 191/1500 | 2.1s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 192/1200 | total 192/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 193/1200 | total 193/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 194/1200 | total 194/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 195/1200 | total 195/1500 | 1.8s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 196/1200 | total 196/1500 | 1.9s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 197/1200 | total 197/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 198/1200 | total 198/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 199/1200 | total 199/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 200/1200 | total 200/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 201/1200 | total 201/1500 | 2.1s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 202/1200 | total 202/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 203/1200 | total 203/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 204/1200 | total 204/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 205/1200 | total 205/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 206/1200 | total 206/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 207/1200 | total 207/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 208/1200 | total 208/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 209/1200 | total 209/1500 | 2.2s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 210/1200 | total 210/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 211/1200 | total 211/1500 | 1.8s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 212/1200 | total 212/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 213/1200 | total 213/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 214/1200 | total 214/1500 | 1.8s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 215/1200 | total 215/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 216/1200 | total 216/1500 | 1.9s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 217/1200 | total 217/1500 | 2.1s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 218/1200 | total 218/1500 | 2.0s/video | ETA 0.70h | 2.6MiB/file
+EXTRACT seed43 train 219/1200 | total 219/1500 | 1.8s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 220/1200 | total 220/1500 | 1.9s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 221/1200 | total 221/1500 | 2.0s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 222/1200 | total 222/1500 | 1.9s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 223/1200 | total 223/1500 | 2.1s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 224/1200 | total 224/1500 | 1.9s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 225/1200 | total 225/1500 | 1.9s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 226/1200 | total 226/1500 | 1.6s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 227/1200 | total 227/1500 | 2.1s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 228/1200 | total 228/1500 | 2.0s/video | ETA 0.69h | 2.6MiB/file
+EXTRACT seed43 train 229/1200 | total 229/1500 | 1.8s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 230/1200 | total 230/1500 | 2.0s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 231/1200 | total 231/1500 | 2.0s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 232/1200 | total 232/1500 | 2.0s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 233/1200 | total 233/1500 | 1.8s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 234/1200 | total 234/1500 | 2.0s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 235/1200 | total 235/1500 | 2.0s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 236/1200 | total 236/1500 | 1.7s/video | ETA 0.68h | 2.6MiB/file
+EXTRACT seed43 train 237/1200 | total 237/1500 | 1.9s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 238/1200 | total 238/1500 | 1.9s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 239/1200 | total 239/1500 | 1.8s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 240/1200 | total 240/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 241/1200 | total 241/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 242/1200 | total 242/1500 | 1.9s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 243/1200 | total 243/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 244/1200 | total 244/1500 | 1.9s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 245/1200 | total 245/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 246/1200 | total 246/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 247/1200 | total 247/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 248/1200 | total 248/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 249/1200 | total 249/1500 | 1.8s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 250/1200 | total 250/1500 | 1.8s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 251/1200 | total 251/1500 | 1.9s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 252/1200 | total 252/1500 | 1.9s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 253/1200 | total 253/1500 | 2.0s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 254/1200 | total 254/1500 | 2.2s/video | ETA 0.67h | 2.6MiB/file
+EXTRACT seed43 train 255/1200 | total 255/1500 | 1.8s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 256/1200 | total 256/1500 | 1.5s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 257/1200 | total 257/1500 | 1.9s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 258/1200 | total 258/1500 | 1.8s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 259/1200 | total 259/1500 | 2.0s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 260/1200 | total 260/1500 | 1.9s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 261/1200 | total 261/1500 | 2.2s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 262/1200 | total 262/1500 | 1.9s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 263/1200 | total 263/1500 | 1.8s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 264/1200 | total 264/1500 | 2.0s/video | ETA 0.66h | 2.6MiB/file
+EXTRACT seed43 train 265/1200 | total 265/1500 | 1.8s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 266/1200 | total 266/1500 | 1.7s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 267/1200 | total 267/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 268/1200 | total 268/1500 | 2.1s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 269/1200 | total 269/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 270/1200 | total 270/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 271/1200 | total 271/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 272/1200 | total 272/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 273/1200 | total 273/1500 | 1.8s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 274/1200 | total 274/1500 | 1.7s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 275/1200 | total 275/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 276/1200 | total 276/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 277/1200 | total 277/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 278/1200 | total 278/1500 | 1.8s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 279/1200 | total 279/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 280/1200 | total 280/1500 | 1.9s/video | ETA 0.65h | 2.6MiB/file
+EXTRACT seed43 train 281/1200 | total 281/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 282/1200 | total 282/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 283/1200 | total 283/1500 | 1.7s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 284/1200 | total 284/1500 | 1.8s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 285/1200 | total 285/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 286/1200 | total 286/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 287/1200 | total 287/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 288/1200 | total 288/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 289/1200 | total 289/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 290/1200 | total 290/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 291/1200 | total 291/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 292/1200 | total 292/1500 | 1.8s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 293/1200 | total 293/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 294/1200 | total 294/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 295/1200 | total 295/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 296/1200 | total 296/1500 | 1.6s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 297/1200 | total 297/1500 | 2.1s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 298/1200 | total 298/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 299/1200 | total 299/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 300/1200 | total 300/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 301/1200 | total 301/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 302/1200 | total 302/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 303/1200 | total 303/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 304/1200 | total 304/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 305/1200 | total 305/1500 | 1.8s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 306/1200 | total 306/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 307/1200 | total 307/1500 | 2.0s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 308/1200 | total 308/1500 | 1.9s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 309/1200 | total 309/1500 | 1.8s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 310/1200 | total 310/1500 | 1.8s/video | ETA 0.64h | 2.6MiB/file
+EXTRACT seed43 train 311/1200 | total 311/1500 | 1.8s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 312/1200 | total 312/1500 | 1.8s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 313/1200 | total 313/1500 | 1.8s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 314/1200 | total 314/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 315/1200 | total 315/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 316/1200 | total 316/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 317/1200 | total 317/1500 | 2.1s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 318/1200 | total 318/1500 | 2.1s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 319/1200 | total 319/1500 | 1.8s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 320/1200 | total 320/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 321/1200 | total 321/1500 | 1.9s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 322/1200 | total 322/1500 | 2.2s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 323/1200 | total 323/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 324/1200 | total 324/1500 | 2.0s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 325/1200 | total 325/1500 | 1.7s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 326/1200 | total 326/1500 | 2.0s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 327/1200 | total 327/1500 | 1.9s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 328/1200 | total 328/1500 | 2.0s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 329/1200 | total 329/1500 | 1.9s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 330/1200 | total 330/1500 | 1.9s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 331/1200 | total 331/1500 | 1.8s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 332/1200 | total 332/1500 | 2.0s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 333/1200 | total 333/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 334/1200 | total 334/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 335/1200 | total 335/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 336/1200 | total 336/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 337/1200 | total 337/1500 | 2.1s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 338/1200 | total 338/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 339/1200 | total 339/1500 | 2.1s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 340/1200 | total 340/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 341/1200 | total 341/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 342/1200 | total 342/1500 | 2.1s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 343/1200 | total 343/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 344/1200 | total 344/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 345/1200 | total 345/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 346/1200 | total 346/1500 | 1.7s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 347/1200 | total 347/1500 | 1.8s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 348/1200 | total 348/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 349/1200 | total 349/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 350/1200 | total 350/1500 | 1.9s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 351/1200 | total 351/1500 | 2.0s/video | ETA 0.63h | 2.6MiB/file
+EXTRACT seed43 train 352/1200 | total 352/1500 | 1.7s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 353/1200 | total 353/1500 | 1.8s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 354/1200 | total 354/1500 | 2.0s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 355/1200 | total 355/1500 | 2.0s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 356/1200 | total 356/1500 | 1.8s/video | ETA 0.62h | 2.6MiB/file
+EXTRACT seed43 train 357/1200 | total 357/1500 | 2.0s/video | ETA 0.61h | 2.6MiB/file
+EXTRACT seed43 train 358/1200 | total 358/1500 | 1.8s/video | ETA 0.61h | 2.6MiB/file
+EXTRACT seed43 train 359/1200 | total 359/1500 | 1.9s/video | ETA 0.61h | 2.6MiB/file
+EXTRACT seed43 train 360/1200 | total 360/1500 | 1.9s/video | ETA 0.61h | 2.6MiB/file
+EXTRACT seed43 train 361/1200 | total 361/1500 | 2.0s/video | ETA 0.61h | 2.6MiB/file
+EXTRACT seed43 train 362/1200 | total 362/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 363/1200 | total 363/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 364/1200 | total 364/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 365/1200 | total 365/1500 | 1.8s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 366/1200 | total 366/1500 | 2.1s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 367/1200 | total 367/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 368/1200 | total 368/1500 | 1.8s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 369/1200 | total 369/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 370/1200 | total 370/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 371/1200 | total 371/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 372/1200 | total 372/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 373/1200 | total 373/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 374/1200 | total 374/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 375/1200 | total 375/1500 | 2.1s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 376/1200 | total 376/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 377/1200 | total 377/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 378/1200 | total 378/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 379/1200 | total 379/1500 | 1.8s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 380/1200 | total 380/1500 | 1.8s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 381/1200 | total 381/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 382/1200 | total 382/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 383/1200 | total 383/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 384/1200 | total 384/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 385/1200 | total 385/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 386/1200 | total 386/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 387/1200 | total 387/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 388/1200 | total 388/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 389/1200 | total 389/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 390/1200 | total 390/1500 | 1.8s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 391/1200 | total 391/1500 | 2.0s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 392/1200 | total 392/1500 | 1.9s/video | ETA 0.60h | 2.6MiB/file
+EXTRACT seed43 train 393/1200 | total 393/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 394/1200 | total 394/1500 | 1.7s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 395/1200 | total 395/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 396/1200 | total 396/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 397/1200 | total 397/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 398/1200 | total 398/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 399/1200 | total 399/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 400/1200 | total 400/1500 | 1.9s/video | ETA 0.59h | 2.6MiB/file
+EXTRACT seed43 train 401/1200 | total 401/1500 | 1.8s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 402/1200 | total 402/1500 | 1.8s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 403/1200 | total 403/1500 | 1.8s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 404/1200 | total 404/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 405/1200 | total 405/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 406/1200 | total 406/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 407/1200 | total 407/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 408/1200 | total 408/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 409/1200 | total 409/1500 | 2.1s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 410/1200 | total 410/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 411/1200 | total 411/1500 | 1.8s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 412/1200 | total 412/1500 | 1.8s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 413/1200 | total 413/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 414/1200 | total 414/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 415/1200 | total 415/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 416/1200 | total 416/1500 | 2.1s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 417/1200 | total 417/1500 | 2.0s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 418/1200 | total 418/1500 | 2.0s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 419/1200 | total 419/1500 | 2.0s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 420/1200 | total 420/1500 | 1.8s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 421/1200 | total 421/1500 | 1.8s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 422/1200 | total 422/1500 | 1.9s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 423/1200 | total 423/1500 | 2.0s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 424/1200 | total 424/1500 | 1.9s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 425/1200 | total 425/1500 | 1.8s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 426/1200 | total 426/1500 | 1.7s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 427/1200 | total 427/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 428/1200 | total 428/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 429/1200 | total 429/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 430/1200 | total 430/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 431/1200 | total 431/1500 | 1.8s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 432/1200 | total 432/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 433/1200 | total 433/1500 | 2.1s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 434/1200 | total 434/1500 | 2.1s/video | ETA 0.58h | 2.6MiB/file
+EXTRACT seed43 train 435/1200 | total 435/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 436/1200 | total 436/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 437/1200 | total 437/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 438/1200 | total 438/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 439/1200 | total 439/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 440/1200 | total 440/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 441/1200 | total 441/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 442/1200 | total 442/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 443/1200 | total 443/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 444/1200 | total 444/1500 | 1.8s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 445/1200 | total 445/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 446/1200 | total 446/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 447/1200 | total 447/1500 | 1.9s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 448/1200 | total 448/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 449/1200 | total 449/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 450/1200 | total 450/1500 | 1.8s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 451/1200 | total 451/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 452/1200 | total 452/1500 | 2.1s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 453/1200 | total 453/1500 | 2.0s/video | ETA 0.57h | 2.6MiB/file
+EXTRACT seed43 train 454/1200 | total 454/1500 | 1.9s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 455/1200 | total 455/1500 | 1.9s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 456/1200 | total 456/1500 | 1.9s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 457/1200 | total 457/1500 | 1.8s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 458/1200 | total 458/1500 | 1.8s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 459/1200 | total 459/1500 | 1.9s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 460/1200 | total 460/1500 | 2.1s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 461/1200 | total 461/1500 | 1.8s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 462/1200 | total 462/1500 | 2.1s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 463/1200 | total 463/1500 | 1.9s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 464/1200 | total 464/1500 | 1.9s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 465/1200 | total 465/1500 | 2.0s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 466/1200 | total 466/1500 | 2.0s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 467/1200 | total 467/1500 | 2.0s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 468/1200 | total 468/1500 | 2.0s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 469/1200 | total 469/1500 | 2.1s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 470/1200 | total 470/1500 | 1.7s/video | ETA 0.56h | 2.6MiB/file
+EXTRACT seed43 train 471/1200 | total 471/1500 | 1.7s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 472/1200 | total 472/1500 | 2.0s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 473/1200 | total 473/1500 | 1.9s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 474/1200 | total 474/1500 | 2.0s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 475/1200 | total 475/1500 | 2.1s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 476/1200 | total 476/1500 | 2.0s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 477/1200 | total 477/1500 | 1.9s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 478/1200 | total 478/1500 | 1.9s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 479/1200 | total 479/1500 | 1.8s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 480/1200 | total 480/1500 | 1.8s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 481/1200 | total 481/1500 | 1.8s/video | ETA 0.55h | 2.6MiB/file
+EXTRACT seed43 train 482/1200 | total 482/1500 | 1.8s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 483/1200 | total 483/1500 | 1.8s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 484/1200 | total 484/1500 | 1.9s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 485/1200 | total 485/1500 | 1.9s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 486/1200 | total 486/1500 | 2.0s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 487/1200 | total 487/1500 | 2.0s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 488/1200 | total 488/1500 | 2.0s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 489/1200 | total 489/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 490/1200 | total 490/1500 | 1.9s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 491/1200 | total 491/1500 | 1.8s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 492/1200 | total 492/1500 | 1.9s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 493/1200 | total 493/1500 | 2.0s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 494/1200 | total 494/1500 | 2.0s/video | ETA 0.54h | 2.6MiB/file
+EXTRACT seed43 train 495/1200 | total 495/1500 | 2.0s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 496/1200 | total 496/1500 | 2.0s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 497/1200 | total 497/1500 | 1.8s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 498/1200 | total 498/1500 | 2.0s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 499/1200 | total 499/1500 | 2.0s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 500/1200 | total 500/1500 | 1.8s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 501/1200 | total 501/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 502/1200 | total 502/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 503/1200 | total 503/1500 | 1.8s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 504/1200 | total 504/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 505/1200 | total 505/1500 | 2.0s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 506/1200 | total 506/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 507/1200 | total 507/1500 | 1.8s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 508/1200 | total 508/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 509/1200 | total 509/1500 | 2.0s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 510/1200 | total 510/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 511/1200 | total 511/1500 | 2.0s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 512/1200 | total 512/1500 | 1.9s/video | ETA 0.53h | 2.6MiB/file
+EXTRACT seed43 train 513/1200 | total 513/1500 | 1.7s/video | ETA 0.52h | 2.6MiB/file
+EXTRACT seed43 train 514/1200 | total 514/1500 | 1.8s/video | ETA 0.52h | 2.6MiB/file
+EXTRACT seed43 train 515/1200 | total 515/1500 | 1.8s/video | ETA 0.52h | 2.6MiB/file
+EXTRACT seed43 train 516/1200 | total 516/1500 | 1.8s/video | ETA 0.52h | 2.6MiB/file
+EXTRACT seed43 train 517/1200 | total 517/1500 | 2.2s/video | ETA 0.52h | 2.6MiB/file
+EXTRACT seed43 train 518/1200 | total 518/1500 | 1.8s/video | ETA 0.52h | 2.6MiB/file
+EXTRACT seed43 train 519/1200 | total 519/1500 | 2.1s/video | ETA 0.52h | 2.6MiB/file
+EXTRACT seed43 train 520/1200 | total 520/1500 | 1.4s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 521/1200 | total 521/1500 | 2.1s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 522/1200 | total 522/1500 | 1.8s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 523/1200 | total 523/1500 | 1.9s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 524/1200 | total 524/1500 | 1.8s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 525/1200 | total 525/1500 | 2.0s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 526/1200 | total 526/1500 | 1.9s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 527/1200 | total 527/1500 | 1.7s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 528/1200 | total 528/1500 | 1.9s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 529/1200 | total 529/1500 | 2.0s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 530/1200 | total 530/1500 | 1.9s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 531/1200 | total 531/1500 | 2.0s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 532/1200 | total 532/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 533/1200 | total 533/1500 | 1.9s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 534/1200 | total 534/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 535/1200 | total 535/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 536/1200 | total 536/1500 | 1.9s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 537/1200 | total 537/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 538/1200 | total 538/1500 | 1.7s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 539/1200 | total 539/1500 | 2.1s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 540/1200 | total 540/1500 | 1.9s/video | ETA 0.51h | 2.6MiB/file
+EXTRACT seed43 train 541/1200 | total 541/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 542/1200 | total 542/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 543/1200 | total 543/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 544/1200 | total 544/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 545/1200 | total 545/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 546/1200 | total 546/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 547/1200 | total 547/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 548/1200 | total 548/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 549/1200 | total 549/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 550/1200 | total 550/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 551/1200 | total 551/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 552/1200 | total 552/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 553/1200 | total 553/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 554/1200 | total 554/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 555/1200 | total 555/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 556/1200 | total 556/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 557/1200 | total 557/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 558/1200 | total 558/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 559/1200 | total 559/1500 | 2.1s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 560/1200 | total 560/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 561/1200 | total 561/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 562/1200 | total 562/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 563/1200 | total 563/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 564/1200 | total 564/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 565/1200 | total 565/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 566/1200 | total 566/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 567/1200 | total 567/1500 | 1.7s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 568/1200 | total 568/1500 | 2.0s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 569/1200 | total 569/1500 | 1.9s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 570/1200 | total 570/1500 | 1.8s/video | ETA 0.50h | 2.6MiB/file
+EXTRACT seed43 train 571/1200 | total 571/1500 | 1.4s/video | ETA 0.49h | 2.6MiB/file
+EXTRACT seed43 train 572/1200 | total 572/1500 | 2.0s/video | ETA 0.49h | 2.6MiB/file
+EXTRACT seed43 train 573/1200 | total 573/1500 | 1.9s/video | ETA 0.49h | 2.6MiB/file
+EXTRACT seed43 train 574/1200 | total 574/1500 | 1.9s/video | ETA 0.49h | 2.6MiB/file
+EXTRACT seed43 train 575/1200 | total 575/1500 | 1.6s/video | ETA 0.49h | 2.6MiB/file
+EXTRACT seed43 train 576/1200 | total 576/1500 | 1.8s/video | ETA 0.49h | 2.6MiB/file
+EXTRACT seed43 train 577/1200 | total 577/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 578/1200 | total 578/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 579/1200 | total 579/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 580/1200 | total 580/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 581/1200 | total 581/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 582/1200 | total 582/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 583/1200 | total 583/1500 | 2.0s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 584/1200 | total 584/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 585/1200 | total 585/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 586/1200 | total 586/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 587/1200 | total 587/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 588/1200 | total 588/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 589/1200 | total 589/1500 | 2.1s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 590/1200 | total 590/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 591/1200 | total 591/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 592/1200 | total 592/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 593/1200 | total 593/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 594/1200 | total 594/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 595/1200 | total 595/1500 | 1.7s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 596/1200 | total 596/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 597/1200 | total 597/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 598/1200 | total 598/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 599/1200 | total 599/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 600/1200 | total 600/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 601/1200 | total 601/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 602/1200 | total 602/1500 | 2.1s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 603/1200 | total 603/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 604/1200 | total 604/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 605/1200 | total 605/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 606/1200 | total 606/1500 | 2.1s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 607/1200 | total 607/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 608/1200 | total 608/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 609/1200 | total 609/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 610/1200 | total 610/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 611/1200 | total 611/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 612/1200 | total 612/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 613/1200 | total 613/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 614/1200 | total 614/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 615/1200 | total 615/1500 | 1.8s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 616/1200 | total 616/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 617/1200 | total 617/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 618/1200 | total 618/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 619/1200 | total 619/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 620/1200 | total 620/1500 | 2.0s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 621/1200 | total 621/1500 | 1.9s/video | ETA 0.48h | 2.6MiB/file
+EXTRACT seed43 train 622/1200 | total 622/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 623/1200 | total 623/1500 | 2.0s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 624/1200 | total 624/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 625/1200 | total 625/1500 | 1.9s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 626/1200 | total 626/1500 | 2.0s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 627/1200 | total 627/1500 | 2.0s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 628/1200 | total 628/1500 | 2.0s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 629/1200 | total 629/1500 | 1.8s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 630/1200 | total 630/1500 | 1.8s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 631/1200 | total 631/1500 | 2.0s/video | ETA 0.47h | 2.6MiB/file
+EXTRACT seed43 train 632/1200 | total 632/1500 | 1.8s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 633/1200 | total 633/1500 | 2.0s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 634/1200 | total 634/1500 | 1.8s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 635/1200 | total 635/1500 | 1.9s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 636/1200 | total 636/1500 | 1.9s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 637/1200 | total 637/1500 | 1.8s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 638/1200 | total 638/1500 | 1.8s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 639/1200 | total 639/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 640/1200 | total 640/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 641/1200 | total 641/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 642/1200 | total 642/1500 | 2.1s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 643/1200 | total 643/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 644/1200 | total 644/1500 | 2.0s/video | ETA 0.46h | 2.6MiB/file
+EXTRACT seed43 train 645/1200 | total 645/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 646/1200 | total 646/1500 | 1.7s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 647/1200 | total 647/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 648/1200 | total 648/1500 | 1.8s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 649/1200 | total 649/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 650/1200 | total 650/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 651/1200 | total 651/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 652/1200 | total 652/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 653/1200 | total 653/1500 | 1.8s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 654/1200 | total 654/1500 | 1.8s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 655/1200 | total 655/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 656/1200 | total 656/1500 | 1.8s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 657/1200 | total 657/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 658/1200 | total 658/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 659/1200 | total 659/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 660/1200 | total 660/1500 | 1.8s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 661/1200 | total 661/1500 | 2.1s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 662/1200 | total 662/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 663/1200 | total 663/1500 | 2.0s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 664/1200 | total 664/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 665/1200 | total 665/1500 | 2.1s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 666/1200 | total 666/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 667/1200 | total 667/1500 | 2.0s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 668/1200 | total 668/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 669/1200 | total 669/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 670/1200 | total 670/1500 | 1.9s/video | ETA 0.45h | 2.6MiB/file
+EXTRACT seed43 train 671/1200 | total 671/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 672/1200 | total 672/1500 | 1.8s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 673/1200 | total 673/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 674/1200 | total 674/1500 | 1.8s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 675/1200 | total 675/1500 | 2.0s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 676/1200 | total 676/1500 | 2.0s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 677/1200 | total 677/1500 | 2.0s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 678/1200 | total 678/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 679/1200 | total 679/1500 | 1.8s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 680/1200 | total 680/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 681/1200 | total 681/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 682/1200 | total 682/1500 | 1.9s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 683/1200 | total 683/1500 | 2.0s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 684/1200 | total 684/1500 | 2.0s/video | ETA 0.44h | 2.6MiB/file
+EXTRACT seed43 train 685/1200 | total 685/1500 | 1.8s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 686/1200 | total 686/1500 | 1.9s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 687/1200 | total 687/1500 | 1.6s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 688/1200 | total 688/1500 | 2.1s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 689/1200 | total 689/1500 | 1.9s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 690/1200 | total 690/1500 | 2.0s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 691/1200 | total 691/1500 | 2.1s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 692/1200 | total 692/1500 | 1.8s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 693/1200 | total 693/1500 | 1.8s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 694/1200 | total 694/1500 | 1.9s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 695/1200 | total 695/1500 | 2.0s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 696/1200 | total 696/1500 | 1.9s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 697/1200 | total 697/1500 | 1.8s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 698/1200 | total 698/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 699/1200 | total 699/1500 | 2.0s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 700/1200 | total 700/1500 | 1.9s/video | ETA 0.43h | 2.6MiB/file
+EXTRACT seed43 train 701/1200 | total 701/1500 | 1.5s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 702/1200 | total 702/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 703/1200 | total 703/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 704/1200 | total 704/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 705/1200 | total 705/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 706/1200 | total 706/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 707/1200 | total 707/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 708/1200 | total 708/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 709/1200 | total 709/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 710/1200 | total 710/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 711/1200 | total 711/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 712/1200 | total 712/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 713/1200 | total 713/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 714/1200 | total 714/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 715/1200 | total 715/1500 | 2.1s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 716/1200 | total 716/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 717/1200 | total 717/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 718/1200 | total 718/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 719/1200 | total 719/1500 | 1.7s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 720/1200 | total 720/1500 | 1.9s/video | ETA 0.41h | 2.6MiB/file
+EXTRACT seed43 train 721/1200 | total 721/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 722/1200 | total 722/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 723/1200 | total 723/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 724/1200 | total 724/1500 | 1.9s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 725/1200 | total 725/1500 | 2.0s/video | ETA 0.42h | 2.6MiB/file
+EXTRACT seed43 train 726/1200 | total 726/1500 | 1.8s/video | ETA 0.41h | 2.6MiB/file
+EXTRACT seed43 train 727/1200 | total 727/1500 | 1.9s/video | ETA 0.41h | 2.6MiB/file
+EXTRACT seed43 train 728/1200 | total 728/1500 | 1.8s/video | ETA 0.41h | 2.6MiB/file
+EXTRACT seed43 train 729/1200 | total 729/1500 | 1.8s/video | ETA 0.41h | 2.6MiB/file
+EXTRACT seed43 train 730/1200 | total 730/1500 | 1.8s/video | ETA 0.41h | 2.6MiB/file
+EXTRACT seed43 train 731/1200 | total 731/1500 | 2.1s/video | ETA 0.41h | 2.6MiB/file
+EXTRACT seed43 train 732/1200 | total 732/1500 | 1.6s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 733/1200 | total 733/1500 | 2.0s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 734/1200 | total 734/1500 | 2.0s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 735/1200 | total 735/1500 | 1.9s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 736/1200 | total 736/1500 | 2.0s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 737/1200 | total 737/1500 | 2.0s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 738/1200 | total 738/1500 | 1.8s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 739/1200 | total 739/1500 | 1.8s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 740/1200 | total 740/1500 | 2.0s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 741/1200 | total 741/1500 | 2.0s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 742/1200 | total 742/1500 | 1.8s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 743/1200 | total 743/1500 | 1.9s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 744/1200 | total 744/1500 | 1.9s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 745/1200 | total 745/1500 | 2.0s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 746/1200 | total 746/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 747/1200 | total 747/1500 | 1.8s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 748/1200 | total 748/1500 | 2.0s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 749/1200 | total 749/1500 | 2.0s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 750/1200 | total 750/1500 | 1.9s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 751/1200 | total 751/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 752/1200 | total 752/1500 | 1.8s/video | ETA 0.40h | 2.6MiB/file
+EXTRACT seed43 train 753/1200 | total 753/1500 | 1.7s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 754/1200 | total 754/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 755/1200 | total 755/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 756/1200 | total 756/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 757/1200 | total 757/1500 | 2.1s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 758/1200 | total 758/1500 | 2.0s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 759/1200 | total 759/1500 | 2.0s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 760/1200 | total 760/1500 | 2.0s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 761/1200 | total 761/1500 | 2.0s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 762/1200 | total 762/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 763/1200 | total 763/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 764/1200 | total 764/1500 | 2.1s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 765/1200 | total 765/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 766/1200 | total 766/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 767/1200 | total 767/1500 | 2.1s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 768/1200 | total 768/1500 | 1.8s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 769/1200 | total 769/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 770/1200 | total 770/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 771/1200 | total 771/1500 | 1.7s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 772/1200 | total 772/1500 | 2.0s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 773/1200 | total 773/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 774/1200 | total 774/1500 | 1.9s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 775/1200 | total 775/1500 | 1.8s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 776/1200 | total 776/1500 | 1.8s/video | ETA 0.39h | 2.6MiB/file
+EXTRACT seed43 train 777/1200 | total 777/1500 | 2.0s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 778/1200 | total 778/1500 | 1.7s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 779/1200 | total 779/1500 | 2.0s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 780/1200 | total 780/1500 | 1.9s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 781/1200 | total 781/1500 | 2.0s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 782/1200 | total 782/1500 | 1.8s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 783/1200 | total 783/1500 | 1.9s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 784/1200 | total 784/1500 | 2.0s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 785/1200 | total 785/1500 | 1.9s/video | ETA 0.38h | 2.6MiB/file
+EXTRACT seed43 train 786/1200 | total 786/1500 | 1.8s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 787/1200 | total 787/1500 | 2.0s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 788/1200 | total 788/1500 | 1.9s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 789/1200 | total 789/1500 | 1.9s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 790/1200 | total 790/1500 | 1.8s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 791/1200 | total 791/1500 | 2.0s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 792/1200 | total 792/1500 | 2.0s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 793/1200 | total 793/1500 | 1.8s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 794/1200 | total 794/1500 | 1.8s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 795/1200 | total 795/1500 | 1.7s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 796/1200 | total 796/1500 | 1.8s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 797/1200 | total 797/1500 | 1.9s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 798/1200 | total 798/1500 | 2.0s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 799/1200 | total 799/1500 | 2.0s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 800/1200 | total 800/1500 | 2.1s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 801/1200 | total 801/1500 | 1.8s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 802/1200 | total 802/1500 | 1.9s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 803/1200 | total 803/1500 | 1.8s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 804/1200 | total 804/1500 | 2.0s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 805/1200 | total 805/1500 | 2.0s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 806/1200 | total 806/1500 | 1.9s/video | ETA 0.37h | 2.6MiB/file
+EXTRACT seed43 train 807/1200 | total 807/1500 | 1.8s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 808/1200 | total 808/1500 | 2.1s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 809/1200 | total 809/1500 | 1.7s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 810/1200 | total 810/1500 | 1.7s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 811/1200 | total 811/1500 | 1.9s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 812/1200 | total 812/1500 | 2.0s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 813/1200 | total 813/1500 | 1.9s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 814/1200 | total 814/1500 | 1.8s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 815/1200 | total 815/1500 | 1.9s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 816/1200 | total 816/1500 | 2.0s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 817/1200 | total 817/1500 | 1.8s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 818/1200 | total 818/1500 | 1.9s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 819/1200 | total 819/1500 | 1.9s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 820/1200 | total 820/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 821/1200 | total 821/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 822/1200 | total 822/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 823/1200 | total 823/1500 | 2.1s/video | ETA 0.36h | 2.6MiB/file
+EXTRACT seed43 train 824/1200 | total 824/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 825/1200 | total 825/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 826/1200 | total 826/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 827/1200 | total 827/1500 | 1.8s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 828/1200 | total 828/1500 | 1.7s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 829/1200 | total 829/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 830/1200 | total 830/1500 | 1.8s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 831/1200 | total 831/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 832/1200 | total 832/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 833/1200 | total 833/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 834/1200 | total 834/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 835/1200 | total 835/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 836/1200 | total 836/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 837/1200 | total 837/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 838/1200 | total 838/1500 | 1.8s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 839/1200 | total 839/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 840/1200 | total 840/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 841/1200 | total 841/1500 | 1.8s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 842/1200 | total 842/1500 | 1.8s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 843/1200 | total 843/1500 | 1.8s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 844/1200 | total 844/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 845/1200 | total 845/1500 | 2.1s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 846/1200 | total 846/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 847/1200 | total 847/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 848/1200 | total 848/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 849/1200 | total 849/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 850/1200 | total 850/1500 | 1.8s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 851/1200 | total 851/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 852/1200 | total 852/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 853/1200 | total 853/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 854/1200 | total 854/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 855/1200 | total 855/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 856/1200 | total 856/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 857/1200 | total 857/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 858/1200 | total 858/1500 | 2.1s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 859/1200 | total 859/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 860/1200 | total 860/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 861/1200 | total 861/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 862/1200 | total 862/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 863/1200 | total 863/1500 | 2.0s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 864/1200 | total 864/1500 | 1.9s/video | ETA 0.35h | 2.6MiB/file
+EXTRACT seed43 train 865/1200 | total 865/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 866/1200 | total 866/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 867/1200 | total 867/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 868/1200 | total 868/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 869/1200 | total 869/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 870/1200 | total 870/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 871/1200 | total 871/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 872/1200 | total 872/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 873/1200 | total 873/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 874/1200 | total 874/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 875/1200 | total 875/1500 | 1.9s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 876/1200 | total 876/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 877/1200 | total 877/1500 | 1.8s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 878/1200 | total 878/1500 | 2.1s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 879/1200 | total 879/1500 | 2.1s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 880/1200 | total 880/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 881/1200 | total 881/1500 | 2.0s/video | ETA 0.34h | 2.6MiB/file
+EXTRACT seed43 train 882/1200 | total 882/1500 | 1.8s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 883/1200 | total 883/1500 | 1.8s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 884/1200 | total 884/1500 | 1.9s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 885/1200 | total 885/1500 | 2.0s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 886/1200 | total 886/1500 | 1.9s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 887/1200 | total 887/1500 | 2.0s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 888/1200 | total 888/1500 | 2.1s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 889/1200 | total 889/1500 | 1.9s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 890/1200 | total 890/1500 | 1.9s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 891/1200 | total 891/1500 | 2.1s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 892/1200 | total 892/1500 | 1.9s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 893/1200 | total 893/1500 | 1.8s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 894/1200 | total 894/1500 | 2.1s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 895/1200 | total 895/1500 | 1.7s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 896/1200 | total 896/1500 | 2.1s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 897/1200 | total 897/1500 | 1.9s/video | ETA 0.33h | 2.6MiB/file
+EXTRACT seed43 train 898/1200 | total 898/1500 | 2.0s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 899/1200 | total 899/1500 | 2.1s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 900/1200 | total 900/1500 | 1.9s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 901/1200 | total 901/1500 | 1.7s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 902/1200 | total 902/1500 | 1.8s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 903/1200 | total 903/1500 | 1.9s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 904/1200 | total 904/1500 | 2.0s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 905/1200 | total 905/1500 | 2.0s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 906/1200 | total 906/1500 | 1.8s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 907/1200 | total 907/1500 | 1.8s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 908/1200 | total 908/1500 | 2.2s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 909/1200 | total 909/1500 | 1.9s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 910/1200 | total 910/1500 | 1.9s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 911/1200 | total 911/1500 | 2.0s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 912/1200 | total 912/1500 | 2.0s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 913/1200 | total 913/1500 | 2.0s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 914/1200 | total 914/1500 | 2.0s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 915/1200 | total 915/1500 | 2.0s/video | ETA 0.32h | 2.6MiB/file
+EXTRACT seed43 train 916/1200 | total 916/1500 | 1.9s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 917/1200 | total 917/1500 | 2.0s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 918/1200 | total 918/1500 | 1.8s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 919/1200 | total 919/1500 | 1.9s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 920/1200 | total 920/1500 | 2.0s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 921/1200 | total 921/1500 | 1.9s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 922/1200 | total 922/1500 | 1.9s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 923/1200 | total 923/1500 | 1.9s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 924/1200 | total 924/1500 | 1.7s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 925/1200 | total 925/1500 | 1.7s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 926/1200 | total 926/1500 | 1.9s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 927/1200 | total 927/1500 | 1.8s/video | ETA 0.31h | 2.6MiB/file
+EXTRACT seed43 train 928/1200 | total 928/1500 | 2.1s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 929/1200 | total 929/1500 | 1.9s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 930/1200 | total 930/1500 | 1.9s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 931/1200 | total 931/1500 | 1.8s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 932/1200 | total 932/1500 | 2.0s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 933/1200 | total 933/1500 | 1.9s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 934/1200 | total 934/1500 | 1.7s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 935/1200 | total 935/1500 | 1.9s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 936/1200 | total 936/1500 | 2.0s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 937/1200 | total 937/1500 | 1.7s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 938/1200 | total 938/1500 | 2.0s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 939/1200 | total 939/1500 | 2.1s/video | ETA 0.30h | 2.6MiB/file
+EXTRACT seed43 train 940/1200 | total 940/1500 | 1.8s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 941/1200 | total 941/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 942/1200 | total 942/1500 | 2.0s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 943/1200 | total 943/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 944/1200 | total 944/1500 | 2.0s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 945/1200 | total 945/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 946/1200 | total 946/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 947/1200 | total 947/1500 | 2.0s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 948/1200 | total 948/1500 | 2.0s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 949/1200 | total 949/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 950/1200 | total 950/1500 | 1.8s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 951/1200 | total 951/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 952/1200 | total 952/1500 | 1.8s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 953/1200 | total 953/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 954/1200 | total 954/1500 | 2.0s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 955/1200 | total 955/1500 | 1.8s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 956/1200 | total 956/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 957/1200 | total 957/1500 | 1.8s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 958/1200 | total 958/1500 | 2.0s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 959/1200 | total 959/1500 | 1.9s/video | ETA 0.29h | 2.6MiB/file
+EXTRACT seed43 train 960/1200 | total 960/1500 | 1.5s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 961/1200 | total 961/1500 | 2.1s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 962/1200 | total 962/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 963/1200 | total 963/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 964/1200 | total 964/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 965/1200 | total 965/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 966/1200 | total 966/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 967/1200 | total 967/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 968/1200 | total 968/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 969/1200 | total 969/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 970/1200 | total 970/1500 | 1.8s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 971/1200 | total 971/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 972/1200 | total 972/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 973/1200 | total 973/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 974/1200 | total 974/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 975/1200 | total 975/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 976/1200 | total 976/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 977/1200 | total 977/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 978/1200 | total 978/1500 | 1.8s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 979/1200 | total 979/1500 | 2.0s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 980/1200 | total 980/1500 | 1.8s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 981/1200 | total 981/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 982/1200 | total 982/1500 | 1.9s/video | ETA 0.28h | 2.6MiB/file
+EXTRACT seed43 train 983/1200 | total 983/1500 | 1.5s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 984/1200 | total 984/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 985/1200 | total 985/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 986/1200 | total 986/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 987/1200 | total 987/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 988/1200 | total 988/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 989/1200 | total 989/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 990/1200 | total 990/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 991/1200 | total 991/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 992/1200 | total 992/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 993/1200 | total 993/1500 | 1.8s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 994/1200 | total 994/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 995/1200 | total 995/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 996/1200 | total 996/1500 | 2.1s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 997/1200 | total 997/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 998/1200 | total 998/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 999/1200 | total 999/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1000/1200 | total 1000/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1001/1200 | total 1001/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1002/1200 | total 1002/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1003/1200 | total 1003/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1004/1200 | total 1004/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1005/1200 | total 1005/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1006/1200 | total 1006/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1007/1200 | total 1007/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1008/1200 | total 1008/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1009/1200 | total 1009/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1010/1200 | total 1010/1500 | 1.8s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1011/1200 | total 1011/1500 | 2.1s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1012/1200 | total 1012/1500 | 2.0s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1013/1200 | total 1013/1500 | 1.9s/video | ETA 0.27h | 2.6MiB/file
+EXTRACT seed43 train 1014/1200 | total 1014/1500 | 1.8s/video | ETA 0.26h | 2.6MiB/file
+EXTRACT seed43 train 1015/1200 | total 1015/1500 | 1.9s/video | ETA 0.26h | 2.6MiB/file
+EXTRACT seed43 train 1016/1200 | total 1016/1500 | 1.9s/video | ETA 0.26h | 2.6MiB/file
+EXTRACT seed43 train 1017/1200 | total 1017/1500 | 1.9s/video | ETA 0.26h | 2.6MiB/file
+EXTRACT seed43 train 1018/1200 | total 1018/1500 | 1.8s/video | ETA 0.26h | 2.6MiB/file
+EXTRACT seed43 train 1019/1200 | total 1019/1500 | 1.9s/video | ETA 0.26h | 2.6MiB/file
+EXTRACT seed43 train 1020/1200 | total 1020/1500 | 1.4s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1021/1200 | total 1021/1500 | 1.8s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1022/1200 | total 1022/1500 | 2.0s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1023/1200 | total 1023/1500 | 1.9s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1024/1200 | total 1024/1500 | 1.9s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1025/1200 | total 1025/1500 | 2.0s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1026/1200 | total 1026/1500 | 1.9s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1027/1200 | total 1027/1500 | 2.0s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1028/1200 | total 1028/1500 | 1.9s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1029/1200 | total 1029/1500 | 1.9s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1030/1200 | total 1030/1500 | 1.9s/video | ETA 0.25h | 2.6MiB/file
+EXTRACT seed43 train 1031/1200 | total 1031/1500 | 1.3s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1032/1200 | total 1032/1500 | 2.0s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1033/1200 | total 1033/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1034/1200 | total 1034/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1035/1200 | total 1035/1500 | 2.0s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1036/1200 | total 1036/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1037/1200 | total 1037/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1038/1200 | total 1038/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1039/1200 | total 1039/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1040/1200 | total 1040/1500 | 1.7s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1041/1200 | total 1041/1500 | 1.8s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1042/1200 | total 1042/1500 | 2.0s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1043/1200 | total 1043/1500 | 2.0s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1044/1200 | total 1044/1500 | 1.7s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1045/1200 | total 1045/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1046/1200 | total 1046/1500 | 1.9s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1047/1200 | total 1047/1500 | 1.8s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1048/1200 | total 1048/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1049/1200 | total 1049/1500 | 1.8s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1050/1200 | total 1050/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1051/1200 | total 1051/1500 | 2.0s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1052/1200 | total 1052/1500 | 1.8s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1053/1200 | total 1053/1500 | 2.0s/video | ETA 0.24h | 2.6MiB/file
+EXTRACT seed43 train 1054/1200 | total 1054/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1055/1200 | total 1055/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1056/1200 | total 1056/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1057/1200 | total 1057/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1058/1200 | total 1058/1500 | 2.1s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1059/1200 | total 1059/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1060/1200 | total 1060/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1061/1200 | total 1061/1500 | 1.8s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1062/1200 | total 1062/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1063/1200 | total 1063/1500 | 2.1s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1064/1200 | total 1064/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1065/1200 | total 1065/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1066/1200 | total 1066/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1067/1200 | total 1067/1500 | 1.6s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1068/1200 | total 1068/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1069/1200 | total 1069/1500 | 1.8s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1070/1200 | total 1070/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1071/1200 | total 1071/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1072/1200 | total 1072/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1073/1200 | total 1073/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1074/1200 | total 1074/1500 | 2.1s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1075/1200 | total 1075/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1076/1200 | total 1076/1500 | 1.9s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1077/1200 | total 1077/1500 | 1.8s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1078/1200 | total 1078/1500 | 2.0s/video | ETA 0.23h | 2.6MiB/file
+EXTRACT seed43 train 1079/1200 | total 1079/1500 | 1.8s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1080/1200 | total 1080/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1081/1200 | total 1081/1500 | 1.8s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1082/1200 | total 1082/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1083/1200 | total 1083/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1084/1200 | total 1084/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1085/1200 | total 1085/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1086/1200 | total 1086/1500 | 1.8s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1087/1200 | total 1087/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1088/1200 | total 1088/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1089/1200 | total 1089/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1090/1200 | total 1090/1500 | 2.0s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1091/1200 | total 1091/1500 | 1.9s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1092/1200 | total 1092/1500 | 1.8s/video | ETA 0.22h | 2.6MiB/file
+EXTRACT seed43 train 1093/1200 | total 1093/1500 | 1.8s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1094/1200 | total 1094/1500 | 1.9s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1095/1200 | total 1095/1500 | 2.1s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1096/1200 | total 1096/1500 | 1.8s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1097/1200 | total 1097/1500 | 1.9s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1098/1200 | total 1098/1500 | 1.8s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1099/1200 | total 1099/1500 | 1.9s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1100/1200 | total 1100/1500 | 2.0s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1101/1200 | total 1101/1500 | 1.9s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1102/1200 | total 1102/1500 | 2.1s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1103/1200 | total 1103/1500 | 1.9s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1104/1200 | total 1104/1500 | 1.6s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1105/1200 | total 1105/1500 | 2.0s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1106/1200 | total 1106/1500 | 1.5s/video | ETA 0.21h | 2.6MiB/file
+EXTRACT seed43 train 1107/1200 | total 1107/1500 | 1.7s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1108/1200 | total 1108/1500 | 2.0s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1109/1200 | total 1109/1500 | 2.0s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1110/1200 | total 1110/1500 | 1.9s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1111/1200 | total 1111/1500 | 1.7s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1112/1200 | total 1112/1500 | 1.5s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1113/1200 | total 1113/1500 | 1.9s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1114/1200 | total 1114/1500 | 1.9s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1115/1200 | total 1115/1500 | 1.9s/video | ETA 0.20h | 2.6MiB/file
+EXTRACT seed43 train 1116/1200 | total 1116/1500 | 1.6s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1117/1200 | total 1117/1500 | 1.7s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1118/1200 | total 1118/1500 | 1.7s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1119/1200 | total 1119/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1120/1200 | total 1120/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1121/1200 | total 1121/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1122/1200 | total 1122/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1123/1200 | total 1123/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1124/1200 | total 1124/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1125/1200 | total 1125/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1126/1200 | total 1126/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1127/1200 | total 1127/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1128/1200 | total 1128/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1129/1200 | total 1129/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1130/1200 | total 1130/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1131/1200 | total 1131/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1132/1200 | total 1132/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1133/1200 | total 1133/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1134/1200 | total 1134/1500 | 2.1s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1135/1200 | total 1135/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1136/1200 | total 1136/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1137/1200 | total 1137/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1138/1200 | total 1138/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1139/1200 | total 1139/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1140/1200 | total 1140/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1141/1200 | total 1141/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1142/1200 | total 1142/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1143/1200 | total 1143/1500 | 2.1s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1144/1200 | total 1144/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1145/1200 | total 1145/1500 | 1.8s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1146/1200 | total 1146/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1147/1200 | total 1147/1500 | 2.1s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1148/1200 | total 1148/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1149/1200 | total 1149/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1150/1200 | total 1150/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1151/1200 | total 1151/1500 | 2.1s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1152/1200 | total 1152/1500 | 1.9s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1153/1200 | total 1153/1500 | 2.0s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1154/1200 | total 1154/1500 | 2.1s/video | ETA 0.19h | 2.6MiB/file
+EXTRACT seed43 train 1155/1200 | total 1155/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1156/1200 | total 1156/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1157/1200 | total 1157/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1158/1200 | total 1158/1500 | 1.8s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1159/1200 | total 1159/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1160/1200 | total 1160/1500 | 2.1s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1161/1200 | total 1161/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1162/1200 | total 1162/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1163/1200 | total 1163/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1164/1200 | total 1164/1500 | 2.1s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1165/1200 | total 1165/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1166/1200 | total 1166/1500 | 1.8s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1167/1200 | total 1167/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1168/1200 | total 1168/1500 | 2.1s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1169/1200 | total 1169/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1170/1200 | total 1170/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1171/1200 | total 1171/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1172/1200 | total 1172/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1173/1200 | total 1173/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1174/1200 | total 1174/1500 | 1.7s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1175/1200 | total 1175/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1176/1200 | total 1176/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1177/1200 | total 1177/1500 | 2.1s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1178/1200 | total 1178/1500 | 1.9s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1179/1200 | total 1179/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1180/1200 | total 1180/1500 | 2.0s/video | ETA 0.18h | 2.6MiB/file
+EXTRACT seed43 train 1181/1200 | total 1181/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1182/1200 | total 1182/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1183/1200 | total 1183/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1184/1200 | total 1184/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1185/1200 | total 1185/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1186/1200 | total 1186/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1187/1200 | total 1187/1500 | 2.1s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1188/1200 | total 1188/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1189/1200 | total 1189/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1190/1200 | total 1190/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1191/1200 | total 1191/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1192/1200 | total 1192/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1193/1200 | total 1193/1500 | 2.1s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1194/1200 | total 1194/1500 | 2.1s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1195/1200 | total 1195/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1196/1200 | total 1196/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1197/1200 | total 1197/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1198/1200 | total 1198/1500 | 1.9s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1199/1200 | total 1199/1500 | 2.0s/video | ETA 0.17h | 2.6MiB/file
+EXTRACT seed43 train 1200/1200 | total 1200/1500 | 1.8s/video | ETA 0.16h | 2.6MiB/file
+EXTRACT seed43 validation 1/300 | total 1201/1500 | 1.7s/video | ETA 0.16h | 2.6MiB/file
+EXTRACT seed43 validation 2/300 | total 1202/1500 | 1.4s/video | ETA 0.16h | 2.6MiB/file
+EXTRACT seed43 validation 3/300 | total 1203/1500 | 2.0s/video | ETA 0.16h | 2.6MiB/file
+EXTRACT seed43 validation 4/300 | total 1204/1500 | 2.0s/video | ETA 0.16h | 2.6MiB/file
+EXTRACT seed43 validation 5/300 | total 1205/1500 | 1.4s/video | ETA 0.16h | 2.6MiB/file
+EXTRACT seed43 validation 6/300 | total 1206/1500 | 2.0s/video | ETA 0.16h | 2.6MiB/file
+EXTRACT seed43 validation 7/300 | total 1207/1500 | 2.1s/video | ETA 0.15h | 2.6MiB/file
+EXTRACT seed43 validation 8/300 | total 1208/1500 | 1.4s/video | ETA 0.15h | 2.6MiB/file
+EXTRACT seed43 validation 9/300 | total 1209/1500 | 1.8s/video | ETA 0.15h | 2.6MiB/file
+EXTRACT seed43 validation 10/300 | total 1210/1500 | 1.9s/video | ETA 0.15h | 2.6MiB/file
+EXTRACT seed43 validation 11/300 | total 1211/1500 | 1.9s/video | ETA 0.15h | 2.6MiB/file
+EXTRACT seed43 validation 12/300 | total 1212/1500 | 1.4s/video | ETA 0.15h | 2.6MiB/file
+EXTRACT seed43 validation 13/300 | total 1213/1500 | 1.4s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 14/300 | total 1214/1500 | 1.8s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 15/300 | total 1215/1500 | 1.9s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 16/300 | total 1216/1500 | 1.4s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 17/300 | total 1217/1500 | 1.9s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 18/300 | total 1218/1500 | 1.9s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 19/300 | total 1219/1500 | 2.0s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 20/300 | total 1220/1500 | 1.9s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 21/300 | total 1221/1500 | 2.0s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 22/300 | total 1222/1500 | 1.4s/video | ETA 0.14h | 2.6MiB/file
+EXTRACT seed43 validation 23/300 | total 1223/1500 | 1.4s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 24/300 | total 1224/1500 | 2.0s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 25/300 | total 1225/1500 | 1.8s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 26/300 | total 1226/1500 | 1.4s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 27/300 | total 1227/1500 | 1.4s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 28/300 | total 1228/1500 | 1.3s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 29/300 | total 1229/1500 | 2.0s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 30/300 | total 1230/1500 | 2.0s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 31/300 | total 1231/1500 | 2.0s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 32/300 | total 1232/1500 | 1.5s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 33/300 | total 1233/1500 | 1.3s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 34/300 | total 1234/1500 | 1.4s/video | ETA 0.13h | 2.6MiB/file
+EXTRACT seed43 validation 35/300 | total 1235/1500 | 1.4s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 36/300 | total 1236/1500 | 1.4s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 37/300 | total 1237/1500 | 1.4s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 38/300 | total 1238/1500 | 2.0s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 39/300 | total 1239/1500 | 1.3s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 40/300 | total 1240/1500 | 2.0s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 41/300 | total 1241/1500 | 2.0s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 42/300 | total 1242/1500 | 2.0s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 43/300 | total 1243/1500 | 1.4s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 44/300 | total 1244/1500 | 2.0s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 45/300 | total 1245/1500 | 1.4s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 46/300 | total 1246/1500 | 1.4s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 47/300 | total 1247/1500 | 1.4s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 48/300 | total 1248/1500 | 1.4s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 49/300 | total 1249/1500 | 2.0s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 50/300 | total 1250/1500 | 1.9s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 51/300 | total 1251/1500 | 1.9s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 52/300 | total 1252/1500 | 2.0s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 53/300 | total 1253/1500 | 2.0s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 54/300 | total 1254/1500 | 1.9s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 55/300 | total 1255/1500 | 1.5s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 56/300 | total 1256/1500 | 1.3s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 57/300 | total 1257/1500 | 1.4s/video | ETA 0.12h | 2.6MiB/file
+EXTRACT seed43 validation 58/300 | total 1258/1500 | 1.3s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 59/300 | total 1259/1500 | 2.1s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 60/300 | total 1260/1500 | 1.4s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 61/300 | total 1261/1500 | 1.9s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 62/300 | total 1262/1500 | 2.0s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 63/300 | total 1263/1500 | 1.9s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 64/300 | total 1264/1500 | 1.9s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 65/300 | total 1265/1500 | 1.4s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 66/300 | total 1266/1500 | 1.3s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 67/300 | total 1267/1500 | 1.8s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 68/300 | total 1268/1500 | 1.4s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 69/300 | total 1269/1500 | 1.8s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 70/300 | total 1270/1500 | 1.4s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 71/300 | total 1271/1500 | 1.8s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 72/300 | total 1272/1500 | 1.9s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 73/300 | total 1273/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 74/300 | total 1274/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 75/300 | total 1275/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 76/300 | total 1276/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 77/300 | total 1277/1500 | 1.9s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 78/300 | total 1278/1500 | 2.0s/video | ETA 0.11h | 2.6MiB/file
+EXTRACT seed43 validation 79/300 | total 1279/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 80/300 | total 1280/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 81/300 | total 1281/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 82/300 | total 1282/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 83/300 | total 1283/1500 | 1.3s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 84/300 | total 1284/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 85/300 | total 1285/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 86/300 | total 1286/1500 | 1.9s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 87/300 | total 1287/1500 | 1.8s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 88/300 | total 1288/1500 | 1.3s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 89/300 | total 1289/1500 | 1.9s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 90/300 | total 1290/1500 | 1.3s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 91/300 | total 1291/1500 | 1.9s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 92/300 | total 1292/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 93/300 | total 1293/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 94/300 | total 1294/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 95/300 | total 1295/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 96/300 | total 1296/1500 | 2.1s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 97/300 | total 1297/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 98/300 | total 1298/1500 | 1.6s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 99/300 | total 1299/1500 | 1.9s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 100/300 | total 1300/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 101/300 | total 1301/1500 | 1.5s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 102/300 | total 1302/1500 | 2.0s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 103/300 | total 1303/1500 | 1.4s/video | ETA 0.10h | 2.6MiB/file
+EXTRACT seed43 validation 104/300 | total 1304/1500 | 1.4s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 105/300 | total 1305/1500 | 1.9s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 106/300 | total 1306/1500 | 1.4s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 107/300 | total 1307/1500 | 1.4s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 108/300 | total 1308/1500 | 2.0s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 109/300 | total 1309/1500 | 1.4s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 110/300 | total 1310/1500 | 1.3s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 111/300 | total 1311/1500 | 1.4s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 112/300 | total 1312/1500 | 1.4s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 113/300 | total 1313/1500 | 1.5s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 114/300 | total 1314/1500 | 2.0s/video | ETA 0.09h | 2.6MiB/file
+EXTRACT seed43 validation 115/300 | total 1315/1500 | 1.4s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 116/300 | total 1316/1500 | 1.3s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 117/300 | total 1317/1500 | 1.5s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 118/300 | total 1318/1500 | 1.3s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 119/300 | total 1319/1500 | 1.8s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 120/300 | total 1320/1500 | 1.4s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 121/300 | total 1321/1500 | 1.3s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 122/300 | total 1322/1500 | 2.0s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 123/300 | total 1323/1500 | 2.0s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 124/300 | total 1324/1500 | 1.9s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 125/300 | total 1325/1500 | 1.9s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 126/300 | total 1326/1500 | 1.8s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 127/300 | total 1327/1500 | 1.7s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 128/300 | total 1328/1500 | 1.4s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 129/300 | total 1329/1500 | 1.4s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 130/300 | total 1330/1500 | 1.3s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 131/300 | total 1331/1500 | 1.8s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 132/300 | total 1332/1500 | 1.4s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 133/300 | total 1333/1500 | 1.8s/video | ETA 0.08h | 2.6MiB/file
+EXTRACT seed43 validation 134/300 | total 1334/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 135/300 | total 1335/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 136/300 | total 1336/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 137/300 | total 1337/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 138/300 | total 1338/1500 | 2.0s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 139/300 | total 1339/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 140/300 | total 1340/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 141/300 | total 1341/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 142/300 | total 1342/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 143/300 | total 1343/1500 | 2.0s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 144/300 | total 1344/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 145/300 | total 1345/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 146/300 | total 1346/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 147/300 | total 1347/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 148/300 | total 1348/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 149/300 | total 1349/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 150/300 | total 1350/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 151/300 | total 1351/1500 | 2.1s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 152/300 | total 1352/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 153/300 | total 1353/1500 | 2.1s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 154/300 | total 1354/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 155/300 | total 1355/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 156/300 | total 1356/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 157/300 | total 1357/1500 | 1.8s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 158/300 | total 1358/1500 | 1.4s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 159/300 | total 1359/1500 | 1.3s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 160/300 | total 1360/1500 | 2.0s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 161/300 | total 1361/1500 | 1.9s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 162/300 | total 1362/1500 | 2.0s/video | ETA 0.07h | 2.6MiB/file
+EXTRACT seed43 validation 163/300 | total 1363/1500 | 1.4s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 164/300 | total 1364/1500 | 1.9s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 165/300 | total 1365/1500 | 1.9s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 166/300 | total 1366/1500 | 1.5s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 167/300 | total 1367/1500 | 1.9s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 168/300 | total 1368/1500 | 1.9s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 169/300 | total 1369/1500 | 2.0s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 170/300 | total 1370/1500 | 2.0s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 171/300 | total 1371/1500 | 1.9s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 172/300 | total 1372/1500 | 1.9s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 173/300 | total 1373/1500 | 1.3s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 174/300 | total 1374/1500 | 1.4s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 175/300 | total 1375/1500 | 2.1s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 176/300 | total 1376/1500 | 2.0s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 177/300 | total 1377/1500 | 1.4s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 178/300 | total 1378/1500 | 1.4s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 179/300 | total 1379/1500 | 2.0s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 180/300 | total 1380/1500 | 1.3s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 181/300 | total 1381/1500 | 1.4s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 182/300 | total 1382/1500 | 1.4s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 183/300 | total 1383/1500 | 2.0s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 184/300 | total 1384/1500 | 1.4s/video | ETA 0.06h | 2.6MiB/file
+EXTRACT seed43 validation 185/300 | total 1385/1500 | 1.4s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 186/300 | total 1386/1500 | 1.4s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 187/300 | total 1387/1500 | 1.9s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 188/300 | total 1388/1500 | 1.4s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 189/300 | total 1389/1500 | 1.4s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 190/300 | total 1390/1500 | 2.0s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 191/300 | total 1391/1500 | 1.4s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 192/300 | total 1392/1500 | 1.9s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 193/300 | total 1393/1500 | 1.4s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 194/300 | total 1394/1500 | 1.5s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 195/300 | total 1395/1500 | 1.5s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 196/300 | total 1396/1500 | 1.9s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 197/300 | total 1397/1500 | 1.4s/video | ETA 0.05h | 2.6MiB/file
+EXTRACT seed43 validation 198/300 | total 1398/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 199/300 | total 1399/1500 | 1.3s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 200/300 | total 1400/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 201/300 | total 1401/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 202/300 | total 1402/1500 | 1.9s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 203/300 | total 1403/1500 | 1.9s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 204/300 | total 1404/1500 | 1.5s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 205/300 | total 1405/1500 | 2.0s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 206/300 | total 1406/1500 | 2.0s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 207/300 | total 1407/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 208/300 | total 1408/1500 | 1.9s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 209/300 | total 1409/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 210/300 | total 1410/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 211/300 | total 1411/1500 | 2.1s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 212/300 | total 1412/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 213/300 | total 1413/1500 | 1.3s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 214/300 | total 1414/1500 | 1.8s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 215/300 | total 1415/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 216/300 | total 1416/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 217/300 | total 1417/1500 | 1.5s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 218/300 | total 1418/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 219/300 | total 1419/1500 | 1.4s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 220/300 | total 1420/1500 | 1.9s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 221/300 | total 1421/1500 | 1.3s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 222/300 | total 1422/1500 | 2.0s/video | ETA 0.04h | 2.6MiB/file
+EXTRACT seed43 validation 223/300 | total 1423/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 224/300 | total 1424/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 225/300 | total 1425/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 226/300 | total 1426/1500 | 2.0s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 227/300 | total 1427/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 228/300 | total 1428/1500 | 2.1s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 229/300 | total 1429/1500 | 1.8s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 230/300 | total 1430/1500 | 1.5s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 231/300 | total 1431/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 232/300 | total 1432/1500 | 1.8s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 233/300 | total 1433/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 234/300 | total 1434/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 235/300 | total 1435/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 236/300 | total 1436/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 237/300 | total 1437/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 238/300 | total 1438/1500 | 2.1s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 239/300 | total 1439/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 240/300 | total 1440/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 241/300 | total 1441/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 242/300 | total 1442/1500 | 2.0s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 243/300 | total 1443/1500 | 2.1s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 244/300 | total 1444/1500 | 2.1s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 245/300 | total 1445/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 246/300 | total 1446/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 247/300 | total 1447/1500 | 1.9s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 248/300 | total 1448/1500 | 1.4s/video | ETA 0.03h | 2.6MiB/file
+EXTRACT seed43 validation 249/300 | total 1449/1500 | 2.0s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 250/300 | total 1450/1500 | 1.3s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 251/300 | total 1451/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 252/300 | total 1452/1500 | 1.9s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 253/300 | total 1453/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 254/300 | total 1454/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 255/300 | total 1455/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 256/300 | total 1456/1500 | 1.9s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 257/300 | total 1457/1500 | 1.8s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 258/300 | total 1458/1500 | 2.0s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 259/300 | total 1459/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 260/300 | total 1460/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 261/300 | total 1461/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 262/300 | total 1462/1500 | 1.5s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 263/300 | total 1463/1500 | 1.9s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 264/300 | total 1464/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 265/300 | total 1465/1500 | 1.4s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 266/300 | total 1466/1500 | 1.8s/video | ETA 0.02h | 2.6MiB/file
+EXTRACT seed43 validation 267/300 | total 1467/1500 | 1.9s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 268/300 | total 1468/1500 | 1.9s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 269/300 | total 1469/1500 | 1.3s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 270/300 | total 1470/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 271/300 | total 1471/1500 | 1.9s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 272/300 | total 1472/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 273/300 | total 1473/1500 | 2.0s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 274/300 | total 1474/1500 | 1.9s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 275/300 | total 1475/1500 | 1.5s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 276/300 | total 1476/1500 | 1.5s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 277/300 | total 1477/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 278/300 | total 1478/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 279/300 | total 1479/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 280/300 | total 1480/1500 | 1.3s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 281/300 | total 1481/1500 | 1.5s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 282/300 | total 1482/1500 | 2.0s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 283/300 | total 1483/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 284/300 | total 1484/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 285/300 | total 1485/1500 | 1.5s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 286/300 | total 1486/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 287/300 | total 1487/1500 | 1.4s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 288/300 | total 1488/1500 | 2.1s/video | ETA 0.01h | 2.6MiB/file
+EXTRACT seed43 validation 289/300 | total 1489/1500 | 1.3s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 290/300 | total 1490/1500 | 1.4s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 291/300 | total 1491/1500 | 2.0s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 292/300 | total 1492/1500 | 1.8s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 293/300 | total 1493/1500 | 1.9s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 294/300 | total 1494/1500 | 2.0s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 295/300 | total 1495/1500 | 1.8s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 296/300 | total 1496/1500 | 2.0s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 297/300 | total 1497/1500 | 1.8s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 298/300 | total 1498/1500 | 2.0s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 299/300 | total 1499/1500 | 1.9s/video | ETA 0.00h | 2.6MiB/file
+EXTRACT seed43 validation 300/300 | total 1500/1500 | 2.0s/video | ETA 0.00h | 2.6MiB/file
+CACHE COMPLETE seed43: /workspace/outputs/rq3_ablv3_2_h7_42_43_44/caches/seed_43 | 1500 files | 3.78GiB arrays; Save Version output before ending session.
+CACHE VERIFY 250/1500
+CACHE VERIFY 500/1500
+CACHE VERIFY 750/1500
+CACHE VERIFY 1000/1500
+CACHE VERIFY 1250/1500
+CACHE VERIFY 1500/1500

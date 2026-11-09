@@ -1,0 +1,20 @@
+{
+  "source_zip": "/workspace/inputs/rq3_selected_source_v1.zip",
+  "data_root": "/workspace/inputs/Nexar_HF",
+  "output_root": "/workspace/outputs/rq3_ablv3_2_h7_42_43_44",
+  "runtime_root": "/workspace/runtime/rq3_checked",
+  "h7_runs": {
+    "42": "/workspace/inputs/H7/seed_42/run",
+    "43": "/workspace/inputs/H7/seed_43/run",
+    "44": "/workspace/inputs/H7/seed_44/run"
+  },
+  "prior_study_root": null,
+  "cache_roots": {
+    "42": null,
+    "43": null,
+    "44": null
+  },
+  "encode_chunk": 4,
+  "log_every_batches": 20,
+  "compact_completed_trials": false
+}

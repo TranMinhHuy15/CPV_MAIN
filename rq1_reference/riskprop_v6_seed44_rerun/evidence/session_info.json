@@ -1,0 +1,9 @@
+{
+ "train_sessions": 2,
+ "session_dirs": [
+  "20261103_015604",
+  "20261103_112644"
+ ],
+ "epochs_val": 50,
+ "epochs_train_logged": 50
+}

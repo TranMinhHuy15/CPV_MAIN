@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "files": {
+    "bootstrap_draws.npz": "89bcd6db5a252e1b4362887a11163f2f203bc12c8131fa9f40cba2cfe555b1c0",
+    "paired_bootstrap.csv": "20f446dbf1599dcf297d8df8f1870ea88a522fc71e1cea8262de15d907d6d4da",
+    "paired_bootstrap_decisions.json": "7a292df96c1f8d9af97ea5fef8c5bc03c3f034983ac77b64e92bc7403e6e6e30"
+  },
+  "metadata": {
+    "analysis_code_sha256": {
+      "ablation_stats.py": "6bebe6dcf265f26e96f7be79132302b09d67c3a309be6b75706c843495613caa",
+      "analyze_cross_base.py": "111aaac75c9427fa8c9db7909d2b29bc89532b054a3613d5e9e1616e50b31f92",
+      "study_guard.py": "b064b973e4f606874cb415a3141d9a3084ef8580903e6a480580af2aa585e9b6"
+    },
+    "analysis_plan_sha256": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86",
+    "base": "h7",
+    "dry_run": false,
+    "indices_sha256": "c88b01bca5559a8e7939d06748e0b86cd2ef19ab2eccab4385ea9e1370637456",
+    "labels_groups_sha256": "a261210d0a845ef457ffe12fcceba4125971848d5d913ecbbe8267ddd9214ba3",
+    "planned_resamples": 5000,
+    "resamples": 5000,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "solution_sha256": "609affe8bbc9b03e7ce6068a74fc18f9a1b015deacd3273c8ca40cbdfc3f3753",
+    "study_contract_sha256": "629265c4f96813f159f88fea644ef470231645682d6624ba90d8d4e89a1031f3",
+    "study_version": "rq3-ablation-v3.2-matched-six-arms",
+    "uncertainty": "shared stratified video bootstrap with three fixed seeds, not seed-population uncertainty"
+  }
+}

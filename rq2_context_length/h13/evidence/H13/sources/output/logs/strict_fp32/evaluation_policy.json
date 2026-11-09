@@ -1,0 +1,11 @@
+{
+  "policy": {
+    "training_changed": false,
+    "inference": "FP32_no_autocast",
+    "cudnn_allow_tf32": false,
+    "matmul_allow_tf32": false,
+    "original_probability_parity_tolerance": 0.0001
+  },
+  "driver_sha256": "fddb64019d931ca518ea3b11c05bae7e2ea036dca3cdc8559b2c18e7306c54e5",
+  "scope": "Inference configuration update only; original training provenance retained."
+}

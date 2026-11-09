@@ -1,0 +1,387 @@
+[
+  {
+    "study": "earlier V6",
+    "file": "worker.py",
+    "expected": "2b373d35bdcbaf902c8c3ccf19f42e7502f92472a4dde0af93d74cc5e7f5bb55",
+    "actual": "2b373d35bdcbaf902c8c3ccf19f42e7502f92472a4dde0af93d74cc5e7f5bb55",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "PREREGISTERED_ANALYSIS.md",
+    "expected": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86",
+    "actual": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "ablation_modules.py",
+    "expected": "8b2c0b66493edb5249a8013ac2efe243059a7be8a1ac6efd98fa28914f59713c",
+    "actual": "8b2c0b66493edb5249a8013ac2efe243059a7be8a1ac6efd98fa28914f59713c",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "ablation_stats.py",
+    "expected": "6bebe6dcf265f26e96f7be79132302b09d67c3a309be6b75706c843495613caa",
+    "actual": "6bebe6dcf265f26e96f7be79132302b09d67c3a309be6b75706c843495613caa",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "analyze_cross_base.py",
+    "expected": "111aaac75c9427fa8c9db7909d2b29bc89532b054a3613d5e9e1616e50b31f92",
+    "actual": "111aaac75c9427fa8c9db7909d2b29bc89532b054a3613d5e9e1616e50b31f92",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "artifacts.py",
+    "expected": "db46f665f2b3262ccc13ca1d6d0a88dbbc7e763433cf2407914da3959e6a0b94",
+    "actual": "db46f665f2b3262ccc13ca1d6d0a88dbbc7e763433cf2407914da3959e6a0b94",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "backend.py",
+    "expected": "dc756341405a1a8bd75feb075dde0376a3ef1703024ed83162301ab093c3508a",
+    "actual": "dc756341405a1a8bd75feb075dde0376a3ef1703024ed83162301ab093c3508a",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "bootstrap_paired.py",
+    "expected": "ec397bef7f71ac82c49729a05076546593375c59d2ca80ea829fec9090ced95f",
+    "actual": "ec397bef7f71ac82c49729a05076546593375c59d2ca80ea829fec9090ced95f",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "build_release.py",
+    "expected": "118ff178eb4107826c190b718509ca9f9855bf1b4666b439ac9b779a05f0c607",
+    "actual": "118ff178eb4107826c190b718509ca9f9855bf1b4666b439ac9b779a05f0c607",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "capture_helpers.py",
+    "expected": "a25cc57475ad089f61aba7928ce3dc359a9471791690ed3cc37db3a223b56ce0",
+    "actual": "a25cc57475ad089f61aba7928ce3dc359a9471791690ed3cc37db3a223b56ce0",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "console.py",
+    "expected": "5eaf3f2dbb2ad6216a60e367d52c93be5ee9fb9c949561339df8e587fb950a07",
+    "actual": "5eaf3f2dbb2ad6216a60e367d52c93be5ee9fb9c949561339df8e587fb950a07",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "diagnostics.py",
+    "expected": "265a6d34a97f7d3af6a0b16576b8993afe29cfa0ab80b2883075b236ed466b90",
+    "actual": "265a6d34a97f7d3af6a0b16576b8993afe29cfa0ab80b2883075b236ed466b90",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "launch.py",
+    "expected": "b8eceed0bac0f08ffe4e47dcd8d00d999b124c282fa2743a25b90c7f640c5ab2",
+    "actual": "b8eceed0bac0f08ffe4e47dcd8d00d999b124c282fa2743a25b90c7f640c5ab2",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "legacy/cache_store.py",
+    "expected": "e0f41b504d9c6c81b07839bce38ce540fdcb9a1ea0e6a4075f75802b9092021e",
+    "actual": "e0f41b504d9c6c81b07839bce38ce540fdcb9a1ea0e6a4075f75802b9092021e",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "legacy/cached_driver.py",
+    "expected": "01fd38c977a0a27fda7f5696d7e2c1ad3e6c7fe1d14d91fe38d7c917ba3e372e",
+    "actual": "01fd38c977a0a27fda7f5696d7e2c1ad3e6c7fe1d14d91fe38d7c917ba3e372e",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "legacy/cached_plugin.py",
+    "expected": "55f14b6cc9ef43ecb12e57a0e7b0b721b9711bc5de949b0039ff7f63ccbe6805",
+    "actual": "55f14b6cc9ef43ecb12e57a0e7b0b721b9711bc5de949b0039ff7f63ccbe6805",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "legacy/module_inputs.py",
+    "expected": "f3846c174cd79c21ac8aa0f8bf58ad69619aa96a7491b718c294173db9e7b29f",
+    "actual": "f3846c174cd79c21ac8aa0f8bf58ad69619aa96a7491b718c294173db9e7b29f",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "legacy/runtime_profile.py",
+    "expected": "0f9eb9af1bb868a927d0182eb487aee89153acc62be58f0da30241ee428a2eb6",
+    "actual": "0f9eb9af1bb868a927d0182eb487aee89153acc62be58f0da30241ee428a2eb6",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "make_inputs_from_v2.py",
+    "expected": "727ae211864fa2b718c4a234302dbb7ead73f608604093f0530896e39e154931",
+    "actual": "727ae211864fa2b718c4a234302dbb7ead73f608604093f0530896e39e154931",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "matched_initialization.py",
+    "expected": "3f2e762bb309aea626afac74f939add0387fa92c5319c8c4f9b42fae5743cd08",
+    "actual": "3f2e762bb309aea626afac74f939add0387fa92c5319c8c4f9b42fae5743cd08",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "models.py",
+    "expected": "5fa1e3007a39f49504f629c3819bbdf3de3f8b4aef28d335d16831fa9344342b",
+    "actual": "5fa1e3007a39f49504f629c3819bbdf3de3f8b4aef28d335d16831fa9344342b",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "protocol.py",
+    "expected": "6c874ddee1e744187e952eb258ec598e78b57da703264c8c7ad03cdd27f1323d",
+    "actual": "6c874ddee1e744187e952eb258ec598e78b57da703264c8c7ad03cdd27f1323d",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "recovery.py",
+    "expected": "7efecc7cdfa9b2c432c473a66de96496908adb7e5144f9ca11a2e15eaff383f7",
+    "actual": "7efecc7cdfa9b2c432c473a66de96496908adb7e5144f9ca11a2e15eaff383f7",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "reporting.py",
+    "expected": "142c23d41421c8c58c7b65e54e2f62c53d7f6841a1e4fa7a95c9bf42195237ba",
+    "actual": "142c23d41421c8c58c7b65e54e2f62c53d7f6841a1e4fa7a95c9bf42195237ba",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "run.py",
+    "expected": "f2be25bebb74a8aa73958c2dc3da262ce77a137bce9e9d9aba174091479ff1a5",
+    "actual": "f2be25bebb74a8aa73958c2dc3da262ce77a137bce9e9d9aba174091479ff1a5",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "study_guard.py",
+    "expected": "b064b973e4f606874cb415a3141d9a3084ef8580903e6a480580af2aa585e9b6",
+    "actual": "b064b973e4f606874cb415a3141d9a3084ef8580903e6a480580af2aa585e9b6",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "test_backend.py",
+    "expected": "ab462f99f857c395a3070bd0a844496a0eac607fc0af621e3c8ae6b6c25b25f9",
+    "actual": "ab462f99f857c395a3070bd0a844496a0eac607fc0af621e3c8ae6b6c25b25f9",
+    "match": true
+  },
+  {
+    "study": "V3.2 h7",
+    "file": "worker.py",
+    "expected": "500e0523bf0883d555540eb1a76cef5f56cadfab36cd90de51049c059c3a6b07",
+    "actual": "500e0523bf0883d555540eb1a76cef5f56cadfab36cd90de51049c059c3a6b07",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "PREREGISTERED_ANALYSIS.md",
+    "expected": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86",
+    "actual": "b90f7e04ffc23834ced85d256cb6bd45b6665346391505e491f48273d5272a86",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "ablation_modules.py",
+    "expected": "8b2c0b66493edb5249a8013ac2efe243059a7be8a1ac6efd98fa28914f59713c",
+    "actual": "8b2c0b66493edb5249a8013ac2efe243059a7be8a1ac6efd98fa28914f59713c",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "ablation_stats.py",
+    "expected": "6bebe6dcf265f26e96f7be79132302b09d67c3a309be6b75706c843495613caa",
+    "actual": "6bebe6dcf265f26e96f7be79132302b09d67c3a309be6b75706c843495613caa",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "analyze_cross_base.py",
+    "expected": "111aaac75c9427fa8c9db7909d2b29bc89532b054a3613d5e9e1616e50b31f92",
+    "actual": "111aaac75c9427fa8c9db7909d2b29bc89532b054a3613d5e9e1616e50b31f92",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "artifacts.py",
+    "expected": "db46f665f2b3262ccc13ca1d6d0a88dbbc7e763433cf2407914da3959e6a0b94",
+    "actual": "db46f665f2b3262ccc13ca1d6d0a88dbbc7e763433cf2407914da3959e6a0b94",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "backend.py",
+    "expected": "aaede4f44f7a57a8c602e8aad508a02c24a6727e6aee6920fcdcad89c3d0ce63",
+    "actual": "aaede4f44f7a57a8c602e8aad508a02c24a6727e6aee6920fcdcad89c3d0ce63",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "bootstrap_paired.py",
+    "expected": "302ab84e81008e95a7ecbf00a07cf18052e3804320cbeb88cf4c59e9c5702a84",
+    "actual": "302ab84e81008e95a7ecbf00a07cf18052e3804320cbeb88cf4c59e9c5702a84",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "build_release.py",
+    "expected": "118ff178eb4107826c190b718509ca9f9855bf1b4666b439ac9b779a05f0c607",
+    "actual": "118ff178eb4107826c190b718509ca9f9855bf1b4666b439ac9b779a05f0c607",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "capture_helpers.py",
+    "expected": "a25cc57475ad089f61aba7928ce3dc359a9471791690ed3cc37db3a223b56ce0",
+    "actual": "a25cc57475ad089f61aba7928ce3dc359a9471791690ed3cc37db3a223b56ce0",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "console.py",
+    "expected": "5eaf3f2dbb2ad6216a60e367d52c93be5ee9fb9c949561339df8e587fb950a07",
+    "actual": "5eaf3f2dbb2ad6216a60e367d52c93be5ee9fb9c949561339df8e587fb950a07",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "diagnostics.py",
+    "expected": "265a6d34a97f7d3af6a0b16576b8993afe29cfa0ab80b2883075b236ed466b90",
+    "actual": "265a6d34a97f7d3af6a0b16576b8993afe29cfa0ab80b2883075b236ed466b90",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "launch.py",
+    "expected": "b8eceed0bac0f08ffe4e47dcd8d00d999b124c282fa2743a25b90c7f640c5ab2",
+    "actual": "b8eceed0bac0f08ffe4e47dcd8d00d999b124c282fa2743a25b90c7f640c5ab2",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "legacy/cache_store.py",
+    "expected": "e0f41b504d9c6c81b07839bce38ce540fdcb9a1ea0e6a4075f75802b9092021e",
+    "actual": "e0f41b504d9c6c81b07839bce38ce540fdcb9a1ea0e6a4075f75802b9092021e",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "legacy/cached_driver.py",
+    "expected": "01fd38c977a0a27fda7f5696d7e2c1ad3e6c7fe1d14d91fe38d7c917ba3e372e",
+    "actual": "01fd38c977a0a27fda7f5696d7e2c1ad3e6c7fe1d14d91fe38d7c917ba3e372e",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "legacy/cached_plugin.py",
+    "expected": "55f14b6cc9ef43ecb12e57a0e7b0b721b9711bc5de949b0039ff7f63ccbe6805",
+    "actual": "55f14b6cc9ef43ecb12e57a0e7b0b721b9711bc5de949b0039ff7f63ccbe6805",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "legacy/module_inputs.py",
+    "expected": "f3846c174cd79c21ac8aa0f8bf58ad69619aa96a7491b718c294173db9e7b29f",
+    "actual": "f3846c174cd79c21ac8aa0f8bf58ad69619aa96a7491b718c294173db9e7b29f",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "legacy/runtime_profile.py",
+    "expected": "0f9eb9af1bb868a927d0182eb487aee89153acc62be58f0da30241ee428a2eb6",
+    "actual": "0f9eb9af1bb868a927d0182eb487aee89153acc62be58f0da30241ee428a2eb6",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "make_inputs_from_v2.py",
+    "expected": "16d35e0c469db1cbe6c0f5ff30c2b656991be69ac9d261fdedf00c4cdf997e3b",
+    "actual": "16d35e0c469db1cbe6c0f5ff30c2b656991be69ac9d261fdedf00c4cdf997e3b",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "matched_initialization.py",
+    "expected": "3f2e762bb309aea626afac74f939add0387fa92c5319c8c4f9b42fae5743cd08",
+    "actual": "3f2e762bb309aea626afac74f939add0387fa92c5319c8c4f9b42fae5743cd08",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "models.py",
+    "expected": "2e404f69526ba11d39605915c14917622997d3f3a60b767f443d30a77c4068fd",
+    "actual": "2e404f69526ba11d39605915c14917622997d3f3a60b767f443d30a77c4068fd",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "protocol.py",
+    "expected": "73e133115ac23c975c7ab3082be810ea5150e042adc3082054fc7a135f18a78b",
+    "actual": "73e133115ac23c975c7ab3082be810ea5150e042adc3082054fc7a135f18a78b",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "recovery.py",
+    "expected": "7efecc7cdfa9b2c432c473a66de96496908adb7e5144f9ca11a2e15eaff383f7",
+    "actual": "7efecc7cdfa9b2c432c473a66de96496908adb7e5144f9ca11a2e15eaff383f7",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "reporting.py",
+    "expected": "e32585800aa30f155ce6c41e9763a67164be8aff78eb65f5a073a671b5c641d8",
+    "actual": "e32585800aa30f155ce6c41e9763a67164be8aff78eb65f5a073a671b5c641d8",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "run.py",
+    "expected": "7c6afcec9cda7b6207e762a74f603adc7322c886c95bef1071c49632aafe2fde",
+    "actual": "7c6afcec9cda7b6207e762a74f603adc7322c886c95bef1071c49632aafe2fde",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "study_guard.py",
+    "expected": "b064b973e4f606874cb415a3141d9a3084ef8580903e6a480580af2aa585e9b6",
+    "actual": "b064b973e4f606874cb415a3141d9a3084ef8580903e6a480580af2aa585e9b6",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "test_backend.py",
+    "expected": "0ca1f9887a124d1928a76d2a7d82c99bb44bddecf86f5fb3cd5d8ffb764e9222",
+    "actual": "0ca1f9887a124d1928a76d2a7d82c99bb44bddecf86f5fb3cd5d8ffb764e9222",
+    "match": true
+  },
+  {
+    "study": "V3.2 v6",
+    "file": "worker.py",
+    "expected": "4a1a0042a2aa4c7b004fa39373e1b8de522046a508dfeb590f18b59aed2468c5",
+    "actual": "4a1a0042a2aa4c7b004fa39373e1b8de522046a508dfeb590f18b59aed2468c5",
+    "match": true
+  }
+]

@@ -1,0 +1,144 @@
+{
+  "chosen": "original v1 (Downloads)",
+  "basis": "exact ZIP SHA256 retained in executed H7 log export",
+  "differences": [
+    {
+      "file": "LOCAL_TEST_REPORT.json",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "LOCAL_VERIFICATION.json",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "PACKAGE_SHA256.json",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "PATCH_REPORT_VI.md",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    },
+    {
+      "file": "README_VI.md",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "VERIFICATION.json",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "checkpoint_safety.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "medium_ops.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "process_control.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "release.json",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "repro.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "run_rq2.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "run_vast.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "test_lifecycle_fixed.py",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    },
+    {
+      "file": "test_medium_ops.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "test_rq2_completion.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "test_rq2_queue.py",
+      "in_a": true,
+      "in_b": true,
+      "same": false
+    },
+    {
+      "file": "training_state.py",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    },
+    {
+      "file": "verification_history/v1/LOCAL_TEST_REPORT.json",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    },
+    {
+      "file": "verification_history/v1/LOCAL_VERIFICATION.json",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    },
+    {
+      "file": "verification_history/v1/VERIFICATION.json",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    },
+    {
+      "file": "verification_logs/CPU_ROUNDTRIP_TESTS.log",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    },
+    {
+      "file": "windows_job.py",
+      "in_a": true,
+      "in_b": false,
+      "same": false
+    }
+  ]
+}

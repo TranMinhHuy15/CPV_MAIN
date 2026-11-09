@@ -1,0 +1,44 @@
+{
+  "package": "RQ3_V6BASE_v1",
+  "date": "2026-11-05",
+  "cpu_tests": 22,
+  "cpu_tests_pass": true,
+  "frozen_base": {
+    "model": "RiskProp V6 (author code, with_rnn=False)",
+    "seeds": {
+      "42": "original run, best_mAUC@_epoch_25",
+      "43": "original run, best_mAUC@_epoch_11",
+      "44": "2026-11-03 rerun (original seed-44 run excluded: resume defect)"
+    }
+  },
+  "modules": {
+    "m1": 3676675,
+    "m1_m2": 3681286,
+    "m1_dx": 4727300
+  },
+  "candidate": "c2_lr_double",
+  "module_training_runs": 9,
+  "epochs_each": 50,
+  "checks": {
+    "v6_head_math_equals_author_AnticipationHead": true,
+    "zero_init_starts_exactly_at_V6": true,
+    "teacher_cache_path_equals_full_path_and_only_adapter_gradients": true,
+    "dx_causal_no_future_tokens": true,
+    "adapter_export_roundtrip_all_arms": true,
+    "validation_parity_gate_pass_and_fail": true,
+    "v6_baseline_route_rejects_wrong_seed_extra_weights_lstm_runs_missing_files_non_earliest_max": true,
+    "paired_capture_one_encoder_four_paths_resume_and_corruption": true,
+    "report_rows_252_and_v6_rescore_parity": true,
+    "bootstrap_detects_shift_and_null": true,
+    "smooth7_causal": true
+  },
+  "original_cache_helpers_byte_identical": {
+    "cache_store.py": "e0f41b504d9c6c81b07839bce38ce540fdcb9a1ea0e6a4075f75802b9092021e",
+    "cached_driver.py": "01fd38c977a0a27fda7f5696d7e2c1ad3e6c7fe1d14d91fe38d7c917ba3e372e",
+    "cached_plugin.py": "55f14b6cc9ef43ecb12e57a0e7b0b721b9711bc5de949b0039ff7f63ccbe6805",
+    "runtime_profile.py": "0f9eb9af1bb868a927d0182eb487aee89153acc62be58f0da30241ee428a2eb6"
+  },
+  "source_zip_sha256": "464a7635fe5e5c3d837078daab8cd42f4d657896f5602f80822c74f19a2a4220",
+  "cuda_end_to_end_executed": false,
+  "note": "GPU/MMCV end-to-end not run while authoring; preflight, V6 validation parity, smoke and 8-video capture parity guard the real run."
+}

@@ -1,0 +1,30 @@
+{
+  "version": "author_index10_inferred_test_v1",
+  "date": "2026-10-14",
+  "source_commit": "579376fa1d879f28a9d68c2565d1e449de24b666",
+  "source_mTTA": "taa/metrics.py AnticipationMetric.calculate: original prefix through tta@1",
+  "reported": [
+    "source uses descending negative-observation ranks, >= ties, misses=0, index difference /10",
+    "Nexar clipping lead time 0.5/1.0/1.5 seconds"
+  ],
+  "inferred": [
+    "event=stream_start+stream_duration+lead; onset=event-(original_event-original_alert)",
+    "native_frame=floor((anchor-first_pts)*native_fps)",
+    "virtual_index=ceil((native_frame-first_stride3_endpoint)/3)",
+    "unobserved onset windows contribute zero; no invented future predictions"
+  ],
+  "missing": [
+    "verified author Nexar test onset/event mapping and Table-1 evaluator"
+  ],
+  "paper_test_equivalence_confirmed": false,
+  "training_changed": false,
+  "test_videos": 1344,
+  "positives": 672,
+  "negatives": 672,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "partial_auc": "report both sklearn standardized and raw divided by .1; no confirmed Table-1 equivalence"
+}

@@ -1,0 +1,7 @@
+/workspace/rq2_runtime_medium_h7/venv/lib/python3.8/site-packages/einops/_torch_specific.py:109: ImportWarning: allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0
+  warnings.warn("allow_ops_in_compiled_graph failed to import torch: ensure pytorch >=2.0", ImportWarning)
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.375s
+
+OK

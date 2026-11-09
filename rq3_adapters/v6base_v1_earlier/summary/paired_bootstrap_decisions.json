@@ -1,0 +1,155 @@
+{
+  "rule": "PREREGISTERED_ANALYSIS.md",
+  "resamples": 5000,
+  "rng_seed": 20261105,
+  "smoothing_points": 7,
+  "decisions": {
+    "m1_vs_b0": {
+      "kind": "primary",
+      "supported_improvement": false,
+      "seeds_with_positive_AP15": 1,
+      "mean_delta_AP15_pp": -0.23174324924645587,
+      "ci95_AP15_pp": [
+        -0.8121146099403022,
+        0.3955815512354011
+      ],
+      "mean_delta_mAP_pp": 0.1415620768807968,
+      "ci95_mAP_pp": [
+        -0.17117423299601317,
+        0.42302924703920386
+      ],
+      "mean_delta_mAUC_pp": 0.19681912748881203,
+      "ci95_mAUC_pp": [
+        -0.0011447761589056212,
+        0.38958631930970883
+      ],
+      "verdict": "not supported (trend or no effect)"
+    },
+    "m1_m2_vs_b0": {
+      "kind": "primary",
+      "supported_improvement": false,
+      "seeds_with_positive_AP15": 0,
+      "mean_delta_AP15_pp": -0.22237599345675818,
+      "ci95_AP15_pp": [
+        -0.7097209607860876,
+        0.2578088190686083
+      ],
+      "mean_delta_mAP_pp": 0.062285164153338034,
+      "ci95_mAP_pp": [
+        -0.1788880990597519,
+        0.2838691556596679
+      ],
+      "mean_delta_mAUC_pp": 0.09986546170175359,
+      "ci95_mAUC_pp": [
+        -0.06984889124874975,
+        0.26414726596284654
+      ],
+      "verdict": "not supported (trend or no effect)"
+    },
+    "diff_h14_vs_b0": {
+      "kind": "primary",
+      "supported_improvement": false,
+      "seeds_with_positive_AP15": 2,
+      "mean_delta_AP15_pp": -0.1352450933505593,
+      "ci95_AP15_pp": [
+        -1.0335301167597588,
+        0.7088183778417783
+      ],
+      "mean_delta_mAP_pp": 0.18320524915930908,
+      "ci95_mAP_pp": [
+        -0.23754248234414688,
+        0.5487089472737003
+      ],
+      "mean_delta_mAUC_pp": 0.09805231063892972,
+      "ci95_mAUC_pp": [
+        -0.15200633807273803,
+        0.3410766251179179
+      ],
+      "verdict": "not supported (trend or no effect)"
+    },
+    "smooth7_vs_b0": {
+      "kind": "control",
+      "supported_improvement": false,
+      "seeds_with_positive_AP15": 0,
+      "mean_delta_AP15_pp": -1.8614191765038979,
+      "ci95_AP15_pp": [
+        -3.315403272634618,
+        -0.40737865612810187
+      ],
+      "mean_delta_mAP_pp": -2.6660846542761503,
+      "ci95_mAP_pp": [
+        -3.4203514761733285,
+        -1.911076799335637
+      ],
+      "mean_delta_mAUC_pp": -2.2584093069752176,
+      "ci95_mAUC_pp": [
+        -2.7497727865184887,
+        -1.784456886562101
+      ],
+      "verdict": "not supported (trend or no effect)"
+    },
+    "m1_vs_smooth7": {
+      "kind": "descriptive",
+      "supported_improvement": null,
+      "seeds_with_positive_AP15": 3,
+      "mean_delta_AP15_pp": 1.629675927257442,
+      "ci95_AP15_pp": [
+        0.0842564865253106,
+        3.018231928648803
+      ],
+      "mean_delta_mAP_pp": 2.807646731156947,
+      "ci95_mAP_pp": [
+        2.0259551780526195,
+        3.5056499648595105
+      ],
+      "mean_delta_mAUC_pp": 2.4552284344640296,
+      "ci95_mAUC_pp": [
+        1.932364320306231,
+        2.9503533363981975
+      ],
+      "verdict": "descriptive only"
+    },
+    "m1_m2_vs_smooth7": {
+      "kind": "descriptive",
+      "supported_improvement": null,
+      "seeds_with_positive_AP15": 3,
+      "mean_delta_AP15_pp": 1.6390431830471397,
+      "ci95_AP15_pp": [
+        0.11602380367036241,
+        3.0849996890250835
+      ],
+      "mean_delta_mAP_pp": 2.728369818429488,
+      "ci95_mAP_pp": [
+        1.9479226914313288,
+        3.4136418437329272
+      ],
+      "mean_delta_mAUC_pp": 2.358274768676971,
+      "ci95_mAUC_pp": [
+        1.8614437740315621,
+        2.849662554755573
+      ],
+      "verdict": "descriptive only"
+    },
+    "diff_h14_vs_smooth7": {
+      "kind": "descriptive",
+      "supported_improvement": null,
+      "seeds_with_positive_AP15": 2,
+      "mean_delta_AP15_pp": 1.7261740831533385,
+      "ci95_AP15_pp": [
+        -0.14012434051711223,
+        3.427026870712049
+      ],
+      "mean_delta_mAP_pp": 2.849289903435459,
+      "ci95_mAP_pp": [
+        1.9495821669843718,
+        3.6834823644656747
+      ],
+      "mean_delta_mAUC_pp": 2.3564616176141473,
+      "ci95_mAUC_pp": [
+        1.762482861648846,
+        2.933698922345392
+      ],
+      "verdict": "descriptive only"
+    }
+  }
+}

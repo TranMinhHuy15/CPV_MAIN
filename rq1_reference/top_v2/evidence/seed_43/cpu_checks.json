@@ -1,0 +1,7 @@
+{
+  "tests_run": 11,
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "scope": "CPU / library checks; not a GPU training benchmark"
+}

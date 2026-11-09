@@ -1,0 +1,6 @@
+{
+  "best_checkpoint": "best_mAUC@_epoch_25.pth",
+  "complete": true,
+  "completed_epochs": 50,
+  "target_epochs": 50
+}

@@ -1,0 +1,50 @@
+test_effective_batch_flush (__main__.ReproductionTests) ... ok
+test_native_jpeg_decode (__main__.ReproductionTests) ... 10/09 06:35:05 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+10/09 06:35:05 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+ok
+test_nexar_records_carry_have_accident (__main__.ReproductionTests)
+The released MultiDataset stores `target`; the adapter must expose the same truth as `have_accident`. ... ok
+test_official_metric_parity (__main__.ReproductionTests) ... ok
+test_original_model_forward_and_backward (__main__.ReproductionTests) ... ok
+test_published_preprocessing (__main__.ReproductionTests) ... ok
+test_published_sampler (__main__.ReproductionTests) ... ok
+test_report_pipeline (__main__.ReproductionTests) ... SYNTHETIC metric self-check from sample_submission.csv; NOT trained model scores.
+mAP (Public): 0.841203
+mAP (Private): 0.861791
+
+Reports saved. Numerical comparisons are labeled provisional, not automatic paper reproduction claims.
+ok
+test_resume_artifact_guard (__main__.ReproductionTests) ... ok
+test_top_loss_matches_released_definition (__main__.ReproductionTests)
+Independent re-derivation of the released 20-horizon BCE (pos_weight=10, annotation labels). ... ok
+test_top_metric_and_submission_rule (__main__.ReproductionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 6.382s
+
+OK
+test_effective_batch_flush (__main__.ReproductionTests) ... ok
+test_native_jpeg_decode (__main__.ReproductionTests) ... 10/09 06:48:33 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+10/09 06:48:33 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+ok
+test_nexar_records_carry_have_accident (__main__.ReproductionTests)
+The released MultiDataset stores `target`; the adapter must expose the same truth as `have_accident`. ... ok
+test_official_metric_parity (__main__.ReproductionTests) ... ok
+test_original_model_forward_and_backward (__main__.ReproductionTests) ... ok
+test_published_preprocessing (__main__.ReproductionTests) ... ok
+test_published_sampler (__main__.ReproductionTests) ... ok
+test_report_pipeline (__main__.ReproductionTests) ... SYNTHETIC metric self-check from sample_submission.csv; NOT trained model scores.
+mAP (Public): 0.841203
+mAP (Private): 0.861791
+
+Reports saved. Numerical comparisons are labeled provisional, not automatic paper reproduction claims.
+ok
+test_resume_artifact_guard (__main__.ReproductionTests) ... ok
+test_top_loss_matches_released_definition (__main__.ReproductionTests)
+Independent re-derivation of the released 20-horizon BCE (pos_weight=10, annotation labels). ... ok
+test_top_metric_and_submission_rule (__main__.ReproductionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 5.035s
+
+OK

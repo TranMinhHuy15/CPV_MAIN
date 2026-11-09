@@ -1,0 +1,11 @@
+{
+  "version": "V3.2 recovery",
+  "cpu_unittests": {
+    "H7": 58,
+    "V6": 58
+  },
+  "original_legacy_cache_export_truncation_reproduced_and_recovered": true,
+  "process_group_tests": "mocked POSIX on Windows",
+  "cuda_end_to_end_executed": false,
+  "source_and_training_core_match_v31": true
+}

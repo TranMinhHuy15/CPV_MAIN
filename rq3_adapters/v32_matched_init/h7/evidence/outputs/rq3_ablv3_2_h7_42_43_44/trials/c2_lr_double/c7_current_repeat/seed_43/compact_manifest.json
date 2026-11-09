@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "files": {
+    "run/adapter_diagnostics_validation.jsonl": "855e07ac8b4fc7b63079dc8d9c0838346600c4b828e89ee0d6a0e59a3e61d4fc",
+    "run/adapter_samples_validation.jsonl": "d05eb0cee5f80712984e1d38cff474c914f92aff1cb6d4986fc15bb6f3ef3a8e",
+    "run/run_manifest.json": "f5fde35923a0b7d0b4c40a76687f5e59ae12edf293f6e82cfaa5aa40f9acb320",
+    "run/training_status.json": "985aa97531bd703e4b0ec685be30519a17ccca2c5c715fe0ba416ab17967daf2",
+    "run/validation_history.jsonl": "ea5a8aa6c37b3d316c47a6d82c9fa185a797ca775e988e71d7dafda27e7298fb",
+    "selected_adapter.npz": "4b5b4b268f8349dbc3750e8a3aa3d0021ed00fe7e298b0ed49097e6d15075804"
+  },
+  "frozen_weights_equal_original": true,
+  "original_full_commit_crc_checked": true,
+  "original_snapshot_sha256": "f1a5eada1adb16df115c0cd019d3c74b628166903214e5aa1b2a9cd15381b700",
+  "selected_full_checkpoint_sha256": "fe1357273b6688f1ca569980b8c0c0fd871e7aebfe7d5af4ff37720bdfcdebf4"
+}

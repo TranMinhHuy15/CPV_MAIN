@@ -1,0 +1,12 @@
+{
+  "source": "/workspace/top_v2_v6matched_fixed_3seeds/seed_42/author_source",
+  "data": "/workspace/top_v2_v6matched_fixed_3seeds/seed_42/prepared_nexar",
+  "protocol": "top-v2-v6matched-batch2-eff16-amp-single-gpu-3seed-terminal-fixed-v2",
+  "paper_values": {
+    "mAP": null,
+    "mAUC": null,
+    "mAUC_0.1": null,
+    "mTTA_0.1_s": null
+  },
+  "training_not_yet_run": true
+}

@@ -1,0 +1,34 @@
+{
+  "tests": 50,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "python38_grammar_files": 109,
+  "notebook_code_cells_parsed": 7,
+  "CLI_help_verified": [
+    "run_modules.py",
+    "analyze.py",
+    "bootstrap.py"
+  ],
+  "original_H7_files_preserved": 212,
+  "module_parameter_counts": {
+    "m1": 3676675,
+    "m1_m2": 3681286,
+    "m1_m3": 4203012,
+    "full": 4207623
+  },
+  "CPU_torch": "2.8.0+cpu",
+  "real_CUDA_Nexar_executed": false,
+  "test_scope": "CPU tensors and registry/config fixtures; actual MMCV/CUDA/Nexar not executed",
+  "review_history": [
+    {
+      "tests": 41,
+      "failures": 1,
+      "finding": "baseline fixture compared grad vs no_grad CPU paths; max delta 2.2351741790771484e-08",
+      "resolution": "compare both in no_grad inference; also preserve original all-axis static reduction"
+    }
+  ],
+  "manifest_files": 229,
+  "manifest_sha256": "80eaf102d1e8dd2a90f9b7edc0b990b3afd598a141ce79e67e19a14f03ffca98",
+  "packaging": "See external DELIVERY_VERIFICATION.json for final ZIP CRC and extracted-file checks."
+}

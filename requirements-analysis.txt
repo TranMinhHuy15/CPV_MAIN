@@ -1,0 +1,2 @@
+numpy>=1.24,<3
+# Numeric scalar replay and file hash verification use only the standard library.

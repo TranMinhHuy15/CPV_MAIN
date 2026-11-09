@@ -1,0 +1,20 @@
+{
+  "adapter_sha256": "cfb7330928882b937c446d52b53bed858938cfb2d4dee837d137eefab6acf79d",
+  "arm": "a7_m1",
+  "baseline_checkpoint_sha256": "fda77d9bfc56258ceea39878e51d38e3ee7e174cf92e42f9ed610c4562d9943b",
+  "candidate": "c2_lr_double",
+  "checkpoint_sha256": "deb85a6a05e52f2a77a120d571b3c5bcdad1bc853a8e19a34452e61f35f4fc0c",
+  "complete": true,
+  "contract_sha256": "d47ccaeabcc18949ea6c3ed7244091a93a82804c7831fee5bd31be949c442dd6",
+  "seed": 42,
+  "selected_epoch": 15,
+  "validation_metrics": {
+    "AP@0.5s": 0.9356868611696356,
+    "AP@1.0s": 0.8771035685931337,
+    "AP@1.5s": 0.8196970854517573,
+    "mAP@": 0.8774958384048421,
+    "mAUC@": 0.8773925925925926
+  },
+  "validation_threshold": 0.3297230303287506,
+  "workspace": "/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/trials/c2_lr_double/a7_m1/seed_42"
+}

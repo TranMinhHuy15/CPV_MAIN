@@ -1,0 +1,9 @@
+test_config_reaches_all_dataset_pipelines (__main__.SourceIntegration) ... ok
+test_prediction_warmup_alignment_variable_targets (__main__.SourceIntegration) ... ok
+test_same_parameter_count_and_original_losses (__main__.SourceIntegration) ... ok
+test_sampler_retains_exact_original_target_grid (__main__.SourceIntegration) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.067s
+
+OK

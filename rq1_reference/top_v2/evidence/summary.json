@@ -1,0 +1,239 @@
+{
+  "protocol": "top-v2-v6matched-batch2-eff16-amp-single-gpu-3seed-terminal-fixed-v2",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "completed_seeds": 3,
+  "final_three_seed_report": true,
+  "per_seed": [
+    {
+      "seed": 42,
+      "state": "complete",
+      "completed_epochs": 50,
+      "best_checkpoint": "best_mAUC@_epoch_12.pth",
+      "validation/mAP@": 0.8442089188397851,
+      "validation/mAUC@": 0.8385481481481483,
+      "validation/mAUC@0.1": 0.6885769980506823,
+      "validation/mtta@0.1": 0.800722962962963,
+      "test_combined/mAP": 0.78025213544363,
+      "test_combined/mAUC_grouped": 0.8122320218380654,
+      "test_combined/mPAUC_sklearn_standardized": 0.6131695840409565,
+      "test_combined/mPAUC_raw_divided_by_0.1": 0.26502220967781726,
+      "test_combined/AP@0.5s": 0.8304802736986168,
+      "test_combined/AP@1.0s": 0.7721663857627961,
+      "test_combined/AP@1.5s": 0.7381097468694774,
+      "test_public/mAP": 0.7447660873459873,
+      "test_public/mAUC_grouped": 0.7899283612306659,
+      "test_public/mPAUC_sklearn_standardized": 0.5715513598994363,
+      "test_public/mPAUC_raw_divided_by_0.1": 0.18594758380892884,
+      "test_public/AP@0.5s": 0.7733715286902719,
+      "test_public/AP@1.0s": 0.7302437763806366,
+      "test_public/AP@1.5s": 0.7306829569670534,
+      "test_private/mAP": 0.8265423716346555,
+      "test_private/mAUC_grouped": 0.834462931783476,
+      "test_private/mPAUC_sklearn_standardized": 0.6668626604028245,
+      "test_private/mPAUC_raw_divided_by_0.1": 0.3670390547653666,
+      "test_private/AP@0.5s": 0.8970832015156089,
+      "test_private/AP@1.0s": 0.8288569645566459,
+      "test_private/AP@1.5s": 0.7536869488317116
+    },
+    {
+      "seed": 43,
+      "state": "complete",
+      "completed_epochs": 50,
+      "best_checkpoint": "best_mAUC@_epoch_14.pth",
+      "validation/mAP@": 0.8385329000790249,
+      "validation/mAUC@": 0.8430814814814815,
+      "validation/mAUC@0.1": 0.6840545808966861,
+      "validation/mtta@0.1": 0.8403970370370372,
+      "test_combined/mAP": 0.793675146855564,
+      "test_combined/mAUC_grouped": 0.8220103068190229,
+      "test_combined/mPAUC_sklearn_standardized": 0.6270964448284474,
+      "test_combined/mPAUC_raw_divided_by_0.1": 0.2914832451740503,
+      "test_combined/AP@0.5s": 0.8368361353056,
+      "test_combined/AP@1.0s": 0.7840111715610723,
+      "test_combined/AP@1.5s": 0.7601781337000196,
+      "test_public/mAP": 0.7558802404261722,
+      "test_public/mAUC_grouped": 0.7997302552961324,
+      "test_public/mPAUC_sklearn_standardized": 0.5839146175176961,
+      "test_public/mPAUC_raw_divided_by_0.1": 0.20943777328362265,
+      "test_public/AP@0.5s": 0.7842785544566091,
+      "test_public/AP@1.0s": 0.7297235895529941,
+      "test_public/AP@1.5s": 0.7536385772689134,
+      "test_private/mAP": 0.8403783253846854,
+      "test_private/mAUC_grouped": 0.8443610823302503,
+      "test_private/mPAUC_sklearn_standardized": 0.6825410452604315,
+      "test_private/mPAUC_raw_divided_by_0.1": 0.3968279859948198,
+      "test_private/AP@0.5s": 0.9072525580267238,
+      "test_private/AP@1.0s": 0.8448377180531227,
+      "test_private/AP@1.5s": 0.7690447000742099
+    },
+    {
+      "seed": 44,
+      "state": "complete",
+      "completed_epochs": 50,
+      "best_checkpoint": "best_mAUC@_epoch_14.pth",
+      "validation/mAP@": 0.8380350655979841,
+      "validation/mAUC@": 0.8375555555555555,
+      "validation/mAUC@0.1": 0.6808576998050683,
+      "validation/mtta@0.1": 0.7784637037037038,
+      "test_combined/mAP": 0.78731350775407,
+      "test_combined/mAUC_grouped": 0.8143595600384322,
+      "test_combined/mPAUC_sklearn_standardized": 0.6231987085591204,
+      "test_combined/mPAUC_raw_divided_by_0.1": 0.2840775462623288,
+      "test_combined/AP@0.5s": 0.8448237111130859,
+      "test_combined/AP@1.0s": 0.7832009238285423,
+      "test_combined/AP@1.5s": 0.7339158883205823,
+      "test_public/mAP": 0.7564615542820882,
+      "test_public/mAUC_grouped": 0.7926326877575544,
+      "test_public/mPAUC_sklearn_standardized": 0.5742343992115733,
+      "test_public/mPAUC_raw_divided_by_0.1": 0.19104535850198925,
+      "test_public/AP@0.5s": 0.7994595794000832,
+      "test_public/AP@1.0s": 0.7326471340178207,
+      "test_public/AP@1.5s": 0.7372779494283608,
+      "test_private/mAP": 0.8277062906042317,
+      "test_private/mAUC_grouped": 0.8352105430244019,
+      "test_private/mPAUC_sklearn_standardized": 0.6835515440333011,
+      "test_private/mPAUC_raw_divided_by_0.1": 0.398747933663272,
+      "test_private/AP@0.5s": 0.8978871925681394,
+      "test_private/AP@1.0s": 0.8439544073715695,
+      "test_private/AP@1.5s": 0.7412772718729863
+    }
+  ],
+  "mean_sample_sd": {
+    "test_combined/AP@0.5s": {
+      "n": 3,
+      "mean": 0.8373800400391008,
+      "sample_sd": 0.0071871707566358405
+    },
+    "test_combined/AP@1.0s": {
+      "n": 3,
+      "mean": 0.7797928270508035,
+      "sample_sd": 0.006617105136431375
+    },
+    "test_combined/AP@1.5s": {
+      "n": 3,
+      "mean": 0.7440679229633598,
+      "sample_sd": 0.014108553429275732
+    },
+    "test_combined/mAP": {
+      "n": 3,
+      "mean": 0.787080263351088,
+      "sample_sd": 0.0067145447392112055
+    },
+    "test_combined/mAUC_grouped": {
+      "n": 3,
+      "mean": 0.8162006295651735,
+      "sample_sd": 0.005142554525129123
+    },
+    "test_combined/mPAUC_raw_divided_by_0.1": {
+      "n": 3,
+      "mean": 0.2801943337047321,
+      "sample_sd": 0.01365123088621804
+    },
+    "test_combined/mPAUC_sklearn_standardized": {
+      "n": 3,
+      "mean": 0.6211549124761747,
+      "sample_sd": 0.0071848583611673405
+    },
+    "test_private/AP@0.5s": {
+      "n": 3,
+      "mean": 0.900740984036824,
+      "sample_sd": 0.005653498675386001
+    },
+    "test_private/AP@1.0s": {
+      "n": 3,
+      "mean": 0.8392163633271127,
+      "sample_sd": 0.008982366982271308
+    },
+    "test_private/AP@1.5s": {
+      "n": 3,
+      "mean": 0.7546696402596359,
+      "sample_sd": 0.013909772789640151
+    },
+    "test_private/mAP": {
+      "n": 3,
+      "mean": 0.8315423292078575,
+      "sample_sd": 0.007674294636617886
+    },
+    "test_private/mAUC_grouped": {
+      "n": 3,
+      "mean": 0.8380115190460428,
+      "sample_sd": 0.00551157382850012
+    },
+    "test_private/mPAUC_raw_divided_by_0.1": {
+      "n": 3,
+      "mean": 0.38753832480781947,
+      "sample_sd": 0.017778824594653412
+    },
+    "test_private/mPAUC_sklearn_standardized": {
+      "n": 3,
+      "mean": 0.6776517498988524,
+      "sample_sd": 0.009357276102449194
+    },
+    "test_public/AP@0.5s": {
+      "n": 3,
+      "mean": 0.785703220848988,
+      "sample_sd": 0.013102246113037308
+    },
+    "test_public/AP@1.0s": {
+      "n": 3,
+      "mean": 0.7308714999838172,
+      "sample_sd": 0.0015595851214175323
+    },
+    "test_public/AP@1.5s": {
+      "n": 3,
+      "mean": 0.7405331612214425,
+      "sample_sd": 0.011818943638251046
+    },
+    "test_public/mAP": {
+      "n": 3,
+      "mean": 0.7523692940180825,
+      "sample_sd": 0.0065909821137456895
+    },
+    "test_public/mAUC_grouped": {
+      "n": 3,
+      "mean": 0.7940971014281175,
+      "sample_sd": 0.005062377145823503
+    },
+    "test_public/mPAUC_raw_divided_by_0.1": {
+      "n": 3,
+      "mean": 0.19547690519818026,
+      "sample_sd": 0.01235622130667968
+    },
+    "test_public/mPAUC_sklearn_standardized": {
+      "n": 3,
+      "mean": 0.5765667922095685,
+      "sample_sd": 0.00650327437193666
+    },
+    "validation/mAP@": {
+      "n": 3,
+      "mean": 0.8402589615055981,
+      "sample_sd": 0.0034298078662006494
+    },
+    "validation/mAUC@": {
+      "n": 3,
+      "mean": 0.8397283950617285,
+      "sample_sd": 0.0029459635804719385
+    },
+    "validation/mAUC@0.1": {
+      "n": 3,
+      "mean": 0.6844964262508122,
+      "sample_sd": 0.0038785708500563725
+    },
+    "validation/mtta@0.1": {
+      "n": 3,
+      "mean": 0.806527901234568,
+      "sample_sd": 0.03137208035335407
+    }
+  },
+  "notes": [
+    "Same fixed author split; seed varies training RNG, not split.",
+    "Checkpoint per seed selected by validation full mAUC@; no best-seed selection.",
+    "Validation risk-curve proxies and Combined/Public/Private clipped-test metrics remain separate.",
+    "Sample SD uses n-1. Three seeds do not prove paper equivalence or statistical superiority.",
+    "No final aggregate from partial/incomplete seeds; test mTTA is not fabricated."
+  ]
+}

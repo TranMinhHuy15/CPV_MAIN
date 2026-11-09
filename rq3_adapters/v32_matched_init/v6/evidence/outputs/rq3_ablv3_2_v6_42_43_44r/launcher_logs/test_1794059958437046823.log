@@ -1,0 +1,827 @@
+time=2026-11-07T13:59:19.100000+00:00 | phase=INPUT READY | seeds=[42, 43, 44] | modules=['c7_current_repeat', 'r7_last_state', 'a7_m1', 'a26_m1', 'u3_uniform', 'g3_learned'] | candidates=1 | runs=18 | epochs_per_run=50 | module_parent=RiskProp V6 frozen | comparison_baselines=same-study b0 and all six newly trained adapters | disk_free_GiB=107.73
+time=2026-11-07T13:59:19.365057+00:00 | phase=START | job=test_seed42 | raw_log=/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/logs/test_seed42_1794059959365040448.log
+time=2026-11-07T13:59:49.365701+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=30.0
+time=2026-11-07T14:00:19.365958+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=60.0
+time=2026-11-07T14:00:49.366212+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=90.0
+time=2026-11-07T14:01:19.366473+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=120.0
+time=2026-11-07T14:01:49.366722+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=150.0
+time=2026-11-07T14:02:19.366990+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=180.0
+time=2026-11-07T14:02:49.367238+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=210.0
+time=2026-11-07T14:03:19.367487+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=240.0
+time=2026-11-07T14:03:49.367751+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=270.0
+time=2026-11-07T14:04:19.368068+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=300.0
+time=2026-11-07T14:04:49.368300+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=330.0
+time=2026-11-07T14:05:19.368554+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=360.0
+time=2026-11-07T14:05:49.368802+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=390.0
+time=2026-11-07T14:06:19.369117+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=420.0
+time=2026-11-07T14:06:49.369335+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=450.0
+time=2026-11-07T14:07:19.369585+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=480.0
+time=2026-11-07T14:07:49.369830+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=510.0
+time=2026-11-07T14:08:19.370098+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=540.0
+time=2026-11-07T14:08:49.370311+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=570.0
+time=2026-11-07T14:09:19.370540+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=600.0
+time=2026-11-07T14:09:49.370775+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=630.0
+time=2026-11-07T14:10:19.371054+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=660.0
+time=2026-11-07T14:10:49.371317+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=690.0
+time=2026-11-07T14:11:19.371578+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=720.0
+time=2026-11-07T14:11:49.371840+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=750.0
+time=2026-11-07T14:12:19.372178+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=780.0
+time=2026-11-07T14:12:49.372429+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=810.0
+time=2026-11-07T14:13:19.372680+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=840.0
+time=2026-11-07T14:13:49.372932+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=870.0
+time=2026-11-07T14:14:19.373187+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=900.0
+time=2026-11-07T14:14:49.373436+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=930.0
+time=2026-11-07T14:15:19.373679+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=960.0
+job=test_seed42 | FREEZE module=c7_current_repeat seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed42 | FREEZE module=r7_last_state seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed42 | FREEZE module=a7_m1 seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed42 | FREEZE module=a26_m1 seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed42 | FREEZE module=u3_uniform seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed42 | FREEZE module=g3_learned seed=42 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+time=2026-11-07T14:15:49.373955+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=990.0
+job=test_seed42 | TEST seed42 1/1344 | 13.32s/video | ETA 4.97h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:16:19.374214+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1020.0
+time=2026-11-07T14:16:49.374465+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1050.0
+time=2026-11-07T14:17:19.374732+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1080.0
+job=test_seed42 | TEST seed42 10/1344 | 10.45s/video | ETA 3.87h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:17:49.375053+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1110.0
+job=test_seed42 | TEST seed42 20/1344 | 6.42s/video | ETA 2.36h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 30/1344 | 5.05s/video | ETA 1.84h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:18:19.375350+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1140.0
+job=test_seed42 | TEST seed42 40/1344 | 4.36s/video | ETA 1.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:18:49.375663+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1170.0
+job=test_seed42 | TEST seed42 50/1344 | 3.95s/video | ETA 1.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:19:19.375899+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1200.0
+job=test_seed42 | TEST seed42 60/1344 | 3.69s/video | ETA 1.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 70/1344 | 3.51s/video | ETA 1.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:19:49.376134+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1230.0
+job=test_seed42 | TEST seed42 80/1344 | 3.35s/video | ETA 1.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:20:19.376428+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1260.0
+job=test_seed42 | TEST seed42 90/1344 | 3.25s/video | ETA 1.13h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:20:49.376708+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1290.0
+job=test_seed42 | TEST seed42 100/1344 | 3.16s/video | ETA 1.09h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:21:19.376972+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1320.0
+job=test_seed42 | TEST seed42 110/1344 | 3.08s/video | ETA 1.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 120/1344 | 3.03s/video | ETA 1.03h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:21:49.377234+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1350.0
+job=test_seed42 | TEST seed42 130/1344 | 2.99s/video | ETA 1.01h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:22:19.377527+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1380.0
+job=test_seed42 | TEST seed42 140/1344 | 2.96s/video | ETA 0.99h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:22:49.377822+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1410.0
+job=test_seed42 | TEST seed42 150/1344 | 2.92s/video | ETA 0.97h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:23:19.378095+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1440.0
+job=test_seed42 | TEST seed42 160/1344 | 2.88s/video | ETA 0.95h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 170/1344 | 2.86s/video | ETA 0.93h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:23:49.378358+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1470.0
+job=test_seed42 | TEST seed42 180/1344 | 2.83s/video | ETA 0.92h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:24:19.378639+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1500.0
+job=test_seed42 | TEST seed42 190/1344 | 2.80s/video | ETA 0.90h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:24:49.378922+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1530.0
+job=test_seed42 | TEST seed42 200/1344 | 2.77s/video | ETA 0.88h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:25:19.379169+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1560.0
+job=test_seed42 | TEST seed42 210/1344 | 2.76s/video | ETA 0.87h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 220/1344 | 2.74s/video | ETA 0.86h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:25:49.379418+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1590.0
+job=test_seed42 | TEST seed42 230/1344 | 2.72s/video | ETA 0.84h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:26:19.379767+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1620.0
+job=test_seed42 | TEST seed42 240/1344 | 2.71s/video | ETA 0.83h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:26:49.380037+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1650.0
+job=test_seed42 | TEST seed42 250/1344 | 2.70s/video | ETA 0.82h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:27:19.380304+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1680.0
+job=test_seed42 | TEST seed42 260/1344 | 2.68s/video | ETA 0.81h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 270/1344 | 2.67s/video | ETA 0.80h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:27:49.380587+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1710.0
+job=test_seed42 | TEST seed42 280/1344 | 2.66s/video | ETA 0.79h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:28:19.380894+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1740.0
+job=test_seed42 | TEST seed42 290/1344 | 2.65s/video | ETA 0.78h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:28:49.381157+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1770.0
+job=test_seed42 | TEST seed42 300/1344 | 2.64s/video | ETA 0.76h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 310/1344 | 2.63s/video | ETA 0.75h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:29:19.381431+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1800.0
+job=test_seed42 | TEST seed42 320/1344 | 2.61s/video | ETA 0.74h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:29:49.381727+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1830.0
+job=test_seed42 | TEST seed42 330/1344 | 2.60s/video | ETA 0.73h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:30:19.381998+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1860.0
+job=test_seed42 | TEST seed42 340/1344 | 2.59s/video | ETA 0.72h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 350/1344 | 2.58s/video | ETA 0.71h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:30:49.382264+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1890.0
+job=test_seed42 | TEST seed42 360/1344 | 2.58s/video | ETA 0.70h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:31:19.382504+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1920.0
+job=test_seed42 | TEST seed42 370/1344 | 2.57s/video | ETA 0.69h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:31:49.382810+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1950.0
+job=test_seed42 | TEST seed42 380/1344 | 2.56s/video | ETA 0.69h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 390/1344 | 2.55s/video | ETA 0.68h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:32:19.383102+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=1980.0
+job=test_seed42 | TEST seed42 400/1344 | 2.54s/video | ETA 0.67h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:32:49.383371+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2010.0
+job=test_seed42 | TEST seed42 410/1344 | 2.53s/video | ETA 0.66h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:33:19.383590+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2040.0
+job=test_seed42 | TEST seed42 420/1344 | 2.53s/video | ETA 0.65h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 430/1344 | 2.52s/video | ETA 0.64h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:33:49.383864+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2070.0
+job=test_seed42 | TEST seed42 440/1344 | 2.52s/video | ETA 0.63h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:34:19.384155+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2100.0
+job=test_seed42 | TEST seed42 450/1344 | 2.51s/video | ETA 0.62h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:34:49.384413+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2130.0
+job=test_seed42 | TEST seed42 460/1344 | 2.51s/video | ETA 0.62h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 470/1344 | 2.50s/video | ETA 0.61h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:35:19.384700+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2160.0
+job=test_seed42 | TEST seed42 480/1344 | 2.50s/video | ETA 0.60h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:35:49.384968+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2190.0
+job=test_seed42 | TEST seed42 490/1344 | 2.49s/video | ETA 0.59h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:36:19.385250+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2220.0
+job=test_seed42 | TEST seed42 500/1344 | 2.49s/video | ETA 0.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 510/1344 | 2.48s/video | ETA 0.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:36:49.385541+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2250.0
+job=test_seed42 | TEST seed42 520/1344 | 2.48s/video | ETA 0.57h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:37:19.385813+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2280.0
+job=test_seed42 | TEST seed42 530/1344 | 2.47s/video | ETA 0.56h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:37:49.386084+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2310.0
+job=test_seed42 | TEST seed42 540/1344 | 2.47s/video | ETA 0.55h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:38:19.386356+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2340.0
+job=test_seed42 | TEST seed42 550/1344 | 2.47s/video | ETA 0.54h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 560/1344 | 2.46s/video | ETA 0.54h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:38:49.386596+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2370.0
+job=test_seed42 | TEST seed42 570/1344 | 2.46s/video | ETA 0.53h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:39:19.386823+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2400.0
+job=test_seed42 | TEST seed42 580/1344 | 2.46s/video | ETA 0.52h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:39:49.387142+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2430.0
+job=test_seed42 | TEST seed42 590/1344 | 2.46s/video | ETA 0.52h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 600/1344 | 2.46s/video | ETA 0.51h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:40:19.387436+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2460.0
+job=test_seed42 | TEST seed42 610/1344 | 2.45s/video | ETA 0.50h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:40:49.387739+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2490.0
+job=test_seed42 | TEST seed42 620/1344 | 2.45s/video | ETA 0.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:41:19.388108+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2520.0
+job=test_seed42 | TEST seed42 630/1344 | 2.45s/video | ETA 0.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:41:49.388401+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2550.0
+job=test_seed42 | TEST seed42 640/1344 | 2.45s/video | ETA 0.48h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 650/1344 | 2.44s/video | ETA 0.47h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:42:19.388664+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2580.0
+job=test_seed42 | TEST seed42 660/1344 | 2.44s/video | ETA 0.46h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:42:49.388951+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2610.0
+job=test_seed42 | TEST seed42 670/1344 | 2.44s/video | ETA 0.46h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:43:19.389225+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2640.0
+job=test_seed42 | TEST seed42 680/1344 | 2.44s/video | ETA 0.45h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 690/1344 | 2.43s/video | ETA 0.44h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:43:49.389494+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2670.0
+job=test_seed42 | TEST seed42 700/1344 | 2.43s/video | ETA 0.44h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:44:19.389759+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2700.0
+job=test_seed42 | TEST seed42 710/1344 | 2.43s/video | ETA 0.43h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:44:49.390035+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2730.0
+job=test_seed42 | TEST seed42 720/1344 | 2.43s/video | ETA 0.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 730/1344 | 2.43s/video | ETA 0.41h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:45:19.390274+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2760.0
+job=test_seed42 | TEST seed42 740/1344 | 2.43s/video | ETA 0.41h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:45:49.390557+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2790.0
+job=test_seed42 | TEST seed42 750/1344 | 2.42s/video | ETA 0.40h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:46:19.391081+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2820.0
+job=test_seed42 | TEST seed42 760/1344 | 2.42s/video | ETA 0.39h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 770/1344 | 2.42s/video | ETA 0.39h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:46:49.391318+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2850.0
+job=test_seed42 | TEST seed42 780/1344 | 2.42s/video | ETA 0.38h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:47:19.391575+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2880.0
+job=test_seed42 | TEST seed42 790/1344 | 2.42s/video | ETA 0.37h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:47:49.391867+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2910.0
+job=test_seed42 | TEST seed42 800/1344 | 2.42s/video | ETA 0.37h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:48:19.392165+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2940.0
+job=test_seed42 | TEST seed42 810/1344 | 2.42s/video | ETA 0.36h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 820/1344 | 2.42s/video | ETA 0.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:48:49.392527+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=2970.0
+job=test_seed42 | TEST seed42 830/1344 | 2.42s/video | ETA 0.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:49:19.393023+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3000.0
+job=test_seed42 | TEST seed42 840/1344 | 2.42s/video | ETA 0.34h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:49:49.393375+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3030.0
+job=test_seed42 | TEST seed42 850/1344 | 2.42s/video | ETA 0.33h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:50:19.393719+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3060.0
+job=test_seed42 | TEST seed42 860/1344 | 2.42s/video | ETA 0.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 870/1344 | 2.41s/video | ETA 0.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:50:49.394106+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3090.0
+job=test_seed42 | TEST seed42 880/1344 | 2.41s/video | ETA 0.31h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:51:19.394364+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3120.0
+job=test_seed42 | TEST seed42 890/1344 | 2.41s/video | ETA 0.30h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:51:49.394648+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3150.0
+job=test_seed42 | TEST seed42 900/1344 | 2.41s/video | ETA 0.30h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 910/1344 | 2.41s/video | ETA 0.29h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:52:19.394933+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3180.0
+job=test_seed42 | TEST seed42 920/1344 | 2.41s/video | ETA 0.28h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:52:49.395202+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3210.0
+job=test_seed42 | TEST seed42 930/1344 | 2.41s/video | ETA 0.28h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:53:19.395441+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3240.0
+job=test_seed42 | TEST seed42 940/1344 | 2.41s/video | ETA 0.27h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:53:49.395711+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3270.0
+job=test_seed42 | TEST seed42 950/1344 | 2.41s/video | ETA 0.26h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 960/1344 | 2.41s/video | ETA 0.26h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:54:19.395941+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3300.0
+job=test_seed42 | TEST seed42 970/1344 | 2.41s/video | ETA 0.25h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:54:49.396233+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3330.0
+job=test_seed42 | TEST seed42 980/1344 | 2.41s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:55:19.396516+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3360.0
+job=test_seed42 | TEST seed42 990/1344 | 2.41s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1000/1344 | 2.40s/video | ETA 0.23h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:55:49.396802+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3390.0
+job=test_seed42 | TEST seed42 1010/1344 | 2.40s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:56:19.397102+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3420.0
+job=test_seed42 | TEST seed42 1020/1344 | 2.40s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:56:49.397373+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3450.0
+job=test_seed42 | TEST seed42 1030/1344 | 2.40s/video | ETA 0.21h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:57:19.397613+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3480.0
+job=test_seed42 | TEST seed42 1040/1344 | 2.40s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1050/1344 | 2.40s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:57:49.397884+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3510.0
+job=test_seed42 | TEST seed42 1060/1344 | 2.40s/video | ETA 0.19h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:58:19.398189+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3540.0
+job=test_seed42 | TEST seed42 1070/1344 | 2.40s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:58:49.398464+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3570.0
+job=test_seed42 | TEST seed42 1080/1344 | 2.40s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1090/1344 | 2.39s/video | ETA 0.17h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:59:19.398703+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3600.0
+job=test_seed42 | TEST seed42 1100/1344 | 2.39s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T14:59:49.398961+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3630.0
+job=test_seed42 | TEST seed42 1110/1344 | 2.39s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:00:19.399222+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3660.0
+job=test_seed42 | TEST seed42 1120/1344 | 2.39s/video | ETA 0.15h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1130/1344 | 2.39s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:00:49.399513+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3690.0
+job=test_seed42 | TEST seed42 1140/1344 | 2.39s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:01:19.399808+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3720.0
+job=test_seed42 | TEST seed42 1150/1344 | 2.39s/video | ETA 0.13h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:01:49.400081+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3750.0
+job=test_seed42 | TEST seed42 1160/1344 | 2.39s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1170/1344 | 2.39s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:02:19.400346+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3780.0
+job=test_seed42 | TEST seed42 1180/1344 | 2.39s/video | ETA 0.11h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:02:49.400607+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3810.0
+job=test_seed42 | TEST seed42 1190/1344 | 2.39s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:03:19.400853+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3840.0
+job=test_seed42 | TEST seed42 1200/1344 | 2.38s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1210/1344 | 2.38s/video | ETA 0.09h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:03:49.401240+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3870.0
+job=test_seed42 | TEST seed42 1220/1344 | 2.38s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:04:19.401675+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3900.0
+job=test_seed42 | TEST seed42 1230/1344 | 2.38s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:04:49.401919+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3930.0
+job=test_seed42 | TEST seed42 1240/1344 | 2.38s/video | ETA 0.07h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1250/1344 | 2.38s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:05:19.402323+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3960.0
+job=test_seed42 | TEST seed42 1260/1344 | 2.38s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:05:49.402680+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=3990.0
+job=test_seed42 | TEST seed42 1270/1344 | 2.38s/video | ETA 0.05h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:06:19.403112+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=4020.0
+job=test_seed42 | TEST seed42 1280/1344 | 2.38s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:06:49.403398+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=4050.0
+job=test_seed42 | TEST seed42 1290/1344 | 2.38s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | TEST seed42 1300/1344 | 2.38s/video | ETA 0.03h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:07:19.403695+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=4080.0
+job=test_seed42 | TEST seed42 1310/1344 | 2.38s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:07:49.404012+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=4110.0
+job=test_seed42 | TEST seed42 1320/1344 | 2.38s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:08:19.404278+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=4140.0
+job=test_seed42 | TEST seed42 1330/1344 | 2.38s/video | ETA 0.01h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:08:49.404602+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=4170.0
+job=test_seed42 | TEST seed42 1340/1344 | 2.38s/video | ETA 0.00h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed42 | RESULT TEST seed=42 model=c7_current_repeat mAP=83.9395% mAUC=85.3130% AP0.5=87.5512% AP1.0=84.5990% AP1.5=79.6683%
+job=test_seed42 | RESULT TEST seed=42 model=V6 mAP=83.9227% mAUC=85.2210% AP0.5=87.0329% AP1.0=84.5125% AP1.5=80.2226%
+job=test_seed42 | RESULT TEST seed=42 model=r7_last_state mAP=84.3441% mAUC=85.4158% AP0.5=87.9959% AP1.0=85.1191% AP1.5=79.9174%
+job=test_seed42 | RESULT TEST seed=42 model=a7_m1 mAP=84.0899% mAUC=85.2234% AP0.5=87.7152% AP1.0=84.6845% AP1.5=79.8700%
+job=test_seed42 | RESULT TEST seed=42 model=a26_m1 mAP=84.6125% mAUC=85.4050% AP0.5=87.6455% AP1.0=85.5787% AP1.5=80.6134%
+job=test_seed42 | RESULT TEST seed=42 model=u3_uniform mAP=84.2526% mAUC=85.3767% AP0.5=87.6273% AP1.0=85.2280% AP1.5=79.9025%
+time=2026-11-07T15:09:19.404884+00:00 | phase=RUNNING | job=test_seed42 | elapsed_s=4200.0
+job=test_seed42 | RESULT TEST seed=42 model=g3_learned mAP=84.2083% mAUC=85.4058% AP0.5=87.7946% AP1.0=84.9838% AP1.5=79.8464%
+time=2026-11-07T15:09:21.223023+00:00 | phase=DONE | job=test_seed42 | exit=0 | elapsed_s=4201.9
+time=2026-11-07T15:09:21.223171+00:00 | phase=START | job=test_seed43 | raw_log=/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/logs/test_seed43_1794064161223159437.log
+job=test_seed43 | FREEZE module=c7_current_repeat seed=43 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed43 | FREEZE module=r7_last_state seed=43 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed43 | FREEZE module=a7_m1 seed=43 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed43 | FREEZE module=a26_m1 seed=43 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed43 | FREEZE module=u3_uniform seed=43 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed43 | FREEZE module=g3_learned seed=43 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed43 | TEST seed43 1/1344 | 13.86s/video | ETA 5.17h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:09:51.223778+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=30.0
+time=2026-11-07T15:10:21.224027+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=60.0
+time=2026-11-07T15:10:51.224381+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=90.0
+job=test_seed43 | TEST seed43 10/1344 | 10.90s/video | ETA 4.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:11:21.224712+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=120.0
+job=test_seed43 | TEST seed43 20/1344 | 6.77s/video | ETA 2.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:11:51.224903+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=150.0
+job=test_seed43 | TEST seed43 30/1344 | 5.38s/video | ETA 1.96h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:12:21.225168+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=180.0
+job=test_seed43 | TEST seed43 40/1344 | 4.65s/video | ETA 1.68h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:12:51.225408+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=210.0
+job=test_seed43 | TEST seed43 50/1344 | 4.21s/video | ETA 1.51h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:13:21.225660+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=240.0
+job=test_seed43 | TEST seed43 60/1344 | 3.92s/video | ETA 1.40h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 70/1344 | 3.70s/video | ETA 1.31h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:13:51.225922+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=270.0
+job=test_seed43 | TEST seed43 80/1344 | 3.52s/video | ETA 1.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:14:21.226175+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=300.0
+job=test_seed43 | TEST seed43 90/1344 | 3.40s/video | ETA 1.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:14:51.226424+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=330.0
+job=test_seed43 | TEST seed43 100/1344 | 3.31s/video | ETA 1.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:15:21.226685+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=360.0
+job=test_seed43 | TEST seed43 110/1344 | 3.24s/video | ETA 1.11h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:15:51.226930+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=390.0
+job=test_seed43 | TEST seed43 120/1344 | 3.18s/video | ETA 1.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 130/1344 | 3.12s/video | ETA 1.05h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:16:21.227212+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=420.0
+job=test_seed43 | TEST seed43 140/1344 | 3.06s/video | ETA 1.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:16:51.227582+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=450.0
+job=test_seed43 | TEST seed43 150/1344 | 3.01s/video | ETA 1.00h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:17:21.227864+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=480.0
+job=test_seed43 | TEST seed43 160/1344 | 2.97s/video | ETA 0.98h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 170/1344 | 2.93s/video | ETA 0.96h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:17:51.228138+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=510.0
+job=test_seed43 | TEST seed43 180/1344 | 2.90s/video | ETA 0.94h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:18:21.228401+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=540.0
+job=test_seed43 | TEST seed43 190/1344 | 2.87s/video | ETA 0.92h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:18:51.228680+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=570.0
+job=test_seed43 | TEST seed43 200/1344 | 2.84s/video | ETA 0.90h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:19:21.228901+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=600.0
+job=test_seed43 | TEST seed43 210/1344 | 2.82s/video | ETA 0.89h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 220/1344 | 2.80s/video | ETA 0.87h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:19:51.229137+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=630.0
+job=test_seed43 | TEST seed43 230/1344 | 2.78s/video | ETA 0.86h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:20:21.229372+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=660.0
+job=test_seed43 | TEST seed43 240/1344 | 2.76s/video | ETA 0.85h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:20:51.229617+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=690.0
+job=test_seed43 | TEST seed43 250/1344 | 2.76s/video | ETA 0.84h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:21:21.229864+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=720.0
+job=test_seed43 | TEST seed43 260/1344 | 2.75s/video | ETA 0.83h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 270/1344 | 2.74s/video | ETA 0.82h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:21:51.230157+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=750.0
+job=test_seed43 | TEST seed43 280/1344 | 2.72s/video | ETA 0.80h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:22:21.230523+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=780.0
+job=test_seed43 | TEST seed43 290/1344 | 2.71s/video | ETA 0.79h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:22:51.230843+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=810.0
+job=test_seed43 | TEST seed43 300/1344 | 2.69s/video | ETA 0.78h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:23:21.231147+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=840.0
+job=test_seed43 | TEST seed43 310/1344 | 2.68s/video | ETA 0.77h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 320/1344 | 2.67s/video | ETA 0.76h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:23:51.231393+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=870.0
+job=test_seed43 | TEST seed43 330/1344 | 2.65s/video | ETA 0.75h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:24:21.231617+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=900.0
+job=test_seed43 | TEST seed43 340/1344 | 2.64s/video | ETA 0.74h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:24:51.231923+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=930.0
+job=test_seed43 | TEST seed43 350/1344 | 2.63s/video | ETA 0.73h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 360/1344 | 2.62s/video | ETA 0.72h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:25:21.232144+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=960.0
+job=test_seed43 | TEST seed43 370/1344 | 2.61s/video | ETA 0.71h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:25:51.232417+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=990.0
+job=test_seed43 | TEST seed43 380/1344 | 2.60s/video | ETA 0.70h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:26:21.232722+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1020.0
+job=test_seed43 | TEST seed43 390/1344 | 2.60s/video | ETA 0.69h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 400/1344 | 2.59s/video | ETA 0.68h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:26:51.233003+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1050.0
+job=test_seed43 | TEST seed43 410/1344 | 2.57s/video | ETA 0.67h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:27:21.233263+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1080.0
+job=test_seed43 | TEST seed43 420/1344 | 2.57s/video | ETA 0.66h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:27:51.233647+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1110.0
+job=test_seed43 | TEST seed43 430/1344 | 2.57s/video | ETA 0.65h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 440/1344 | 2.56s/video | ETA 0.64h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:28:21.233882+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1140.0
+job=test_seed43 | TEST seed43 450/1344 | 2.56s/video | ETA 0.64h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:28:51.234136+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1170.0
+job=test_seed43 | TEST seed43 460/1344 | 2.56s/video | ETA 0.63h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:29:21.234383+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1200.0
+job=test_seed43 | TEST seed43 470/1344 | 2.55s/video | ETA 0.62h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 480/1344 | 2.54s/video | ETA 0.61h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:29:51.234639+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1230.0
+job=test_seed43 | TEST seed43 490/1344 | 2.54s/video | ETA 0.60h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:30:21.235024+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1260.0
+job=test_seed43 | TEST seed43 500/1344 | 2.53s/video | ETA 0.59h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:30:51.235312+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1290.0
+job=test_seed43 | TEST seed43 510/1344 | 2.53s/video | ETA 0.59h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:31:21.235590+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1320.0
+job=test_seed43 | TEST seed43 520/1344 | 2.53s/video | ETA 0.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 530/1344 | 2.52s/video | ETA 0.57h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:31:51.235890+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1350.0
+job=test_seed43 | TEST seed43 540/1344 | 2.52s/video | ETA 0.56h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:32:21.236203+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1380.0
+job=test_seed43 | TEST seed43 550/1344 | 2.52s/video | ETA 0.56h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:32:51.236551+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1410.0
+job=test_seed43 | TEST seed43 560/1344 | 2.51s/video | ETA 0.55h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 570/1344 | 2.51s/video | ETA 0.54h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:33:21.236852+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1440.0
+job=test_seed43 | TEST seed43 580/1344 | 2.51s/video | ETA 0.53h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:33:51.237146+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1470.0
+job=test_seed43 | TEST seed43 590/1344 | 2.50s/video | ETA 0.52h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:34:21.237428+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1500.0
+job=test_seed43 | TEST seed43 600/1344 | 2.50s/video | ETA 0.52h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:34:51.237678+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1530.0
+job=test_seed43 | TEST seed43 610/1344 | 2.49s/video | ETA 0.51h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 620/1344 | 2.49s/video | ETA 0.50h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:35:21.237956+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1560.0
+job=test_seed43 | TEST seed43 630/1344 | 2.49s/video | ETA 0.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:35:51.238247+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1590.0
+job=test_seed43 | TEST seed43 640/1344 | 2.49s/video | ETA 0.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:36:21.238513+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1620.0
+job=test_seed43 | TEST seed43 650/1344 | 2.48s/video | ETA 0.48h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 660/1344 | 2.48s/video | ETA 0.47h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:36:51.238788+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1650.0
+job=test_seed43 | TEST seed43 670/1344 | 2.48s/video | ETA 0.46h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:37:21.239040+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1680.0
+job=test_seed43 | TEST seed43 680/1344 | 2.47s/video | ETA 0.46h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:37:51.239274+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1710.0
+job=test_seed43 | TEST seed43 690/1344 | 2.47s/video | ETA 0.45h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 700/1344 | 2.47s/video | ETA 0.44h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:38:21.239552+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1740.0
+job=test_seed43 | TEST seed43 710/1344 | 2.46s/video | ETA 0.43h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:38:51.239801+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1770.0
+job=test_seed43 | TEST seed43 720/1344 | 2.46s/video | ETA 0.43h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:39:21.240122+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1800.0
+job=test_seed43 | TEST seed43 730/1344 | 2.46s/video | ETA 0.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 740/1344 | 2.46s/video | ETA 0.41h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:39:51.240409+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1830.0
+job=test_seed43 | TEST seed43 750/1344 | 2.46s/video | ETA 0.41h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:40:21.240727+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1860.0
+job=test_seed43 | TEST seed43 760/1344 | 2.45s/video | ETA 0.40h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:40:51.241027+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1890.0
+job=test_seed43 | TEST seed43 770/1344 | 2.45s/video | ETA 0.39h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:41:21.241264+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1920.0
+job=test_seed43 | TEST seed43 780/1344 | 2.45s/video | ETA 0.38h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 790/1344 | 2.45s/video | ETA 0.38h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:41:51.241531+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1950.0
+job=test_seed43 | TEST seed43 800/1344 | 2.45s/video | ETA 0.37h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:42:21.241771+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=1980.0
+job=test_seed43 | TEST seed43 810/1344 | 2.44s/video | ETA 0.36h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:42:51.242011+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2010.0
+job=test_seed43 | TEST seed43 820/1344 | 2.44s/video | ETA 0.36h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 830/1344 | 2.44s/video | ETA 0.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:43:21.242286+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2040.0
+job=test_seed43 | TEST seed43 840/1344 | 2.44s/video | ETA 0.34h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:43:51.242536+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2070.0
+job=test_seed43 | TEST seed43 850/1344 | 2.44s/video | ETA 0.33h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:44:21.242793+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2100.0
+job=test_seed43 | TEST seed43 860/1344 | 2.44s/video | ETA 0.33h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 870/1344 | 2.44s/video | ETA 0.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:44:51.243120+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2130.0
+job=test_seed43 | TEST seed43 880/1344 | 2.43s/video | ETA 0.31h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:45:21.243371+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2160.0
+job=test_seed43 | TEST seed43 890/1344 | 2.43s/video | ETA 0.31h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:45:51.243664+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2190.0
+job=test_seed43 | TEST seed43 900/1344 | 2.43s/video | ETA 0.30h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:46:21.243956+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2220.0
+job=test_seed43 | TEST seed43 910/1344 | 2.43s/video | ETA 0.29h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 920/1344 | 2.43s/video | ETA 0.29h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:46:51.244226+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2250.0
+job=test_seed43 | TEST seed43 930/1344 | 2.43s/video | ETA 0.28h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:47:21.244469+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2280.0
+job=test_seed43 | TEST seed43 940/1344 | 2.43s/video | ETA 0.27h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:47:51.244703+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2310.0
+job=test_seed43 | TEST seed43 950/1344 | 2.43s/video | ETA 0.27h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 960/1344 | 2.42s/video | ETA 0.26h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:48:21.244967+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2340.0
+job=test_seed43 | TEST seed43 970/1344 | 2.42s/video | ETA 0.25h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:48:51.245201+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2370.0
+job=test_seed43 | TEST seed43 980/1344 | 2.42s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:49:21.245522+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2400.0
+job=test_seed43 | TEST seed43 990/1344 | 2.42s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1000/1344 | 2.42s/video | ETA 0.23h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:49:51.245825+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2430.0
+job=test_seed43 | TEST seed43 1010/1344 | 2.42s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:50:21.246079+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2460.0
+job=test_seed43 | TEST seed43 1020/1344 | 2.42s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:50:51.246364+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2490.0
+job=test_seed43 | TEST seed43 1030/1344 | 2.41s/video | ETA 0.21h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1040/1344 | 2.41s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:51:21.246658+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2520.0
+job=test_seed43 | TEST seed43 1050/1344 | 2.41s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:51:51.246964+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2550.0
+job=test_seed43 | TEST seed43 1060/1344 | 2.41s/video | ETA 0.19h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:52:21.247268+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2580.0
+job=test_seed43 | TEST seed43 1070/1344 | 2.41s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1080/1344 | 2.41s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:52:51.247516+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2610.0
+job=test_seed43 | TEST seed43 1090/1344 | 2.40s/video | ETA 0.17h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:53:21.247763+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2640.0
+job=test_seed43 | TEST seed43 1100/1344 | 2.40s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:53:51.248091+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2670.0
+job=test_seed43 | TEST seed43 1110/1344 | 2.40s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1120/1344 | 2.40s/video | ETA 0.15h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:54:21.248376+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2700.0
+job=test_seed43 | TEST seed43 1130/1344 | 2.40s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:54:51.248623+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2730.0
+job=test_seed43 | TEST seed43 1140/1344 | 2.40s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:55:21.248870+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2760.0
+job=test_seed43 | TEST seed43 1150/1344 | 2.40s/video | ETA 0.13h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:55:51.249179+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2790.0
+job=test_seed43 | TEST seed43 1160/1344 | 2.40s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1170/1344 | 2.40s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:56:21.249449+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2820.0
+job=test_seed43 | TEST seed43 1180/1344 | 2.40s/video | ETA 0.11h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:56:51.249735+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2850.0
+job=test_seed43 | TEST seed43 1190/1344 | 2.40s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:57:21.250049+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2880.0
+job=test_seed43 | TEST seed43 1200/1344 | 2.39s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1210/1344 | 2.39s/video | ETA 0.09h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:57:51.250338+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2910.0
+job=test_seed43 | TEST seed43 1220/1344 | 2.39s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:58:21.250602+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2940.0
+job=test_seed43 | TEST seed43 1230/1344 | 2.39s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:58:51.250876+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=2970.0
+job=test_seed43 | TEST seed43 1240/1344 | 2.39s/video | ETA 0.07h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1250/1344 | 2.39s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:59:21.251129+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3000.0
+job=test_seed43 | TEST seed43 1260/1344 | 2.39s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T15:59:51.251379+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3030.0
+job=test_seed43 | TEST seed43 1270/1344 | 2.39s/video | ETA 0.05h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:00:21.251615+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3060.0
+job=test_seed43 | TEST seed43 1280/1344 | 2.39s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:00:51.251879+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3090.0
+job=test_seed43 | TEST seed43 1290/1344 | 2.39s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1300/1344 | 2.39s/video | ETA 0.03h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:01:21.252225+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3120.0
+job=test_seed43 | TEST seed43 1310/1344 | 2.39s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:01:51.252550+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3150.0
+job=test_seed43 | TEST seed43 1320/1344 | 2.39s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:02:21.252796+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3180.0
+job=test_seed43 | TEST seed43 1330/1344 | 2.39s/video | ETA 0.01h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed43 | TEST seed43 1340/1344 | 2.38s/video | ETA 0.00h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:02:51.253079+00:00 | phase=RUNNING | job=test_seed43 | elapsed_s=3210.0
+job=test_seed43 | RESULT TEST seed=43 model=c7_current_repeat mAP=84.1492% mAUC=86.4810% AP0.5=88.4471% AP1.0=84.4736% AP1.5=79.5269%
+job=test_seed43 | RESULT TEST seed=43 model=V6 mAP=84.0566% mAUC=86.2512% AP0.5=88.2399% AP1.0=84.3679% AP1.5=79.5620%
+job=test_seed43 | RESULT TEST seed=43 model=r7_last_state mAP=84.0935% mAUC=86.4323% AP0.5=88.4669% AP1.0=84.3358% AP1.5=79.4777%
+job=test_seed43 | RESULT TEST seed=43 model=a7_m1 mAP=84.0948% mAUC=86.3557% AP0.5=88.5039% AP1.0=84.5319% AP1.5=79.2485%
+job=test_seed43 | RESULT TEST seed=43 model=a26_m1 mAP=84.0166% mAUC=86.3673% AP0.5=88.6109% AP1.0=84.4916% AP1.5=78.9475%
+job=test_seed43 | RESULT TEST seed=43 model=u3_uniform mAP=84.0018% mAUC=86.3852% AP0.5=88.4989% AP1.0=84.1743% AP1.5=79.3321%
+job=test_seed43 | RESULT TEST seed=43 model=g3_learned mAP=84.1362% mAUC=86.4028% AP0.5=88.4704% AP1.0=84.5036% AP1.5=79.4345%
+time=2026-11-07T16:03:15.819691+00:00 | phase=DONE | job=test_seed43 | exit=0 | elapsed_s=3234.6
+time=2026-11-07T16:03:15.819847+00:00 | phase=START | job=test_seed44 | raw_log=/workspace/outputs/rq3_ablv3_2_v6_42_43_44r/logs/test_seed44_1794067395819835528.log
+job=test_seed44 | FREEZE module=c7_current_repeat seed=44 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed44 | FREEZE module=r7_last_state seed=44 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed44 | FREEZE module=a7_m1 seed=44 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed44 | FREEZE module=a26_m1 seed=44 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed44 | FREEZE module=u3_uniform seed=44 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed44 | FREEZE module=g3_learned seed=44 shared_candidate=c2_lr_double hyperparameters={'dropout': 0.1, 'id': 'c2_lr_double', 'lr': 0.0002, 'rationale': 'Winner of the v1.1 H7 study for all three modules; reused unchanged, no new tuning.', 'weight_decay': 0.0001, 'width': 512}
+job=test_seed44 | TEST seed44 1/1344 | 13.21s/video | ETA 4.93h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:03:45.820493+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=30.0
+time=2026-11-07T16:04:15.820822+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=60.0
+time=2026-11-07T16:04:45.821165+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=90.0
+job=test_seed44 | TEST seed44 10/1344 | 10.41s/video | ETA 3.86h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:05:15.821436+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=120.0
+job=test_seed44 | TEST seed44 20/1344 | 6.40s/video | ETA 2.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:05:45.821685+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=150.0
+job=test_seed44 | TEST seed44 30/1344 | 5.04s/video | ETA 1.84h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:06:15.821941+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=180.0
+job=test_seed44 | TEST seed44 40/1344 | 4.35s/video | ETA 1.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 50/1344 | 3.94s/video | ETA 1.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:06:45.822219+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=210.0
+job=test_seed44 | TEST seed44 60/1344 | 3.69s/video | ETA 1.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:07:15.822516+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=240.0
+job=test_seed44 | TEST seed44 70/1344 | 3.50s/video | ETA 1.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:07:45.822899+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=270.0
+job=test_seed44 | TEST seed44 80/1344 | 3.34s/video | ETA 1.17h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:08:15.823363+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=300.0
+job=test_seed44 | TEST seed44 90/1344 | 3.24s/video | ETA 1.13h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 100/1344 | 3.15s/video | ETA 1.09h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:08:45.823620+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=330.0
+job=test_seed44 | TEST seed44 110/1344 | 3.08s/video | ETA 1.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:09:15.823924+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=360.0
+job=test_seed44 | TEST seed44 120/1344 | 3.02s/video | ETA 1.03h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:09:45.824195+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=390.0
+job=test_seed44 | TEST seed44 130/1344 | 2.98s/video | ETA 1.00h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:10:15.824493+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=420.0
+job=test_seed44 | TEST seed44 140/1344 | 2.94s/video | ETA 0.98h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 150/1344 | 2.90s/video | ETA 0.96h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:10:45.824757+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=450.0
+job=test_seed44 | TEST seed44 160/1344 | 2.87s/video | ETA 0.94h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:11:15.825057+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=480.0
+job=test_seed44 | TEST seed44 170/1344 | 2.85s/video | ETA 0.93h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:11:45.825342+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=510.0
+job=test_seed44 | TEST seed44 180/1344 | 2.83s/video | ETA 0.92h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:12:15.825615+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=540.0
+job=test_seed44 | TEST seed44 190/1344 | 2.81s/video | ETA 0.90h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 200/1344 | 2.78s/video | ETA 0.88h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:12:45.825882+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=570.0
+job=test_seed44 | TEST seed44 210/1344 | 2.76s/video | ETA 0.87h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:13:15.826145+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=600.0
+job=test_seed44 | TEST seed44 220/1344 | 2.75s/video | ETA 0.86h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:13:45.826459+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=630.0
+job=test_seed44 | TEST seed44 230/1344 | 2.73s/video | ETA 0.84h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 240/1344 | 2.71s/video | ETA 0.83h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:14:15.826735+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=660.0
+job=test_seed44 | TEST seed44 250/1344 | 2.70s/video | ETA 0.82h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:14:45.826996+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=690.0
+job=test_seed44 | TEST seed44 260/1344 | 2.68s/video | ETA 0.81h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:15:15.827248+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=720.0
+job=test_seed44 | TEST seed44 270/1344 | 2.67s/video | ETA 0.80h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:15:45.827521+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=750.0
+job=test_seed44 | TEST seed44 280/1344 | 2.66s/video | ETA 0.79h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:16:15.827765+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=780.0
+job=test_seed44 | TEST seed44 290/1344 | 2.66s/video | ETA 0.78h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 300/1344 | 2.65s/video | ETA 0.77h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:16:45.828098+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=810.0
+job=test_seed44 | TEST seed44 310/1344 | 2.64s/video | ETA 0.76h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:17:15.828633+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=840.0
+job=test_seed44 | TEST seed44 320/1344 | 2.63s/video | ETA 0.75h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:17:45.829077+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=870.0
+job=test_seed44 | TEST seed44 330/1344 | 2.62s/video | ETA 0.74h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 340/1344 | 2.61s/video | ETA 0.73h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:18:15.829318+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=900.0
+job=test_seed44 | TEST seed44 350/1344 | 2.60s/video | ETA 0.72h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:18:45.829560+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=930.0
+job=test_seed44 | TEST seed44 360/1344 | 2.59s/video | ETA 0.71h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:19:15.829807+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=960.0
+job=test_seed44 | TEST seed44 370/1344 | 2.58s/video | ETA 0.70h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 380/1344 | 2.58s/video | ETA 0.69h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:19:45.830146+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=990.0
+job=test_seed44 | TEST seed44 390/1344 | 2.58s/video | ETA 0.68h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:20:15.830410+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1020.0
+job=test_seed44 | TEST seed44 400/1344 | 2.57s/video | ETA 0.67h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:20:45.830654+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1050.0
+job=test_seed44 | TEST seed44 410/1344 | 2.56s/video | ETA 0.66h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:21:15.830926+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1080.0
+job=test_seed44 | TEST seed44 420/1344 | 2.55s/video | ETA 0.65h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 430/1344 | 2.54s/video | ETA 0.65h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:21:45.831190+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1110.0
+job=test_seed44 | TEST seed44 440/1344 | 2.54s/video | ETA 0.64h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:22:15.831495+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1140.0
+job=test_seed44 | TEST seed44 450/1344 | 2.53s/video | ETA 0.63h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:22:45.831794+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1170.0
+job=test_seed44 | TEST seed44 460/1344 | 2.53s/video | ETA 0.62h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 470/1344 | 2.52s/video | ETA 0.61h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:23:15.832137+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1200.0
+job=test_seed44 | TEST seed44 480/1344 | 2.51s/video | ETA 0.60h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:23:45.832428+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1230.0
+job=test_seed44 | TEST seed44 490/1344 | 2.51s/video | ETA 0.60h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:24:15.832656+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1260.0
+job=test_seed44 | TEST seed44 500/1344 | 2.51s/video | ETA 0.59h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 510/1344 | 2.50s/video | ETA 0.58h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:24:45.832904+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1290.0
+job=test_seed44 | TEST seed44 520/1344 | 2.50s/video | ETA 0.57h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:25:15.833188+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1320.0
+job=test_seed44 | TEST seed44 530/1344 | 2.49s/video | ETA 0.56h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:25:45.833441+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1350.0
+job=test_seed44 | TEST seed44 540/1344 | 2.49s/video | ETA 0.56h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 550/1344 | 2.48s/video | ETA 0.55h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:26:15.833691+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1380.0
+job=test_seed44 | TEST seed44 560/1344 | 2.48s/video | ETA 0.54h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:26:45.833941+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1410.0
+job=test_seed44 | TEST seed44 570/1344 | 2.48s/video | ETA 0.53h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:27:15.834213+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1440.0
+job=test_seed44 | TEST seed44 580/1344 | 2.47s/video | ETA 0.53h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 590/1344 | 2.47s/video | ETA 0.52h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:27:45.834507+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1470.0
+job=test_seed44 | TEST seed44 600/1344 | 2.47s/video | ETA 0.51h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:28:15.834798+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1500.0
+job=test_seed44 | TEST seed44 610/1344 | 2.46s/video | ETA 0.50h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:28:45.835099+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1530.0
+job=test_seed44 | TEST seed44 620/1344 | 2.46s/video | ETA 0.50h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 630/1344 | 2.46s/video | ETA 0.49h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:29:15.835385+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1560.0
+job=test_seed44 | TEST seed44 640/1344 | 2.46s/video | ETA 0.48h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:29:45.835692+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1590.0
+job=test_seed44 | TEST seed44 650/1344 | 2.45s/video | ETA 0.47h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:30:15.835980+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1620.0
+job=test_seed44 | TEST seed44 660/1344 | 2.45s/video | ETA 0.47h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:30:45.836271+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1650.0
+job=test_seed44 | TEST seed44 670/1344 | 2.45s/video | ETA 0.46h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 680/1344 | 2.45s/video | ETA 0.45h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:31:15.836558+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1680.0
+job=test_seed44 | TEST seed44 690/1344 | 2.44s/video | ETA 0.44h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:31:45.836778+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1710.0
+job=test_seed44 | TEST seed44 700/1344 | 2.44s/video | ETA 0.44h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:32:15.837050+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1740.0
+job=test_seed44 | TEST seed44 710/1344 | 2.44s/video | ETA 0.43h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 720/1344 | 2.44s/video | ETA 0.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:32:45.837341+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1770.0
+job=test_seed44 | TEST seed44 730/1344 | 2.44s/video | ETA 0.42h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:33:15.837659+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1800.0
+job=test_seed44 | TEST seed44 740/1344 | 2.43s/video | ETA 0.41h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:33:45.837951+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1830.0
+job=test_seed44 | TEST seed44 750/1344 | 2.43s/video | ETA 0.40h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 760/1344 | 2.43s/video | ETA 0.39h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:34:15.838231+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1860.0
+job=test_seed44 | TEST seed44 770/1344 | 2.43s/video | ETA 0.39h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:34:45.838510+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1890.0
+job=test_seed44 | TEST seed44 780/1344 | 2.43s/video | ETA 0.38h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:35:15.838793+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1920.0
+job=test_seed44 | TEST seed44 790/1344 | 2.42s/video | ETA 0.37h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 800/1344 | 2.43s/video | ETA 0.37h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:35:45.839085+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1950.0
+job=test_seed44 | TEST seed44 810/1344 | 2.43s/video | ETA 0.36h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:36:15.839420+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=1980.0
+job=test_seed44 | TEST seed44 820/1344 | 2.43s/video | ETA 0.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:36:45.839740+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2010.0
+job=test_seed44 | TEST seed44 830/1344 | 2.43s/video | ETA 0.35h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:37:15.840026+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2040.0
+job=test_seed44 | TEST seed44 840/1344 | 2.42s/video | ETA 0.34h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 850/1344 | 2.42s/video | ETA 0.33h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:37:45.840323+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2070.0
+job=test_seed44 | TEST seed44 860/1344 | 2.42s/video | ETA 0.33h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:38:15.840703+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2100.0
+job=test_seed44 | TEST seed44 870/1344 | 2.42s/video | ETA 0.32h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:38:45.841214+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2130.0
+job=test_seed44 | TEST seed44 880/1344 | 2.42s/video | ETA 0.31h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:39:15.841499+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2160.0
+job=test_seed44 | TEST seed44 890/1344 | 2.42s/video | ETA 0.31h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 900/1344 | 2.42s/video | ETA 0.30h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:39:45.841783+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2190.0
+job=test_seed44 | TEST seed44 910/1344 | 2.42s/video | ETA 0.29h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:40:15.842070+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2220.0
+job=test_seed44 | TEST seed44 920/1344 | 2.41s/video | ETA 0.28h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:40:45.842346+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2250.0
+job=test_seed44 | TEST seed44 930/1344 | 2.42s/video | ETA 0.28h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 940/1344 | 2.41s/video | ETA 0.27h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:41:15.842615+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2280.0
+job=test_seed44 | TEST seed44 950/1344 | 2.41s/video | ETA 0.26h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:41:45.842963+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2310.0
+job=test_seed44 | TEST seed44 960/1344 | 2.41s/video | ETA 0.26h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:42:15.843314+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2340.0
+job=test_seed44 | TEST seed44 970/1344 | 2.41s/video | ETA 0.25h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:42:45.843618+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2370.0
+job=test_seed44 | TEST seed44 980/1344 | 2.41s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 990/1344 | 2.41s/video | ETA 0.24h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:43:15.843882+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2400.0
+job=test_seed44 | TEST seed44 1000/1344 | 2.41s/video | ETA 0.23h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:43:45.844185+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2430.0
+job=test_seed44 | TEST seed44 1010/1344 | 2.40s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:44:15.844459+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2460.0
+job=test_seed44 | TEST seed44 1020/1344 | 2.40s/video | ETA 0.22h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1030/1344 | 2.40s/video | ETA 0.21h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:44:45.844688+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2490.0
+job=test_seed44 | TEST seed44 1040/1344 | 2.40s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:45:15.844957+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2520.0
+job=test_seed44 | TEST seed44 1050/1344 | 2.40s/video | ETA 0.20h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:45:45.845217+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2550.0
+job=test_seed44 | TEST seed44 1060/1344 | 2.40s/video | ETA 0.19h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1070/1344 | 2.40s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:46:15.845531+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2580.0
+job=test_seed44 | TEST seed44 1080/1344 | 2.40s/video | ETA 0.18h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:46:45.845780+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2610.0
+job=test_seed44 | TEST seed44 1090/1344 | 2.39s/video | ETA 0.17h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:47:15.846084+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2640.0
+job=test_seed44 | TEST seed44 1100/1344 | 2.39s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1110/1344 | 2.39s/video | ETA 0.16h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:47:45.846417+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2670.0
+job=test_seed44 | TEST seed44 1120/1344 | 2.39s/video | ETA 0.15h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:48:15.846743+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2700.0
+job=test_seed44 | TEST seed44 1130/1344 | 2.39s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:48:45.847055+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2730.0
+job=test_seed44 | TEST seed44 1140/1344 | 2.39s/video | ETA 0.14h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1150/1344 | 2.39s/video | ETA 0.13h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:49:15.847309+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2760.0
+job=test_seed44 | TEST seed44 1160/1344 | 2.39s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:49:45.847559+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2790.0
+job=test_seed44 | TEST seed44 1170/1344 | 2.39s/video | ETA 0.12h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:50:15.847816+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2820.0
+job=test_seed44 | TEST seed44 1180/1344 | 2.39s/video | ETA 0.11h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:50:45.848055+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2850.0
+job=test_seed44 | TEST seed44 1190/1344 | 2.39s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1200/1344 | 2.39s/video | ETA 0.10h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:51:15.848332+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2880.0
+job=test_seed44 | TEST seed44 1210/1344 | 2.39s/video | ETA 0.09h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:51:45.848655+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2910.0
+job=test_seed44 | TEST seed44 1220/1344 | 2.38s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:52:15.849010+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2940.0
+job=test_seed44 | TEST seed44 1230/1344 | 2.38s/video | ETA 0.08h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1240/1344 | 2.38s/video | ETA 0.07h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:52:45.849378+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=2970.0
+job=test_seed44 | TEST seed44 1250/1344 | 2.38s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:53:15.849649+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3000.0
+job=test_seed44 | TEST seed44 1260/1344 | 2.38s/video | ETA 0.06h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:53:45.849896+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3030.0
+job=test_seed44 | TEST seed44 1270/1344 | 2.38s/video | ETA 0.05h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1280/1344 | 2.38s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:54:15.850175+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3060.0
+job=test_seed44 | TEST seed44 1290/1344 | 2.38s/video | ETA 0.04h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:54:45.850419+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3090.0
+job=test_seed44 | TEST seed44 1300/1344 | 2.38s/video | ETA 0.03h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:55:15.850691+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3120.0
+job=test_seed44 | TEST seed44 1310/1344 | 2.38s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+job=test_seed44 | TEST seed44 1320/1344 | 2.38s/video | ETA 0.02h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:55:45.850981+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3150.0
+job=test_seed44 | TEST seed44 1330/1344 | 2.38s/video | ETA 0.01h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:56:15.851255+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3180.0
+job=test_seed44 | TEST seed44 1340/1344 | 2.38s/video | ETA 0.00h | V6+c7_current_repeat+r7_last_state+a7_m1+a26_m1+u3_uniform+g3_learned heads share the frozen V6 CNN
+time=2026-11-07T16:56:45.851591+00:00 | phase=RUNNING | job=test_seed44 | elapsed_s=3210.0
+job=test_seed44 | RESULT TEST seed=44 model=c7_current_repeat mAP=84.2483% mAUC=85.7332% AP0.5=87.6386% AP1.0=83.9643% AP1.5=81.1419%
+job=test_seed44 | RESULT TEST seed=44 model=V6 mAP=83.6597% mAUC=85.3428% AP0.5=86.6761% AP1.0=83.7713% AP1.5=80.5318%
+job=test_seed44 | RESULT TEST seed=44 model=r7_last_state mAP=84.1789% mAUC=85.8012% AP0.5=87.4145% AP1.0=84.1405% AP1.5=80.9818%
+job=test_seed44 | RESULT TEST seed=44 model=a7_m1 mAP=84.2503% mAUC=85.7196% AP0.5=87.6962% AP1.0=83.8987% AP1.5=81.1559%
+job=test_seed44 | RESULT TEST seed=44 model=a26_m1 mAP=83.6597% mAUC=85.3428% AP0.5=86.6761% AP1.0=83.7713% AP1.5=80.5318%
+job=test_seed44 | RESULT TEST seed=44 model=u3_uniform mAP=84.2311% mAUC=85.6840% AP0.5=87.5739% AP1.0=83.9592% AP1.5=81.1603%
+job=test_seed44 | RESULT TEST seed=44 model=g3_learned mAP=84.1353% mAUC=85.7545% AP0.5=87.2713% AP1.0=84.1859% AP1.5=80.9488%
+time=2026-11-07T16:57:03.003533+00:00 | phase=DONE | job=test_seed44 | exit=0 | elapsed_s=3227.2
+RESULT FINAL seed=42 model=V6(b0) mAP=83.9227% AP1.5=80.2226% | vs saved V6 test scores: max|d|=1.52e-03 mean|d|=1.42e-04
+RESULT FINAL seed=42 module=c7_current_repeat config=c2_lr_double mAP=83.9395% delta_V6=+0.0168pp AP1.5=79.6683% delta_V6_AP1.5=-0.5543pp
+RESULT FINAL seed=42 module=r7_last_state config=c2_lr_double mAP=84.3441% delta_V6=+0.4214pp AP1.5=79.9174% delta_V6_AP1.5=-0.3053pp
+RESULT FINAL seed=42 module=a7_m1 config=c2_lr_double mAP=84.0899% delta_V6=+0.1672pp AP1.5=79.8700% delta_V6_AP1.5=-0.3526pp
+RESULT FINAL seed=42 module=a26_m1 config=c2_lr_double mAP=84.6125% delta_V6=+0.6898pp AP1.5=80.6134% delta_V6_AP1.5=+0.3908pp
+RESULT FINAL seed=42 module=u3_uniform config=c2_lr_double mAP=84.2526% delta_V6=+0.3299pp AP1.5=79.9025% delta_V6_AP1.5=-0.3201pp
+RESULT FINAL seed=42 module=g3_learned config=c2_lr_double mAP=84.2083% delta_V6=+0.2856pp AP1.5=79.8464% delta_V6_AP1.5=-0.3762pp
+RESULT FINAL seed=43 model=V6(b0) mAP=84.0566% AP1.5=79.5620% | vs saved V6 test scores: max|d|=1.17e-03 mean|d|=1.38e-04
+RESULT FINAL seed=43 module=c7_current_repeat config=c2_lr_double mAP=84.1492% delta_V6=+0.0926pp AP1.5=79.5269% delta_V6_AP1.5=-0.0350pp
+RESULT FINAL seed=43 module=r7_last_state config=c2_lr_double mAP=84.0935% delta_V6=+0.0369pp AP1.5=79.4777% delta_V6_AP1.5=-0.0843pp
+RESULT FINAL seed=43 module=a7_m1 config=c2_lr_double mAP=84.0948% delta_V6=+0.0382pp AP1.5=79.2485% delta_V6_AP1.5=-0.3135pp
+RESULT FINAL seed=43 module=a26_m1 config=c2_lr_double mAP=84.0166% delta_V6=-0.0400pp AP1.5=78.9475% delta_V6_AP1.5=-0.6145pp
+RESULT FINAL seed=43 module=u3_uniform config=c2_lr_double mAP=84.0018% delta_V6=-0.0548pp AP1.5=79.3321% delta_V6_AP1.5=-0.2299pp
+RESULT FINAL seed=43 module=g3_learned config=c2_lr_double mAP=84.1362% delta_V6=+0.0796pp AP1.5=79.4345% delta_V6_AP1.5=-0.1275pp
+RESULT FINAL seed=44 model=V6(b0) mAP=83.6597% AP1.5=80.5318% | vs saved V6 test scores: max|d|=3.70e-03 mean|d|=2.20e-04
+RESULT FINAL seed=44 module=c7_current_repeat config=c2_lr_double mAP=84.2483% delta_V6=+0.5885pp AP1.5=81.1419% delta_V6_AP1.5=+0.6101pp
+RESULT FINAL seed=44 module=r7_last_state config=c2_lr_double mAP=84.1789% delta_V6=+0.5192pp AP1.5=80.9818% delta_V6_AP1.5=+0.4500pp
+RESULT FINAL seed=44 module=a7_m1 config=c2_lr_double mAP=84.2503% delta_V6=+0.5905pp AP1.5=81.1559% delta_V6_AP1.5=+0.6241pp
+RESULT FINAL seed=44 module=a26_m1 config=c2_lr_double mAP=83.6597% delta_V6=+0.0000pp AP1.5=80.5318% delta_V6_AP1.5=+0.0000pp
+RESULT FINAL seed=44 module=u3_uniform config=c2_lr_double mAP=84.2311% delta_V6=+0.5714pp AP1.5=81.1603% delta_V6_AP1.5=+0.6285pp
+RESULT FINAL seed=44 module=g3_learned config=c2_lr_double mAP=84.1353% delta_V6=+0.4756pp AP1.5=80.9488% delta_V6_AP1.5=+0.4171pp
+time=2026-11-07T16:57:06.041308+00:00 | phase=DONE | completed_phase=test | output_root=/workspace/outputs/rq3_ablv3_2_v6_42_43_44r

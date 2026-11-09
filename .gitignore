@@ -1,0 +1,29 @@
+# Large/runtime artifacts are external; small pinned upstream SOURCE zips are intentional.
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+*.mp4
+*.avi
+*.jpg
+*.jpeg
+*.tar
+*.tar.gz
+**/__pycache__/
+**/prepared_nexar/
+**/frames/
+**/features/
+**/cache/
+**/venv/
+.env
+*.env
+.netrc
+id_rsa*
+*.pem
+# Restored duplicates of the canonical upstream source archives:
+rq2_context_length/*/code/rq1_evaluation/engine/references/*/original_source.zip
+
+# Statistical bootstrap outputs; these are not model weights.
+!rq3_adapters/v32_matched_init/h7/summary/bootstrap_draws.npz
+!rq3_adapters/v32_matched_init/v6/summary/bootstrap_draws.npz

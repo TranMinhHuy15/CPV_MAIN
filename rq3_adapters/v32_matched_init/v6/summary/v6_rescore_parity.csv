@@ -1,0 +1,4 @@
+﻿seed,videos,max_abs_score_diff,mean_abs_score_diff,share_within_1e_3,note
+42,1344,0.0015184581279754639,0.0001417309796947631,0.9985119047619048,Identical sampling/weights give ~0; a larger gap means V6 test-time snippet anchoring differed. Diagnostic only.
+43,1344,0.0011665523052215576,0.00013778627561848787,0.9992559523809523,Identical sampling/weights give ~0; a larger gap means V6 test-time snippet anchoring differed. Diagnostic only.
+44,1344,0.003701925277709961,0.00022003384185067954,0.9709821428571429,Identical sampling/weights give ~0; a larger gap means V6 test-time snippet anchoring differed. Diagnostic only.

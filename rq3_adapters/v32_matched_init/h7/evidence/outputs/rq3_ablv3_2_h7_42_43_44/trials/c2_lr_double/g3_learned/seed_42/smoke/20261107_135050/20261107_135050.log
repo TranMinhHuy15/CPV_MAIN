@@ -1,0 +1,1295 @@
+2026/11/07 13:50:50 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.5 (default, Aug 23 2020, 01:02:51) [Clang 10.0.1 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 42
+    GPU 0: NVIDIA GeForce RTX 4080
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 13.2, V13.2.86
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+    PyTorch: 2.1.0+cu118
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.8
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.7
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.8, CUDNN_VERSION=8.7.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu118
+    OpenCV: 4.8.1
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 42
+    diff_rank_seed: False
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+2026/11/07 13:50:51 - mmengine - INFO - Config:
+algorithm_keys = (
+    'dataset',
+    'frame_dir',
+    'filename_tmpl',
+    'img_shape',
+    'sample_idx',
+    'video_id',
+    'type',
+    'start_index',
+    'total_frames',
+    'target',
+    'abnormal_start_frame',
+    'accident_frame',
+    'frame_inds',
+    'clip_len',
+    'num_clips',
+    'frame_interval',
+    'fps',
+    'is_val',
+    'is_test',
+    'text',
+)
+cap = dict(
+    ann_file='cap_text_annotations.xls',
+    data_root='data/MM-AU/CAP-DATA',
+    filename_tmpl='{:06}.jpg',
+    start_index=1)
+clip_len = 5
+custom_hooks = [
+    dict(type='EpochHook'),
+    dict(
+        deadline=1.7976931348623157e+308,
+        seed=42,
+        type='ReproductionStateHook'),
+    dict(type='RQ3StrictHook'),
+    dict(type='CacheEpochTimingHook'),
+]
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'taa',
+        'kaggle_adapter',
+        'amp_adapter',
+    ])
+d2city = dict(ann_file='annotations.csv', data_root='data/D_square-City')
+dada = dict(
+    ann_file='dada_text_annotations.xlsx',
+    data_root='data/MM-AU/DADA-DATA',
+    filename_tmpl='{:04}.png',
+    start_index=1)
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1,
+        max_keep_ckpts=1,
+        rule='greater',
+        save_best='mAUC@',
+        type='CheckpointHook'),
+    logger=dict(ignore_last=False, interval=20, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    runtime_info=dict(type='RuntimeInfoHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    sync_buffers=dict(type='SyncBuffersHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmaction'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+file_client_args = dict(io_backend='disk')
+launcher = 'none'
+load_from = '/workspace/rq3abl32_inputs/H7/medium_h7/seed_42/run/best_mAUC@_epoch_10.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=20)
+modality = 'rgb'
+model = dict(
+    activation_checkpoint=False,
+    backbone=dict(
+        conv1_kernel=(
+            1,
+            7,
+            7,
+        ),
+        conv1_stride_t=1,
+        depth=50,
+        inflate=(
+            0,
+            0,
+            1,
+            1,
+        ),
+        lateral=False,
+        norm_eval=False,
+        pool1_stride_t=1,
+        pretrained=None,
+        type='ResNet3dSlowOnly'),
+    cls_head=dict(
+        adapter_dropout=0.1,
+        adapter_init_seed=42,
+        arm='g3_learned',
+        clip_len=5,
+        history=7,
+        label_with='constraint',
+        num_clips=30,
+        pos_weight=1,
+        reference_history=7,
+        rnn_bidirectional=False,
+        two_stream=False,
+        type='VastTunedH7AblationHead',
+        width=512,
+        with_decoder=False,
+        with_rnn=True),
+    data_preprocessor=dict(type='VastTeacherPreprocessor'),
+    encode_chunk=4,
+    test_cfg=dict(max_testing_views=10),
+    train_cfg=None,
+    type='VastTeacherCachedRecognizer')
+model_wrapper_cfg = dict(
+    find_unused_parameters=False, type='MMDistributedDataParallel')
+nexar = dict(
+    ann_file='annotations.csv',
+    data_root='data/nexar-collision-prediction',
+    filename_tmpl='{:06}.jpg',
+    start_index=0)
+num_clips = 30
+optim_wrapper = dict(
+    accumulative_counts=8,
+    clip_grad=dict(max_norm=40.0, norm_type=2),
+    optimizer=dict(lr=0.0002, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(
+        custom_keys=dict({
+            'backbone': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.fc_cls': dict(decay_mult=0.0, lr_mult=0.0),
+            'cls_head.rnn': dict(decay_mult=0.0, lr_mult=0.0)
+        })),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(by_epoch=True, gamma=0.1, milestones=[
+        20,
+        40,
+    ], type='MultiStepLR'),
+]
+randomness = dict(deterministic=False, diff_rank_seed=False, seed=42)
+resume = False
+test_cfg = dict(fp16=False, type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        modality='rgb',
+        nexar=dict(
+            ann_file='annotations.csv',
+            data_root=
+            '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/g3_learned/seed_42/prepared_nexar',
+            filename_tmpl='{:06}.jpg',
+            start_index=0),
+        pipeline_frame=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        pipeline_video=[
+            dict(
+                clip_len=5,
+                num_clips=30,
+                test_mode=True,
+                type='RQ2SampleFrames'),
+            dict(type='NativeJpegDecode'),
+            dict(keep_ratio=False, scale=(
+                224,
+                224,
+            ), type='Resize'),
+            dict(modality='rgb', type='Flow'),
+            dict(input_format='NCTHW', type='FormatShape'),
+            dict(
+                algorithm_keys=(
+                    'dataset',
+                    'frame_dir',
+                    'filename_tmpl',
+                    'img_shape',
+                    'sample_idx',
+                    'video_id',
+                    'type',
+                    'start_index',
+                    'total_frames',
+                    'target',
+                    'abnormal_start_frame',
+                    'accident_frame',
+                    'frame_inds',
+                    'clip_len',
+                    'num_clips',
+                    'frame_interval',
+                    'fps',
+                    'is_val',
+                    'is_test',
+                    'text',
+                ),
+                meta_keys=(),
+                type='PackActionInputs'),
+        ],
+        seed=42,
+        split='test',
+        test_mode=True,
+        type='NexarSubsetDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(type='TestPredictionMetric')
+test_pipeline_frame = [
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(io_backend='disk', type='RawFrameDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+test_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_cfg = dict(
+    max_epochs=50, type='EpochBasedTrainLoop', val_begin=1, val_interval=1)
+train_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_h7_42_43_44/caches/seed_42',
+        manifest_sha256=
+        '808f23de90ab49fba9567285e37162217d068cd0c8bbc628ceece2fea543d02b',
+        split='train',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=True, shuffle=True, type='DefaultSampler'))
+train_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=False, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+train_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=False,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(
+        area_range=(
+            0.8,
+            1.0,
+        ),
+        aspect_ratio_range=(
+            1.3333333333333333,
+            1.7777777777777777,
+        ),
+        type='RandomResizedCrop'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(flip_ratio=0.5, type='Flip'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_cfg = dict(fp16=False, type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        cache_root='/workspace/outputs/rq3_ablv3_2_h7_42_43_44/caches/seed_42',
+        manifest_sha256=
+        '808f23de90ab49fba9567285e37162217d068cd0c8bbc628ceece2fea543d02b',
+        split='validation',
+        teacher_root=
+        '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/teachers/seed_42',
+        type='VastTeacherDataset'),
+    num_workers=0,
+    persistent_workers=False,
+    sampler=dict(round_up=False, shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    fpr_max=0.1, output_dir=None, type='SavingAnticipationMetric', vis_list=[])
+val_pipeline_frame = [
+    dict(clip_len=5, num_clips=30, test_mode=True, type='RQ2SampleFrames'),
+    dict(type='NativeJpegDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+val_pipeline_video = [
+    dict(io_backend='disk', type='DecordInit'),
+    dict(
+        clip_len=5,
+        num_clips=30,
+        test_mode=True,
+        type='SampleFramesBeforeAccident'),
+    dict(type='DecordDecode'),
+    dict(keep_ratio=False, scale=(
+        224,
+        224,
+    ), type='Resize'),
+    dict(modality='rgb', type='Flow'),
+    dict(input_format='NCTHW', type='FormatShape'),
+    dict(
+        algorithm_keys=(
+            'dataset',
+            'frame_dir',
+            'filename_tmpl',
+            'img_shape',
+            'sample_idx',
+            'video_id',
+            'type',
+            'start_index',
+            'total_frames',
+            'target',
+            'abnormal_start_frame',
+            'accident_frame',
+            'frame_inds',
+            'clip_len',
+            'num_clips',
+            'frame_interval',
+            'fps',
+            'is_val',
+            'is_test',
+            'text',
+        ),
+        meta_keys=(),
+        type='PackActionInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+vis_list = dict({
+    '001017': 12,
+    '001040': 12,
+    '001171': 12,
+    '001197': 12,
+    '001293': 15,
+    '001360': 12,
+    '001447': 12,
+    '001483': 12,
+    '001547': 12,
+    '001604': 7,
+    '001632': 12,
+    '001656': 12,
+    '001676': 14,
+    '001772': 14,
+    '001929': 15,
+    '001974': 14,
+    '002103': 14,
+    '002527': 14,
+    '002620': 13,
+    '002690': 15,
+    '002700': 13,
+    '002728': 13,
+    '002819': 14,
+    '003121': 14,
+    '003706': 14,
+    '004114': 14,
+    '004494': 13,
+    '004502': 13,
+    '004662': 14,
+    '005781': 6,
+    '006382': 5,
+    '006390': 11,
+    '006393': 5,
+    '006403': 11,
+    '006413': 11,
+    '006432': 6,
+    '006439': 11,
+    '006450': 5,
+    '006453': 11,
+    '006459': 4,
+    '006473': 11,
+    '006492': 11,
+    '006502': 6,
+    '006505': 11,
+    '006517': 1,
+    '006520': 11,
+    '006577': 7,
+    '006603': 11,
+    '006713': 1,
+    '006986': 1,
+    '006993': 1,
+    '006994': 1,
+    '006998': 1,
+    '007211': 6,
+    '007460': 1,
+    '007492': 7,
+    '008219': 7,
+    '009126': 6,
+    '009256': 7,
+    '009689': 7,
+    '009733': 1,
+    '010066': 7,
+    '010261': 1,
+    '010361': 1,
+    '011072': 7,
+    '011211': 1,
+    '011215': 1,
+    '011309': 1,
+    '011398': 7,
+    '013001': 7,
+    '013336': 1
+})
+visualizer = dict(
+    type='Visualizer', vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = '/workspace/outputs/rq3_ablv3_2_h7_42_43_44/trials/c2_lr_double/g3_learned/seed_42/smoke'
+
+2026/11/07 13:50:52 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2026/11/07 13:50:52 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+(NORMAL      ) EpochHook                          
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) SyncBuffersHook                    
+(NORMAL      ) EpochHook                          
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+(LOWEST      ) ReproductionStateHook              
+(LOWEST      ) CacheEpochTimingHook               
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_HIGH   ) RQ3StrictHook                      
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Name of parameter - Initialization information
+
+backbone.conv1.conv.weight - torch.Size([64, 3, 1, 7, 7]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv1.conv.weight - torch.Size([64, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv2.conv.weight - torch.Size([64, 64, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.conv3.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv3.bn.weight - torch.Size([256]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.conv3.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.downsample.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.0.downsample.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.0.downsample.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv1.conv.weight - torch.Size([64, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv2.conv.weight - torch.Size([64, 64, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.1.conv3.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv3.bn.weight - torch.Size([256]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.1.conv3.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv1.conv.weight - torch.Size([64, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv1.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv1.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv2.conv.weight - torch.Size([64, 64, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv2.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv2.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer1.2.conv3.conv.weight - torch.Size([256, 64, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv3.bn.weight - torch.Size([256]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer1.2.conv3.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv1.conv.weight - torch.Size([128, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.downsample.conv.weight - torch.Size([512, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.0.downsample.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.0.downsample.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv1.conv.weight - torch.Size([128, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.1.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.1.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv1.conv.weight - torch.Size([128, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.2.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.2.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv1.conv.weight - torch.Size([128, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv1.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv1.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv2.conv.weight - torch.Size([128, 128, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv2.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv2.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer2.3.conv3.conv.weight - torch.Size([512, 128, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv3.bn.weight - torch.Size([512]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer2.3.conv3.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv1.conv.weight - torch.Size([256, 512, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.downsample.conv.weight - torch.Size([1024, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.0.downsample.bn.weight - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.0.downsample.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.1.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.1.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.2.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.2.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.3.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.3.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.4.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.4.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv1.conv.weight - torch.Size([256, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv2.conv.weight - torch.Size([256, 256, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer3.5.conv3.conv.weight - torch.Size([1024, 256, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv3.bn.weight - torch.Size([1024]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer3.5.conv3.bn.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv1.conv.weight - torch.Size([512, 1024, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv1.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv1.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv2.conv.weight - torch.Size([512, 512, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv2.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv2.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.conv3.conv.weight - torch.Size([2048, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv3.bn.weight - torch.Size([2048]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.conv3.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.downsample.conv.weight - torch.Size([2048, 1024, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.0.downsample.bn.weight - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.0.downsample.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv1.conv.weight - torch.Size([512, 2048, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv1.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv1.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv2.conv.weight - torch.Size([512, 512, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv2.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv2.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.1.conv3.conv.weight - torch.Size([2048, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv3.bn.weight - torch.Size([2048]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.1.conv3.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv1.conv.weight - torch.Size([512, 2048, 3, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv1.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv1.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv2.conv.weight - torch.Size([512, 512, 1, 3, 3]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv2.bn.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv2.bn.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+backbone.layer4.2.conv3.conv.weight - torch.Size([2048, 512, 1, 1, 1]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv3.bn.weight - torch.Size([2048]): 
+Initialized by user-defined `init_weights` in ResNet3dSlowOnly  
+
+backbone.layer4.2.conv3.bn.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.weight_ih_l0 - torch.Size([8192, 2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.weight_hh_l0 - torch.Size([8192, 2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.bias_ih_l0 - torch.Size([8192]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.rnn.bias_hh_l0 - torch.Size([8192]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.fc_cls.weight - torch.Size([1, 2048]): 
+Initialized by user-defined `init_weights` in VastTunedH7AblationHead  
+
+cls_head.fc_cls.bias - torch.Size([1]): 
+Initialized by user-defined `init_weights` in VastTunedH7AblationHead  
+
+cls_head.adapter.decay_raw - torch.Size([]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.proj.weight - torch.Size([512, 2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.proj.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.norm.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.norm.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.weight_ih_l0 - torch.Size([2048, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.weight_hh_l0 - torch.Size([2048, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.bias_ih_l0 - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.rnn.bias_hh_l0 - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.query.weight - torch.Size([512, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.key.weight - torch.Size([512, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.residual_gate.weight - torch.Size([1, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.residual_gate.bias - torch.Size([1]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.fusion.weight - torch.Size([3, 1536]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.fusion.bias - torch.Size([3]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.output.weight - torch.Size([1, 512]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+
+cls_head.adapter.output.bias - torch.Size([1]): 
+The value is the same before and after calling `init_weights` of VastTeacherCachedRecognizer  
+2026/11/07 13:50:52 - mmengine - WARNING - The prefix is not set in metric class SavingAnticipationMetric.

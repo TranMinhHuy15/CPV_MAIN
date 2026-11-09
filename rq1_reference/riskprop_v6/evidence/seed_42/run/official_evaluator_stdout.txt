@@ -1,0 +1,2 @@
+mAP (Public): 0.822941
+mAP (Private): 0.860000

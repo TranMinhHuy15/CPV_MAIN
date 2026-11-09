@@ -1,0 +1,7 @@
+{
+  "completed_paired_videos": 1340,
+  "remaining_hours": 0.0027864548573334515,
+  "scope": "one frozen H7 CNN pass shared by b0 and the four ablation heads, same decoded pixels",
+  "seconds_per_paired_video": 2.507809371600106,
+  "total": 1344
+}

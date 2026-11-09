@@ -1,0 +1,11 @@
+{
+  "baseline_reused": true,
+  "contract": {
+    "arm": "b0",
+    "base_model": "H7 frozen",
+    "checkpoint_sha256": "a838b126359ceb01598ac4bc3fd23668cf84b16bd306b3c02d1c5e64b83ee838",
+    "original_contract_sha256": "dcb99bb199cec8abb98bdb70b6591ec3a92abd67631baa7ea1d724fd9c80007b",
+    "seed": 42,
+    "study_contract_sha256": "629265c4f96813f159f88fea644ef470231645682d6624ba90d8d4e89a1031f3"
+  }
+}

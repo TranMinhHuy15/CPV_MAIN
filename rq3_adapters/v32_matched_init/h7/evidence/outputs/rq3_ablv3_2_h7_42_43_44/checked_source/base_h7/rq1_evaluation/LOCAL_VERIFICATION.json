@@ -1,0 +1,242 @@
+{
+  "passed": true,
+  "date": "2026-10-14",
+  "local_GPU": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "real_GPU_preflights": [
+    {
+      "model": "riskprop",
+      "seed": 42,
+      "passed": true,
+      "contract": {
+        "checkpoint_sha256": "fda77d9bfc56258ceea39878e51d38e3ee7e174cf92e42f9ed610c4562d9943b",
+        "source_commit": "579376fa1d879f28a9d68c2565d1e449de24b666",
+        "evaluator_manifest_sha256": "04b054758c2bbf3617254911fcaeb44c2bc14f56f53205155e62d27141d25d0d",
+        "capture_worker_sha256": "4cdabead565032e57c3743b6a7b5399b06588de0a04856500e7211ef46ad02dd",
+        "blind_index_sha256": "c28d79f7578f514b92c04d790b1d71cc0a3ed3fde1a087dcdabac1d31547f172",
+        "GPU": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "torch": "2.1.0+cu118",
+        "cuda": "11.8",
+        "precision": "FP32 tensors, no autocast",
+        "tf32_cudnn": true,
+        "sampling": "native_end_anchored_stride3_5past_frames",
+        "views": 10
+      },
+      "videos": 8,
+      "max_scalar_delta": 2.9802322387695312e-08,
+      "max_cached_vs_original_delta": 0.0,
+      "max_single_vs_chunk_delta": 0.00018152594566345215,
+      "cached_input_pixels_exact": true,
+      "max_same_shape_independent_snippet_delta": 2.9802322387695312e-08,
+      "peak_cuda_allocated_bytes": 858152448,
+      "seconds_per_video_including_decode_and_checks": 13.979668587499999,
+      "warning": "Preflight performs extra parity passes, not a guaranteed full-run runtime."
+    },
+    {
+      "model": "riskprop",
+      "seed": 43,
+      "passed": true,
+      "contract": {
+        "checkpoint_sha256": "65690bba89a0be6a12afd5885668e423a499a78a4312ce90210b2ed5b89acc17",
+        "source_commit": "579376fa1d879f28a9d68c2565d1e449de24b666",
+        "evaluator_manifest_sha256": "04b054758c2bbf3617254911fcaeb44c2bc14f56f53205155e62d27141d25d0d",
+        "capture_worker_sha256": "4cdabead565032e57c3743b6a7b5399b06588de0a04856500e7211ef46ad02dd",
+        "blind_index_sha256": "c28d79f7578f514b92c04d790b1d71cc0a3ed3fde1a087dcdabac1d31547f172",
+        "GPU": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "torch": "2.1.0+cu118",
+        "cuda": "11.8",
+        "precision": "FP32 tensors, no autocast",
+        "tf32_cudnn": true,
+        "sampling": "native_end_anchored_stride3_5past_frames",
+        "views": 10
+      },
+      "videos": 8,
+      "max_scalar_delta": 1.4901161193847656e-08,
+      "max_cached_vs_original_delta": 0.0,
+      "max_single_vs_chunk_delta": 0.00028301775455474854,
+      "cached_input_pixels_exact": true,
+      "max_same_shape_independent_snippet_delta": 1.4901161193847656e-08,
+      "peak_cuda_allocated_bytes": 858152448,
+      "seconds_per_video_including_decode_and_checks": 12.5853666,
+      "warning": "Preflight performs extra parity passes, not a guaranteed full-run runtime."
+    },
+    {
+      "model": "riskprop",
+      "seed": 44,
+      "passed": true,
+      "contract": {
+        "checkpoint_sha256": "85f7421dda95b04b7e6e02f8f1a77591d8b49a820ed0bc516cd4041e94e3005a",
+        "source_commit": "579376fa1d879f28a9d68c2565d1e449de24b666",
+        "evaluator_manifest_sha256": "04b054758c2bbf3617254911fcaeb44c2bc14f56f53205155e62d27141d25d0d",
+        "capture_worker_sha256": "4cdabead565032e57c3743b6a7b5399b06588de0a04856500e7211ef46ad02dd",
+        "blind_index_sha256": "c28d79f7578f514b92c04d790b1d71cc0a3ed3fde1a087dcdabac1d31547f172",
+        "GPU": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "torch": "2.1.0+cu118",
+        "cuda": "11.8",
+        "precision": "FP32 tensors, no autocast",
+        "tf32_cudnn": true,
+        "sampling": "native_end_anchored_stride3_5past_frames",
+        "views": 10
+      },
+      "videos": 8,
+      "max_scalar_delta": 7.450580596923828e-09,
+      "max_cached_vs_original_delta": 0.0,
+      "max_single_vs_chunk_delta": 0.00027655065059661865,
+      "cached_input_pixels_exact": true,
+      "max_same_shape_independent_snippet_delta": 7.450580596923828e-09,
+      "peak_cuda_allocated_bytes": 858152448,
+      "seconds_per_video_including_decode_and_checks": 12.049976675,
+      "warning": "Preflight performs extra parity passes, not a guaranteed full-run runtime."
+    },
+    {
+      "model": "top",
+      "seed": 42,
+      "passed": true,
+      "contract": {
+        "checkpoint_sha256": "31ab843c8d0e4331e52e0b36496823e06834dec1e871e28005c8abbdc8ff068b",
+        "source_commit": "772c6e57e664ecde83f9d92d0641e1cba99abfb7",
+        "evaluator_manifest_sha256": "04b054758c2bbf3617254911fcaeb44c2bc14f56f53205155e62d27141d25d0d",
+        "capture_worker_sha256": "4cdabead565032e57c3743b6a7b5399b06588de0a04856500e7211ef46ad02dd",
+        "blind_index_sha256": "c28d79f7578f514b92c04d790b1d71cc0a3ed3fde1a087dcdabac1d31547f172",
+        "GPU": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "torch": "2.1.0+cu118",
+        "cuda": "11.8",
+        "precision": "FP32 tensors, no autocast",
+        "tf32_cudnn": true,
+        "sampling": "native_end_anchored_stride3_5past_frames",
+        "views": 10
+      },
+      "videos": 8,
+      "max_scalar_delta": 2.9802322387695312e-08,
+      "max_cached_vs_original_delta": 0.0,
+      "max_single_vs_chunk_delta": 0.0003096461296081543,
+      "cached_input_pixels_exact": true,
+      "max_same_shape_independent_snippet_delta": 2.9802322387695312e-08,
+      "peak_cuda_allocated_bytes": 1202134528,
+      "seconds_per_video_including_decode_and_checks": 12.498356075,
+      "warning": "Preflight performs extra parity passes, not a guaranteed full-run runtime."
+    },
+    {
+      "model": "top",
+      "seed": 43,
+      "passed": true,
+      "contract": {
+        "checkpoint_sha256": "55b5bad05903381349e618107c7e21dfdc1f0ae1d9a577b35073ee73208e1ad5",
+        "source_commit": "772c6e57e664ecde83f9d92d0641e1cba99abfb7",
+        "evaluator_manifest_sha256": "04b054758c2bbf3617254911fcaeb44c2bc14f56f53205155e62d27141d25d0d",
+        "capture_worker_sha256": "4cdabead565032e57c3743b6a7b5399b06588de0a04856500e7211ef46ad02dd",
+        "blind_index_sha256": "c28d79f7578f514b92c04d790b1d71cc0a3ed3fde1a087dcdabac1d31547f172",
+        "GPU": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "torch": "2.1.0+cu118",
+        "cuda": "11.8",
+        "precision": "FP32 tensors, no autocast",
+        "tf32_cudnn": true,
+        "sampling": "native_end_anchored_stride3_5past_frames",
+        "views": 10
+      },
+      "videos": 8,
+      "max_scalar_delta": 4.470348358154297e-08,
+      "max_cached_vs_original_delta": 0.0,
+      "max_single_vs_chunk_delta": 0.0003024935722351074,
+      "cached_input_pixels_exact": true,
+      "max_same_shape_independent_snippet_delta": 4.470348358154297e-08,
+      "peak_cuda_allocated_bytes": 1202134528,
+      "seconds_per_video_including_decode_and_checks": 12.441470275,
+      "warning": "Preflight performs extra parity passes, not a guaranteed full-run runtime."
+    },
+    {
+      "model": "top",
+      "seed": 44,
+      "passed": true,
+      "contract": {
+        "checkpoint_sha256": "316f407ba6cfe1142125def9015c9070072e53c554b6d6d446c2bf5ce9168984",
+        "source_commit": "772c6e57e664ecde83f9d92d0641e1cba99abfb7",
+        "evaluator_manifest_sha256": "04b054758c2bbf3617254911fcaeb44c2bc14f56f53205155e62d27141d25d0d",
+        "capture_worker_sha256": "4cdabead565032e57c3743b6a7b5399b06588de0a04856500e7211ef46ad02dd",
+        "blind_index_sha256": "c28d79f7578f514b92c04d790b1d71cc0a3ed3fde1a087dcdabac1d31547f172",
+        "GPU": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "torch": "2.1.0+cu118",
+        "cuda": "11.8",
+        "precision": "FP32 tensors, no autocast",
+        "tf32_cudnn": true,
+        "sampling": "native_end_anchored_stride3_5past_frames",
+        "views": 10
+      },
+      "videos": 8,
+      "max_scalar_delta": 2.9802322387695312e-08,
+      "max_cached_vs_original_delta": 0.0,
+      "max_single_vs_chunk_delta": 0.00030766427516937256,
+      "cached_input_pixels_exact": true,
+      "max_same_shape_independent_snippet_delta": 1.043081283569336e-07,
+      "peak_cuda_allocated_bytes": 1202134528,
+      "seconds_per_video_including_decode_and_checks": 12.474251287500001,
+      "warning": "Preflight performs extra parity passes, not a guaranteed full-run runtime."
+    }
+  ],
+  "original_validation_replay": [
+    {
+      "model": "riskprop",
+      "seed": 42,
+      "delta": 0.0,
+      "scope": "original_validation_300"
+    },
+    {
+      "model": "riskprop",
+      "seed": 43,
+      "delta": 0.0,
+      "scope": "original_validation_300"
+    },
+    {
+      "model": "riskprop",
+      "seed": 44,
+      "delta": 0.0,
+      "scope": "original_validation_300"
+    },
+    {
+      "model": "top",
+      "seed": 42,
+      "delta": 0.0,
+      "scope": "original_validation_300"
+    },
+    {
+      "model": "top",
+      "seed": 43,
+      "delta": 0.0,
+      "scope": "original_validation_300"
+    },
+    {
+      "model": "top",
+      "seed": 44,
+      "delta": 0.0,
+      "scope": "original_validation_300"
+    }
+  ],
+  "real_test_metadata_mapping": 1344,
+  "physical_onset_after_last_pts": 33,
+  "source_index_unobserved_onsets": 22,
+  "unit_test_scope": "7 tests, including 25 original full-method comparisons and 100 independent threshold-oracle cases; CLI and metric-runtime guards",
+  "synthetic_full_pipeline_only": {
+    "jobs": 6,
+    "curves_per_job": 1344,
+    "report_only_CLI_passed": true,
+    "corruption_rejection": {
+      "uses_future": true,
+      "prediction_tail_extrapolated": true,
+      "video_sha256": true,
+      "checkpoint_sha256": true,
+      "scores": true,
+      "incomplete_capture": true
+    },
+    "scientific_result": false
+  },
+  "original_training_inputs_changed": false,
+  "old_engine_ZIP_unchanged": true,
+  "process_control": "Actual duplicate-lock and deadline descendant-termination test passed on Windows; unchanged process-control source",
+  "all_real_1344_test_curves_GPU_captured_locally": false,
+  "Linux_Vast_runtime_install_and_full_execution_tested": false,
+  "paper_test_equivalence_confirmed": false,
+  "limitations": [
+    "Author test evaluator unavailable: event/onset adapter inferred, not source-provided.",
+    "Index/10 and native physical-PTS onset inclusion differ; both counts disclosed.",
+    "No guarantee of target Linux installation, full Vast execution, or Table-1 metric parity."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scope": "CPU synthetic MP4 /32px/random init/2train+2val/2epochs/partial accumulation flush; NOT GPU or model performance",
+  "actual_runner_train_val_checkpoint_snapshot_resume": true,
+  "resume_epochs": [
+    1,
+    2
+  ],
+  "model_test_predictions_finite": true,
+  "test_labels_hidden": true,
+  "production_profile_not_executed": true
+}

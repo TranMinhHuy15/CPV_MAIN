@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests_run": 4,
+  "errors": 0,
+  "failures": 0,
+  "scope": "CPU configuration, V6 sampler, tie-safe metric, pooled scoring; NOT RTX4080 preflight"
+}

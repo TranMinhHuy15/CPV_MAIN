@@ -1,0 +1,11 @@
+usage: run_modules.py [-h] --inputs INPUTS --mode
+                      {prepare,smoke,train,evaluate} --hours HOURS
+
+Single-GPU H7 module study. Prepare -> actual CUDA smoke -> train -> gated
+test.
+
+options:
+  -h, --help            show this help message and exit
+  --inputs INPUTS
+  --mode {prepare,smoke,train,evaluate}
+  --hours HOURS

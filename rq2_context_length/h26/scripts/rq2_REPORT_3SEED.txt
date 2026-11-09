@@ -1,0 +1,345 @@
+===== RQ2 BAO CAO 3 SEED - 2026-10-20 07:57:34 =====
+
+===== TRANG THAI (rq2_status.py) =====
+
+===== SHORT seed 42 =====
+SMOKE: passed=True | GPU NVIDIA GeForce RTX 4080 SUPER | peak VRAM 10.94 GB | 1.553 s/microstep | 600 microstep/epoch | uoc tinh train 50 epoch ~12.9 gio (chua gom val/test)
+TRAIN: 50/50 epoch | complete=True | best=best_mAUC@_epoch_18.pth
+val              mAUC@      mAP@   AP@0.5s   AP@1.0s   AP@1.5s  mAUC@0.1  mtta@0.1
+best ep18       0.8628    0.8201    0.8972    0.8139    0.7492    0.6380    0.6793
+last ep50       0.8326    0.7835    0.8563    0.7754    0.7188    0.6211    0.6525
+TEST (da niem phong): mAP=0.8524 | mAUC_grouped=0.8644 | mPAUC_raw_divided_by_0.1=0.3869 | mTTA_test_author_index10_inferred_s=0.9503 | pAUC_raw_div_0.1@1.0s=0.3987 | pAUC_raw_div_0.1@1.5s=0.3088 | AP@1.5s=0.8161
+
+===== SHORT seed 43 =====
+SMOKE: passed=True | GPU NVIDIA GeForce RTX 4080 SUPER | peak VRAM 10.94 GB | 1.561 s/microstep | 600 microstep/epoch | uoc tinh train 50 epoch ~13.0 gio (chua gom val/test)
+TRAIN: 50/50 epoch | complete=True | best=best_mAUC@_epoch_17.pth
+val              mAUC@      mAP@   AP@0.5s   AP@1.0s   AP@1.5s  mAUC@0.1  mtta@0.1
+best ep17       0.8645    0.8528    0.9202    0.8587    0.7794    0.6825    0.8396
+last ep50       0.8202    0.7981    0.8617    0.7904    0.7423    0.6456    0.6839
+TEST (da niem phong): mAP=0.8380 | mAUC_grouped=0.8514 | mPAUC_raw_divided_by_0.1=0.3541 | mTTA_test_author_index10_inferred_s=0.9000 | pAUC_raw_div_0.1@1.0s=0.3673 | pAUC_raw_div_0.1@1.5s=0.2945 | AP@1.5s=0.7970
+
+===== SHORT seed 44 =====
+SMOKE: passed=True | GPU NVIDIA GeForce RTX 4080 SUPER | peak VRAM 10.94 GB | 1.582 s/microstep | 600 microstep/epoch | uoc tinh train 50 epoch ~13.2 gio (chua gom val/test)
+TRAIN: 50/50 epoch | complete=True | best=best_mAUC@_epoch_16.pth
+val              mAUC@      mAP@   AP@0.5s   AP@1.0s   AP@1.5s  mAUC@0.1  mtta@0.1
+best ep16       0.8734    0.8475    0.9168    0.8483    0.7773    0.6721    0.7981
+last ep50       0.8276    0.8173    0.8810    0.8102    0.7606    0.6491    0.7508
+TEST (da niem phong): mAP=0.8375 | mAUC_grouped=0.8603 | mPAUC_raw_divided_by_0.1=0.3459 | mTTA_test_author_index10_inferred_s=0.8983 | pAUC_raw_div_0.1@1.0s=0.3800 | pAUC_raw_div_0.1@1.5s=0.2430 | AP@1.5s=0.7879
+
+===== LONG seed 42 =====
+SMOKE: passed=True | GPU NVIDIA GeForce RTX 4080 SUPER | peak VRAM 10.94 GB | 1.535 s/microstep | 600 microstep/epoch | uoc tinh train 50 epoch ~12.8 gio (chua gom val/test)
+TRAIN: 50/50 epoch | complete=True | best=best_mAUC@_epoch_10.pth
+val              mAUC@      mAP@   AP@0.5s   AP@1.0s   AP@1.5s  mAUC@0.1  mtta@0.1
+best ep10       0.8690    0.8611    0.9224    0.8648    0.7960    0.6977    0.8089
+last ep50       0.8310    0.8145    0.8776    0.8115    0.7544    0.6633    0.7211
+TEST (da niem phong): mAP=0.8253 | mAUC_grouped=0.8332 | mPAUC_raw_divided_by_0.1=0.3444 | mTTA_test_author_index10_inferred_s=0.8774 | pAUC_raw_div_0.1@1.0s=0.3406 | pAUC_raw_div_0.1@1.5s=0.2710 | AP@1.5s=0.7803
+
+===== LONG seed 43 =====
+SMOKE: passed=True | GPU NVIDIA GeForce RTX 4080 SUPER | peak VRAM 10.94 GB | 1.659 s/microstep | 600 microstep/epoch | uoc tinh train 50 epoch ~13.8 gio (chua gom val/test)
+TRAIN: 50/50 epoch | complete=True | best=best_mAUC@_epoch_5.pth
+val              mAUC@      mAP@   AP@0.5s   AP@1.0s   AP@1.5s  mAUC@0.1  mtta@0.1
+best ep5        0.8540    0.8351    0.9049    0.8339    0.7667    0.6621    0.6535
+last ep50       0.8271    0.7808    0.8576    0.7715    0.7134    0.6025    0.6263
+TEST (da niem phong): mAP=0.7861 | mAUC_grouped=0.8161 | mPAUC_raw_divided_by_0.1=0.2642 | mTTA_test_author_index10_inferred_s=0.6949 | pAUC_raw_div_0.1@1.0s=0.2737 | pAUC_raw_div_0.1@1.5s=0.2276 | AP@1.5s=0.7495
+
+===== LONG seed 44 =====
+SMOKE: passed=True | GPU NVIDIA GeForce RTX 4080 SUPER | peak VRAM 10.94 GB | 1.633 s/microstep | 600 microstep/epoch | uoc tinh train 50 epoch ~13.6 gio (chua gom val/test)
+TRAIN: 50/50 epoch | complete=True | best=best_mAUC@_epoch_16.pth
+val              mAUC@      mAP@   AP@0.5s   AP@1.0s   AP@1.5s  mAUC@0.1  mtta@0.1
+best ep16       0.8618    0.8277    0.8916    0.8282    0.7633    0.6621    0.7067
+last ep50       0.7983    0.7602    0.8031    0.7506    0.7269    0.5988    0.5204
+TEST (da niem phong): mAP=0.7835 | mAUC_grouped=0.8018 | mPAUC_raw_divided_by_0.1=0.2631 | mTTA_test_author_index10_inferred_s=0.7810 | pAUC_raw_div_0.1@1.0s=0.2612 | pAUC_raw_div_0.1@1.5s=0.2145 | AP@1.5s=0.7457
+
+===== SO SANH LONG - SHORT tren VALIDATION (epoch tot nhat) =====
+seed 42: mAUC@ +0.0062 | mAP@ +0.0410 | AP@0.5s +0.0252 | AP@1.0s +0.0509 | AP@1.5s +0.0468 | mAUC@0.1 +0.0597 | mtta@0.1 +0.1296
+seed 43: mAUC@ -0.0105 | mAP@ -0.0176 | AP@0.5s -0.0153 | AP@1.0s -0.0248 | AP@1.5s -0.0127 | mAUC@0.1 -0.0204 | mtta@0.1 -0.1861
+seed 44: mAUC@ -0.0116 | mAP@ -0.0198 | AP@0.5s -0.0251 | AP@1.0s -0.0201 | AP@1.5s -0.0140 | mAUC@0.1 -0.0101 | mtta@0.1 -0.0914
+
+===== TEST mean +- SD (chi khi du 3 seed/nhanh) =====
+short mAP 0.8426+-0.0084 | mAUC_grouped 0.8587+-0.0067 | mPAUC_raw_divided_by_0.1 0.3623+-0.0217 | mTTA_test_author_index10_inferred_s 0.9162+-0.0296 | pAUC_raw_div_0.1@1.0s 0.3820+-0.0158 | pAUC_raw_div_0.1@1.5s 0.2821+-0.0346 | AP@1.5s 0.8003+-0.0144
+long mAP 0.7983+-0.0234 | mAUC_grouped 0.8170+-0.0157 | mPAUC_raw_divided_by_0.1 0.2906+-0.0466 | mTTA_test_author_index10_inferred_s 0.7844+-0.0913 | pAUC_raw_div_0.1@1.0s 0.2919+-0.0427 | pAUC_raw_div_0.1@1.5s 0.2377+-0.0296 | AP@1.5s 0.7585+-0.0190
+
+===== 1. VALIDATION (300 video) - epoch chon checkpoint (best val mAUC@ tren 1-50) =====
+              ep     mAUC@      mAP@   AP@0.5s   AP@1.0s   AP@1.5s  mAUC@0.1  mtta@0.1
+short s42   ep18    0.8628    0.8201    0.8972    0.8139    0.7492    0.6380    0.6793   (50 epoch)
+short s43   ep17    0.8645    0.8528    0.9202    0.8587    0.7794    0.6825    0.8396   (50 epoch)
+short s44   ep16    0.8734    0.8475    0.9168    0.8483    0.7773    0.6721    0.7981   (50 epoch)
+short TB            0.8669    0.8401    0.9114    0.8403    0.7686    0.6642    0.7723
+long s42    ep10    0.8690    0.8611    0.9224    0.8648    0.7960    0.6977    0.8089   (50 epoch)
+long s43     ep5    0.8540    0.8351    0.9049    0.8339    0.7667    0.6621    0.6535   (50 epoch)
+long s44    ep16    0.8618    0.8277    0.8916    0.8282    0.7633    0.6621    0.7067   (50 epoch)
+long TB             0.8616    0.8413    0.9063    0.8423    0.7753    0.6740    0.7230
+L-S TB             -0.0053   +0.0012   -0.0051   +0.0020   +0.0067   +0.0098   -0.0493
+
+===== 2. TEST (Combined 1344, bo cham RQ1) - DAY DU 28 CHI SO =====
+chi so                                            S42      S43      S44      L42      L43      L44      short TB+-SD       long TB+-SD    L-S TB
+mAP                                            0.8524   0.8380   0.8375   0.8253   0.7861   0.7835    0.8426+-0.0084    0.7983+-0.0234   -0.0443
+mAUC_grouped                                   0.8644   0.8514   0.8603   0.8332   0.8161   0.8018    0.8587+-0.0067    0.8170+-0.0157   -0.0417
+mPAUC_sklearn_standardized                     0.6773   0.6601   0.6558   0.6549   0.6127   0.6122    0.6644+-0.0114    0.6266+-0.0245   -0.0378
+mPAUC_raw_divided_by_0.1                       0.3869   0.3541   0.3459   0.3444   0.2642   0.2631    0.3623+-0.0217    0.2906+-0.0466   -0.0718
+mTTA_test_author_index10_inferred_s            0.9503   0.9000   0.8983   0.8774   0.6949   0.7810    0.9162+-0.0296    0.7844+-0.0913   -0.1318
+maximum_actual_negative_frame_FAR              0.1000   0.1000   0.1000   0.1000   0.1000   0.1000    0.1000+-0.0000    0.1000+-0.0000   +0.0000
+AP@0.5s                                        0.8799   0.8685   0.8742   0.8629   0.8240   0.8194    0.8742+-0.0057    0.8354+-0.0239   -0.0388
+AUC_full@0.5s                                  0.8872   0.8784   0.8876   0.8711   0.8560   0.8357    0.8844+-0.0052    0.8543+-0.0178   -0.0302
+pAUC_raw_div_0.1@0.5s                          0.4532   0.4005   0.4148   0.4214   0.2912   0.3137    0.4228+-0.0273    0.3421+-0.0696   -0.0808
+mTTA_author_index10_inferred@0.5s              0.9889   0.9291   0.9326   0.9185   0.7394   0.8010    0.9502+-0.0336    0.8197+-0.0910   -0.1305
+AP@1.0s                                        0.8610   0.8484   0.8503   0.8327   0.7848   0.7855    0.8532+-0.0068    0.8010+-0.0275   -0.0522
+AUC_full@1.0s                                  0.8782   0.8613   0.8703   0.8430   0.8172   0.8046    0.8699+-0.0085    0.8216+-0.0196   -0.0483
+pAUC_raw_div_0.1@1.0s                          0.3987   0.3673   0.3800   0.3406   0.2737   0.2612    0.3820+-0.0158    0.2919+-0.0427   -0.0902
+mTTA_author_index10_inferred@1.0s              0.9636   0.9161   0.9092   0.8858   0.6882   0.7804    0.9296+-0.0296    0.7848+-0.0989   -0.1448
+AP@1.5s                                        0.8161   0.7970   0.7879   0.7803   0.7495   0.7457    0.8003+-0.0144    0.7585+-0.0190   -0.0418
+AUC_full@1.5s                                  0.8278   0.8145   0.8230   0.7854   0.7751   0.7651    0.8218+-0.0067    0.7752+-0.0101   -0.0466
+pAUC_raw_div_0.1@1.5s                          0.3088   0.2945   0.2430   0.2710   0.2276   0.2145    0.2821+-0.0346    0.2377+-0.0296   -0.0444
+mTTA_author_index10_inferred@1.5s              0.8602   0.8229   0.8197   0.7902   0.6236   0.7454    0.8343+-0.0225    0.7197+-0.0862   -0.1145
+Public/mAP                                     0.8350   0.8226   0.8053   0.8214   0.7575   0.7626    0.8209+-0.0149    0.7805+-0.0355   -0.0405
+Public/mAUC_grouped                            0.8596   0.8445   0.8460   0.8231   0.8095   0.7818    0.8500+-0.0083    0.8048+-0.0210   -0.0452
+Public/mPAUC_sklearn_standardized              0.6582   0.6399   0.6159   0.6513   0.5764   0.5950    0.6380+-0.0212    0.6076+-0.0390   -0.0305
+Public/mPAUC_raw_divided_by_0.1                0.3506   0.3159   0.2703   0.3375   0.1952   0.2305    0.3123+-0.0403    0.2544+-0.0741   -0.0579
+mTTA_Public_author_index10_inferred_s          0.8605   0.7818   0.8197   0.8192   0.5642   0.7203    0.8207+-0.0394    0.7012+-0.1286   -0.1195
+Private/mAP                                    0.8677   0.8542   0.8711   0.8346   0.8172   0.8078    0.8643+-0.0089    0.8199+-0.0136   -0.0445
+Private/mAUC_grouped                           0.8690   0.8580   0.8738   0.8438   0.8223   0.8209    0.8669+-0.0081    0.8290+-0.0128   -0.0380
+Private/mPAUC_sklearn_standardized             0.6984   0.6826   0.7054   0.6665   0.6542   0.6342    0.6955+-0.0116    0.6516+-0.0163   -0.0438
+Private/mPAUC_raw_divided_by_0.1               0.4269   0.3970   0.4402   0.3663   0.3430   0.3050    0.4214+-0.0221    0.3381+-0.0309   -0.0833
+mTTA_Private_author_index10_inferred_s         1.0514   1.0489   0.9922   0.9491   0.8393   0.8703    1.0308+-0.0335    0.8862+-0.0566   -0.1446
+
+===== 3. TEST - RQ2 short / long va V6 (RQ1) cung seed =====
+                  mAP     mAUC    mPAUC  pAUC1.0  pAUC1.5    AP1.5     mTTA
+short s42      0.8524   0.8644   0.3869   0.3987   0.3088   0.8161   0.9503
+long s42       0.8253   0.8332   0.3444   0.3406   0.2710   0.7803   0.8774
+V6 s42         0.8394   0.8524   0.3544   0.3568   0.2525   0.8024   0.8576
+short s43      0.8380   0.8514   0.3541   0.3673   0.2945   0.7970   0.9000
+long s43       0.7861   0.8161   0.2642   0.2737   0.2276   0.7495   0.6949
+V6 s43         0.8407   0.8626   0.3711   0.4028   0.2607   0.7959   0.8732
+short s44      0.8375   0.8603   0.3459   0.3800   0.2430   0.7879   0.8983
+long s44       0.7835   0.8018   0.2631   0.2612   0.2145   0.7457   0.7810
+V6 s44         0.7962   0.8301   0.2649   0.2708   0.1660   0.7480   0.7291
+
+--- trung binh +- SD (3 seed) ---
+short           0.8426+-0.0084    0.8587+-0.0067    0.3623+-0.0217    0.3820+-0.0158    0.2821+-0.0346    0.8003+-0.0144    0.9162+-0.0296
+long            0.7983+-0.0234    0.8170+-0.0157    0.2906+-0.0466    0.2919+-0.0427    0.2377+-0.0296    0.7585+-0.0190    0.7844+-0.0913
+V6              0.8254+-0.0253    0.8484+-0.0166    0.3301+-0.0571    0.3435+-0.0670    0.2264+-0.0525    0.7821+-0.0297    0.8200+-0.0791
+
+--- long - short tung seed / TB / so seed thang ---
+s42           -0.0270  -0.0312  -0.0425  -0.0581  -0.0377  -0.0359  -0.0729
+s43           -0.0519  -0.0353  -0.0900  -0.0936  -0.0669  -0.0474  -0.2051
+s44           -0.0540  -0.0585  -0.0828  -0.1188  -0.0285  -0.0422  -0.1173
+TB            -0.0443  -0.0417  -0.0718  -0.0902  -0.0444  -0.0418  -0.1318
+thang/3           0/3      0/3      0/3      0/3      0/3      0/3      0/3
+
+--- short - V6 tung seed / TB / so seed thang ---
+s42           +0.0130  +0.0120  +0.0325  +0.0419  +0.0563  +0.0137  +0.0927
+s43           -0.0027  -0.0112  -0.0170  -0.0355  +0.0338  +0.0011  +0.0268
+s44           +0.0413  +0.0302  +0.0810  +0.1092  +0.0770  +0.0399  +0.1692
+TB            +0.0172  +0.0103  +0.0322  +0.0386  +0.0557  +0.0182  +0.0962
+thang/3           2/3      2/3      2/3      2/3      3/3      3/3      3/3
+
+--- long - V6 tung seed / TB / so seed thang ---
+s42           -0.0141  -0.0192  -0.0100  -0.0162  +0.0185  -0.0221  +0.0198
+s43           -0.0546  -0.0465  -0.1069  -0.1291  -0.0331  -0.0464  -0.1783
+s44           -0.0127  -0.0283  -0.0018  -0.0096  +0.0485  -0.0023  +0.0519
+TB            -0.0271  -0.0313  -0.0396  -0.0516  +0.0113  -0.0236  -0.0355
+thang/3           0/3      0/3      0/3      0/3      2/3      0/3      2/3
+
+GHI CHU QUY TRINH:
+ - Checkpoint chon tren validation full mAUC@ (giong V6/goi); test 1344 video khoa den khi train xong, TF32 tat khi test.
+ - long seed 43: FAIL cong epoch 20 (best ep5 mAUC@ 0.8540 < 0.855) -> KEO DAI 21-50 sau cong (resume_latest.pth).
+ - seed 44: chay du 50 epoch ca 2 nhanh, khong cong (dung goi: khong dung som do diem thap).
+ - 3 seed: mean +- sample SD; chenh lech nho hon SD giua seed thi chua du ket luan.
+
+===== SUMMARY CUA GOI (mean_sd.csv) =====
+﻿variant,metric,mean,sample_sd,n
+short,AP@0.5s,0.874219749872543,0.005703382453859674,3
+short,AP@1.0s,0.8532473041250095,0.006787169536025119,3
+short,AP@1.5s,0.800347864116854,0.014398309274684086,3
+short,AUC_full@0.5s,0.8844186008067183,0.0052397349113547,3
+short,AUC_full@1.0s,0.8699031411018628,0.008450523890066813,3
+short,AUC_full@1.5s,0.8217592592592593,0.006719708784290682,3
+short,Private/mAP,0.8643164250425063,0.008909967023460112,3
+short,Private/mAUC_grouped,0.8669499583028122,0.008083300408465097,3
+short,Private/mPAUC_raw_divided_by_0.1,0.42136542572625585,0.022106744171031974,3
+short,Private/mPAUC_sklearn_standardized,0.6954554872243451,0.011635128511069395,3
+short,Public/mAP,0.8209481769856696,0.014918926504387607,3
+short,Public/mAUC_grouped,0.8500266701975955,0.008305703623634022,3
+short,Public/mPAUC_raw_divided_by_0.1,0.312270892978149,0.04029204364740263,3
+short,Public/mPAUC_sklearn_standardized,0.6380373120937626,0.021206338761790882,3
+short,mAP,0.8426049727048022,0.00844521068895563,3
+short,mAUC_grouped,0.8586936670559469,0.006652992022165717,3
+short,mPAUC_raw_divided_by_0.1,0.36232608745735395,0.02167404717045065,3
+short,mPAUC_sklearn_standardized,0.6643821512933441,0.01140739324760564,3
+short,mTTA_Private_author_index10_inferred_s,1.0308227678212463,0.033497545337890455,3
+short,mTTA_Public_author_index10_inferred_s,0.8206780226075069,0.039362023933791755,3
+short,mTTA_author_index10_inferred@0.5s,0.9502003215406588,0.033572316203978644,3
+short,mTTA_author_index10_inferred@1.0s,0.9296379170766771,0.029636664586876745,3
+short,mTTA_author_index10_inferred@1.5s,0.8342666542120094,0.022497335401650338,3
+short,mTTA_test_author_index10_inferred_s,0.9161882234172762,0.029552733272097516,3
+short,maximum_actual_negative_frame_FAR,0.1,0.0,3
+short,pAUC_raw_div_0.1@0.5s,0.42284930238709256,0.02725886184248858,3
+short,pAUC_raw_div_0.1@1.0s,0.3820228894173603,0.015776728788472874,3
+short,pAUC_raw_div_0.1@1.5s,0.28210607056760906,0.034592635743477165,3
+long,AP@0.5s,0.8354206423660632,0.023895042165277425,3
+long,AP@1.0s,0.8010086846398687,0.027486468610217283,3
+long,AP@1.5s,0.7585051998420855,0.018955025637365796,3
+long,AUC_full@0.5s,0.8542575877802023,0.01775274705310825,3
+long,AUC_full@1.0s,0.8216099385652001,0.01958661951710415,3
+long,AUC_full@1.5s,0.7752027175104099,0.010149683556894443,3
+long,Private/mAP,0.8198570912838392,0.01362140173132477,3
+long,Private/mAUC_grouped,0.8289871554531432,0.012842252274689442,3
+long,Private/mPAUC_raw_divided_by_0.1,0.33810392195749667,0.030917452607384644,3
+long,Private/mPAUC_sklearn_standardized,0.6516336431355245,0.016272343477570814,3
+long,Public/mAP,0.7804632599809528,0.03550608280899693,3
+long,Public/mAUC_grouped,0.8047822980603475,0.021026160660891524,3
+long,Public/mPAUC_raw_divided_by_0.1,0.25437139716293533,0.07407720205115689,3
+long,Public/mPAUC_sklearn_standardized,0.6075638932436502,0.038988001079556286,3
+long,mAP,0.7983115089493391,0.023411221810433983,3
+long,mAUC_grouped,0.8170234146186042,0.015701417664794746,3
+long,mPAUC_raw_divided_by_0.1,0.2905623460796559,0.046595040255507855,3
+long,mPAUC_sklearn_standardized,0.6266117610945557,0.024523705397635716,3
+long,mTTA_Private_author_index10_inferred_s,0.886208607078834,0.056586184644388464,3
+long,mTTA_Public_author_index10_inferred_s,0.7012168833664568,0.1285541068681188,3
+long,mTTA_author_index10_inferred@0.5s,0.8196622433447069,0.09100764861186146,3
+long,mTTA_author_index10_inferred@1.0s,0.7848060781009009,0.09885476674252987,3
+long,mTTA_author_index10_inferred@1.5s,0.7197338530558022,0.08622455436309846,3
+long,mTTA_test_author_index10_inferred_s,0.7844309052172783,0.09134152488504305,3
+long,maximum_actual_negative_frame_FAR,0.1,0.0,3
+long,pAUC_raw_div_0.1@0.5s,0.342094822455862,0.06961538380568369,3
+long,pAUC_raw_div_0.1@1.0s,0.2918648434403488,0.04269236938847332,3
+long,pAUC_raw_div_0.1@1.5s,0.23772737234275698,0.02958823376153875,3
+
+===== summary.json (dau) =====
+{
+  "complete_six_run_study": true,
+  "jobs": [
+    {
+      "variant": "short",
+      "seed": 42,
+      "state": "complete",
+      "completed_epochs": 50,
+      "selected_checkpoint": "best_mAUC@_epoch_18.pth",
+      "metrics": {
+        "mAP": 0.8523532323272001,
+        "mAUC_grouped": 0.8643979973485912,
+        "mPAUC_sklearn_standardized": 0.6773159764442048,
+        "mPAUC_raw_divided_by_0.1": 0.3869003552439892,
+        "mTTA_test_author_index10_inferred_s": 0.9502990195015473,
+        "maximum_actual_negative_frame_FAR": 0.1,
+        "AP@0.5s": 0.8799156101413758,
+        "AUC_full@0.5s": 0.8872495536599883,
+        "pAUC_raw_div_0.1@0.5s": 0.4532334854195597,
+        "mTTA_author_index10_inferred@0.5s": 0.9889155592327497,
+        "AP@1.0s": 0.8610043605344622,
+        "AUC_full@1.0s": 0.8781584423305588,
+        "pAUC_raw_div_0.1@1.0s": 0.3987068965517242,
+        "mTTA_author_index10_inferred@1.0s": 0.9636244975189998,
+        "AP@1.5s": 0.8161397263057623,
+        "AUC_full@1.5s": 0.8277859960552268,
+        "pAUC_raw_div_0.1@1.5s": 0.3087606837606838,
+        "mTTA_author_index10_inferred@1.5s": 0.8601797362726324,
+        "Public/mAP": 0.8349686203064944,
+        "Public/mAUC_grouped": 0.8595798607436252,
+        "Public/mPAUC_sklearn_standardized": 0.6582346921795277,
+        "Public/mPAUC_raw_divided_by_0.1": 0.35064591514110255,
+        "mTTA_Public_author_index10_inferred_s": 0.8605311677475559,
+        "Private/mAP": 0.8676550032836957,
+        "Private/mAUC_grouped": 0.8689750303051426,
+        "Private/mPAUC_sklearn_standardized": 0.6983777404635004,
+        "Private/mPAUC_raw_divided_by_0.1": 0.42691770688065084,
+        "mTTA_Private_author_index10_inferred_s": 1.051361780398167
+      }
+    },
+    {
+      "variant": "short",
+      "seed": 43,
+      "state": "complete",
+      "completed_epochs": 50,
+      "selected_checkpoint": "best_mAUC@_epoch_17.pth",
+      "metrics": {
+        "mAP": 0.837954805684253,
+        "mAUC_grouped": 0.8513852967099828,
+        "mPAUC_sklearn_standardized": 0.6600752724979139,
+        "mPAUC_raw_divided_by_0.1": 0.3541430177460365,
+        "mTTA_test_author_index10_inferred_s": 0.8999720135094107,
+        "maximum_actual_negative_frame_FAR": 0.1,
+        "AP@0.5s": 0.8685088748795162,
+        "AUC_full@0.5s": 0.8783723467565959,
+        "pAUC_raw_div_0.1@0.5s": 0.40054056734774846,
+        "mTTA_author_index10_inferred@0.5s": 0.9291256723705927,
+        "AP@1.0s": 0.8484009292350203,
+        "AUC_full@1.0s": 0.8612700653983354,
+        "pAUC_raw_div_0.1@1.0s": 0.36734542211652793,
+        "mTTA_author_index10_inferred@1.0s": 0.9161110587693403,
+        "AP@1.5s": 0.7969546129382225,
+        "AUC_full@1.5s": 0.8145134779750165,
+        "pAUC_raw_div_0.1@1.5s": 0.29454306377383305,
+        "mTTA_author_index10_inferred@1.5s": 0.8228957467345447,
+        "Public/mAP": 0.8226065621832807,
+        "Public/mAUC_grouped": 0.8445171864766688,
+        "Public/mPAUC_sklearn_standardized": 0.6399285420645078,
+        "Public/mPAUC_raw_divided_by_0.1": 0.31586422992256474,
+        "mTTA_Public_author_index10_inferred_s": 0.7818262275817479,
+        "Private/mAP": 0.854219328742417,
+        "Private/mAUC_grouped": 0.8580466645412969,
+        "Private/mPAUC_sklearn_standardized": 0.6826377967550027,
+        "Private/mPAUC_raw_divided_by_0.1": 0.39701181383450507,
+        "mTTA_Private_author_index10_inferred_s": 1.0489380684801273
+      }
+    },
+    {
+      "variant": "short",
+      "seed": 44,
+      "state": "complete",
+      "completed_epochs": 50,
+      "selected_checkpoint": "best_mAUC@_epoch_16.pth",
+      "metrics": {
+        "mAP": 0.8375068801029535,
+        "mAUC_grouped": 0.8602977071092665,
+        "mPAUC_sklearn_standardized": 0.6557552049379137,
+        "mPAUC_raw_divided_by_0.1": 0.3459348893820362,
+        "mTTA_test_author_index10_inferred_s": 0.8982936372408707,
+        "maximum_actual_negative_frame_FAR": 0.1,
+        "AP@0.5s": 0.874234764596737,
+        "AUC_full@0.5s": 0.8876339020035706,
+        "pAUC_raw_div_0.1@0.5s": 0.41477385439396947,
+        "mTTA_author_index10_inferred@0.5s": 0.9325597330186339,
+        "AP@1.0s": 0.850336622605546,
+        "AUC_full@1.0s": 0.8702809155766944,
+        "pAUC_raw_div_0.1@1.0s": 0.3800163495838288,
+        "mTTA_author_index10_inferred@1.0s": 0.9091781949416913,
+        "AP@1.5s": 0.7879492531065774,
+        "AUC_full@1.5s": 0.8229783037475346,
+        "pAUC_raw_div_0.1@1.5s": 0.24301446416831032,
+        "mTTA_author_index10_inferred@1.5s": 0.8197244796288512,
+        "Public/mAP": 0.8052693484672336,
+        "Public/mAUC_grouped": 0.8459829633724922,
+        "Public/mPAUC_sklearn_standardized": 0.6159487020372524,
+        "Public/mPAUC_raw_divided_by_0.1": 0.27030253387077957,
+        "mTTA_Public_author_index10_inferred_s": 0.819676672493217,
+        "Private/mAP": 0.871074943101406,
+        "Private/mAUC_grouped": 0.873828180061997,
+        "Private/mPAUC_sklearn_standardized": 0.7053509244545323,
+        "Private/mPAUC_raw_divided_by_0.1": 0.4401667564636116,
+        "mTTA_Private_author_index10_inferred_s": 0.9921684545854443
+      }
+    },
+    {
+      "variant": "long",
+      "seed": 42,
+      "state": "complete",
+      "completed_epochs": 50,
+      "selected_checkpoint": "best_mAUC@_epoch_10.pth",
+      "metrics": {
+        "mAP": 0.8253038834808137,
+        "mAUC_grouped": 0.8331541434947444,
+        "mPAUC_sklearn_standardized": 0.6549275205827922,
+        "mPAUC_raw_divided_by_0.1": 0.34436228910730526,
+        "mTTA_test_author_index10_inferred_s": 0.8774442664512683,
+        "maximum_actual_negative_frame_FAR": 0.1,
+        "AP@0.5s": 0.8628850089528772,
+        "AUC_full@0.5s": 0.8710573298948622,
+        "pAUC_raw_div_0.1@0.5s": 0.4214193612378496,
+        "mTTA_author_index10_inferred@0.5s": 0.9185433181969779,
+        "AP@1.0s": 0.832744758174881,
+        "AUC_full@1.0s": 0.8430254161712247,
+        "pAUC_raw_div_0.1@1.0s": 0.3406287158145066,
+        "mTTA_author_index10_
+
+===== HET BAO CAO =====

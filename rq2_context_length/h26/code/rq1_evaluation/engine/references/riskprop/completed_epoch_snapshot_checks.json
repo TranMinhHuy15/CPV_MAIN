@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "fixture_resolution": 32,
+  "fixture_train_videos": 4,
+  "fixture_validation_videos": 4,
+  "original_pretraining_loaded": true,
+  "completed_fixture_epochs": 2,
+  "actual_runner_train_val_checkpoint_hook": true,
+  "actual_snapshot_rollback_hashes_match": true,
+  "actual_runner_resume_optimizer_scaler_scheduler_rng": true,
+  "no_duplicate_history_epochs": true,
+  "snapshot_bytes": 380461807,
+  "actual_linux_rtx4080_full224_verified": false,
+  "scope": "LOCAL CUDA original model/pipeline and real Runner checkpoint/resume; 32px/four-video fixture with partial accumulation flush. NOT 50epoch/full-dataset results."
+}

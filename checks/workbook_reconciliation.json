@@ -1,0 +1,200 @@
+[
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!C2",
+    "metric": "AP@0.5s",
+    "field": "mean",
+    "reported": 0.8373800400391008,
+    "recomputed": 0.8373800400391009,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!D2",
+    "metric": "AP@0.5s",
+    "field": "sample_sd",
+    "reported": 0.00718717075663584,
+    "recomputed": 0.0071871707566361475,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!C3",
+    "metric": "AP@1.0s",
+    "field": "mean",
+    "reported": 0.7797928270508035,
+    "recomputed": 0.7797928270508033,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!D3",
+    "metric": "AP@1.0s",
+    "field": "sample_sd",
+    "reported": 0.006617105136431375,
+    "recomputed": 0.006617105136431055,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!C4",
+    "metric": "AP@1.5s",
+    "field": "mean",
+    "reported": 0.7440679229633598,
+    "recomputed": 0.7440679229633598,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!D4",
+    "metric": "AP@1.5s",
+    "field": "sample_sd",
+    "reported": 0.01410855342927573,
+    "recomputed": 0.014108553429275479,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!C5",
+    "metric": "mAP",
+    "field": "mean",
+    "reported": 0.787080263351088,
+    "recomputed": 0.787080263351088,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!D5",
+    "metric": "mAP",
+    "field": "sample_sd",
+    "reported": 0.006714544739211206,
+    "recomputed": 0.006714544739211153,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!C6",
+    "metric": "mAUC_grouped",
+    "field": "mean",
+    "reported": 0.8162006295651735,
+    "recomputed": 0.8162006295651733,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!D6",
+    "metric": "mAUC_grouped",
+    "field": "sample_sd",
+    "reported": 0.005142554525129123,
+    "recomputed": 0.005142554525129063,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!C7",
+    "metric": "mPAUC_raw_divided_by_0.1",
+    "field": "mean",
+    "reported": 0.2801943337047321,
+    "recomputed": 0.28019433370473207,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!D7",
+    "metric": "mPAUC_raw_divided_by_0.1",
+    "field": "sample_sd",
+    "reported": 0.01365123088621804,
+    "recomputed": 0.013651230886218018,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!C8",
+    "metric": "mPAUC_sklearn_standardized",
+    "field": "mean",
+    "reported": 0.6211549124761747,
+    "recomputed": 0.6211549124761748,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/top_v2/metrics/top_v2_results.xlsx",
+    "cell": "mean_sd!D8",
+    "metric": "mPAUC_sklearn_standardized",
+    "field": "sample_sd",
+    "reported": 0.007184858361167341,
+    "recomputed": 0.0071848583611673865,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!F2",
+    "metric": "mAP",
+    "field": "mean",
+    "reported": 0.766178,
+    "recomputed": 0.7661781611169356,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!G2",
+    "metric": "mAP",
+    "field": "sample_sd",
+    "reported": 0.003823,
+    "recomputed": 0.0038231799978909547,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!F3",
+    "metric": "mAUC_grouped",
+    "field": "mean",
+    "reported": 0.784696,
+    "recomputed": 0.7846959738942106,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!G3",
+    "metric": "mAUC_grouped",
+    "field": "sample_sd",
+    "reported": 0.001536,
+    "recomputed": 0.0015361784888247357,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!F4",
+    "metric": "mPAUC_sklearn_standardized",
+    "field": "mean",
+    "reported": 0.612234,
+    "recomputed": 0.6122340797778933,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!G4",
+    "metric": "mPAUC_sklearn_standardized",
+    "field": "sample_sd",
+    "reported": 0.003596,
+    "recomputed": 0.0035964653280732358,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!F5",
+    "metric": "mPAUC_raw_divided_by_0.1",
+    "field": "mean",
+    "reported": 0.263245,
+    "recomputed": 0.2632447515779973,
+    "match": true
+  },
+  {
+    "file": "rq1_reference/adalea_v4/metrics/AdaLEA_V4_Report.xlsx",
+    "cell": "Sumary!G5",
+    "metric": "mPAUC_raw_divided_by_0.1",
+    "field": "sample_sd",
+    "reported": 0.006833,
+    "recomputed": 0.0068332841233392115,
+    "match": true
+  }
+]

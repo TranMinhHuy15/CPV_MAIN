@@ -1,0 +1,45 @@
+{
+  "videos": 8,
+  "checks": [
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 0.0
+    },
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 0.0
+    },
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 1.4901161193847656e-08
+    },
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 1.1920928955078125e-07
+    },
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 5.960464477539063e-08
+    },
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 5.960464477539063e-08
+    },
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 2.9802322387695312e-08
+    },
+    {
+      "passed": true,
+      "decoded_pixel_parity": true,
+      "max_probability_delta": 0.0
+    }
+  ]
+}

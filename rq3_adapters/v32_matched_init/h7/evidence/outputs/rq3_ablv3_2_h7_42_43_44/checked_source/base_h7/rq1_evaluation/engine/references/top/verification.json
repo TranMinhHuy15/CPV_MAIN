@@ -1,0 +1,20 @@
+{
+  "release": "TOP_V2_V6Matched_Fixed",
+  "date": "2026-10-09",
+  "reference_source": "happytianhao/TOP@772c6e57e664ecde83f9d92d0641e1cba99abfb7",
+  "reference_hash_audit": "1241 upstream files matched the pinned archive in prior audit; adapter and documented mechanical fixes are separate",
+  "local_checks": {
+    "test_repro": {"passed": 11, "failed": 0},
+    "test_three_seeds": {"passed": 6, "failed": 0},
+    "test_matched": {"passed": 4, "failed": 0},
+    "test_amp_precision_cpu": "passed",
+    "test_safety": {"passed": 9, "skipped": 1, "failed": 0, "skip": "Real POSIX orphan-process cleanup unavailable on Windows"},
+    "actual_runner_fixture": "runner_fixture_checks.json: train/val/checkpoint/snapshot/resume/test passed, CPU synthetic MP4s, random initialization, 32px, 2 epochs"
+  },
+  "not_verified_locally": ["RTX4080 CUDA training", "Real Linux process-tree cleanup", "Full Nexar224px convergence", "Three full 50epoch seeds", "Original pretraining download/forward on rented GPU"],
+  "mandatory_remote_gate": "Default command only preflights; train requires original-pretraining smoke at224px, two actual optimizer updates across16 microsteps and FP32 mini-validation. No automatic batch/precision/input fallback.",
+  "comparison_scope": "Controlled V6 implementation benchmark; not equivalent to RiskProp PDF Table1",
+  "test_mtta": null,
+  "test_mtta_reason": "Scalar clipped-test V6 inference cannot provide continuous-curve mTTA. Validation proxy is kept separate.",
+  "paid_remote_jobs_started": false
+}

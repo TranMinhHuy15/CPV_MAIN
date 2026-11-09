@@ -1,0 +1,11 @@
+{
+  "baseline_reused": true,
+  "contract": {
+    "arm": "b0",
+    "base_model": "RiskProp V6 frozen",
+    "checkpoint_sha256": "5c0e817995491932240f7c2533423b61d47f4d9b5af96e34b65978594b901a17",
+    "original_contract_sha256": "fd3452bf7ec1e20285f3823196717321dc27a1a13a935d9164fe3439e8ef21e6",
+    "seed": 44,
+    "study_contract_sha256": "8c777e167d2b94f86d0c6b06d59763e047a5b8db096337c806883c8fef805b29"
+  }
+}

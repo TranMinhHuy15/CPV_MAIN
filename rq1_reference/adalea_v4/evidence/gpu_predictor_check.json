@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "torch": "2.1.0+cu118",
+  "optimizer_steps": 2,
+  "microbatches": 16,
+  "empty_object_amp_finite": true,
+  "validation_fp32": true,
+  "peak_memory_gib": 0.0810236930847168,
+  "synthetic_features_only": true,
+  "pretrained_extractor_tested": false,
+  "rtx4080_tested": false
+}

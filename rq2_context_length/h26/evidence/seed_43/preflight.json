@@ -1,0 +1,12 @@
+{
+  "source": "/workspace/rq2_lstm_checked/long/seed_43/author_source",
+  "data": "/workspace/rq2_lstm_checked/long/seed_43/prepared_nexar",
+  "protocol": "rq2-lstm-long-nominalclock-b2-eff16-amp-cp-v2-checked",
+  "paper_values": {
+    "mAP": 0.87,
+    "mAUC": 0.869,
+    "mAUC_0.1": 0.472,
+    "mTTA_0.1_s": 0.958
+  },
+  "training_not_yet_run": true
+}

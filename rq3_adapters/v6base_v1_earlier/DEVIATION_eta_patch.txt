@@ -1,0 +1,2 @@
+cde2cd205fdd5ddf25746bfc129633c98320a0ed21f96df549ec88ce1226fa31  reporting.py
+2026-11-06 ETA len(epoch)==3 -> len(ARMS), patched during extraction, before any training; only affects runtime_estimate.json
